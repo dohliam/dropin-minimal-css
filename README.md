@@ -1,6 +1,27 @@
 # An overview of barebones drop-in minimal CSS boilerplate frameworks
 
-This is a quick CSS switcher to allow for previewing some of the many minimal CSS-only frameworks out there. See the demo [here](https://dohliam.github.io/dropin-minimal-css).
+This is a quick CSS switcher to allow for previewing some of the many minimal CSS-only frameworks out there. See the demo [here](https://dohliam.github.io/dropin-minimal-css) or [drop the switcher](#Usage) into your own page to see how [different frameworks](#list-of-frameworks) would look with your content.
+
+## Usage
+
+The switcher is fully modular, so you can easily drop it into your own pages to quickly preview the effect of using different CSS frameworks. You can even add your own frameworks to the list and use the dropdown menu to switch between them.
+
+To use the CSS switcher, just clone or download the project and then copy your html file into the main project folder (you can replace `index.html` if you want, since it's just the demo).
+
+If you don't already have a stylesheet defined, you'll need to add the following default stylesheet to the header of your page:
+
+        <link rel="stylesheet" type="text/css" href="vendor/bullframe.min.css"/>
+
+Include the js for the switcher in the header of the page:
+
+        <script src="switcher.js" type="text/javascript"></script> 
+
+Then, add the following code wherever you want the dropdown to appear:
+
+          <div id="switcher">&nbsp;</div>
+          <script type="text/javascript">inline_switcher();</script>
+
+That's it! You should now be able to cycle through the different frameworks by choosing them from the dropdown.
 
 ## List of frameworks
 

@@ -10,41 +10,16 @@
         padding-left: 24px;
       }
     </style>
-    <script type="text/javascript">
-      function switch_css(css) {
-        document.getElementsByTagName("link")[0].href = "vendor/" + css + ".min.css";
-      }
-    </script>
+    <script src="switcher.js" type="text/javascript"></script> 
   </head>
   <body>
     <div id="top" class="page" role="document">
       <header role="banner">
         <h1>Drop-in Minimal CSS</h1>
-        <p>This page provides an overview of barebones drop-in minimal CSS boilerplate frameworks. For more information, and links to all the frameworks seen here, visit the project page on <a href="https://github.com/dohliam/dropin-minimal-css">GitHub</a>.</p>
+        <p>This page provides an overview of barebones drop-in minimal CSS boilerplate frameworks. To switch to a different stylesheet, select one of the frameworks from the dropdown menu below. For more information, and links to all the frameworks seen here, visit the project page on <a href="https://github.com/dohliam/dropin-minimal-css">GitHub</a>.</p>
 
-    <select name="somename" id="someid" accesskey='a' onchange="switch_css(this.value)">
-      <option value="bullframe">Bullframe CSS</option>
-      <option value="caiuss">Caiuss CSS</option>
-      <option value="kathamo">Kathamo CSS</option>
-      <option value="kube">Kube CSS</option>
-      <option value="lotus">Lotus CSS</option>
-      <option value="motherplate">Motherplate CSS</option>
-      <option value="milligram">Milligram CSS</option>
-      <option value="min">Min CSS</option>
-      <option value="monalisa">Monalisa CSS</option>
-      <option value="normalize">Normalize CSS</option>
-      <option value="ohmycss">Oh-my-css CSS</option>
-      <option value="pure">Pure CSS</option>
-      <option value="sanitize-10up">Sanitize CSS (10up)</option>
-      <option value="sanitize-zdroid">Sanitize CSS (ZDroid)</option>
-      <option value="siimple">Siimple CSS</option>
-      <option value="simple">Simple CSS</option>
-      <option value="skeleton">Skeleton CSS</option>
-      <option value="skeleton-framework">Skeleton-framework CSS</option>
-      <option value="skeleton-plus">Skeleton-plus CSS</option>
-      <option value="tacit">Tacit CSS</option>
-      <option value="thao">Thao CSS</option>
-    </select>
+      <div id="switcher">&nbsp;</div>
+      <script type="text/javascript">inline_switcher();</script>
 
       </header>
       <nav role="navigation">
