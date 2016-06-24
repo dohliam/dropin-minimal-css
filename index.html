@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop-in Minimal CSS</title>
+    <link rel="stylesheet" type="text/css" href="vendor/bullframe.min.css"/>
+    <style type="text/css">
+      body {
+        padding-left: 24px;
+      }
+    </style>
+    <script type="text/javascript">
+      function switch_css(css) {
+        document.getElementsByTagName("link")[0].href = "vendor/" + css + ".min.css";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="top" class="page" role="document">
+      <header role="banner">
+        <h1>Drop-in Minimal CSS</h1>
+        <p>This is a test page filled with common HTML elements to be used to provide visual feedback whilst building CSS systems and frameworks.</p>
+
+    <select name="somename" id="someid" accesskey='a' onchange="switch_css(this.value)">
+      <option value="bullframe">Bullframe CSS</option>
+      <option value="caiuss">Caiuss CSS</option>
+      <option value="kathamo">Kathamo CSS</option>
+      <option value="kube">Kube CSS</option>
+      <option value="lotus">Lotus CSS</option>
+      <option value="motherplate">Motherplate CSS</option>
+      <option value="milligram">Milligram CSS</option>
+      <option value="min">Min CSS</option>
+      <option value="monalisa">Monalisa CSS</option>
+      <option value="normalize">Normalize CSS</option>
+      <option value="ohmycss">Oh-my-css CSS</option>
+      <option value="pure">Pure CSS</option>
+      <option value="sanitize-10up">Sanitize CSS (10up)</option>
+      <option value="sanitize-zdroid">Sanitize CSS (ZDroid)</option>
+      <option value="siimple">Siimple CSS</option>
+      <option value="simple">Simple CSS</option>
+      <option value="skeleton">Skeleton CSS</option>
+      <option value="skeleton-framework">Skeleton-framework CSS</option>
+      <option value="skeleton-plus">Skeleton-plus CSS</option>
+      <option value="tacit">Tacit CSS</option>
+      <option value="thao">Thao CSS</option>
+    </select>
+
+      </header>
+      <nav role="navigation">
+        <ul>
+          <li><a href="#text">Text</a>: <a href="#text__headings">Headings</a> · <a href="#text__paragraphs">Paragraphs</a> · <a href="#text__blockquotes">Blockquotes</a> · <a href="#text__lists">Lists</a> · <a href="#text__hr">Horizontal rules</a> · <a href="#text__tables">Tabular data</a> · <a href="#text__code">Code</a> · <a href="#text__inline">Inline elements</a></li>
+          <li><a href="#embedded">Embedded content</a>: <a href="#embedded__images">Images</a> · <a href="#embedded__audio">Audio</a> · <a href="#embedded__video">Video</a> · <a href="#embedded__canvas">Canvas</a> · <a href="#embedded__meter">Meter</a> · <a href="#embedded__progress">Progress</a> · <a href="#embedded__svg">Inline SVG</a> · <a href="#embedded__iframe">IFrames</a></li>
+          <li><a href="#forms">Form elements</a>: <a href="#forms__input">Input fields</a> · <a href="#forms__select">Select menus</a> · <a href="#forms__checkbox">Checkboxes</a> · <a href="#forms__radio">Radio buttons</a> · <a href="#forms__textareas">Textareas</a> · <a href="#forms__html5">HTML5 inputs</a> · <a href="#forms__action">Action buttons</a></li>
+        </ul>
+      </nav>
+      <main role="main">
+        <section id="text">
+          <header><h1>Text</h1></header>
+          <article id="text__headings">
+            <header>
+              <h1>Headings</h1>
+            </header>
+            <div>
+              <h1>Heading 1</h1>
+              <h2>Heading 2</h2>
+              <h3>Heading 3</h3>
+              <h4>Heading 4</h4>
+              <h5>Heading 5</h5>
+              <h6>Heading 6</h6>
+            </div>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+          <article id="text__paragraphs">
+            <header><h1>Paragraphs</h1></header>
+            <div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra viverra nisl, vel maximus turpis ornare a. Ut scelerisque lectus sed odio dictum scelerisque vitae quis nisi. Nulla facilisi. Phasellus vehicula convallis nisl, id suscipit dui semper at. In eu iaculis lorem. In vehicula sed mauris et suscipit. Vivamus pellentesque non massa sit amet ornare. Integer placerat est vitae nisl molestie, eget rhoncus erat vulputate. Proin ornare massa eget bibendum faucibus.</p>
+            </div>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+          <article id="text__blockquotes">
+            <header><h1>Blockquotes</h1></header>
+            <div>
+              <blockquote>
+                <p>Etiam porttitor egestas elit, at venenatis neque accumsan eu. Nulla viverra odio nisi, quis commodo tellus tristique non. Proin ac ante at orci euismod eleifend. Quisque nisi sapien, dapibus in venenatis sit amet, posuere non purus. In sit amet metus erat. Pellentesque nec neque eleifend, luctus ipsum at, ullamcorper nunc. Pellentesque sagittis, dolor eu bibendum lacinia, orci ex bibendum risus, at tincidunt augue lacus eleifend diam. Nulla facilisis velit ut est auctor sollicitudin. Morbi eget lectus a lacus maximus molestie in ut lorem.</p>
+                <p>Vestibulum ut erat sapien. Duis eros est, tempus a rutrum eu, rhoncus at ante. Vestibulum congue vel nunc et dapibus. Ut tristique facilisis orci ac pretium. Nunc et sodales turpis. Nulla pretium augue vitae faucibus tempor. Aliquam convallis mollis feugiat. Ut non pellentesque sem. Suspendisse interdum, neque at hendrerit varius, enim neque imperdiet enim, pellentesque efficitur leo orci non erat.</p>
+                <cite><a href="#!">Said no one, ever.</a></cite>
+              </blockquote>
+            </div>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+          <article id="text__lists">
+            <header><h1>Lists</h1></header>
+            <div>
+              <h3>Definition list</h3>
+              <dl>
+                <dt>Definition List Title</dt>
+                <dd>This is a definition list division.</dd>
+              </dl>
+              <h3>Ordered List</h3>
+              <ol>
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+              </ol>
+              <h3>Unordered List</h3>
+              <ul>
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+              </ul>
+            </div>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+          <article id="text__hr">
+            <header><h1>Horizontal rules</h1></header>
+            <div>
+              <hr>
+            </div>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+          <article id="text__tables">
+            <header><h1>Tabular data</h1></header>
+            <table>
+              <caption>Table Caption</caption>
+              <thead>
+                <tr>
+                  <th>Table Heading 1</th>
+                  <th>Table Heading 2</th>
+                  <th>Table Heading 3</th>
+                  <th>Table Heading 4</th>
+                  <th>Table Heading 5</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Table Footer 1</th>
+                  <th>Table Footer 2</th>
+                  <th>Table Footer 3</th>
+                  <th>Table Footer 4</th>
+                  <th>Table Footer 5</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                <tr>
+                  <td>Table Cell 1</td>
+                  <td>Table Cell 2</td>
+                  <td>Table Cell 3</td>
+                  <td>Table Cell 4</td>
+                  <td>Table Cell 5</td>
+                </tr>
+                <tr>
+                  <td>Table Cell 1</td>
+                  <td>Table Cell 2</td>
+                  <td>Table Cell 3</td>
+                  <td>Table Cell 4</td>
+                  <td>Table Cell 5</td>
+                </tr>
+                <tr>
+                  <td>Table Cell 1</td>
+                  <td>Table Cell 2</td>
+                  <td>Table Cell 3</td>
+                  <td>Table Cell 4</td>
+                  <td>Table Cell 5</td>
+                </tr>
+                <tr>
+                  <td>Table Cell 1</td>
+                  <td>Table Cell 2</td>
+                  <td>Table Cell 3</td>
+                  <td>Table Cell 4</td>
+                  <td>Table Cell 5</td>
+                </tr>
+              </tbody>
+            </table>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+          <article id="text__code">
+            <header><h1>Code</h1></header>
+            <div>
+              <p><strong>Keyboard input:</strong> <kbd>Cmd</kbd></p>
+              <p><strong>Inline code:</strong> <code>&lt;div&gt;code&lt;/div&gt;</code></p>
+              <p><strong>Sample output:</strong> <samp>This is sample output from a computer program.</samp></p>
+              <h2>Pre-formatted text</h2>
+              <pre>  P R E F O R M A T T E D T E X T
+  ! " # $ % &amp; ' ( ) * + , - . /
+  0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+  @ A B C D E F G H I J K L M N O
+  P Q R S T U V W X Y Z [ \ ] ^ _
+  ` a b c d e f g h i j k l m n o
+  p q r s t u v w x y z { | } ~ </pre>
+            </div>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+          <article id="text__inline">
+            <header><h1>Inline elements</h1></header>
+            <div>
+              <a href="#!">This is a text link</a>.<br>
+              <strong>Strong is used to indicate strong importance.</strong><br>
+              <em>This text has added emphasis.</em><br>
+              The <b>b element</b> is stylistically different text from normal text, without any special importance.<br>
+              The <i>i element</i> is text that is offset from the normal text.<br>
+              The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation.<br>
+              <del>This text is deleted</del> and <ins>This text is inserted</ins>.<br>
+              <s>This text has a strikethrough</s>.<br>
+              Superscript<sup>®</sup>.<br>
+              Subscript for things like H<sub>2</sub>O.<br>
+              <small>This small text is small for for fine print, etc.</small><br>
+              Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr><br>
+              <q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation.</q><br>
+              <cite>This is a citation.</cite><br>
+              The <dfn>dfn element</dfn> indicates a definition.<br>
+              The <mark>mark element</mark> indicates a highlight.<br>
+              The <var>variable element</var>, such as <var>x</var> = <var>y</var>.<br>
+              The time element: <time datetime="2013-04-06T12:32+00:00">2 weeks ago</time><br>
+            </div>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+        </section>
+
+        <section id="embedded">
+          <header><h1>Embedded content</h1></header>
+          <article id="embedded__images">
+            <header><h2>Images</h2></header>
+            <div>
+              <h3>No <code>&lt;figure&gt;</code> element</h3>
+              <p><a href="https://commons.wikimedia.org/wiki/File:Colouring_pencils.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Colouring_pencils.jpg/640px-Colouring_pencils.jpg" alt="Colouring pencils by MichaelMaggs"></a></p>
+              <h3>Wrapped in a <code>&lt;figure&gt;</code> element, no <code>&lt;figcaption&gt;</code></h3>
+              <figure><a href="https://commons.wikimedia.org/wiki/File:Coloured,_textured_craft_card_edit.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Coloured%2C_textured_craft_card_edit.jpg/640px-Coloured%2C_textured_craft_card_edit.jpg" alt="Coloured, textured craft card by MichaelMaggs"></a></figure>
+              <h3>Wrapped in a <code>&lt;figure&gt;</code> element, with a <code>&lt;figcaption&gt;</code></h3>
+              <figure>
+                <a href="https://commons.wikimedia.org/wiki/File:Opening_chess_position_from_black_side.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Opening_chess_position_from_black_side.jpg/640px-Opening_chess_position_from_black_side.jpg" alt="Opening chess position from black side by MichaelMaggs"></a>
+                <figcaption>Here is a caption for this image.</figcaption>
+              </figure>
+            </div>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+          <article id="embedded__audio">
+            <header><h2>Audio</h2></header>
+            <div><audio controls="">audio</audio></div>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+          <article id="embedded__video">
+            <header><h2>Video</h2></header>
+            <div><video controls="">video</video></div>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+          <article id="embedded__canvas">
+            <header><h2>Canvas</h2></header>
+            <div><canvas>canvas</canvas></div>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+          <article id="embedded__meter">
+            <header><h2>Meter</h2></header>
+            <div><meter value="2" min="0" max="10">2 out of 10</meter></div>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+          <article id="embedded__progress">
+            <header><h2>Progress</h2></header>
+            <div><progress>progress</progress></div>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+          <article id="embedded__svg">
+            <header><h2>Inline SVG</h2></header>
+            <div><svg width="100px" height="100px"><circle cx="100" cy="100" r="100" fill="#1fa3ec"></circle></svg></div>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+          <article id="embedded__iframe">
+            <header><h2>IFrame</h2></header>
+            <div><iframe src="index.html" height="300"></iframe></div>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+        </section>
+        <section id="forms">
+          <header><h1>Form elements</h1></header>
+          <form>
+            <fieldset id="forms__input">
+              <legend>Input fields</legend>
+              <p>
+                <label for="input__text">Text Input</label>
+                <input id="input__text" type="text" placeholder="Text Input">
+              </p>
+              <p>
+                <label for="input__password">Password</label>
+                <input id="input__password" type="password" placeholder="Type your Password">
+              </p>
+              <p>
+                <label for="input__webaddress">Web Address</label>
+                <input id="input__webaddress" type="url" placeholder="http://yoursite.com">
+              </p>
+              <p>
+                <label for="input__emailaddress">Email Address</label>
+                <input id="input__emailaddress" type="email" placeholder="name@email.com">
+              </p>
+              <p>
+                <label for="input__phone">Phone Number</label>
+                <input id="input__phone" type="tel" placeholder="(999) 999-9999">
+              </p>
+              <p>
+                <label for="input__search">Search</label>
+                <input id="input__search" type="search" placeholder="Enter Search Term">
+              </p>
+              <p>
+                <label for="input__text2">Number Input</label>
+                <input id="input__text2" type="number" placeholder="Enter a Number">
+              </p>
+              <p>
+                <label for="input__text3" class="error">Error</label>
+                <input id="input__text3" class="is-error" type="text" placeholder="Text Input">
+              </p>
+              <p>
+                <label for="input__text4" class="valid">Valid</label>
+                <input id="input__text4" class="is-valid" type="text" placeholder="Text Input">
+              </p>
+            </fieldset>
+            <p><a href="#top">[Top]</a></p>
+            <fieldset id="forms__select">
+              <legend>Select menus</legend>
+              <p>
+                <label for="select">Select</label>
+                <select id="select">
+                  <optgroup label="Option Group">
+                    <option>Option One</option>
+                    <option>Option Two</option>
+                    <option>Option Three</option>
+                  </optgroup>
+                </select>
+              </p>
+            </fieldset>
+            <p><a href="#top">[Top]</a></p>
+            <fieldset id="forms__checkbox">
+              <legend>Checkboxes</legend>
+              <ul class="list list--bare">
+                <li><label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked"> Choice A</label></li>
+                <li><label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Choice B</label></li>
+                <li><label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice C</label></li>
+              </ul>
+            </fieldset>
+            <p><a href="#top">[Top]</a></p>
+            <fieldset id="forms__radio">
+              <legend>Radio buttons</legend>
+              <ul class="list list--bare">
+                <li><label for="radio1"><input id="radio1" name="radio" type="radio" class="radio" checked="checked"> Option 1</label></li>
+                <li><label for="radio2"><input id="radio2" name="radio" type="radio" class="radio"> Option 2</label></li>
+                <li><label for="radio3"><input id="radio3" name="radio" type="radio" class="radio"> Option 3</label></li>
+              </ul>
+            </fieldset>
+            <p><a href="#top">[Top]</a></p>
+            <fieldset id="forms__textareas">
+              <legend>Textareas</legend>
+              <p>
+                <label for="textarea">Textarea</label>
+                <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+              </p>
+            </fieldset>
+            <p><a href="#top">[Top]</a></p>
+            <fieldset id="forms__html5">
+              <legend>HTML5 inputs</legend>
+              <p>
+                <label for="ic">Color input</label>
+                <input type="color" id="ic" value="#000000">
+              </p>
+              <p>
+                <label for="in">Number input</label>
+                <input type="number" id="in" min="0" max="10" value="5">
+              </p>
+              <p>
+                <label for="ir">Range input</label>
+                <input type="range" id="ir" value="10">
+              </p>
+              <p>
+                <label for="idd">Date input</label>
+                <input type="date" id="idd" value="1970-01-01">
+              </p>
+              <p>
+                <label for="idm">Month input</label>
+                <input type="month" id="idm" value="1970-01">
+              </p>
+              <p>
+                <label for="idw">Week input</label>
+                <input type="week" id="idw" value="1970-W01">
+              </p>
+              <p>
+                <label for="idt">Datetime input</label>
+                <input type="datetime" id="idt" value="1970-01-01T00:00:00Z">
+              </p>
+              <p>
+                <label for="idtl">Datetime-local input</label>
+                <input type="datetime-local" id="idtl" value="1970-01-01T00:00">
+              </p>
+            </fieldset>
+            <p><a href="#top">[Top]</a></p>
+            <fieldset id="forms__action">
+              <legend>Action buttons</legend>
+              <p>
+                <input type="submit" value="<input type=submit>">
+                <input type="button" value="<input type=button>">
+                <input type="reset" value="<input type=reset>">
+                <input type="submit" value="<input disabled>" disabled>
+              </p>
+              <p>
+                <button type="submit">&lt;button type=submit&gt;</button>
+                <button type="button">&lt;button type=button&gt;</button>
+                <button type="reset">&lt;button type=reset&gt;</button>
+                <button type="button" disabled>&lt;button disabled&gt;</button>
+              </p>
+            </fieldset>
+            <p><a href="#top">[Top]</a></p>
+          </form>
+        </section>
+      </main>
+      <footer role="contentinfo">
+        <p>View this project on <a href="https://github.com/dohliam/dropin-minimal-css">GitHub</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
