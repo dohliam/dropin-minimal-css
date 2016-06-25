@@ -10,10 +10,6 @@ The switcher is fully modular, so you can easily drop it into your own pages to 
 
 To use the CSS switcher, just clone or download the project and then copy your html file into the main project folder (you can replace `index.html` if you want, since it's just the demo).
 
-If you don't already have a stylesheet defined, you'll need to add the following default stylesheet to the header of your page:
-
-        <link rel="stylesheet" type="text/css" href="vendor/bullframe.min.css"/>
-
 Include the js for the switcher in the header of the page:
 
         <script src="switcher.js" type="text/javascript"></script> 

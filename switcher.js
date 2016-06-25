@@ -1,5 +1,15 @@
 var frameworks = "bullframe,caiuss,kathamo,kube,lotus,milligram,min,monalisa,motherplate,normalize,oh-my-css,pure,sanitize-10up,sanitize-zdroid,siimple,simple,skeleton-framework,skeleton-plus,skeleton,tacit,thao";
 
+stylesheet = document.getElementsByTagName("link")[0];
+if (stylesheet == undefined) {
+  head = document.getElementsByTagName('head')[0];
+  link = document.createElement('link');
+  link.rel="stylesheet";
+  link.type="text/css";
+  link.href="vendor/bullframe.min.css";
+  head.appendChild(link);
+}
+
 function switch_css(css) {
   document.getElementsByTagName("link")[0].href = "vendor/" + css + ".min.css";
 }
