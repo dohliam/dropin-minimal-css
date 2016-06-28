@@ -3,7 +3,7 @@ var frameworks = "bullframe,caiuss,kathamo,kube,lotus,milligram,min,motherplate,
 add_switcher();
 
 function switch_css(css) {
-  document.getElementsByTagName("link")[0].href = "vendor/" + css + ".min.css";
+  document.getElementsByTagName("link")[0].href = "https://dohliam.github.io/dropin-minimal-css/vendor/" + css + ".min.css";
 }
 
 function capitalize(s) {
@@ -36,7 +36,7 @@ function add_switcher() {
     link = document.createElement('link');
     link.rel="stylesheet";
     link.type="text/css";
-    link.href="vendor/bullframe.min.css";
+    link.href="https://dohliam.github.io/dropin-minimal-css/vendor/" + frameworks.split(",")[0] + ".min.css";
     head.appendChild(link);
   }
 

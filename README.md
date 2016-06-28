@@ -1,24 +1,20 @@
 # Modular switcher for previewing drop-in minimal CSS frameworks
 
-This is a quick CSS switcher to allow for previewing some of the many minimal CSS-only frameworks out there. See the [demo](https://dohliam.github.io/dropin-minimal-css) or [drop the switcher](#Usage) into your own page to see how [different frameworks](#list-of-frameworks) would look together with your content.
+This is a quick drop-in CSS switcher to allow for previewing some of the many minimal CSS-only frameworks that are available. See the [demo](https://dohliam.github.io/dropin-minimal-css) or [drop the switcher](#Usage) into your own page to see how [different frameworks](#list-of-frameworks) would look together with your content.
 
-This project only includes "drop-in" minimal frameworks, in other words, boilerplate frameworks that require no adjustment of the corresponding HTML and can be simply dropped into the project to provide a starting point for further design. No additional javascript, compiling, pre-processors, or fiddling with classes should be required for these to look good and be responsive.
+This project only includes _minimal_ frameworks, in other words, boilerplate frameworks that require no adjustment of the corresponding HTML and can be simply dropped into the project to provide a starting point for further design. No additional javascript, compiling, pre-processors, or fiddling with classes should be required for these to look good and be responsive.
 
 ## Usage
 
-The switcher is fully modular, so you can easily drop it into your own pages to quickly preview the effect of using different CSS frameworks. You can even add your own frameworks to the list and use the dropdown menu to switch between them.
-
-To use the CSS switcher, just clone or download the project and then drop your html file into the main project folder (you can replace `index.html` if you want, since it's just a demo page).
-
-Then it's just a matter of adding the following line at the end of the document, before the closing `</body>` tag:
+To use the CSS switcher, just add the following line anywhere within the body tag on your page:
 
         <script src="switcher.js" type="text/javascript"></script> 
 
 That's it! You should now be able to cycle through the different frameworks by choosing them from the dropdown at the top of the page.
 
-## Custom frameworks
+## Adding frameworks
 
-You can easily add your own frameworks to the dropdown, or replace the default ones entirely. Just copy the minified css file for each framework into the `vendor` directory and add the framework names to the list at the top of `switcher.js`, separated by commas. They will be automatically pulled into the switcher dropdown and loaded when you select them.
+If you know of a minimal framework that hasn't been included here, by all means create an [issue](https://github.com/dohliam/dropin-minimal-css/issues) or [pull request](https://github.com/dohliam/dropin-minimal-css/pulls) so that we can add it to the list!
 
 ## List of frameworks
 
