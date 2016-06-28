@@ -1,14 +1,6 @@
-var frameworks = "bullframe,caiuss,kathamo,kube,lotus,milligram,min,monalisa,motherplate,normalize,oh-my-css,pure,sanitize-10up,sanitize-zdroid,siimple,simple,skeleton-framework,skeleton-plus,skeleton,tacit,thao";
+var frameworks = "bullframe,caiuss,kathamo,kube,lotus,milligram,min,motherplate,normalize,oh-my-css,pure,sanitize-10up,sanitize-zdroid,siimple,simple,skeleton-framework,skeleton-plus,skeleton,tacit,thao";
 
-stylesheet = document.getElementsByTagName("link")[0];
-if (stylesheet == undefined) {
-  head = document.getElementsByTagName('head')[0];
-  link = document.createElement('link');
-  link.rel="stylesheet";
-  link.type="text/css";
-  link.href="vendor/bullframe.min.css";
-  head.appendChild(link);
-}
+add_switcher();
 
 function switch_css(css) {
   document.getElementsByTagName("link")[0].href = "vendor/" + css + ".min.css";
@@ -35,4 +27,23 @@ function inline_switcher() {
   select_close = '        </select>\n      '
   dropdown = dropdown + select_close;
   switcher.innerHTML = dropdown;
+}
+
+function add_switcher() {
+  stylesheet = document.getElementsByTagName("link")[0];
+  if (stylesheet == undefined) {
+    head = document.getElementsByTagName('head')[0];
+    link = document.createElement('link');
+    link.rel="stylesheet";
+    link.type="text/css";
+    link.href="vendor/bullframe.min.css";
+    head.appendChild(link);
+  }
+
+  var new_div = document.createElement("div");
+  new_div.innerHTML = '      <div id="switcher">&nbsp;</div>\n      <script type="text/javascript">inline_switcher();</script>';
+  document.body.insertBefore(new_div, document.body.firstChild);
+  document.body.style.paddingLeft = "24px"
+
+  inline_switcher();
 }

@@ -8,18 +8,13 @@ This project only includes "drop-in" minimal frameworks, in other words, boilerp
 
 The switcher is fully modular, so you can easily drop it into your own pages to quickly preview the effect of using different CSS frameworks. You can even add your own frameworks to the list and use the dropdown menu to switch between them.
 
-To use the CSS switcher, just clone or download the project and then copy your html file into the main project folder (you can replace `index.html` if you want, since it's just the demo).
+To use the CSS switcher, just clone or download the project and then drop your html file into the main project folder (you can replace `index.html` if you want, since it's just a demo page).
 
-Include the js for the switcher in the header of the page:
+Then it's just a matter of adding the following line at the end of the document, before the closing `</body>` tag:
 
         <script src="switcher.js" type="text/javascript"></script> 
 
-Then, add the following code wherever you want the dropdown to appear:
-
-          <div id="switcher">&nbsp;</div>
-          <script type="text/javascript">inline_switcher();</script>
-
-That's it! You should now be able to cycle through the different frameworks by choosing them from the dropdown.
+That's it! You should now be able to cycle through the different frameworks by choosing them from the dropdown at the top of the page.
 
 ## Custom frameworks
 
