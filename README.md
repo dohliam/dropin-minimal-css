@@ -1,6 +1,6 @@
 # Modular switcher for previewing drop-in minimal CSS frameworks
 
-This is a quick drop-in CSS switcher to allow for previewing some of the many minimal CSS-only frameworks that are available. See the [demo](https://dohliam.github.io/dropin-minimal-css) or [drop the switcher](#Usage) into your own page to see how [different frameworks](#list-of-frameworks) would look together with your content.
+This is a quick drop-in CSS switcher to allow for previewing some of the many minimal CSS-only frameworks that are available. See the [demo](https://dohliam.github.io/dropin-minimal-css) or [drop the switcher](#usage) into your own page to see how [different frameworks](#list-of-frameworks) would look together with your content.
 
 This project only includes _minimal_ frameworks, in other words, boilerplate frameworks that require no adjustment of the corresponding HTML and can be simply dropped into the project to provide a starting point for further design. No additional javascript, compiling, pre-processors, or fiddling with classes should be required for these to look good and be responsive.
 
@@ -31,12 +31,12 @@ If you know of a minimal framework that hasn't been included here, by all means 
 * [pure](https://github.com/yahoo/pure/) by yahoo ([BSD](https://github.com/yahoo/pure/blob/master/LICENSE.md))
 * [siimple](https://github.com/siimple/siimple) by @jmjuanes ([MIT](https://github.com/siimple/siimple/blob/master/LICENSE.md))
 * [simplecss](https://github.com/neculaesei/simplecss) by @neculaesei ([MIT](http://opensource.org/licenses/mit-license.php))
-* [tacit](https://github.com/yegor256/tacit) by @yegor256 ([MIT](https://github.com/yegor256/tacit/blob/master/LICENSE))
 * [sanitize](https://github.com/10up/sanitize.css) by @10up ([PD](https://github.com/10up/sanitize.css/blob/master/LICENSE.md))
 * [sanitize](https://github.com/ZDroid/sanitize.css) by @ZDroid ([MIT](https://github.com/ZDroid/sanitize.css/blob/master/LICENSE.md))
 * [skeleton](https://github.com/dhg/Skeleton) by @dhg ([MIT](https://github.com/dhg/Skeleton/blob/master/LICENSE.md))
   * [skeleton-framework](https://github.com/skeleton-framework/skeleton-framework) by skeleton-framework ([MIT](https://github.com/skeleton-framework/skeleton-framework/blob/master/LICENSE))
   * [skeleton-plus](https://github.com/oltmannsdaniel/skeleton-plus) by @oltmannsdaniel ([MIT](https://github.com/oltmannsdaniel/skeleton-plus/blob/master/LICENSE))
+* [tacit](https://github.com/yegor256/tacit) by @yegor256 ([MIT](https://github.com/yegor256/tacit/blob/master/LICENSE))
 * [thao](https://github.com/ThaoFramework/Thao/) by Giuseppe Sanfrancesco ([Apache](http://www.apache.org/licenses/LICENSE-2.0))
 
 ## Acknowledgements
