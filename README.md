@@ -1,4 +1,4 @@
-# Modular switcher for previewing drop-in minimal CSS frameworks
+# Drop-in switcher for previewing minimal CSS frameworks
 
 This is a quick drop-in CSS switcher to allow for previewing some of the many minimal CSS-only frameworks that are available. See the [demo](https://dohliam.github.io/dropin-minimal-css) or [drop the switcher](#usage) into your own page to see how [different frameworks](#list-of-frameworks) would look together with your content.
 
