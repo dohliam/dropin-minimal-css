@@ -41,7 +41,7 @@ If you know of a minimal framework that hasn't been included here, by all means 
 
 ## Acknowledgements
 
-* Sample HTML5 markup based on [html5-kitchen-sink](https://github.com/dbox/html5-kitchen-sink) by @dbox (MIT)
+* Sample HTML5 markup based on [html5-test-page](https://github.com/cbracco/html5-test-page) by @cbracco (MIT)
 * Example images in the demo are by [MichaelMaggs](https://commons.wikimedia.org/wiki/User:MichaelMaggs) on [Wikimedia Commons](https://commons.wikimedia.org)
 * Example videos provided by the [Blender Foundation](https://peach.blender.org/) via the [HTML5-Test-Videos](https://github.com/benhosmer/HTML5-Test-Videos) project
 * Embedded audio by [John Pazdan](http://ccmixter.org/files/flatwound/14476) at [ccMixter](http://ccmixter.org/files/flatwound/14476)
