@@ -1,4 +1,4 @@
-var frameworks = "base,bullframe,bulma,cardinal,caramel,caiuss,flat-ui,html-starterkit,kathamo,kube,lotus,milligram,min,motherplate,mui,normalize,oh-my-css,papier,pavilion,picnic,pure,sanitize-10up,sanitize-zdroid,semantic-ui,siimple,simple,skeleton-framework,skeleton-plus,skeleton,tachyons,tacit,thao,wing";
+var frameworks = "base,bullframe,bulma,cardinal,caramel,caiuss,flat-ui,html-starterkit,kathamo,kube,lotus,milligram,min,motherplate,mui,normalize,oh-my-css,papier,pavilion,picnic,pure,sanitize-10up,sanitize-zdroid,semantic-ui,siimple,simple,skeleton-framework,skeleton-plus,skeleton,tacit,thao,wing";
 
 add_switcher();
 
