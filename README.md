@@ -17,10 +17,7 @@ That's it! You should now be able to cycle through the different frameworks by c
 If you know of a minimal framework that hasn't been included here, by all means create an [issue](https://github.com/dohliam/dropin-minimal-css/issues) or [pull request](https://github.com/dohliam/dropin-minimal-css/pulls) so that we can add it to the list!
 
 ## List of frameworks
-
 * [base](https://github.com/matthewhartman/base) by @matthewhartman ([MIT](https://github.com/matthewhartman/base#license))
-* [bootswatch](https://github.com/thomaspark/bootswatch/) by @thomaspark ([MIT](https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE))
-  * Including [Cerulean](https://bootswatch.com/cerulean/), [Cosmo](https://bootswatch.com/cosmo/), [Cyborg](https://bootswatch.com/cyborg/), [Darkly](https://bootswatch.com/darkly/), [Flatly](https://bootswatch.com/flatly/), [Journal](https://bootswatch.com/journal/), [Lumen](https://bootswatch.com/lumen/), [Paper](https://bootswatch.com/paper/), [Readable](https://bootswatch.com/readable/), [Sandstone](https://bootswatch.com/sandstone/), [Slate](https://bootswatch.com/slate/), [Spacelab](https://bootswatch.com/spacelab/), [Superhero](https://bootswatch.com/superhero/), and [Yeti](https://bootswatch.com/yeti/) themes
 * [bullframe](https://github.com/marcopontili/bullframe.css) by @marcopontili ([MIT](http://opensource.org/licenses/MIT))
 * [bulma](https://github.com/jgthms/bulma) by @jgthms ([MIT](https://github.com/jgthms/bulma/blob/master/LICENSE))
 * [caiuss](https://github.com/IonicaBizau/CaiuSS) by @IonicaBizau ([MIT](http://showalicense.com/?fullname=Ionic%C4%83%20Biz%C4%83u%20%3Cbizauionica%40gmail.com%3E%20(http%3A%2F%2Fionicabizau.net)&year=2015#license-mit))
@@ -53,6 +50,13 @@ If you know of a minimal framework that hasn't been included here, by all means 
 * [tacit](https://github.com/yegor256/tacit) by @yegor256 ([MIT](https://github.com/yegor256/tacit/blob/master/LICENSE))
 * [thao](https://github.com/ThaoFramework/Thao/) by Giuseppe Sanfrancesco ([Apache](http://www.apache.org/licenses/LICENSE-2.0))
 * [wing](https://github.com/KingPixil/wing/) by @KingPixil ([MIT](https://github.com/KingPixil/wing/blob/master/LICENSE))
+
+### Theme collections
+
+* [asciidoctor-skins](https://github.com/darshandsoni/asciidoctor-skins) by @darshandsoni ([MIT](https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/LICENSE))
+  * Including [Gazette](https://darshandsoni.com/asciidoctor-skins/?gazette), [Medium](https://darshandsoni.com/asciidoctor-skins/?medium), [Notebook](https://darshandsoni.com/asciidoctor-skins/?notebook), and [Tufte](https://darshandsoni.com/asciidoctor-skins/?tufte) themes
+* [bootswatch](https://github.com/thomaspark/bootswatch/) by @thomaspark ([MIT](https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE))
+  * Including [Cerulean](https://bootswatch.com/cerulean/), [Cosmo](https://bootswatch.com/cosmo/), [Cyborg](https://bootswatch.com/cyborg/), [Darkly](https://bootswatch.com/darkly/), [Flatly](https://bootswatch.com/flatly/), [Journal](https://bootswatch.com/journal/), [Lumen](https://bootswatch.com/lumen/), [Paper](https://bootswatch.com/paper/), [Readable](https://bootswatch.com/readable/), [Sandstone](https://bootswatch.com/sandstone/), [Slate](https://bootswatch.com/slate/), [Spacelab](https://bootswatch.com/spacelab/), [Superhero](https://bootswatch.com/superhero/), and [Yeti](https://bootswatch.com/yeti/) themes
 
 ## Acknowledgements
 

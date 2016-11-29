@@ -1,4 +1,4 @@
-var frameworks = "base,boot-cerulean,boot-cosmo,boot-cyborg,boot-darkly,boot-flatly,boot-journal,boot-lumen,boot-paper,boot-readable,boot-sandstone,boot-slate,boot-spacelab,boot-superhero,boot-yeti,bullframe,bulma,cardinal,caramel,caiuss,flat-ui,html-starterkit,kathamo,kube,lotus,milligram,min,motherplate,mui,normalize,oh-my-css,papier,pavilion,picnic,pure,sanitize-10up,sanitize-zdroid,semantic-ui,siimple,simple,skeleton-framework,skeleton-plus,skeleton,tacit,thao,wing";
+var frameworks = "base,bullframe,bulma,cardinal,caramel,caiuss,flat-ui,html-starterkit,kathamo,kube,lotus,milligram,min,motherplate,mui,normalize,oh-my-css,papier,pavilion,picnic,pure,sanitize-10up,sanitize-zdroid,semantic-ui,siimple,simple,skeleton-framework,skeleton-plus,skeleton,tacit,thao,wing,ads-gazette,ads-medium,ads-notebook,ads-tufte,boot-cerulean,boot-cosmo,boot-cyborg,boot-darkly,boot-flatly,boot-journal,boot-lumen,boot-paper,boot-readable,boot-sandstone,boot-slate,boot-spacelab,boot-superhero,boot-yeti";
 
 add_switcher();
 
