@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drop-in Minimal CSS</title>
+    <style type="text/css">
+      body {
+        padding-left: 24px;
+      }
+    </style>
   </head>
   <body>
     <div id="top" class="page" role="document">
@@ -20,11 +25,9 @@
       </nav>
       <main role="main">
         <section id="text">
-          <header><h1>Text</h1></header>
+          <h1>Text</h1>
           <article id="text__headings">
-            <header>
               <h1>Headings</h1>
-            </header>
             <div>
               <h1>Heading 1</h1>
               <h2>Heading 2</h2>
@@ -36,25 +39,25 @@
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>
           <article id="text__paragraphs">
-            <header><h1>Paragraphs</h1></header>
+            <h1>Paragraphs</h1>
             <div>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra viverra nisl, vel maximus turpis ornare a. Ut scelerisque lectus sed odio dictum scelerisque vitae quis nisi. Nulla facilisi. Phasellus vehicula convallis nisl, id suscipit dui semper at. In eu iaculis lorem. In vehicula sed mauris et suscipit. Vivamus pellentesque non massa sit amet ornare. Integer placerat est vitae nisl molestie, eget rhoncus erat vulputate. Proin ornare massa eget bibendum faucibus.</p>
             </div>
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>
           <article id="text__blockquotes">
-            <header><h1>Blockquotes</h1></header>
+            <h1>Blockquotes</h1>
             <div>
               <blockquote>
                 <p>Etiam porttitor egestas elit, at venenatis neque accumsan eu. Nulla viverra odio nisi, quis commodo tellus tristique non. Proin ac ante at orci euismod eleifend. Quisque nisi sapien, dapibus in venenatis sit amet, posuere non purus. In sit amet metus erat. Pellentesque nec neque eleifend, luctus ipsum at, ullamcorper nunc. Pellentesque sagittis, dolor eu bibendum lacinia, orci ex bibendum risus, at tincidunt augue lacus eleifend diam. Nulla facilisis velit ut est auctor sollicitudin. Morbi eget lectus a lacus maximus molestie in ut lorem.</p>
                 <p>Vestibulum ut erat sapien. Duis eros est, tempus a rutrum eu, rhoncus at ante. Vestibulum congue vel nunc et dapibus. Ut tristique facilisis orci ac pretium. Nunc et sodales turpis. Nulla pretium augue vitae faucibus tempor. Aliquam convallis mollis feugiat. Ut non pellentesque sem. Suspendisse interdum, neque at hendrerit varius, enim neque imperdiet enim, pellentesque efficitur leo orci non erat.</p>
-                <cite><a href="#!">Said no one, ever.</a></cite>
+                <cite>Said no one, ever.</cite>
               </blockquote>
             </div>
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>
           <article id="text__lists">
-            <header><h1>Lists</h1></header>
+            <h1>Lists</h1>
             <div>
               <h3>Definition list</h3>
               <dl>
@@ -77,14 +80,14 @@
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>
           <article id="text__hr">
-            <header><h1>Horizontal rules</h1></header>
+            <h1>Horizontal rules</h1>
             <div>
               <hr>
             </div>
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>
           <article id="text__tables">
-            <header><h1>Tabular data</h1></header>
+            <h1>Tabular data</h1>
             <table>
               <caption>Table Caption</caption>
               <thead>
@@ -139,7 +142,7 @@
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>
           <article id="text__code">
-            <header><h1>Code</h1></header>
+            <h1>Code</h1>
             <div>
               <p><strong>Keyboard input:</strong> <kbd>Cmd</kbd></p>
               <p><strong>Inline code:</strong> <code>&lt;div&gt;code&lt;/div&gt;</code></p>
@@ -156,7 +159,7 @@
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>
           <article id="text__inline">
-            <header><h1>Inline elements</h1></header>
+            <h1>Inline elements</h1>
             <div>
               <a href="#!">This is a text link</a>.<br>
               <strong>Strong is used to indicate strong importance.</strong><br>
@@ -182,9 +185,9 @@
         </section>
 
         <section id="embedded">
-          <header><h1>Embedded content</h1></header>
+          <h1>Embedded content</h1>
           <article id="embedded__images">
-            <header><h2>Images</h2></header>
+            <h2>Images</h2>
             <div>
               <h3>No <code>&lt;figure&gt;</code> element</h3>
               <p><a href="https://commons.wikimedia.org/wiki/File:Colouring_pencils.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Colouring_pencils.jpg/640px-Colouring_pencils.jpg" alt="Colouring pencils by MichaelMaggs"></a></p>
@@ -199,7 +202,7 @@
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>
           <article id="embedded__audio">
-            <header><h2>Audio</h2></header>
+            <h2>Audio</h2>
             <div>
               <audio controls>
                 <source src="http://ccmixter.org/content/flatwound/flatwound_-_The_Long_Goodbye.mp3">
@@ -208,7 +211,7 @@
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>
           <article id="embedded__video">
-            <header><h2>Video</h2></header>
+            <h2>Video</h2>
             <div>
               <video controls>
                 <source src="https://github.com/benhosmer/HTML5-Test-Videos/blob/master/big_buck_bunny.mp4?raw=true" type="video/mp4">
@@ -218,33 +221,33 @@
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>
           <article id="embedded__canvas">
-            <header><h2>Canvas</h2></header>
+            <h2>Canvas</h2>
             <div><canvas>canvas</canvas></div>
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>
           <article id="embedded__meter">
-            <header><h2>Meter</h2></header>
+            <h2>Meter</h2>
             <div><meter value="2" min="0" max="10">2 out of 10</meter></div>
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>
           <article id="embedded__progress">
-            <header><h2>Progress</h2></header>
+            <h2>Progress</h2>
             <div><progress>progress</progress></div>
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>
           <article id="embedded__svg">
-            <header><h2>Inline SVG</h2></header>
+            <h2>Inline SVG</h2>
             <div><svg width="100px" height="100px"><circle cx="100" cy="100" r="100" fill="#1fa3ec"></circle></svg></div>
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>
           <article id="embedded__iframe">
-            <header><h2>IFrame</h2></header>
+            <h2>IFrame</h2>
             <div><iframe src="index.html" height="300"></iframe></div>
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>
         </section>
         <section id="forms">
-          <header><h1>Form elements</h1></header>
+          <h1>Form elements</h1>
           <form>
             <fieldset id="forms__input">
               <legend>Input fields</legend>
