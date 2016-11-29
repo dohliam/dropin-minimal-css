@@ -19,6 +19,8 @@ If you know of a minimal framework that hasn't been included here, by all means 
 ## List of frameworks
 
 * [base](https://github.com/matthewhartman/base) by @matthewhartman ([MIT](https://github.com/matthewhartman/base#license))
+* [bootswatch](https://github.com/thomaspark/bootswatch/) by @thomaspark ([MIT](https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE))
+  * Including [Cerulean](https://bootswatch.com/cerulean/), [Cosmo](https://bootswatch.com/cosmo/), [Cyborg](https://bootswatch.com/cyborg/), [Darkly](https://bootswatch.com/darkly/), [Flatly](https://bootswatch.com/flatly/), [Journal](https://bootswatch.com/journal/), [Lumen](https://bootswatch.com/lumen/), [Paper](https://bootswatch.com/paper/), [Readable](https://bootswatch.com/readable/), [Sandstone](https://bootswatch.com/sandstone/), [Slate](https://bootswatch.com/slate/), [Spacelab](https://bootswatch.com/spacelab/), [Superhero](https://bootswatch.com/superhero/), and [Yeti](https://bootswatch.com/yeti/) themes
 * [bullframe](https://github.com/marcopontili/bullframe.css) by @marcopontili ([MIT](http://opensource.org/licenses/MIT))
 * [bulma](https://github.com/jgthms/bulma) by @jgthms ([MIT](https://github.com/jgthms/bulma/blob/master/LICENSE))
 * [caiuss](https://github.com/IonicaBizau/CaiuSS) by @IonicaBizau ([MIT](http://showalicense.com/?fullname=Ionic%C4%83%20Biz%C4%83u%20%3Cbizauionica%40gmail.com%3E%20(http%3A%2F%2Fionicabizau.net)&year=2015#license-mit))
@@ -26,10 +28,10 @@ If you know of a minimal framework that hasn't been included here, by all means 
 * [cardinal](https://github.com/cardinalcss/cardinalcss) by @cbracco ([MIT](https://github.com/cardinalcss/cardinalcss/blob/master/LICENSE.md))
 * [flat-ui](https://github.com/designmodo/Flat-UI) by Designmodo ([CC BY & MIT](https://github.com/designmodo/Flat-UI#copyright-and-license))
 * [html-starterkit](https://github.com/zitrusfrisch/HTML-StarterKit) by @zitrusfrisch ([MIT](https://github.com/zitrusfrisch/HTML-StarterKit#its-free))
-* [kathamo](https://github.com/kathamo/Kathamo) by debashisbarman ([MIT](https://github.com/kathamo/Kathamo/blob/master/LICENSE))
+* [kathamo](https://github.com/kathamo/Kathamo) by @debashisbarman ([MIT](https://github.com/kathamo/Kathamo/blob/master/LICENSE))
 * [kraken](https://github.com/cferdinandi/kraken) by @cferdinandi ([MIT](https://github.com/cferdinandi/kraken/blob/master/LICENSE.md))
 * [kube](https://github.com/imperavi/kube) by @imperavi ([MIT](https://github.com/imperavi/kube/blob/master/LICENSE))
-* [lotus](https://github.com/goatslacker/lotus.css) by goatslacker (MIT)
+* [lotus](https://github.com/goatslacker/lotus.css) by @goatslacker (MIT)
 * [milligram](https://github.com/milligram/milligram) by @cjpatoilo ([MIT](http://cjpatoilo.mit-license.org/))
 * [min](https://github.com/owenversteeg/min) by @owenversteeg (MIT)
 * [motherplate](https://github.com/leemunroe/motherplate) by @leemunroe ([MIT](https://github.com/leemunroe/motherplate/blob/master/LICENSE))
@@ -39,7 +41,7 @@ If you know of a minimal framework that hasn't been included here, by all means 
 * [papier](https://github.com/alexanderGugel/papier) by @baasdesign ([MIT](https://github.com/alexanderGugel/papier/blob/master/LICENSE.md))
 * [pavilion](https://github.com/getpavilion/pavilion) by @baasdesign ([MIT](https://github.com/getpavilion/pavilion/blob/master/license))
 * [picnic](https://github.com/picnicss/picnic) by @FranciscoP ([MIT](https://github.com/picnicss/picnic/blob/master/LICENSE))
-* [pure](https://github.com/yahoo/pure/) by yahoo ([BSD](https://github.com/yahoo/pure/blob/master/LICENSE.md))
+* [pure](https://github.com/yahoo/pure/) by @yahoo ([BSD](https://github.com/yahoo/pure/blob/master/LICENSE.md))
 * [sanitize](https://github.com/10up/sanitize.css) by @10up ([PD](https://github.com/10up/sanitize.css/blob/master/LICENSE.md))
 * [sanitize](https://github.com/ZDroid/sanitize.css) by @ZDroid ([MIT](https://github.com/ZDroid/sanitize.css/blob/master/LICENSE.md))
 * [semantic-ui](https://github.com/semantic-org/semantic-ui) by Semantic-Org ([MIT](https://github.com/Semantic-Org/Semantic-UI/blob/master/LICENSE.md))
