@@ -17,6 +17,7 @@ That's it! You should now be able to cycle through the different frameworks by c
 If you know of a minimal framework that hasn't been included here, by all means create an [issue](https://github.com/dohliam/dropin-minimal-css/issues) or [pull request](https://github.com/dohliam/dropin-minimal-css/pulls) so that we can add it to the list!
 
 ## List of frameworks
+* [awsm](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
 * [base](https://github.com/matthewhartman/base) by @matthewhartman ([MIT](https://github.com/matthewhartman/base#license))
 * [bullframe](https://github.com/marcopontili/bullframe.css) by @marcopontili ([MIT](http://opensource.org/licenses/MIT))
 * [bulma](https://github.com/jgthms/bulma) by @jgthms ([MIT](https://github.com/jgthms/bulma/blob/master/LICENSE))
@@ -28,9 +29,11 @@ If you know of a minimal framework that hasn't been included here, by all means 
 * [kathamo](https://github.com/kathamo/Kathamo) by @debashisbarman ([MIT](https://github.com/kathamo/Kathamo/blob/master/LICENSE))
 * [kraken](https://github.com/cferdinandi/kraken) by @cferdinandi ([MIT](https://github.com/cferdinandi/kraken/blob/master/LICENSE.md))
 * [kube](https://github.com/imperavi/kube) by @imperavi ([MIT](https://github.com/imperavi/kube/blob/master/LICENSE))
-* [lotus](https://github.com/goatslacker/lotus.css) by @goatslacker (MIT)
+* [lotus](https://github.com/goatslacker/lotus.css) by @goatslacker ([MIT](https://github.com/goatslacker/lotus.css#license))
+* [markdown-css](https://github.com/mrcoles/markdown-css) by @mrcoles ([MIT](https://github.com/mrcoles/markdown-css/blob/master/license.txt))
 * [milligram](https://github.com/milligram/milligram) by @cjpatoilo ([MIT](http://cjpatoilo.mit-license.org/))
-* [min](https://github.com/owenversteeg/min) by @owenversteeg (MIT)
+* [min](https://github.com/owenversteeg/min) by @owenversteeg ([MIT](https://github.com/owenversteeg/min#license))
+* [mini](https://github.com/Chalarangelo/mini.css) by @Chalarangelo ([MIT](https://github.com/Chalarangelo/mini.css/blob/master/LICENSE))
 * [motherplate](https://github.com/leemunroe/motherplate) by @leemunroe ([MIT](https://github.com/leemunroe/motherplate/blob/master/LICENSE))
 * [mui](https://github.com/muicss/mui) by @amorey ([MIT](https://github.com/muicss/mui/blob/master/LICENSE.txt))
 * [normalize](https://github.com/necolas/normalize.css) by @necolas ([MIT](https://github.com/necolas/normalize.css/blob/master/LICENSE.md))
