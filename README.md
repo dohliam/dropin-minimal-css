@@ -50,6 +50,7 @@ If you know of a minimal framework that hasn't been included here, by all means 
 * [skeleton](https://github.com/dhg/Skeleton) by @dhg ([MIT](https://github.com/dhg/Skeleton/blob/master/LICENSE.md))
   * [skeleton-framework](https://github.com/skeleton-framework/skeleton-framework) by skeleton-framework ([MIT](https://github.com/skeleton-framework/skeleton-framework/blob/master/LICENSE))
   * [skeleton-plus](https://github.com/oltmannsdaniel/skeleton-plus) by @oltmannsdaniel ([MIT](https://github.com/oltmannsdaniel/skeleton-plus/blob/master/LICENSE))
+* [spectre](https://github.com/picturepan2/spectre) by @picturepan2 ([MIT](https://github.com/picturepan2/spectre/blob/master/LICENSE))
 * [tacit](https://github.com/yegor256/tacit) by @yegor256 ([MIT](https://github.com/yegor256/tacit/blob/master/LICENSE))
 * [thao](https://github.com/ThaoFramework/Thao/) by Giuseppe Sanfrancesco ([Apache](http://www.apache.org/licenses/LICENSE-2.0))
 * [vital](https://github.com/doximity/vital) by @doximity ([Apache](https://github.com/doximity/vital/blob/master/LICENSE.md))
