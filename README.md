@@ -55,6 +55,7 @@ If you know of a minimal framework that hasn't been included here, by all means 
 * [spectre](https://github.com/picturepan2/spectre) by @picturepan2 ([MIT](https://github.com/picturepan2/spectre/blob/master/LICENSE))
 * [tachyons](https://github.com/tachyons-css/tachyons/) by tachyons-css ([MIT](https://github.com/tachyons-css/tachyons/blob/master/license))
 * [tacit](https://github.com/yegor256/tacit) by @yegor256 ([MIT](https://github.com/yegor256/tacit/blob/master/LICENSE))
+* [tent](https://github.com/sitetent/tentcss) by @ulinaaron ([MIT](https://github.com/sitetent/tentcss/blob/master/LICENSE))
 * [thao](https://github.com/ThaoFramework/Thao/) by Giuseppe Sanfrancesco ([Apache](http://www.apache.org/licenses/LICENSE-2.0))
 * [vital](https://github.com/doximity/vital) by @doximity ([Apache](https://github.com/doximity/vital/blob/master/LICENSE.md))
 * [wing](https://github.com/KingPixil/wing/) by @KingPixil ([MIT](https://github.com/KingPixil/wing/blob/master/LICENSE))
