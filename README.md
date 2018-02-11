@@ -61,6 +61,7 @@ If you know of a minimal framework that hasn't been included here, by all means 
 * [mui](https://github.com/muicss/mui) by @amorey ([MIT](https://github.com/muicss/mui/blob/master/LICENSE.txt))
 * [normalize](https://github.com/necolas/normalize.css) by @necolas ([MIT](https://github.com/necolas/normalize.css/blob/master/LICENSE.md))
 * [oh-my-css](https://github.com/egoist/oh-my-css) by @egoist ([MIT](https://github.com/egoist/oh-my-css/blob/gh-pages/LICENSE))
+* [paper](https://github.com/papercss/papercss) by @rhyneav ([ISC](https://github.com/papercss/papercss/blob/master/license))
 * [papier](https://github.com/alexanderGugel/papier) by @baasdesign ([MIT](https://github.com/alexanderGugel/papier/blob/master/LICENSE.md))
 * [pavilion](https://github.com/getpavilion/pavilion) by @baasdesign ([MIT](https://github.com/getpavilion/pavilion/blob/master/license))
 * [picnic](https://github.com/picnicss/picnic) by @FranciscoP ([MIT](https://github.com/picnicss/picnic/blob/master/LICENSE))
