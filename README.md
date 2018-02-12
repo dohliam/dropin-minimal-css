@@ -48,6 +48,7 @@ If you know of a minimal framework that hasn't been included here, by all means 
 * [flat-ui](https://github.com/designmodo/Flat-UI) by Designmodo ([CC BY & MIT](https://github.com/designmodo/Flat-UI#copyright-and-license))
 * [fluidity](https://github.com/mrmrs/fluidity) by @mrmrs ([MIT](https://github.com/mrmrs/fluidity/blob/master/README.md))
 * [furtive](https://github.com/johnotander/furtive) by @johnotander ([MIT](https://github.com/johnotander/furtive/blob/master/LICENSE))
+* [generic](https://github.com/Vereis/generic.css) by @Vereis ([MIT](https://github.com/Vereis/generic.css))
 * [hack](https://github.com/egoist/hack) by @egoist ([MIT](https://github.com/egoist/hack/blob/master/LICENSE))
 * [html-starterkit](https://github.com/zitrusfrisch/HTML-StarterKit) by @zitrusfrisch ([MIT](https://github.com/zitrusfrisch/HTML-StarterKit#its-free))
 * [kathamo](https://github.com/kathamo/Kathamo) by @debashisbarman ([MIT](https://github.com/kathamo/Kathamo/blob/master/LICENSE))
