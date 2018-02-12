@@ -46,6 +46,7 @@ If you know of a minimal framework that hasn't been included here, by all means 
 * [clmaterial](https://github.com/24aitor/CLMaterial) by @24aitor ([MIT](https://github.com/24aitor/CLMaterial/blob/master/LICENSE))
 * [concise](https://github.com/ConciseCSS/concise.css) by ConciseCSS ([MIT](https://github.com/ConciseCSS/concise.css/blob/master/LICENSE))
 * [flat-ui](https://github.com/designmodo/Flat-UI) by Designmodo ([CC BY & MIT](https://github.com/designmodo/Flat-UI#copyright-and-license))
+* [fluidity](https://github.com/mrmrs/fluidity) by @mrmrs ([MIT](https://github.com/mrmrs/fluidity/blob/master/README.md))
 * [furtive](https://github.com/johnotander/furtive) by @johnotander ([MIT](https://github.com/johnotander/furtive/blob/master/LICENSE))
 * [hack](https://github.com/egoist/hack) by @egoist ([MIT](https://github.com/egoist/hack/blob/master/LICENSE))
 * [html-starterkit](https://github.com/zitrusfrisch/HTML-StarterKit) by @zitrusfrisch ([MIT](https://github.com/zitrusfrisch/HTML-StarterKit#its-free))
