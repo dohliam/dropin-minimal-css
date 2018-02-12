@@ -89,6 +89,7 @@ If you know of a minimal framework that hasn't been included here, by all means 
 * [thao](https://github.com/ThaoFramework/Thao/) by Giuseppe Sanfrancesco ([Apache](http://www.apache.org/licenses/LICENSE-2.0))
 * [vital](https://github.com/doximity/vital) by @doximity ([Apache](https://github.com/doximity/vital/blob/master/LICENSE.md))
 * [wing](https://github.com/KingPixil/wing/) by @KingPixil ([MIT](https://github.com/KingPixil/wing/blob/master/LICENSE))
+* [writ](https://github.com/programble/writ) by @programble ([ISC](https://github.com/programble/writ/blob/master/LICENSE))
 
 ### Theme collections
 
