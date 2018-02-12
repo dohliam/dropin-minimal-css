@@ -36,6 +36,7 @@ If you know of a minimal framework that hasn't been included here, by all means 
 ### List of frameworks
 
 * [awsm](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
+* [bare](https://github.com/longsien/BareCSS) by @longsien ([MIT](https://github.com/longsien/BareCSS/blob/master/LICENSE))
 * [base](https://github.com/matthewhartman/base) by @matthewhartman ([MIT](https://github.com/matthewhartman/base#license))
 * [bullframe](https://github.com/marcopontili/bullframe.css) by @marcopontili ([MIT](http://opensource.org/licenses/MIT))
 * [bulma](https://github.com/jgthms/bulma) by @jgthms ([MIT](https://github.com/jgthms/bulma/blob/master/LICENSE))
