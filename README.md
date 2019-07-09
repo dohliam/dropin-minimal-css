@@ -59,6 +59,7 @@ If you know of a minimal framework that hasn't been included here, by all means 
 * [lotus](https://github.com/goatslacker/lotus.css) by @goatslacker ([MIT](https://github.com/goatslacker/lotus.css#license))
 * [markdown-css](https://github.com/mrcoles/markdown-css) by @mrcoles ([MIT](https://github.com/mrcoles/markdown-css/blob/master/license.txt))
 * [marx](https://github.com/mblode/marx) by @mblode ([MIT](https://github.com/mblode/marx/blob/master/LICENSE.md))
+* [materialize](https://github.com/Dogfalo/materialize) by @Dogfalo ([MIT](https://github.com/Dogfalo/materialize/blob/v1-dev/LICENSE))
 * [mercury](https://github.com/wmeredith/MercuryCSS) by @wmeredith ([MIT](https://github.com/wmeredith/MercuryCSS/blob/master/LICENSE))
 * [milligram](https://github.com/milligram/milligram) by @cjpatoilo ([MIT](http://cjpatoilo.mit-license.org/))
 * [min](https://github.com/owenversteeg/min) by @owenversteeg ([MIT](https://github.com/owenversteeg/min#license))
