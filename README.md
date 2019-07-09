@@ -71,6 +71,7 @@ If you know of a minimal framework that hasn't been included here, by all means 
 * [papier](https://github.com/alexanderGugel/papier) by @baasdesign ([MIT](https://github.com/alexanderGugel/papier/blob/master/LICENSE.md))
 * [pavilion](https://github.com/getpavilion/pavilion) by @baasdesign ([MIT](https://github.com/getpavilion/pavilion/blob/master/license))
 * [picnic](https://github.com/picnicss/picnic) by @FranciscoP ([MIT](https://github.com/picnicss/picnic/blob/master/LICENSE))
+* [primer](https://github.com/primer/css) by GitHub Inc. ([MIT](https://github.com/primer/css/blob/master/LICENSE))
 * [pure](https://github.com/yahoo/pure/) by @yahoo ([BSD](https://github.com/yahoo/pure/blob/master/LICENSE.md))
 * [sakura](https://github.com/oxalorg/sakura) by @oxalorg ([MIT](https://github.com/oxalorg/sakura/blob/master/LICENSE.txt))
 * [sanitize](https://github.com/10up/sanitize.css) by @10up ([PD](https://github.com/10up/sanitize.css/blob/master/LICENSE.md))
