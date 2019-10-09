@@ -36,6 +36,7 @@ If you know of a minimal framework that hasn't been included here, by all means 
 ### List of frameworks
 
 * [awsm](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
+* [bahunya](https://github.com/Kimeiga/bahunya) by @Kimeiga ([MIT](https://github.com/Kimeiga/bahunya/blob/master/LICENSE))
 * [bare](https://github.com/longsien/BareCSS) by @longsien ([MIT](https://github.com/longsien/BareCSS/blob/master/LICENSE))
 * [base](https://github.com/matthewhartman/base) by @matthewhartman ([MIT](https://github.com/matthewhartman/base#license))
 * [bullframe](https://github.com/marcopontili/bullframe.css) by @marcopontili ([MIT](http://opensource.org/licenses/MIT))
@@ -67,6 +68,7 @@ If you know of a minimal framework that hasn't been included here, by all means 
 * [mobi](https://github.com/mobi-css/mobi.css) by @xcatliu ([MIT](https://github.com/mobi-css/mobi.css/blob/master/LICENSE)
 * [motherplate](https://github.com/leemunroe/motherplate) by @leemunroe ([MIT](https://github.com/leemunroe/motherplate/blob/master/LICENSE))
 * [mui](https://github.com/muicss/mui) by @amorey ([MIT](https://github.com/muicss/mui/blob/master/LICENSE.txt))
+* [no-class](https://github.com/davidpaulsson/no-class) by @davidpaulsson ([MIT](https://github.com/davidpaulsson/no-class/blob/master/LICENSE.txt))
 * [normalize](https://github.com/necolas/normalize.css) by @necolas ([MIT](https://github.com/necolas/normalize.css/blob/master/LICENSE.md))
 * [oh-my-css](https://github.com/egoist/oh-my-css) by @egoist ([MIT](https://github.com/egoist/oh-my-css/blob/gh-pages/LICENSE))
 * [paper](https://github.com/papercss/papercss) by @rhyneav ([ISC](https://github.com/papercss/papercss/blob/master/license))
@@ -91,7 +93,10 @@ If you know of a minimal framework that hasn't been included here, by all means 
 * [tacit](https://github.com/yegor256/tacit) by @yegor256 ([MIT](https://github.com/yegor256/tacit/blob/master/LICENSE))
 * [tent](https://github.com/sitetent/tentcss) by @ulinaaron ([MIT](https://github.com/sitetent/tentcss/blob/master/LICENSE))
 * [thao](https://github.com/ThaoFramework/Thao/) by Giuseppe Sanfrancesco ([Apache](http://www.apache.org/licenses/LICENSE-2.0))
+* [vanilla](https://github.com/bradleytaunt/vanilla-css) by @bradleytaunt ([MIT](https://github.com/bradleytaunt/vanilla-css/blob/master/LICENSE))
 * [vital](https://github.com/doximity/vital) by @doximity ([Apache](https://github.com/doximity/vital/blob/master/LICENSE.md))
+* [water](https://github.com/kognise/water.css) by @kognise ([MIT](https://github.com/kognise/water.css/blob/master/LICENSE.md))
+  * comes in "light" and "dark" variants
 * [wing](https://github.com/KingPixil/wing/) by @KingPixil ([MIT](https://github.com/KingPixil/wing/blob/master/LICENSE))
 * [writ](https://github.com/programble/writ) by @programble ([ISC](https://github.com/programble/writ/blob/master/LICENSE))
 
