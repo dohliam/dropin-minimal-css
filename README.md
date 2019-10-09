@@ -96,7 +96,6 @@ If you know of a minimal framework that hasn't been included here, by all means 
 * [vanilla](https://github.com/bradleytaunt/vanilla-css) by @bradleytaunt ([MIT](https://github.com/bradleytaunt/vanilla-css/blob/master/LICENSE))
 * [vital](https://github.com/doximity/vital) by @doximity ([Apache](https://github.com/doximity/vital/blob/master/LICENSE.md))
 * [water](https://github.com/kognise/water.css) by @kognise ([MIT](https://github.com/kognise/water.css/blob/master/LICENSE.md))
-  * comes in "light" and "dark" variants
 * [wing](https://github.com/KingPixil/wing/) by @KingPixil ([MIT](https://github.com/KingPixil/wing/blob/master/LICENSE))
 * [writ](https://github.com/programble/writ) by @programble ([ISC](https://github.com/programble/writ/blob/master/LICENSE))
 
