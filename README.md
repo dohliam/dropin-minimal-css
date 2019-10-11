@@ -108,9 +108,10 @@ If you know of a minimal framework that hasn't been included here, by all means 
 * [bootswatch](https://github.com/thomaspark/bootswatch/) by @thomaspark ([MIT](https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE))
   * Including [Cerulean](https://bootswatch.com/cerulean/), [Cosmo](https://bootswatch.com/cosmo/), [Cyborg](https://bootswatch.com/cyborg/), [Darkly](https://bootswatch.com/darkly/), [Flatly](https://bootswatch.com/flatly/), [Journal](https://bootswatch.com/journal/), [Lumen](https://bootswatch.com/lumen/), [Paper](https://bootswatch.com/paper/), [Readable](https://bootswatch.com/readable/), [Sandstone](https://bootswatch.com/sandstone/), [Slate](https://bootswatch.com/slate/), [Spacelab](https://bootswatch.com/spacelab/), [Superhero](https://bootswatch.com/superhero/), and [Yeti](https://bootswatch.com/yeti/) themes
 * [markdowncss](https://github.com/markdowncss) by @johnotander:
-  * [Splendor](https://github.com/markdowncss/splendor) ([MIT](https://github.com/markdowncss/splendor/blob/master/LICENSE))
-  * [Modest](https://github.com/markdowncss/modest) ([MIT](https://github.com/markdowncss/modest/blob/master/LICENSE))
   * [Air](https://github.com/markdowncss/air) ([MIT](https://github.com/markdowncss/air/blob/master/LICENSE))
+  * [Modest](https://github.com/markdowncss/modest) ([MIT](https://github.com/markdowncss/modest/blob/master/LICENSE))
+  * [Retro](https://github.com/markdowncss/retro) ([MIT](https://github.com/markdowncss/retro/blob/master/LICENSE))
+  * [Splendor](https://github.com/markdowncss/splendor) ([MIT](https://github.com/markdowncss/splendor/blob/master/LICENSE))
 
 ## Bookmarklet
 
