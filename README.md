@@ -57,6 +57,7 @@ If you know of a minimal framework that hasn't been included here, by all means 
 * [kathamo](https://github.com/kathamo/Kathamo) by @debashisbarman ([MIT](https://github.com/kathamo/Kathamo/blob/master/LICENSE))
 * [kraken](https://github.com/cferdinandi/kraken) by @cferdinandi ([MIT](https://github.com/cferdinandi/kraken/blob/master/LICENSE.md))
 * [kube](https://github.com/imperavi/kube) by @imperavi ([MIT](https://github.com/imperavi/kube/blob/master/LICENSE))
+* [latex](https://github.com/davidrzs/latexcss) by @davidrzs ([MIT](https://github.com/davidrzs/latexcss/blob/master/LICENSE))
 * [lit](https://github.com/Ajusa/lit) by @Ajusa ([MIT](https://github.com/Ajusa/lit/blob/master/LICENSE))
 * [lotus](https://github.com/goatslacker/lotus.css) by @goatslacker ([MIT](https://github.com/goatslacker/lotus.css#license))
 * [markdown-css](https://github.com/mrcoles/markdown-css) by @mrcoles ([MIT](https://github.com/mrcoles/markdown-css/blob/master/license.txt))
