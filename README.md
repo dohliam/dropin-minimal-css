@@ -69,6 +69,7 @@ If you know of a minimal framework that hasn't been included here, by all means 
 * [mini](https://github.com/Chalarangelo/mini.css) by @Chalarangelo ([MIT](https://github.com/Chalarangelo/mini.css/blob/master/LICENSE))
 * [mobi](https://github.com/mobi-css/mobi.css) by @xcatliu ([MIT](https://github.com/mobi-css/mobi.css/blob/master/LICENSE)
 * [motherplate](https://github.com/leemunroe/motherplate) by @leemunroe ([MIT](https://github.com/leemunroe/motherplate/blob/master/LICENSE))
+* [mu](https://github.com/BafS/mu) by @BafS ([MIT](https://github.com/BafS/mu/blob/gh-pages/LICENSE))
 * [mui](https://github.com/muicss/mui) by @amorey ([MIT](https://github.com/muicss/mui/blob/master/LICENSE.txt))
 * [no-class](https://github.com/davidpaulsson/no-class) by @davidpaulsson ([MIT](https://github.com/davidpaulsson/no-class/blob/master/LICENSE.txt))
 * [normalize](https://github.com/necolas/normalize.css) by @necolas ([MIT](https://github.com/necolas/normalize.css/blob/master/LICENSE.md))
