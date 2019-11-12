@@ -9,8 +9,31 @@
         padding-left: 24px;
       }
     </style>
+    <script type="text/javascript">
+      function quick_api() {
+        var geturl = location.href;
+        if (/\?/.test(geturl) == true) {
+          css = /\?([a-z\-_0-9]+)/.exec(geturl)[1];
+          head = document.getElementsByTagName('head')[0];
+          link = document.createElement('link');
+          link.rel="stylesheet";
+          link.type="text/css";
+          link.href="vendor/" + css + ".min.css";
+          head.appendChild(link);
+          window.id_store = css;
+        }
+      }
+      function update_switcher() {
+        css_id = window.id_store;
+        if (css_id) {
+          switcher = window.switcher_dropdown;
+          switcher.value = css_id;
+        }
+      }
+      quick_api();
+    </script>
   </head>
-  <body>
+  <body onload="update_switcher()">
     <div id="top" class="page" role="document">
       <header role="banner">
         <h1>Drop-in Minimal CSS</h1>
