@@ -123,6 +123,14 @@ If you know of a minimal framework that hasn't been included here, by all means 
   * [Retro](https://github.com/markdowncss/retro) ([MIT](https://github.com/markdowncss/retro/blob/master/LICENSE))
   * [Splendor](https://github.com/markdowncss/splendor) ([MIT](https://github.com/markdowncss/splendor/blob/master/LICENSE))
 
+## API
+
+There is a simple API available to allow linking to particular stylesheets on the demo page. For example:
+
+https://dohliam.github.io/dropin-minimal-css/?sakura
+
+The above links directly to the demo with [Sakura CSS](https://dohliam.github.io/dropin-minimal-css/?sakura).
+
 ## Bookmarklet
 
 You can now try out the experimental dropin-css bookmarklet. Just paste the following code into your address bar to create a CSS switcher for any site:
