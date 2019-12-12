@@ -10,10 +10,11 @@ This project only includes _minimal_ frameworks, in other words, boilerplate fra
   * [2.1 Adding frameworks](#adding-frameworks)
   * [2.2 List of frameworks](#list-of-frameworks)
   * [2.3 Theme collections](#theme-collections)
-* [3 Bookmarklet](#bookmarklet)
-* [4 See also](#see-also)
-* [5 Acknowledgements](#acknowledgements)
-* [6 License](#license)
+* [3 API](#api)
+* [4 Bookmarklet](#bookmarklet)
+* [5 See also](#see-also)
+* [6 Acknowledgements](#acknowledgements)
+* [7 License](#license)
 
 ## Usage
 
