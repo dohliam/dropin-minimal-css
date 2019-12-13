@@ -30,7 +30,7 @@ You can quickly switch between frameworks by pressing the [modifier key or keys 
 
 ### Bookmarklet
 
-The Drop-in Minimal CSS bookmarklet is a convenient way to preview how different CSS frameworks would look on any HTML page. Just paste the following code into your address bar to create a CSS switcher for any site:
+The bookmarklet is a convenient way to preview how different CSS frameworks would look on any HTML page. Just paste the following code into your address bar to create a CSS switcher for any site:
 
 ```javascript
 javascript:(function()%7Bvar%20body%20%3D%20document.getElementsByTagName('body')%5B0%5D%3Bscript%20%3D%20document.createElement('script')%3Bscript.type%3D%20'text%2Fjavascript'%3Bscript.src%3D%20'https%3A%2F%2Fdohliam.github.io%2Fdropin-minimal-css%2Fswitcher.js'%3Bbody.appendChild(script)%7D)()
