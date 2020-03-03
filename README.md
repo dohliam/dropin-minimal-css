@@ -74,6 +74,7 @@ If you know of a minimal framework that hasn't been included here, please create
 * [fluidity](https://dohliam.github.io/dropin-minimal-css/?fluidity) by @mrmrs ([Source](https://github.com/mrmrs/fluidity) · [MIT](https://github.com/mrmrs/fluidity/blob/master/README.md))
 * [furtive](https://dohliam.github.io/dropin-minimal-css/?furtive) by @johnotander ([Source](https://github.com/johnotander/furtive) · [MIT](https://github.com/johnotander/furtive/blob/master/LICENSE))
 * [generic](https://dohliam.github.io/dropin-minimal-css/?generic) by @Vereis ([Source](https://github.com/Vereis/generic.css) · [MIT](https://github.com/Vereis/generic.css))
+* [github-markdown](https://dohliam.github.io/dropin-minimal-css/?github-markdown) by @sindresorhus ([Source](https://github.com/sindresorhus/github-markdown-css) · [MIT](https://github.com/sindresorhus/github-markdown-css/blob/gh-pages/license))
 * [hack](https://dohliam.github.io/dropin-minimal-css/?hack) by @egoist ([Source](https://github.com/egoist/hack) · [MIT](https://github.com/egoist/hack/blob/master/LICENSE))
 * [holiday](https://dohliam.github.io/dropin-minimal-css/?holiday) by @EvgenyOrekhov ([Source](https://github.com/EvgenyOrekhov/holiday.css) · [MIT](https://github.com/EvgenyOrekhov/holiday.css/blob/master/LICENSE))
 * [html-starterkit](https://dohliam.github.io/dropin-minimal-css/?html-starterkit) by @zitrusfrisch ([Source](https://github.com/zitrusfrisch/HTML-StarterKit) · [MIT](https://github.com/zitrusfrisch/HTML-StarterKit#its-free))
