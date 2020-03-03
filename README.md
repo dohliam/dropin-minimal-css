@@ -70,6 +70,7 @@ If you know of a minimal framework that hasn't been included here, please create
 * [clmaterial](https://dohliam.github.io/dropin-minimal-css/?clmaterial) by @24aitor ([Source](https://github.com/24aitor/CLMaterial) · [MIT](https://github.com/24aitor/CLMaterial/blob/master/LICENSE))
 * [comet](https://dohliam.github.io/dropin-minimal-css/?comet) by @marcbruederlin ([Source](https://github.com/marcbruederlin/comet) · [MIT](https://github.com/marcbruederlin/comet/blob/master/LICENSE))
 * [concise](https://dohliam.github.io/dropin-minimal-css/?concise) by ConciseCSS ([Source](https://github.com/ConciseCSS/concise.css) · [MIT](https://github.com/ConciseCSS/concise.css/blob/master/LICENSE))
+* [concrete](https://dohliam.github.io/dropin-minimal-css/?concrete) by @louismerlin ([Source](https://github.com/louismerlin/concrete.css) · [MIT](https://github.com/louismerlin/concrete.css/blob/master/LICENSE))
 * [flat-ui](https://dohliam.github.io/dropin-minimal-css/?flat-ui) by Designmodo ([Source](https://github.com/designmodo/Flat-UI) · [CC BY & MIT](https://github.com/designmodo/Flat-UI#copyright-and-license))
 * [fluidity](https://dohliam.github.io/dropin-minimal-css/?fluidity) by @mrmrs ([Source](https://github.com/mrmrs/fluidity) · [MIT](https://github.com/mrmrs/fluidity/blob/master/README.md))
 * [furtive](https://dohliam.github.io/dropin-minimal-css/?furtive) by @johnotander ([Source](https://github.com/johnotander/furtive) · [MIT](https://github.com/johnotander/furtive/blob/master/LICENSE))
