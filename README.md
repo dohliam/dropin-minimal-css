@@ -100,6 +100,7 @@ If you know of a minimal framework that hasn't been included here, please create
 * [mu](https://dohliam.github.io/dropin-minimal-css/?mu) by @BafS ([Source](https://github.com/BafS/mu) · [MIT](https://github.com/BafS/mu/blob/gh-pages/LICENSE))
 * [mui](https://dohliam.github.io/dropin-minimal-css/?mui) by @amorey ([Source](https://github.com/muicss/mui) · [MIT](https://github.com/muicss/mui/blob/master/LICENSE.txt))
 * [mvp](https://dohliam.github.io/dropin-minimal-css/?mvp) by @andybrewer ([Source](https://github.com/andybrewer/mvp) · [MIT](https://github.com/andybrewer/mvp/blob/master/LICENSE))
+* [new.css](https://newcss.net/) by @xz ([Source](https://github.com/xz/new.css)) · [MIT](https://github.com/xz/new.css/blob/master/LICENSE)
 * [no-class](https://dohliam.github.io/dropin-minimal-css/?no-class) by @davidpaulsson ([Source](https://github.com/davidpaulsson/no-class) · [MIT](https://github.com/davidpaulsson/no-class/blob/master/LICENSE.txt))
 * [normalize](https://dohliam.github.io/dropin-minimal-css/?normalize) by @necolas ([Source](https://github.com/necolas/normalize.css) · [MIT](https://github.com/necolas/normalize.css/blob/master/LICENSE.md))
 * [oh-my-css](https://dohliam.github.io/dropin-minimal-css/?oh-my-css) by @egoist ([Source](https://github.com/egoist/oh-my-css) · [MIT](https://github.com/egoist/oh-my-css/blob/gh-pages/LICENSE))
