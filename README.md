@@ -4,17 +4,18 @@ This is a quick drop-in CSS switcher to allow for previewing some of the many mi
 
 This project only includes _minimal_ frameworks, in other words, boilerplate / classless frameworks that require no adjustment of the corresponding HTML and can be simply dropped into the project to provide a starting point for further design. No additional javascript, compiling, pre-processors, or fiddling with classes should be required for these to look good and be responsive.
 
-* [1 Usage](#usage)
-  * [1.1 Keyboard shortcut](#keyboard-shortcut)
-  * [1.2 Bookmarklet](#bookmarklet)
-  * [1.3 API](#api)
-* [2 Frameworks](#frameworks)
-  * [2.1 Adding frameworks](#adding-frameworks)
-  * [2.2 List of frameworks](#list-of-frameworks)
-  * [2.3 Theme collections](#theme-collections)
-* [3 See also](#see-also)
-* [4 Acknowledgements](#acknowledgements)
-* [5 License](#license)
+- [Drop-in switcher for previewing minimal CSS frameworks](#drop-in-switcher-for-previewing-minimal-css-frameworks)
+  - [Usage](#usage)
+    - [Keyboard shortcut](#keyboard-shortcut)
+    - [Bookmarklet](#bookmarklet)
+    - [API](#api)
+  - [Frameworks](#frameworks)
+    - [Adding frameworks](#adding-frameworks)
+    - [List of frameworks](#list-of-frameworks)
+    - [Theme collections](#theme-collections)
+  - [See also](#see-also)
+  - [Acknowledgements](#acknowledgements)
+  - [License](#license)
 
 ## Usage
 
@@ -95,7 +96,8 @@ If you know of a minimal framework that hasn't been included here, please create
 * [milligram](https://dohliam.github.io/dropin-minimal-css/?milligram) by @cjpatoilo ([Source](https://github.com/milligram/milligram) · [MIT](http://cjpatoilo.mit-license.org/))
 * [min](https://dohliam.github.io/dropin-minimal-css/?min) by @owenversteeg ([Source](https://github.com/owenversteeg/min) · [MIT](https://github.com/owenversteeg/min#license))
 * [mini](https://dohliam.github.io/dropin-minimal-css/?mini) by @Chalarangelo ([Source](https://github.com/Chalarangelo/mini.css) · [MIT](https://github.com/Chalarangelo/mini.css/blob/master/LICENSE))
-* [mobi](https://dohliam.github.io/dropin-minimal-css/?mobi) by @xcatliu ([Source](https://github.com/mobi-css/mobi.css) · [MIT](https://github.com/mobi-css/mobi.css/blob/master/LICENSE)
+* [minimal-stylesheet](https://dohliam.github.io/dropin-minimal-css/?minimal-stylesheet) by @chr15m ([Source](https://github.com/chr15m/minimal-stylesheet))
+* [mobi](https://dohliam.github.io/dropin-minimal-css/?mobi) by @xcatliu ([Source](https://github.com/mobi-css/mobi.css) · [MIT](https://github.com/mobi-css/mobi.css/blob/master/LICENSE))
 * [motherplate](https://dohliam.github.io/dropin-minimal-css/?motherplate) by @leemunroe ([Source](https://github.com/leemunroe/motherplate) · [MIT](https://github.com/leemunroe/motherplate/blob/master/LICENSE))
 * [mu](https://dohliam.github.io/dropin-minimal-css/?mu) by @BafS ([Source](https://github.com/BafS/mu) · [MIT](https://github.com/BafS/mu/blob/gh-pages/LICENSE))
 * [mui](https://dohliam.github.io/dropin-minimal-css/?mui) by @amorey ([Source](https://github.com/muicss/mui) · [MIT](https://github.com/muicss/mui/blob/master/LICENSE.txt))
