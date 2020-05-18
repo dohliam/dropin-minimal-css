@@ -4,18 +4,17 @@ This is a quick drop-in CSS switcher to allow for previewing some of the many mi
 
 This project only includes _minimal_ frameworks, in other words, boilerplate / classless frameworks that require no adjustment of the corresponding HTML and can be simply dropped into the project to provide a starting point for further design. No additional javascript, compiling, pre-processors, or fiddling with classes should be required for these to look good and be responsive.
 
-- [Drop-in switcher for previewing minimal CSS frameworks](#drop-in-switcher-for-previewing-minimal-css-frameworks)
-  - [Usage](#usage)
-    - [Keyboard shortcut](#keyboard-shortcut)
-    - [Bookmarklet](#bookmarklet)
-    - [API](#api)
-  - [Frameworks](#frameworks)
-    - [Adding frameworks](#adding-frameworks)
-    - [List of frameworks](#list-of-frameworks)
-    - [Theme collections](#theme-collections)
-  - [See also](#see-also)
-  - [Acknowledgements](#acknowledgements)
-  - [License](#license)
+* [1 Usage](#usage)
+  * [1.1 Keyboard shortcut](#keyboard-shortcut)
+  * [1.2 Bookmarklet](#bookmarklet)
+  * [1.3 API](#api)
+* [2 Frameworks](#frameworks)
+  * [2.1 Adding frameworks](#adding-frameworks)
+  * [2.2 List of frameworks](#list-of-frameworks)
+  * [2.3 Theme collections](#theme-collections)
+* [3 See also](#see-also)
+* [4 Acknowledgements](#acknowledgements)
+* [5 License](#license)
 
 ## Usage
 
