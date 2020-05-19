@@ -107,7 +107,7 @@ If you know of a minimal framework that hasn't been included here, please create
 * [normalize](https://dohliam.github.io/dropin-minimal-css/?normalize) by @necolas ([Source](https://github.com/necolas/normalize.css) · [MIT](https://github.com/necolas/normalize.css/blob/master/LICENSE.md))
 * [oh-my-css](https://dohliam.github.io/dropin-minimal-css/?oh-my-css) by @egoist ([Source](https://github.com/egoist/oh-my-css) · [MIT](https://github.com/egoist/oh-my-css/blob/gh-pages/LICENSE))
 * [paper](https://dohliam.github.io/dropin-minimal-css/?paper) by @rhyneav ([Source](https://github.com/papercss/papercss) · [ISC](https://github.com/papercss/papercss/blob/master/license))
-* [papier](https://dohliam.github.io/dropin-minimal-css/?papier) by @baasdesign ([Source](https://github.com/alexanderGugel/papier) · [MIT](https://github.com/alexanderGugel/papier/blob/master/LICENSE.md))
+* [papier](https://dohliam.github.io/dropin-minimal-css/?papier) by @alexanderGugel ([Source](https://github.com/alexanderGugel/papier) · [MIT](https://github.com/alexanderGugel/papier/blob/master/LICENSE.md))
 * [pavilion](https://dohliam.github.io/dropin-minimal-css/?pavilion) by @baasdesign ([Source](https://github.com/getpavilion/pavilion) · [MIT](https://github.com/getpavilion/pavilion/blob/master/license))
 * [picnic](https://dohliam.github.io/dropin-minimal-css/?picnic) by @FranciscoP ([Source](https://github.com/picnicss/picnic) · [MIT](https://github.com/picnicss/picnic/blob/master/LICENSE))
 * [preface](https://dohliam.github.io/dropin-minimal-css/?preface) by @cluzier ([Source](https://github.com/cluzier/PrefaceCSS) · [MIT](https://github.com/cluzier/PrefaceCSS/blob/master/LICENSE))
