@@ -100,6 +100,7 @@ If you know of a minimal framework that hasn't been included here, please create
 * [mu](https://dohliam.github.io/dropin-minimal-css/?mu) by @BafS ([Source](https://github.com/BafS/mu) · [MIT](https://github.com/BafS/mu/blob/gh-pages/LICENSE))
 * [mui](https://dohliam.github.io/dropin-minimal-css/?mui) by @amorey ([Source](https://github.com/muicss/mui) · [MIT](https://github.com/muicss/mui/blob/master/LICENSE.txt))
 * [mvp](https://dohliam.github.io/dropin-minimal-css/?mvp) by @andybrewer ([Source](https://github.com/andybrewer/mvp) · [MIT](https://github.com/andybrewer/mvp/blob/master/LICENSE))
+* [new.css](https://dohliam.github.io/dropin-minimal-css/?new) by @xz ([Source](https://github.com/xz/new.css)) · [MIT](https://github.com/xz/new.css/blob/master/LICENSE)
 * [no-class](https://dohliam.github.io/dropin-minimal-css/?no-class) by @davidpaulsson ([Source](https://github.com/davidpaulsson/no-class) · [MIT](https://github.com/davidpaulsson/no-class/blob/master/LICENSE.txt))
 * [normalize](https://dohliam.github.io/dropin-minimal-css/?normalize) by @necolas ([Source](https://github.com/necolas/normalize.css) · [MIT](https://github.com/necolas/normalize.css/blob/master/LICENSE.md))
 * [oh-my-css](https://dohliam.github.io/dropin-minimal-css/?oh-my-css) by @egoist ([Source](https://github.com/egoist/oh-my-css) · [MIT](https://github.com/egoist/oh-my-css/blob/gh-pages/LICENSE))
@@ -133,6 +134,7 @@ If you know of a minimal framework that hasn't been included here, please create
 * [water](https://dohliam.github.io/dropin-minimal-css/?water) by @kognise ([Source](https://github.com/kognise/water.css) · [MIT](https://github.com/kognise/water.css/blob/master/LICENSE.md))
 * [wing](https://dohliam.github.io/dropin-minimal-css/?wing) by @KingPixil ([Source](https://github.com/KingPixil/wing/) · [MIT](https://github.com/KingPixil/wing/blob/master/LICENSE))
 * [writ](https://dohliam.github.io/dropin-minimal-css/?writ) by @programble ([Source](https://github.com/programble/writ) · [ISC](https://github.com/programble/writ/blob/master/LICENSE))
+* [YAMB](https://dohliam.github.io/dropin-minimal-css/?yamb) by @runxel ([Source](https://github.com/runxel/yamb-css)) · [Blue Oak Model License](https://github.com/runxel/yamb-css/blob/master/LICENSE.md)
 * [yorha](https://dohliam.github.io/dropin-minimal-css/?yorha) by @metakirby5 ([Source](https://github.com/metakirby5/yorha) · [MIT](https://github.com/metakirby5/yorha/blob/master/LICENSE))
 
 ### Theme collections
