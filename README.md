@@ -13,6 +13,7 @@ This project only includes _minimal_ frameworks, in other words, boilerplate / c
   * [2.2 List of frameworks](#list-of-frameworks)
   * [2.3 Theme collections](#theme-collections)
 * [3 See also](#see-also)
+  * [3.1 Other similar collections](#other-similar-collections)
 * [4 Acknowledgements](#acknowledgements)
 * [5 License](#license)
 
@@ -155,6 +156,13 @@ If you know of a minimal framework that hasn't been included here, please create
 
 * [workflow](https://github.com/dohliam/workflow) - Quick prototyping script for creating rich html and pdfs from markdown documents (based on dropin-minimal-css)
 * [asciidoctor-skins](https://github.com/darshandsoni/asciidoctor-skins) - CSS stylesheets for asciidoctor (with a switcher based on dropin-minimal-css)
+
+### Other similar collections
+
+* [CSS Bed](https://github.com/ubershmekel/cssbed) by @ubershmekel
+* [classless-css](https://github.com/dbohdan/classless-css) by @dbohdan
+* [cleanrmd](https://github.com/gadenbuie/cleanrmd) by @gadenbuie
+* [awesome-css-frameworks](https://github.com/troxler/awesome-css-frameworks) by @troxler
 
 ## Acknowledgements
 
