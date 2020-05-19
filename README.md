@@ -161,7 +161,7 @@ If you know of a minimal framework that hasn't been included here, please create
 * Sample HTML5 markup based on [html5-test-page](https://github.com/cbracco/html5-test-page) by @cbracco (MIT)
 * Example images in the demo are by [MichaelMaggs](https://commons.wikimedia.org/wiki/User:MichaelMaggs) on [Wikimedia Commons](https://commons.wikimedia.org)
 * Example videos provided by the [Blender Foundation](https://peach.blender.org/) via the [HTML5-Test-Videos](https://github.com/benhosmer/HTML5-Test-Videos) project
-* Embedded audio by [John Pazdan](http://ccmixter.org/files/flatwound/14476) at [ccMixter](http://ccmixter.org/files/flatwound/14476)
+* Embedded audio [Night Owl](https://freemusicarchive.org/music/Broke_For_Free/Directionless_EP/Broke_For_Free_-_Directionless_EP_-_01_Night_Owl) by [Broke For Free](https://freemusicarchive.org/music/Broke_For_Free) at the [Free Music Archive](https://freemusicarchive.org/)
 * Special thanks to [Tacit CSS](https://github.com/yegor256/tacit), which was the original inspiration for making this list to answer the question "Where can I find more frameworks like Tacit?"
 * Table of contents made with [tocdown](https://github.com/dohliam/tocdown)
 
