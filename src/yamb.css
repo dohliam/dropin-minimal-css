@@ -1,0 +1,781 @@
+@charset "UTF-8";
+/* might be needed when you have non-ASCII characters
+ * in a "content" rule
+ * MUST be the very first thing in a stylesheet
+ */
+
+/*! YAMB CSS v1.0.0 | BOML License | github.com/runxel/yamb-css */
+
+/* load your custom fonts like this
+ * WOFF2 is enough (except you have to support IE11? Have fun with that shipwreck!)
+ * Also please selfhost them and DO NOT use Google Fonts directly
+ * https://www.tunetheweb.com/blog/should-you-self-host-google-fonts/
+ */
+@font-face {
+  font-family: 'My Font';
+  font-style: normal;
+  font-weight: 400;
+  src: local('My Font'), local('MyFont-Regular'),
+       url('../fonts/myfont.woff2') format('woff2');
+}
+
+/* obligatory element reset
+ * if you look for a more in-depth, proper approach:
+ * http://necolas.github.io/normalize.css/  or
+ * https://github.com/hankchizljaw/modern-css-reset
+ */
+*, ::before, ::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 16px; /* this will be one REM */
+	box-sizing: border-box;
+}
+
+/* I use :root to store all my global variables */
+:root {
+	--text-color: #242424;
+	--text-header-color: var(--text-color);
+	--text-muted-color: #585858;
+	--text-placheolder-color: #686868;
+	--link-color: #32b6b6;
+	--code-color: #3b444e;
+
+	--background-color: hsl(40, 10%, 95%);
+	--background-dark-color:  hsl(48, 5%, 80%);
+	--background-code-color:  hsl(50, 5%, 90%);
+	--background-alt-color: hsl(40, 10%, 90%);
+	--background-alt-bright-color: #f7f7f7;
+	--thumb-color: #c5c5c5; /* scrollbar thumb */
+
+	--accent-color: #14da6d;
+	--highlight: #ffee00c2;
+	--selection-color: hsla(162, 75%, 51%, 0.5);
+	--focus-color: #24c278;
+	--border-color: #c6cbd1;
+	--border-alt-color: #959da5;
+	--button-color: hsl(150, 70%, 60%);
+	--button-hover-color: hsl(150, 60%, 75%);
+	--warning: #eb6363b2;
+	--accepted: #75ee6a8c;
+
+	--animation-duration: 0.2s;
+
+	--base-font: Clear Sans Light, Clear Sans, PT Sans, Inter, Segoe UI, Roboto, Trebuchet MS, Helvetica Neue, Arial, sans-serif;
+	--text-font: 'Libre Franklin', sans-serif;
+	--h-font: var(--text-font); /* Header font h1-h6 */
+	--mono-font: Consolas, 'Fira Code', 'Ubuntu Mono', monospace;
+
+	--content-width: 70ch;
+	--text-fat: 700; /* change for different weight */
+
+	--select-arrow: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' height='63' width='117' fill='%23161f27'%3E%3Cpath d='M115 2c-1-2-4-2-5 0L59 53 7 2a4 4 0 0 0-5 5l54 54 2 2 3-2 54-54c2-1 2-4 0-5z'/%3E%3C/svg%3E");
+
+	scrollbar-color: var(--thumb-color) var(--background-color);
+}
+
+/* visual sugar */
+::selection {
+	color: var(--text-color);
+	background-color: var(--selection-color);
+	text-shadow: none;
+}
+
+/* use 'body' for all the basic declarations
+ * most commonly fonts + bg-color
+ */
+body {
+	font-family: var(--text-font);
+	/* you could also set it to "optimizeSpeed",
+	 * but I think legibility is more important and old problems are gone meanwhile */
+	text-rendering: optimizeLegibility;
+	font-variant-ligatures: common-ligatures;
+	font-kerning: normal;
+	line-height: 1.6;
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+
+/* LINKS */
+a, a:visited {
+	text-decoration: underline;
+	color: var(--link-color);
+	white-space: break-word;  /* not nowrap! */
+}
+a:hover {
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+}
+a:focus {
+	color: var(--focus-color);
+}
+
+/* ELEMENTS */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+header {
+	margin-bottom: 1rem;
+}
+
+section {
+	margin: 1.5em 0;
+}
+
+article {
+	margin: 0.7em 0;
+}
+
+article > footer {
+	margin-bottom: 1.3em;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid var(--border-color);
+	margin: 0.3em 0;
+}
+
+ul,
+ol {
+	list-style-position: inside;
+	padding-left: 1em;
+}
+:not(fieldset) > ul:not(.no-marker) li::marker {
+	color: currentColor;
+	content: '🞄 ';
+}
+ul.no-marker {
+	list-style-type: none;
+}
+
+/* TABLES */
+table {
+	border-collapse: collapse;
+	margin-bottom: 10px;
+	width: 100%;
+}
+table > caption {
+	margin-bottom: 5px;
+}
+td,
+th {
+	padding: 6px;
+	text-align: left;
+}
+thead {
+	border-bottom: 1px solid var(--border-color);
+}
+tfoot {
+	border-top: 1px solid var(--border-color);
+}
+tbody tr:nth-child(even) {
+	background-color: var(--background-alt-color);
+}
+
+/* Details */
+details {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background-color: var(--background-alt-color);
+	margin: 1em 0;
+	padding: 10px 10px 0;
+	border-radius: 6px;
+	overflow: hidden;
+}
+details[open] {
+	padding: 10px;
+}
+details > :last-child {
+	margin-bottom: 0;
+}
+details[open] summary {
+	margin-bottom: 10px;
+}
+summary {
+	display: list-item;
+	background-color: var(--background-dark-color);
+	margin: -10px -10px 0;
+	padding: 10px;
+}
+details > :not(summary) {
+	margin-top: 0;
+}
+summary::-webkit-details-marker {
+	color: var(--text-main);
+}
+
+footer {
+	padding-top: 10px;
+	font-size: 0.8em;
+	color: var(--text-muted-color);
+}
+main + footer {
+	text-align: center;
+	border-top: 1px solid var(--background-dark-color);
+}
+
+/* TYPOGRAPHY */
+h1 {
+	font-size: 2.2em;
+	margin-top: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 5px 0 calc(0.4rem + 0.2em);
+	color: var(--text-header-color);
+}
+h1, h2, h3, h4, h5, h6,
+b,
+strong,
+th {
+	font-weight: var(--text-fat);
+}
+h2 { letter-spacing: 0.02em; }
+h3 { letter-spacing: 0.03em; }
+h4 { letter-spacing: 0.04em; }
+h5 { letter-spacing: 0.06em; }
+h6 { letter-spacing: 0.08em; }
+
+small {
+	letter-spacing: 0.025em;
+}
+
+q {
+	font-style: italic;
+}
+q::before {
+    content: "«";
+}
+q::after {
+	content: "»"
+}
+blockquote {
+	border-left: 3px solid var(--text-muted-color);
+	margin: 1.5em 0em;
+	padding: 0.5em 1em;
+	font-style: normal;
+}
+blockquote {
+	border-radius: 4px;
+}
+blockquote p:last-of-type {
+	margin-bottom: 1em;
+}
+blockquote cite,
+blockquote > footer {
+	font-style: italic;
+	border: 0;
+}
+blockquote cite::before {
+	content: '✲ ';
+}
+
+address {
+	font-style: normal;
+}
+address a {
+	text-decoration: none;
+}
+a[href^='mailto\:']::before {
+	content: '📧 ';
+	filter: saturate(0);
+}
+a[href^='tel\:']::before {
+	content: '📞 ';
+	filter: saturate(0);
+}
+a[href^='sms\:']::before {
+	content: '💬 ';
+	filter: saturate(0);
+}
+
+mark {
+	background-color: var(--highlight);
+	border-radius: 2px;
+	padding: 0px 2px 0px 2px;
+}
+
+/* CODE */
+pre, code, samp, time, var, kbd {
+	font-family: var(--mono-font);
+}
+code, samp, time {
+	background:  var(--background-code-color);
+	color: var(--code-color);
+	padding: 2.5px 5px;
+	border-radius: calc(1em * 0.2);
+	font-size: 1em;
+}
+pre > code {
+	padding: 10px;
+	display: block;
+	overflow-x: auto;
+}
+var {
+	color: var(--code-color);
+	font-style: normal;
+}
+kbd {
+	background: var(--background-alt-bright-color);
+	border: 1px solid var(--border-color);
+	border-bottom-color: var(--border-alt-color);
+	box-shadow: inset 0 -1px 0 var(--border-alt-color);
+	border-radius: calc(1em * 0.4);
+	color: var(--text-main);
+	font-size: 80%;
+	padding: 2px 5px;
+	display: inline-block;
+	position: relative;
+	bottom: 3px;
+	vertical-align: middle;
+}
+
+abbr,
+acronym {
+	cursor:help;
+}
+
+sup, sub {
+	vertical-align: baseline;
+	position: relative;
+	top: -0.5em;
+	font-size: 0.7em;
+}
+sub {
+	top: 0.3em;
+}
+
+del {
+	background-color: var(--warning);
+}
+ins {
+	background-color: var(--accepted);
+}
+
+iframe {
+	border: none;
+}
+
+/* FORMS */
+::placeholder {
+  color: var(--form-placeholder);
+}
+button, select,
+input[type='submit'],
+input[type='button'],
+input[type='checkbox'],
+input[type='range'],
+input[type='radio'] {
+	cursor: pointer;
+}
+input:not([type='checkbox']):not([type='radio']),
+select {
+	display: block;
+}
+input,
+button,
+textarea,
+select {
+	color: var(--text-placeholder-color);
+	background-color: var(--background-alt-color);
+	font-family: inherit;
+	font-size: inherit;
+	margin-right: 6px;
+	margin-bottom: 6px;
+	padding: 10px;
+	border: none;
+	border-radius: 6px;
+	outline: none;
+}
+input,
+select,
+button,
+textarea {
+	-webkit-appearance: none;
+}
+textarea {
+	min-height: 4rem;
+	margin-right: 0;
+	width: 100%;
+	box-sizing: border-box;
+	resize: vertical;
+  	scrollbar-width: thin;
+	scrollbar-color: var(--thumb-color) var(--background-color);
+}
+select {
+	background: var(--background-alt-color) var(--select-arrow) calc(100% - 12px) 50% / 12px no-repeat;
+	padding-right: 35px;
+}
+select::-ms-expand {
+	display: none;
+}
+select[multiple] {
+	padding-right: 10px;
+	background-image: none;
+	overflow-y: auto;
+}
+select > optgroup {
+	background-color: var(--background-alt-color);
+	color: var(--text-color);
+}
+optgroup > option {
+	background-color: var(--background-color);
+}
+button,
+input[type='submit'],
+input[type='button'] {
+	background-color: var(--button-color);
+	padding-right: 30px;
+	padding-left: 30px;
+}
+button:not(:disabled):hover,
+input[type='submit']:not(:disabled):hover,
+input[type='button']:not(:disabled):hover {
+	background-color: var(--button-hover-color);
+}
+/* STATES */
+/* -- FOCUS */
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+	box-shadow: 0 0 0 2px var(--focus-color);
+	background-color: var(--background-alt-bright-color);
+}
+/* -- DISABLED */
+input:disabled,
+select:disabled,
+button:disabled,
+textarea:disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+/* -- INVALID / ERROR */
+input:invalid,
+input.is-error,
+input.error {
+	box-shadow: 0 0 0 2px var(--warning);
+}
+/* -- VALID */
+ /* input:valid, -> would style *evertyhing*, even empty */
+input.is-valid,
+input.valid {
+	box-shadow: 0 0 0 2px var(--accepted);
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+	position: relative;
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	margin-right: 2px;
+}
+input[type='radio'] {
+	border-radius: 50%;
+}
+input[type='checkbox']:checked,
+input[type='radio']:checked {
+	background: var(--button-hover);
+}
+input[type='checkbox']:checked::before,
+input[type='radio']:checked::before {
+	content: '🞇';
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+input[type='checkbox']:checked::before {
+	content: '✔';
+	transform: translateY(-50%) translateX(-6px);
+}
+input[type='checkbox']:active,
+input[type='radio']:active,
+input[type='submit']:active,
+input[type='button']:active,
+input[type='range']:active,
+button:active {
+	transform: translateY(2px);
+}
+input:read-only {
+	user-select: all;
+}
+fieldset {
+	border: 1px var(--border-color) solid;
+	border-radius: 6px;
+	margin: 0;
+	margin-bottom: 6px;
+	padding: 10px;
+}
+legend {
+	font-size: 0.9em;
+	font-weight: var(--text-fat);
+}
+input[type='color'] {
+	min-height: 1.8em;
+	padding: 2px;
+	border-radius: 0;
+}
+/* RANGE */
+input[type='range'] {
+	margin: 10px 0;
+	padding: 10px 0;
+	background: transparent;
+}
+input[type='range']:focus {
+	outline: none;
+}
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-moz-range-track {
+	width: 100%;
+	height: 9.5px;
+	transition: 0.2s;
+	background: var(--background-dark-color);
+	border-radius: 3px;
+}
+input[type='range']:focus::-webkit-slider-runnable-track,
+input[type='range']:focus::-moz-range-track {
+  background: var(--background-alt-color);
+}
+input[type='range']::-webkit-slider-thumb,
+input[type='range']::-moz-range-thumb {
+	box-shadow: 0px 1px 1px var(--border-alt-color), 0px 0px 1px var(--border-alt-color);
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	background: var(--background-alt-bright-color);
+	margin-top: -7px;
+	-webkit-appearance: none;
+}
+
+/* SEARCH input */
+/* mitigations against Chrome's uglyness */
+input[type="search"] {
+	-webkit-appearance: textfield;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	/* get rid of non-standard weirdness */
+	display: none;
+}
+
+/* EXPLICIT */
+/* a wrapper for all elements on the page */
+div.page {
+	max-width: var(--content-width);
+	margin: 20px auto;
+}
+@media screen and (max-width: 720px) {
+	div.page {
+		padding: 2vh 3.5vw;
+	}
+}
+
+nav ul {
+	list-style: none;
+}
+nav ul li::marker {
+	content: none;
+}
+
+/* DARK THEME */
+/* Media queries are really powerful.
+ * Here we'd like to know, if the user prefers to have a dark color scheme
+ */
+@media ( prefers-color-scheme: dark) {
+	/* if you use CSS variables (and you definitely should!) this is extremely easy to accomplish */
+	:root {
+		--text-color: #dbdbdb;
+		--text-header-color: var(--text-color);
+		--text-muted-color: #585858;
+		--text-placheolder-color: #686868;
+		--code-color: hsl(210, 10%, 85%);
+
+		--background-color: hsl(0, 0%, 20%);
+		--background-dark-color:  hsl(0, 0%, 12%);
+		--background-code-color:  hsl(50, 2%, 30%);
+		--background-alt-color: hsl(40, 1%, 26%);
+		--background-alt-bright-color: hsl(0, 0%, 40%);
+		--thumb-color: #585858; /* scrollbar thumb */
+
+		--accent-color: #14da6d;
+		--focus-color: #24c278;
+		--border-color: #75787c;
+		--border-alt-color: #535557;
+		--button-color: hsl(150, 36%, 52%);
+		--button-hover-color: hsl(150, 39%, 66%);
+		--warning: #ec4444d3;
+		--accepted: #7eff73bd;
+
+		--select-arrow: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' height='63' width='117' fill='%23dbdbdb'%3E%3Cpath d='M115 2c-1-2-4-2-5 0L59 53 7 2a4 4 0 0 0-5 5l54 54 2 2 3-2 54-54c2-1 2-4 0-5z'/%3E%3C/svg%3E");
+	}
+
+	ins {
+		color: var(--background-color);
+	}
+
+	button,
+	input[type='submit'],
+	input[type='button'] {
+		color: var(--background-color);
+	}
+
+	/* let's style images, because they are too harsh
+	   when having a dark theme enabled */
+	img {
+		/* filter are a nice feature
+		   you can have Photoshop-esque <img> stylings
+		*/
+		filter:
+				opacity(90%)
+				/* why not the 'opacity' property of CSS?
+				   -> `filter` has hardware acceleration in most browsers! = FAST */
+				brightness(0.9)
+				contrast(90%);
+			}
+
+	/* If you have graphics with white background (like charts) this will help */
+	img.graphic {
+		filter:
+				/* invert will help with the white background */
+				invert(100%)
+				/* to get the original colors back, you rotate the hue back */
+				hue-rotate(180deg);
+	}
+
+	/* our friend, the filter again!
+	 * desaturate things that are to colorful
+	 * nicest thing: it even works on emojis! 👋🏻
+	 */
+	.desaturate {
+		filter: saturate(0);
+	}
+}
+
+/* --------------- */
+/* targeting PRINT */
+/* (yes, this is a thing) */
+@media print {
+	@page {
+		size: A4;
+		/* 'legal' if you're in the US
+		 *  you set page orientation by either 'portrait' or 'landscape'
+		 */
+		margin: 15mm;
+	}
+
+	body {
+		background: transparent !important; /* we don't want any color here */
+		color: black !important;
+		font-size: 12pt;
+		max-width: 100%;
+		box-decoration-break: clone; /* boxes should be treated per page */
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	img,
+	pre,
+	code,
+	blockquote,
+	table,
+	figure,
+	ul,
+	ol,
+	li,
+	tr,
+	hr {
+		page-break-before: auto;
+		page-break-after: auto;
+		page-break-inside: avoid;
+		break-before: auto;
+		break-after: auto;
+		break-inside: avoid;
+	}
+
+	pre {
+		white-space: pre-wrap !important;
+		word-wrap: break-word;
+	}
+
+	/* prevent single lines at page end/start */
+	p,
+	a {
+		orphans: 4;
+		widows: 3;
+	}
+
+	/* always cause a page break before an h1 header */
+	h1 {
+		break-before: page;
+	}
+	/* avoid paragraphs being detached from preceding header */
+	h1, h2, h3 {
+		page-break-after: avoid;
+		break-after: avoid-page;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		page-break-inside: avoid;
+		break-inside: avoid;
+	}
+
+	/* display expansions of abbreviations */
+	abbr[title]::after,
+	acronym[title]::after {
+		content: " (" attr(title) ")";
+	}
+	/* SHOW targets of external links
+	 * "a:not(:local-link):after" if we ever got to CSS4
+	 */
+	a[href^="http"]:not([href*="example.com"])::after {
+		content: " (" attr(href) ")";
+	}
+
+	/* if you have a map on your site consider to display a static image
+	 * older browsers and Safari aren't able to print maps
+	 */
+	#map iframe {
+		display: none;
+		/* don't show the default interactive map*/
+	}
+
+	#map {
+		width: 400px;
+		height: 300px;
+		background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=Wien+Floridsdorf&zoom=13&scale=false&size=400x300&maptype=roadmap&format=png&visual_refresh=true');
+		/* force printing of the image */
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+
+	/* IF you use white, alpha-masked images on a dark background
+	 * you should invert them
+	 */
+	header img {
+		-webkit-filter: invert(100%);
+		filter: invert(100%);
+	}
+
+	nav,
+	aside {
+		display: none;
+	}
+
+	/* KIND of a catch all, just slam this class on everything you don't want to print */
+	.no-print {
+		display: none;
+	}
+	/* IF the space reserved for the element should stay, just without content */
+	.no-show {
+		visibility: hidden;
+	}
+}
