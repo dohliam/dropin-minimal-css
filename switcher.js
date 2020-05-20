@@ -40,10 +40,11 @@ function add_switcher() {
     head.appendChild(link);
   }
 
-  var new_div = document.createElement("div");
-  new_div.innerHTML = '      <div id="switcher">&nbsp;</div>\n      <script type="text/javascript">inline_switcher();</script>';
+  var new_div = document.createElement('div');
+  new_div.id = 'switcher';
+  new_div.innerHTML = '      <div>&nbsp;</div>\n      <script type="text/javascript">inline_switcher();</script>';
   document.body.insertBefore(new_div, document.body.firstChild);
-  document.body.style.paddingLeft = "24px"
+  document.body.style.paddingLeft = "24px";
 
   inline_switcher();
 }
