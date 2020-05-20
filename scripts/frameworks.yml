@@ -89,6 +89,13 @@ frameworks:
     license_url: https://github.com/24aitor/CLMaterial/blob/master/LICENSE
     repo: https://github.com/24aitor/CLMaterial
     url: https://github.com/24aitor/CLMaterial/blob/master/src/css/clmaterial.css
+  codify:
+    author: zdroid
+    author_name: Zlatan Vasović
+    license: MIT
+    license_url: https://github.com/zdroid/codify.css/blob/master/LICENSE.md
+    repo: https://github.com/zdroid/codify.css
+    url: https://github.com/zdroid/codify.css/blob/master/dist/codify.css
   comet:
     author: marcbruederlin
     author_name: Marc Brüderlin
@@ -404,20 +411,13 @@ frameworks:
     license_url: https://github.com/oxalorg/sakura/blob/master/LICENSE.txt
     repo: https://github.com/oxalorg/sakura
     url: https://github.com/oxalorg/sakura/blob/master/css/sakura.css
-  sanitize-10up:
+  sanitize:
     author: csstools
     author_name: CSS Tools
     license: CC0
     license_url: https://github.com/csstools/sanitize.css/blob/master/LICENSE.md
     repo: https://github.com/csstools/sanitize.css
     url: https://github.com/csstools/sanitize.css/blob/master/sanitize.css
-  sanitize-zdroid:
-    author: zdroid
-    author_name: Zlatan Vasović
-    license: MIT
-    license_url: https://github.com/zdroid/codify.css/blob/master/LICENSE.md
-    repo: https://github.com/zdroid/codify.css
-    url: https://github.com/zdroid/codify.css/blob/master/dist/codify.css
   semantic-ui:
     author: Semantic-Org
     author_name: Semantic Org
