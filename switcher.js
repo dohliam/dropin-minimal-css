@@ -1,9 +1,9 @@
-var frameworks = "a11yana,air,awsm,bahunya,bare,base,bullframe,bulma,caiuss,caramel,cardinal,chota,clmaterial,comet,concise,concrete,flat-ui,fluidity,furtive,generic,github-markdown,hack,holiday,html-starterkit,hyp,kathamo,koochak,kraken,kube,latex,lemon,lit,lotus,markdown,marx,materialize,mercury,milligram,min,mini,mobi,modest,motherplate,mu,mui,mvp,no-class,new,normalize,oh-my-css,paper,papier,pavilion,picnic,preface,primer,pure,retro,sakura,sanitize-10up,sanitize-zdroid,semantic-ui,shoelace,siimple,simple,skeleton,skeleton-framework,skeleton-plus,snack,spectre,splendor,style,stylize,tachyons,tacit,tent,thao,vanilla,vital,water,wing,writ,yamb,yorha,ads-gazette,ads-medium,ads-notebook,ads-tufte,boot-cerulean,boot-cosmo,boot-cyborg,boot-darkly,boot-flatly,boot-journal,boot-lumen,boot-paper,boot-readable,boot-sandstone,boot-slate,boot-spacelab,boot-superhero,boot-yeti";
+var frameworks = "a11yana,awsm,bahunya,bare,base,bullframe,bulma,caiuss,caramel,cardinal,chota,clmaterial,comet,concise,concrete,flat-ui,fluidity,furtive,generic,github-markdown,hack,holiday,html-starterkit,hyp,kathamo,koochak,kraken,kube,latex,lemon,lit,lotus,markdown,marx,materialize,mercury,milligram,min,mini,mobi,motherplate,mu,mui,mvp,new,no-class,normalize,oh-my-css,paper,papier,pavilion,picnic,preface,primer,pure,sakura,sanitize-10up,sanitize-zdroid,semantic-ui,shoelace,siimple,simple,skeleton,skeleton-framework,skeleton-plus,snack,spectre,style,stylize,tachyons,tacit,tent,thao,vanilla,vital,water,wing,writ,yamb,yorha,info,ads-gazette,ads-medium,ads-notebook,ads-tufte,info,boot-cerulean,boot-cosmo,boot-cyborg,boot-darkly,boot-flatly,boot-journal,boot-lumen,boot-paper,boot-readable,boot-sandstone,boot-slate,boot-spacelab,boot-superhero,boot-yeti,info,air,modest,retro,splendor";
 
 add_switcher();
 
 function switch_css(css) {
-  document.getElementsByTagName("link")[0].href = "https://dohliam.github.io/dropin-minimal-css/vendor/" + css + ".min.css";
+  document.getElementsByTagName("link")[0].href = "https://dohliam.github.io/dropin-minimal-css/min/" + css + ".min.css";
 }
 
 function capitalize(s) {
@@ -36,7 +36,7 @@ function add_switcher() {
     link = document.createElement('link');
     link.rel="stylesheet";
     link.type="text/css";
-    link.href="https://dohliam.github.io/dropin-minimal-css/vendor/" + frameworks.split(",")[0] + ".min.css";
+    link.href="https://dohliam.github.io/dropin-minimal-css/min/" + frameworks.split(",")[0] + ".min.css";
     head.appendChild(link);
   }
 
