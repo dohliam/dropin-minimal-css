@@ -586,7 +586,7 @@ collections:
       license_url: https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/LICENSE
       name: Gazette
       repo: https://github.com/darshandsoni/asciidoctor-skins
-      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/vendor/ads-gazette.min.css
+      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/min/ads-gazette.min.css
       min_only: true
     ads-medium:
       author: darshandsoni
@@ -594,7 +594,7 @@ collections:
       license_url: https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/LICENSE
       name: Medium
       repo: https://github.com/darshandsoni/asciidoctor-skins
-      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/vendor/ads-medium.min.css
+      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/min/ads-medium.min.css
       min_only: true
     ads-notebook:
       author: darshandsoni
@@ -602,7 +602,7 @@ collections:
       license_url: https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/LICENSE
       name: Notebook
       repo: https://github.com/darshandsoni/asciidoctor-skins
-      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/vendor/ads-notebook.min.css
+      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/min/ads-notebook.min.css
       min_only: true
     ads-tufte:
       author: darshandsoni
@@ -610,7 +610,7 @@ collections:
       license_url: https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/LICENSE
       name: Tufte
       repo: https://github.com/darshandsoni/asciidoctor-skins
-      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/vendor/ads-tufte.min.css
+      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/min/ads-tufte.min.css
       min_only: true
   bootswatch:
     info:
