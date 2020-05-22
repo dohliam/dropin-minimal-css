@@ -47,6 +47,11 @@ def update_css(name, url)
 end
 
 def diff_css(css, name)
-  src = File.read("../src/" + name + ".css")
-  css == src
+  source_path = "../src/" + name + ".css"
+  if File.exist?(source_path)
+    src = File.read(source_path)
+    css == src
+  else
+    false
+  end
 end
