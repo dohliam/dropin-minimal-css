@@ -1,0 +1,4346 @@
+/*!
+ * Propeller v1.3.2 (http://propeller.in/)
+ * Copyright 2016-2019 Digicorp, Inc
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+
+  src: url("../fonts/roboto/Roboto-Thin-webfont.eot?") format("eot"), url("../fonts/roboto/Roboto-Thin-webfont.woff") format("woff"), url("../fonts/roboto/Roboto-Thin-webfont.ttf") format("truetype"), url('../fonts/roboto/Roboto-Thin-webfont.svg#str-replace("Roboto", " ", "_")') format("svg");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+
+  src: url("../fonts/roboto/Roboto-Light-webfont.eot?") format("eot"), url("../fonts/roboto/Roboto-Light-webfont.woff") format("woff"), url("../fonts/roboto/Roboto-Light-webfont.ttf") format("truetype"), url('../fonts/roboto/Roboto-Light-webfont.svg#str-replace("Roboto", " ", "_")') format("svg");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+
+  src: url("../fonts/roboto/Roboto-Regular-webfont.eot?") format("eot"), url("../fonts/roboto/Roboto-Regular-webfont.woff") format("woff"), url("../fonts/roboto/Roboto-Regular-webfont.ttf") format("truetype"), url('../fonts/roboto/Roboto-Regular-webfont.svg#str-replace("Roboto", " ", "_")') format("svg");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+
+  src: url("../fonts/roboto/Roboto-Medium-webfont.eot?") format("eot"), url("../fonts/roboto/Roboto-Medium-webfont.woff") format("woff"), url("../fonts/roboto/Roboto-Medium-webfont.ttf") format("truetype"), url('../fonts/roboto/Roboto-Medium-webfont.svg#str-replace("Roboto", " ", "_")') format("svg");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+
+  src: url("../fonts/roboto/Roboto-Bold-webfont.eot?") format("eot"), url("../fonts/roboto/Roboto-Bold-webfont.woff") format("woff"), url("../fonts/roboto/Roboto-Bold-webfont.ttf") format("truetype"), url('../fonts/roboto/Roboto-Bold-webfont.svg#str-replace("Roboto", " ", "_")') format("svg");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+
+  src: url("../fonts/roboto/Roboto-Black-webfont.eot?") format("eot"), url("../fonts/roboto/Roboto-Black-webfont.woff") format("woff"), url("../fonts/roboto/Roboto-Black-webfont.ttf") format("truetype"), url('../fonts/roboto/Roboto-Black-webfont.svg#str-replace("Roboto", " ", "_")') format("svg");
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in): typography.css
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+html {
+  font-size: 16px;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+a {
+  color: #4285f4;
+  text-decoration: none;
+  outline: none;
+}
+
+a:focus, a:hover {
+  color: #0d5bdd;
+  text-decoration: underline;
+  outline: none;
+  outline-offset: -2px;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.lead, p.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: .5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h1, .h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+h2, .h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+h3, .h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+h4, .h4 {
+  font-size: .8125rem;
+  font-weight: 500;
+}
+
+h5, .h5 {
+  font-size: .8125rem;
+  font-weight: 400;
+}
+
+.pmd-display1 {
+  font-size: 2.125rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: rgba(0, 0, 0, .54);
+}
+
+.pmd-display2 {
+  font-size: 2.8125rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: rgba(0, 0, 0, .54);
+}
+
+.pmd-display3 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: rgba(0, 0, 0, .54);
+}
+
+.pmd-display4 {
+  font-size: 7rem;
+  font-weight: 300;
+  line-height: 1.1;
+  color: rgba(0, 0, 0, .54);
+}
+
+.pmd-caption {
+  font-size: .75rem;
+  color: #868e96;
+  letter-spacing: .02em;
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in/)
+ * Copyright 2016-2019 Digicorp, Inc
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.pmd-z-depth {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+}
+
+.pmd-z-depth-1 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+}
+
+.pmd-z-depth-2 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+}
+
+.pmd-z-depth-3 {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+}
+
+.pmd-z-depth-4 {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, .3), 0 15px 12px rgba(0, 0, 0, .22);
+}
+
+.pmd-z-depth-5 {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, .3), 0 15px 12px rgba(0, 0, 0, .22);
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in): google-icons.css
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.material-icons.pmd-xs, .material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.pmd-sm, .material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.pmd-md, .material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.pmd-lg, .material-icons.md-48 {
+  font-size: 48px;
+}
+
+.material-icons.md-dark {
+  color: #333;
+}
+
+.material-icons.md-dark.md-inactive {
+  color: rgba(51, 51, 51, .25);
+}
+
+.material-icons.md-light {
+  color: #fff;
+}
+
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, .25);
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in/): card.css
+ * Copyright 2016-2019 Digicorp, Inc
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.pmd-card {
+  padding: 1px 0;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: .125rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+}
+
+.pmd-card .form-horizontal .form-group {
+  margin-right: inherit;
+  margin-left: inherit;
+}
+
+.pmd-card-body {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: rgba(0, 0, 0, .87);
+}
+
+.pmd-card-title {
+  padding: 1rem 1rem 0 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: .125rem;
+  border-top-right-radius: .125rem;
+}
+
+.pmd-card-title .dropdown .dropdown-toggle {
+  color: inherit;
+}
+
+.pmd-card-title-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: inherit;
+}
+
+h2.pmd-card-title-text {
+  margin-bottom: 2px;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.pmd-card-subtitle-text {
+  margin-bottom: 0;
+  font-size: .875rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, .54);
+}
+
+.pmd-card-footer {
+  display: table;
+  width: 100%;
+  padding: .5rem 1rem;
+  content: "";
+}
+
+.pmd-card-actions {
+  padding: .5rem .25rem;
+}
+
+.pmd-card-actions .btn {
+  min-width: inherit;
+  margin-right: .25rem;
+  margin-bottom: .5rem;
+  margin-left: .25rem;
+}
+
+.pmd-card-actions .btn:first-child {
+  margin-left: .75rem;
+}
+
+.pmd-card-actions .btn:last-child {
+  margin-right: .75rem;
+}
+
+.pmd-card-actions .btn.pmd-btn-flat {
+  margin-right: .25rem;
+  margin-bottom: 0;
+  margin-left: .25rem;
+}
+
+.pmd-card-actions .btn.pmd-btn-fab {
+  padding: 0;
+}
+
+/* Card Media Action */
+.pmd-card-media-inline .pmd-card-media {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+.pmd-card-media-inline .pmd-card-media h2.pmd-card-title-text {
+  margin-top: .25rem;
+}
+
+.pmd-card-footer-no-border {
+  padding-top: 0;
+  border-color: transparent;
+}
+
+.pmd-card-list {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  background-color: #fff;
+}
+
+/* Card inverse*/
+.pmd-card-inverse {
+  color: #fff;
+  background-color: rgba(0, 0, 0, .84);
+}
+
+.pmd-card-inverse .pmd-card-body {
+  color: rgba(255, 255, 255, .84);
+}
+
+.pmd-card-inverse .pmd-card-subtitle-text {
+  color: rgba(255, 255, 255, .54);
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in/): accordion.css
+ * Copyright 2016-2019 Digicorp, Inc
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.panel-group.pmd-accordion .panel {
+  position: relative;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  transition: all .2s ease-in-out;
+}
+
+.panel-group.pmd-accordion .panel .panel-body {
+  border: none;
+}
+
+.panel-group.pmd-accordion .panel > .panel-heading {
+  padding: 0;
+  background: none;
+}
+
+.panel-group.pmd-accordion .panel > .panel-heading a {
+  display: block;
+  padding: .75rem 1rem;
+  line-height: 1.5rem;
+}
+
+.panel-group.pmd-accordion .panel > .panel-heading a:hover, .panel-group.pmd-accordion .panel > .panel-heading a:focus {
+  color: inherit;
+}
+
+.panel-group.pmd-accordion .panel > .panel-heading + .panel-collapse > .panel-body {
+  border: none;
+}
+
+.panel-group.pmd-accordion .panel.active .material-icons.pmd-accordion-arrow {
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+}
+
+.panel-group.pmd-accordion .panel.panel-success > .panel-heading {
+  color: #135113;
+  background-color: #d3ebd3;
+  border-color: #c2e3c2;
+}
+
+.panel-group.pmd-accordion .panel.panel-info > .panel-heading {
+  color: #02587f;
+  background-color: #cdeefd;
+  border-color: #b8e7fc;
+}
+
+.panel-group.pmd-accordion .panel.panel-warning > .panel-heading {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.panel-group.pmd-accordion .panel.panel-danger > .panel-heading {
+  color: #852d12;
+  background-color: #ffddd3;
+  border-color: #ffd0c1;
+}
+
+.panel-group.pmd-accordion-inbox .panel.active {
+  margin: .5rem -.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+}
+
+@media screen and (max-width: 767px) {
+  .panel-group.pmd-accordion-inbox .panel.active {
+    margin: 1rem -10px;
+  }
+}
+
+.panel-group.pmd-accordion-nospace .panel {
+  margin: 0;
+}
+
+.pmd-accordion-icon-left {
+  float: left;
+  padding-right: 32px;
+}
+
+.pmd-accordion-icon-right {
+  float: right;
+  padding-left: 32px;
+}
+
+.pmd-accordion-arrow {
+  float: right;
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in/): alert.css
+ * Copyright 2016-2019 Digicorp, Inc
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.pmd-alert-container {
+  position: fixed;
+  z-index: 100000000;
+}
+
+.pmd-alert-container.top {
+  top: 20px;
+}
+
+.pmd-alert-container.bottom {
+  bottom: 20px;
+}
+
+.pmd-alert-container.left {
+  left: 20px;
+}
+
+.pmd-alert-container.right {
+  right: 20px;
+}
+
+.pmd-alert-container.center {
+  left: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .pmd-alert-container.left {
+    left: 50%;
+  }
+  .pmd-alert-container.right {
+    right: 50%;
+  }
+}
+
+.pmd-alert-container .pmd-alert {
+  position: relative;
+  z-index: 1000;
+  width: 300px;
+  padding: .5rem 1.5rem;
+  margin-bottom: 5px;
+  clear: both;
+  font-size: 1rem;
+  color: #fff;
+  text-align: left;
+  vertical-align: middle;
+  background: #000;
+  border-radius: .125rem;
+  animation-duration: 1s;
+
+  animation-fill-mode: both;
+}
+
+.pmd-alert-container .pmd-alert a {
+  position: absolute;
+  right: 18px;
+  float: right;
+  color: #4285f4;
+}
+
+.pmd-alert-container .pmd-alert a:before {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  bottom: 0;
+  left: -10px;
+  margin: auto;
+  content: "";
+}
+
+.pmd-alert-container .pmd-alert.success {
+  color: #fff;
+  background-color: #259b24;
+}
+
+.pmd-alert-container .pmd-alert.warning {
+  color: #333;
+  background-color: #ffc107;
+}
+
+.pmd-alert-container .pmd-alert.light {
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+.pmd-alert-container .pmd-alert.dark {
+  color: #fff;
+  background-color: #343a40;
+}
+
+.pmd-alert-container .pmd-alert.error {
+  color: #fff;
+  background-color: #ff5722;
+}
+
+.pmd-alert-container .pmd-alert.information {
+  color: #fff;
+  background-color: #03a9f4;
+}
+
+.notification a {
+  position: absolute;
+  right: 18px;
+  float: right;
+  color: #4285f4;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.fadeOutDown {
+  animation-name: fadeOutDown;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in/): badge.css
+ * Copyright 2016-2019 Digicorp, Inc
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.badge {
+  display: inline-block;
+  color: #fff;
+  vertical-align: baseline;
+  background-color: #777;
+}
+
+.badge:hover {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.badge-success {
+  color: #fff;
+  background-color: #259b24;
+}
+
+.badge-success:hover, .badge-success:focus {
+  color: #fff;
+  background-color: #1b721a;
+}
+
+.badge-info {
+  color: #fff;
+  background-color: #03a9f4;
+}
+
+.badge-info:hover, .badge-info:focus {
+  color: #fff;
+  background-color: #0286c2;
+}
+
+.badge-warning {
+  color: #333;
+  background-color: #ffc107;
+}
+
+.badge-warning:hover, .badge-warning:focus {
+  color: #333;
+  background-color: #d39e00;
+}
+
+.badge-error {
+  color: #fff;
+  background-color: #ff5722;
+}
+
+.badge-error:hover, .badge-error:focus {
+  color: #fff;
+  background-color: #ee3900;
+}
+
+.badge-inverse {
+  color: #fff;
+  background-color: #343a40;
+}
+
+.badge-inverse:hover, .badge-inverse:focus {
+  color: #fff;
+  background-color: #1d2124;
+}
+
+.badge-information {
+  color: #fff;
+  background-color: #03a9f4;
+}
+
+.badge-information:hover, .badge-information:focus {
+  color: #fff;
+  background-color: #0286c2;
+}
+
+.pmd-badge {
+  position: relative;
+  display: inline-block;
+  font-size: 32px;
+  text-align: left;
+}
+
+.pmd-badge[data-badge]::after {
+  position: absolute;
+  top: -10px;
+  right: -24px;
+  width: 22px;
+  height: 22px;
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: .75rem;
+  font-weight: 700;
+  line-height: 22px;
+  color: #fff;
+  text-align: center;
+  content: attr(data-badge);
+  background: #4285f4;
+  border-radius: 50%;
+}
+
+.pmd-badge.pmd-badge-overlap::after {
+  right: -10px;
+}
+
+.pmd-chip {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 .5rem 0 .75rem;
+  line-height: 34px;
+  color: rgba(0, 0, 0, .87);
+  text-transform: capitalize;
+  cursor: default;
+  background: #e0e0e0;
+  border-radius: 1rem;
+}
+
+.pmd-chip:hover, .pmd-chip:focus {
+  background-color: #e0e0e0;
+}
+
+.pmd-chip.pmd-chip-inverse {
+  color: rgba(255, 255, 255, .87);
+  background: rgba(0, 0, 0, .87);
+}
+
+.pmd-chip.pmd-chip-inverse:hover, .pmd-chip.pmd-chip-inverse:focus {
+  background-color: rgba(0, 0, 0, .87);
+}
+
+.pmd-chip-action {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pmd-chip-action i {
+  padding: 1px 2px 2px 2px;
+  margin-left: 5px;
+  font-size: .875rem;
+  color: rgba(255, 255, 255, .87);
+  background-color: #adadad;
+  border-radius: 50%;
+}
+
+.pmd-chip-action .material-icons:hover {
+  background-color: #949393;
+}
+
+.pmd-chip-contact {
+  padding-left: 0;
+}
+
+.pmd-chip-contact img {
+  width: 2.25rem;
+  margin-top: -3px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in): button.css
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.btn {
+  padding: .625rem .75rem;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: .125rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.btn:active, .btn.active {
+  box-shadow: none;
+}
+
+.btn:hover, .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+  border-color: transparent;
+  outline: 0;
+  outline-offset: 0;
+}
+
+.btn.pmd-btn-raised {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+}
+
+.btn.pmd-btn-raised:active, .btn.pmd-btn-raised:focus, .btn.pmd-btn-raised.active, .btn.pmd-btn-raised:active:focus, .btn.pmd-btn-raised.active:focus {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+}
+
+.btn.pmd-btn-fab {
+  width: 56px;
+  min-width: 56px;
+  height: 56px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.btn.pmd-btn-fab span,
+.btn.pmd-btn-fab i {
+  line-height: 56px;
+}
+
+.btn.pmd-btn-fab.btn-lg {
+  width: 78px;
+  min-width: 78px;
+  height: 78px;
+}
+
+.btn.pmd-btn-fab.btn-lg span,
+.btn.pmd-btn-fab.btn-lg i {
+  line-height: 78px;
+}
+
+.btn.pmd-btn-fab.btn-sm {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+}
+
+.btn.pmd-btn-fab.btn-sm span,
+.btn.pmd-btn-fab.btn-sm i {
+  line-height: 40px;
+}
+
+.btn.pmd-btn-fab.btn-xs {
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+}
+
+.btn.pmd-btn-fab.btn-xs span,
+.btn.pmd-btn-fab.btn-xs i {
+  line-height: 30px;
+}
+
+.btn-default {
+  color: #333;
+  background-color: #fff;
+}
+
+.btn-default:hover {
+  color: #333;
+  background-color: #ececec;
+}
+
+.btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .btn-default.active.focus, .btn-default.active:focus, .btn-default:active.focus, .btn-default:active:focus {
+  color: #333;
+  background-color: #ececec;
+}
+
+.btn-default .ink {
+  background-color: #e6e5e5;
+}
+
+.btn-default.pmd-btn-flat {
+  color: #fff;
+  background-color: transparent;
+}
+
+.btn-default.pmd-btn-flat:hover {
+  background-color: #e5e5e5;
+}
+
+.btn-default.pmd-btn-flat:active, .btn-default.pmd-btn-flat.active, .btn-default.pmd-btn-flat:focus {
+  color: #fff;
+  background-color: #ccc;
+}
+
+.btn-default.pmd-btn-flat .ink {
+  background-color: #808080;
+}
+
+.btn-default.pmd-btn-outline {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.btn-default.pmd-btn-outline:hover, .btn-default.pmd-btn-outline:focus {
+  color: #333;
+  background-color: #ececec;
+  border-color: #e6e5e5;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #4285f4;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #1e6ef2;
+}
+
+.btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .btn-primary.active.focus, .btn-primary.active:focus, .btn-primary:active.focus, .btn-primary:active:focus {
+  color: #fff;
+  background-color: #1e6ef2;
+}
+
+.btn-primary .ink {
+  background-color: #1266f1;
+}
+
+.btn-primary.pmd-btn-flat {
+  color: #4285f4;
+  background-color: transparent;
+}
+
+.btn-primary.pmd-btn-flat:hover {
+  background-color: #e5e5e5;
+}
+
+.btn-primary.pmd-btn-flat:active, .btn-primary.pmd-btn-flat.active, .btn-primary.pmd-btn-flat:focus {
+  color: #4285f4;
+  background-color: #ccc;
+}
+
+.btn-primary.pmd-btn-flat .ink {
+  background-color: #808080;
+}
+
+.btn-primary.pmd-btn-outline {
+  color: #4285f4;
+  background-color: transparent;
+  border-color: #4285f4;
+}
+
+.btn-primary.pmd-btn-outline:hover, .btn-primary.pmd-btn-outline:focus {
+  color: #fff;
+  background-color: #1e6ef2;
+  border-color: #1266f1;
+}
+
+.btn-secondary {
+  color: #333;
+  background-color: #ffc107;
+}
+
+.btn-secondary:hover {
+  color: #333;
+  background-color: #e0a800;
+}
+
+.btn-secondary:focus, .btn-secondary.focus, .btn-secondary:active, .btn-secondary.active, .btn-secondary.active.focus, .btn-secondary.active:focus, .btn-secondary:active.focus, .btn-secondary:active:focus {
+  color: #333;
+  background-color: #e0a800;
+}
+
+.btn-secondary .ink {
+  background-color: #d39e00;
+}
+
+.btn-secondary.pmd-btn-flat {
+  color: #ffc107;
+  background-color: transparent;
+}
+
+.btn-secondary.pmd-btn-flat:hover {
+  background-color: #e5e5e5;
+}
+
+.btn-secondary.pmd-btn-flat:active, .btn-secondary.pmd-btn-flat.active, .btn-secondary.pmd-btn-flat:focus {
+  color: #ffc107;
+  background-color: #ccc;
+}
+
+.btn-secondary.pmd-btn-flat .ink {
+  background-color: #808080;
+}
+
+.btn-secondary.pmd-btn-outline {
+  color: #ffc107;
+  background-color: transparent;
+  border-color: #ffc107;
+}
+
+.btn-secondary.pmd-btn-outline:hover, .btn-secondary.pmd-btn-outline:focus {
+  color: #333;
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #259b24;
+}
+
+.btn-success:hover {
+  color: #fff;
+  background-color: #1e7c1d;
+}
+
+.btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active, .btn-success.active.focus, .btn-success.active:focus, .btn-success:active.focus, .btn-success:active:focus {
+  color: #fff;
+  background-color: #1e7c1d;
+}
+
+.btn-success .ink {
+  background-color: #1b721a;
+}
+
+.btn-success.pmd-btn-flat {
+  color: #259b24;
+  background-color: transparent;
+}
+
+.btn-success.pmd-btn-flat:hover {
+  background-color: #e5e5e5;
+}
+
+.btn-success.pmd-btn-flat:active, .btn-success.pmd-btn-flat.active, .btn-success.pmd-btn-flat:focus {
+  color: #259b24;
+  background-color: #ccc;
+}
+
+.btn-success.pmd-btn-flat .ink {
+  background-color: #808080;
+}
+
+.btn-success.pmd-btn-outline {
+  color: #259b24;
+  background-color: transparent;
+  border-color: #259b24;
+}
+
+.btn-success.pmd-btn-outline:hover, .btn-success.pmd-btn-outline:focus {
+  color: #fff;
+  background-color: #1e7c1d;
+  border-color: #1b721a;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #03a9f4;
+}
+
+.btn-info:hover {
+  color: #fff;
+  background-color: #038fce;
+}
+
+.btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active, .btn-info.active.focus, .btn-info.active:focus, .btn-info:active.focus, .btn-info:active:focus {
+  color: #fff;
+  background-color: #038fce;
+}
+
+.btn-info .ink {
+  background-color: #0286c2;
+}
+
+.btn-info.pmd-btn-flat {
+  color: #03a9f4;
+  background-color: transparent;
+}
+
+.btn-info.pmd-btn-flat:hover {
+  background-color: #e5e5e5;
+}
+
+.btn-info.pmd-btn-flat:active, .btn-info.pmd-btn-flat.active, .btn-info.pmd-btn-flat:focus {
+  color: #03a9f4;
+  background-color: #ccc;
+}
+
+.btn-info.pmd-btn-flat .ink {
+  background-color: #808080;
+}
+
+.btn-info.pmd-btn-outline {
+  color: #03a9f4;
+  background-color: transparent;
+  border-color: #03a9f4;
+}
+
+.btn-info.pmd-btn-outline:hover, .btn-info.pmd-btn-outline:focus {
+  color: #fff;
+  background-color: #038fce;
+  border-color: #0286c2;
+}
+
+.btn-warning {
+  color: #333;
+  background-color: #ffc107;
+}
+
+.btn-warning:hover {
+  color: #333;
+  background-color: #e0a800;
+}
+
+.btn-warning:focus, .btn-warning.focus, .btn-warning:active, .btn-warning.active, .btn-warning.active.focus, .btn-warning.active:focus, .btn-warning:active.focus, .btn-warning:active:focus {
+  color: #333;
+  background-color: #e0a800;
+}
+
+.btn-warning .ink {
+  background-color: #d39e00;
+}
+
+.btn-warning.pmd-btn-flat {
+  color: #ffc107;
+  background-color: transparent;
+}
+
+.btn-warning.pmd-btn-flat:hover {
+  background-color: #e5e5e5;
+}
+
+.btn-warning.pmd-btn-flat:active, .btn-warning.pmd-btn-flat.active, .btn-warning.pmd-btn-flat:focus {
+  color: #ffc107;
+  background-color: #ccc;
+}
+
+.btn-warning.pmd-btn-flat .ink {
+  background-color: #808080;
+}
+
+.btn-warning.pmd-btn-outline {
+  color: #ffc107;
+  background-color: transparent;
+  border-color: #ffc107;
+}
+
+.btn-warning.pmd-btn-outline:hover, .btn-warning.pmd-btn-outline:focus {
+  color: #333;
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #ff5722;
+}
+
+.btn-danger:hover {
+  color: #fff;
+  background-color: #fb3c00;
+}
+
+.btn-danger:focus, .btn-danger.focus, .btn-danger:active, .btn-danger.active, .btn-danger.active.focus, .btn-danger.active:focus, .btn-danger:active.focus, .btn-danger:active:focus {
+  color: #fff;
+  background-color: #fb3c00;
+}
+
+.btn-danger .ink {
+  background-color: #ee3900;
+}
+
+.btn-danger.pmd-btn-flat {
+  color: #ff5722;
+  background-color: transparent;
+}
+
+.btn-danger.pmd-btn-flat:hover {
+  background-color: #e5e5e5;
+}
+
+.btn-danger.pmd-btn-flat:active, .btn-danger.pmd-btn-flat.active, .btn-danger.pmd-btn-flat:focus {
+  color: #ff5722;
+  background-color: #ccc;
+}
+
+.btn-danger.pmd-btn-flat .ink {
+  background-color: #808080;
+}
+
+.btn-danger.pmd-btn-outline {
+  color: #ff5722;
+  background-color: transparent;
+  border-color: #ff5722;
+}
+
+.btn-danger.pmd-btn-outline:hover, .btn-danger.pmd-btn-outline:focus {
+  color: #fff;
+  background-color: #fb3c00;
+  border-color: #ee3900;
+}
+
+.btn-light {
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+.btn-light:hover {
+  color: #333;
+  background-color: #e2e6ea;
+}
+
+.btn-light:focus, .btn-light.focus, .btn-light:active, .btn-light.active, .btn-light.active.focus, .btn-light.active:focus, .btn-light:active.focus, .btn-light:active:focus {
+  color: #333;
+  background-color: #e2e6ea;
+}
+
+.btn-light .ink {
+  background-color: #dae0e5;
+}
+
+.btn-light.pmd-btn-flat {
+  color: #f8f9fa;
+  background-color: transparent;
+}
+
+.btn-light.pmd-btn-flat:hover {
+  background-color: #e5e5e5;
+}
+
+.btn-light.pmd-btn-flat:active, .btn-light.pmd-btn-flat.active, .btn-light.pmd-btn-flat:focus {
+  color: #f8f9fa;
+  background-color: #ccc;
+}
+
+.btn-light.pmd-btn-flat .ink {
+  background-color: #808080;
+}
+
+.btn-light.pmd-btn-outline {
+  color: #f8f9fa;
+  background-color: transparent;
+  border-color: #f8f9fa;
+}
+
+.btn-light.pmd-btn-outline:hover, .btn-light.pmd-btn-outline:focus {
+  color: #333;
+  background-color: #e2e6ea;
+  border-color: #dae0e5;
+}
+
+.btn-dark {
+  color: #fff;
+  background-color: #343a40;
+}
+
+.btn-dark:hover {
+  color: #fff;
+  background-color: #23272b;
+}
+
+.btn-dark:focus, .btn-dark.focus, .btn-dark:active, .btn-dark.active, .btn-dark.active.focus, .btn-dark.active:focus, .btn-dark:active.focus, .btn-dark:active:focus {
+  color: #fff;
+  background-color: #23272b;
+}
+
+.btn-dark .ink {
+  background-color: #1d2124;
+}
+
+.btn-dark.pmd-btn-flat {
+  color: #343a40;
+  background-color: transparent;
+}
+
+.btn-dark.pmd-btn-flat:hover {
+  background-color: #e5e5e5;
+}
+
+.btn-dark.pmd-btn-flat:active, .btn-dark.pmd-btn-flat.active, .btn-dark.pmd-btn-flat:focus {
+  color: #343a40;
+  background-color: #ccc;
+}
+
+.btn-dark.pmd-btn-flat .ink {
+  background-color: #808080;
+}
+
+.btn-dark.pmd-btn-outline {
+  color: #343a40;
+  background-color: transparent;
+  border-color: #343a40;
+}
+
+.btn-dark.pmd-btn-outline:hover, .btn-dark.pmd-btn-outline:focus {
+  color: #fff;
+  background-color: #23272b;
+  border-color: #1d2124;
+}
+
+.btn-error {
+  color: #fff;
+  background-color: #ff5722;
+}
+
+.btn-error:hover {
+  color: #fff;
+  background-color: #fb3c00;
+}
+
+.btn-error:focus, .btn-error.focus, .btn-error:active, .btn-error.active, .btn-error.active.focus, .btn-error.active:focus, .btn-error:active.focus, .btn-error:active:focus {
+  color: #fff;
+  background-color: #fb3c00;
+}
+
+.btn-error .ink {
+  background-color: #ee3900;
+}
+
+.btn-error.pmd-btn-flat {
+  color: #ff5722;
+  background-color: transparent;
+}
+
+.btn-error.pmd-btn-flat:hover {
+  background-color: #e5e5e5;
+}
+
+.btn-error.pmd-btn-flat:active, .btn-error.pmd-btn-flat.active, .btn-error.pmd-btn-flat:focus {
+  color: #ff5722;
+  background-color: #ccc;
+}
+
+.btn-error.pmd-btn-flat .ink {
+  background-color: #808080;
+}
+
+.btn-error.pmd-btn-outline {
+  color: #ff5722;
+  background-color: transparent;
+  border-color: #ff5722;
+}
+
+.btn-error.pmd-btn-outline:hover, .btn-error.pmd-btn-outline:focus {
+  color: #fff;
+  background-color: #fb3c00;
+  border-color: #ee3900;
+}
+
+.btn-inverse {
+  color: #fff;
+  background-color: #343a40;
+}
+
+.btn-inverse:hover {
+  color: #fff;
+  background-color: #23272b;
+}
+
+.btn-inverse:focus, .btn-inverse.focus, .btn-inverse:active, .btn-inverse.active, .btn-inverse.active.focus, .btn-inverse.active:focus, .btn-inverse:active.focus, .btn-inverse:active:focus {
+  color: #fff;
+  background-color: #23272b;
+}
+
+.btn-inverse .ink {
+  background-color: #1d2124;
+}
+
+.btn-inverse.pmd-btn-flat {
+  color: #343a40;
+  background-color: transparent;
+}
+
+.btn-inverse.pmd-btn-flat:hover {
+  background-color: #e5e5e5;
+}
+
+.btn-inverse.pmd-btn-flat:active, .btn-inverse.pmd-btn-flat.active, .btn-inverse.pmd-btn-flat:focus {
+  color: #343a40;
+  background-color: #ccc;
+}
+
+.btn-inverse.pmd-btn-flat .ink {
+  background-color: #808080;
+}
+
+.btn-inverse.pmd-btn-outline {
+  color: #343a40;
+  background-color: transparent;
+  border-color: #343a40;
+}
+
+.btn-inverse.pmd-btn-outline:hover, .btn-inverse.pmd-btn-outline:focus {
+  color: #fff;
+  background-color: #23272b;
+  border-color: #1d2124;
+}
+
+.btn-information {
+  color: #fff;
+  background-color: #03a9f4;
+}
+
+.btn-information:hover {
+  color: #fff;
+  background-color: #038fce;
+}
+
+.btn-information:focus, .btn-information.focus, .btn-information:active, .btn-information.active, .btn-information.active.focus, .btn-information.active:focus, .btn-information:active.focus, .btn-information:active:focus {
+  color: #fff;
+  background-color: #038fce;
+}
+
+.btn-information .ink {
+  background-color: #0286c2;
+}
+
+.btn-information.pmd-btn-flat {
+  color: #03a9f4;
+  background-color: transparent;
+}
+
+.btn-information.pmd-btn-flat:hover {
+  background-color: #e5e5e5;
+}
+
+.btn-information.pmd-btn-flat:active, .btn-information.pmd-btn-flat.active, .btn-information.pmd-btn-flat:focus {
+  color: #03a9f4;
+  background-color: #ccc;
+}
+
+.btn-information.pmd-btn-flat .ink {
+  background-color: #808080;
+}
+
+.btn-information.pmd-btn-outline {
+  color: #03a9f4;
+  background-color: transparent;
+  border-color: #03a9f4;
+}
+
+.btn-information.pmd-btn-outline:hover, .btn-information.pmd-btn-outline:focus {
+  color: #fff;
+  background-color: #038fce;
+  border-color: #0286c2;
+}
+
+.btn-default.pmd-btn-flat {
+  color: #333;
+}
+
+.btn-default.pmd-btn-outline {
+  color: #333;
+  border-color: #333;
+}
+
+.btn-default.pmd-btn-outline:hover, .btn-default.pmd-btn-outline:focus {
+  border-color: #333;
+}
+
+.btn-lg {
+  padding: .625rem 1rem;
+  font-size: 1.125rem;
+  line-height: 1.3;
+  border-radius: .125rem;
+}
+
+.btn-sm {
+  padding: .25rem .75rem;
+  font-size: .75rem;
+  line-height: 1.5;
+  border-radius: .125rem;
+}
+
+.pmd-ripple-effect {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.ink {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 1;
+  -ms-transform: scale(0);
+      transform: scale(0);
+}
+
+.ink.animate {
+  animation: ripple .5s linear;
+}
+
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
+
+.btn-group .btn {
+  border-radius: 2px;
+}
+
+.btn-group.open .dropdown-toggle {
+  outline: 0;
+  outline-offset: 0;
+  box-shadow: none;
+}
+
+.btn-group .btn + .btn,
+.btn-group .btn + .btn-group,
+.btn-group .btn-group + .btn,
+.btn-group .btn-group + .btn-group {
+  margin-left: 0;
+}
+
+.btn-group > .btn:hover,
+.btn-group-vertical > .btn:hover {
+  z-index: 0;
+}
+
+.btn-group > .btn:focus:hover,
+.btn-group-vertical > .btn:focus:hover,
+.btn-group > .btn:active:hover,
+.btn-group-vertical > .btn:active:hover,
+.btn-group > .btn.active:hover,
+.btn-group-vertical > .btn.active:hover {
+  z-index: 2;
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in): modal.css
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.modal-content {
+  border-radius: .125rem;
+}
+
+.modal-header {
+  padding: 1rem 1rem 0;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  border-top-left-radius: .125rem;
+  border-top-right-radius: .125rem;
+}
+
+.modal-header.pmd-modal-bordered {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.modal-header h2.pmd-card-title-text {
+  font-weight: 500;
+}
+
+.pmd-modal-list {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-body {
+  padding: 0 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: rgba(0, 0, 0, .84);
+}
+
+.modal-body > p:last-child {
+  margin-bottom: 0;
+}
+
+.modal-footer {
+  padding: 1rem;
+}
+
+.pmd-modal-action {
+  padding: .5rem .25rem;
+}
+
+.pmd-modal-action .btn.pmd-btn-fab {
+  padding: 0;
+}
+
+.pmd-modal-action.pmd-modal-bordered {
+  border-top: 1px solid #e9ecef;
+}
+
+.pmd-modal-action .btn {
+  min-width: inherit;
+  padding: .625rem .5rem;
+  margin: .5rem .25rem;
+}
+
+.pmd-modal-action .btn:first-child {
+  margin-left: .75rem;
+}
+
+.pmd-modal-action .btn.pmd-btn-flat:first-child {
+  margin-left: .25rem;
+}
+
+.pmd-modal-action .pmd-btn-flat {
+  margin: 0 .25rem 0 0;
+}
+
+.modal .radio,
+.modal .checkbox {
+  margin: 1rem 0;
+}
+
+.modal .radio-options > label {
+  padding-left: 32px;
+}
+
+.modal .list-group.pmd-list-avatar {
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.modal.list-group:last-child {
+  margin-bottom: 0;
+}
+
+/* Form css */
+.form-horizontal .form-group {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* Modal center */
+.modal {
+  text-align: center;
+}
+
+.modal:before {
+  display: inline-block;
+  height: 100%;
+  margin-right: -4px;
+  vertical-align: middle;
+  content: '';
+}
+
+.modal .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in): dropdown.css
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.pmd-dropdown .dropdown-menu {
+  top: 0;
+  padding: .5rem 0;
+  margin: 0;
+  clip: rect(0 0 0 0);
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+}
+
+.pmd-dropdown .dropdown-menu > li > a {
+  padding: .75rem 1rem;
+  line-height: 1.42857143;
+  color: #333;
+}
+
+.pmd-dropdown .dropdown-menu > li > a:hover, .pmd-dropdown .dropdown-menu > li > a:focus {
+  color: #262626;
+  background-color: #f8f9fa;
+}
+
+.pmd-dropdown .dropdown-menu ul > li > a {
+  display: block;
+  padding: .75rem .75rem;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+}
+
+.pmd-dropdown .dropdown-menu ul > li > a:hover, .pmd-dropdown .dropdown-menu ul > li > a:focus {
+  color: #262626;
+  text-decoration: none;
+  background-color: #f8f9fa;
+}
+
+.pmd-dropdown .dropdown-menu > .active > a:hover, .pmd-dropdown .dropdown-menu > .active > a:focus {
+  background-color: #f8f9fa;
+}
+
+.pmd-dropdown .dropdown-menu > .disabled > a {
+  color: #868e96;
+}
+
+.pmd-dropdown .dropdown-menu > .disabled > a:hover, .pmd-dropdown .dropdown-menu > .disabled > a:focus {
+  color: #868e96;
+  background-color: transparent;
+}
+
+.pmd-dropdown .pmd-dropdown-menu-bg.pmd-dropdown-menu-bg-right {
+  -ms-transform-origin: right top;
+      transform-origin: right top;
+
+  will-change: transform;
+}
+
+.pmd-dropdown.open > .pmd-dropdown-menu-container {
+  display: block;
+}
+
+.pmd-dropdown.open > .pmd-dropdown-menu-container > .dropdown-menu {
+  display: block;
+  opacity: 1;
+}
+
+.pmd-dropdown.open > .pmd-dropdown-menu-container > .pmd-dropdown-menu-bg {
+  -ms-transform: scale(1);
+      transform: scale(1);
+}
+
+.pmd-dropdown.dropup .dropdown-menu {
+  top: auto;
+  bottom: 0;
+}
+
+.pmd-dropdown.dropup .pmd-dropdown-menu-container {
+  bottom: 100%;
+}
+
+.pmd-dropdown.dropup .caret {
+  border-bottom: 4px solid;
+}
+
+.pmd-dropdown .dropdown-menu-right {
+  clip: rect(0 0 0 0);
+}
+
+.pmd-dropdown-menu-container {
+  position: absolute;
+  z-index: 999;
+}
+
+.pmd-dropdown-menu-bg {
+  position: absolute;
+  background-color: #fff;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  transition: transform .3s cubic-bezier(.4, 0, .2, 1) 0s;
+  -ms-transform: scale(0);
+      transform: scale(0);
+  -ms-transform-origin: left top;
+      transform-origin: left top;
+
+  will-change: transform;
+}
+
+.pmd-dropdown-menu-bg.pmd-dropdown-menu-bg-bottom-left {
+  -ms-transform-origin: left bottom;
+      transform-origin: left bottom;
+
+  will-change: transform;
+}
+
+.pmd-dropdown-menu-bg.pmd-dropdown-menu-bg-bottom-right {
+  -ms-transform-origin: right bottom;
+      transform-origin: right bottom;
+
+  will-change: transform;
+}
+
+.dropdown-header {
+  padding: .25rem 1rem;
+  margin-top: 8px;
+  color: #868e96;
+}
+
+.navbar-fixed-bottom .pmd-dropdown.dropdown .caret {
+  border-bottom: 4px solid;
+}
+
+.pmd-dropdown-menu-top-right {
+  right: 0;
+  left: auto;
+}
+
+.pmd-dropdown-menu-center {
+  clip: inherit;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  transition: none;
+}
+
+.pmd-sidebar .pmd-dropdown-menu-container .dropdown-menu {
+  opacity: 1;
+  transition: none;
+}
+
+.pmd-sidebar-open.pmd-sidebar .pmd-dropdown-menu-container {
+  position: static;
+  transition: none;
+}
+
+.pmd-sidebar-open.pmd-sidebar .pmd-dropdown-menu-bg {
+  display: none;
+}
+
+.pmd-sidebar-open.pmd-sidebar .open > .pmd-dropdown-menu-container {
+  position: static;
+}
+
+.pmd-sidebar-open.pmd-navbar-sidebar .dropdown-menu {
+  top: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  opacity: 1;
+  transition: none;
+}
+
+.pmd-sidebar-open.pmd-navbar-sidebar .pmd-dropdown-menu-container {
+  position: static;
+  transition: none;
+}
+
+.pmd-sidebar-open.pmd-navbar-sidebar .pmd-dropdown-menu-container .dropdown-menu {
+  transition: none;
+}
+
+.pmd-sidebar-open.pmd-navbar-sidebar .pmd-dropdown-menu-bg {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .pmd-sidebar-dropdown .pmd-dropdown-menu-container {
+    position: static;
+    transition: none;
+  }
+  .pmd-sidebar-dropdown .dropdown-menu {
+    opacity: 1;
+    transition: none;
+  }
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in): textfield.css
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.pmd-textfield-focused {
+  position: relative;
+  top: -1px;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #4285f4;
+  transition: transform .2s cubic-bezier(.4, 0, .2, 1) 0s;
+  -ms-transform: scaleX(0);
+      transform: scaleX(0);
+}
+
+.pmd-textfield.pmd-textfield-floating-label-active .pmd-textfield-focused {
+  -ms-transform: scaleX(1);
+      transform: scaleX(1);
+}
+
+.form-group.pmd-textfield {
+  margin-bottom: 1rem;
+  line-height: 1.375rem;
+}
+
+.pmd-textfield .form-control {
+  padding: 0;
+  padding-bottom: .375rem;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: solid 1px #e6e6e6;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+.pmd-textfield input.form-control {
+  height: inherit;
+}
+
+.pmd-textfield textarea.form-control {
+  height: 80px;
+}
+
+.pmd-textfield label {
+  margin-bottom: 0;
+  font-size: .875rem;
+  font-weight: normal;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, .54);
+}
+
+.pmd-textfield-floating-label {
+  position: relative;
+}
+
+.pmd-textfield-floating-label label {
+  margin: 0;
+  margin-bottom: .25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  transition-duration: .2s;
+  -ms-transform: translateY(26px);
+      transform: translateY(26px);
+}
+
+.pmd-textfield-floating-label .form-control {
+  position: relative;
+}
+
+.pmd-textfield-floating-label.pmd-textfield-floating-label-completed label {
+  font-size: .875rem;
+  color: rgba(0, 0, 0, .54);
+  -ms-transform: translateY(0px);
+      transform: translateY(0px);
+}
+
+.pmd-textfield.has-success .form-control {
+  color: #259b24;
+  border-color: #259b24;
+}
+
+.pmd-textfield.has-success .form-control ~ .pmd-textfield-focused {
+  background-color: #259b24;
+}
+
+.pmd-textfield.has-success .form-control ~ .has-error-text {
+  display: block;
+  color: #259b24;
+}
+
+.pmd-textfield.has-success .form-control:focus {
+  box-shadow: none;
+}
+
+.pmd-textfield-floating-label.pmd-textfield-floating-label-completed.has-success label {
+  color: #259b24;
+}
+
+.has-success .control-label,
+.has-success .help-block {
+  color: #259b24;
+}
+
+.pmd-textfield.has-warning .form-control {
+  color: #ffc107;
+  border-color: #ffc107;
+}
+
+.pmd-textfield.has-warning .form-control ~ .pmd-textfield-focused {
+  background-color: #ffc107;
+}
+
+.pmd-textfield.has-warning .form-control ~ .has-error-text {
+  display: block;
+  color: #ffc107;
+}
+
+.pmd-textfield.has-warning .form-control:focus {
+  box-shadow: none;
+}
+
+.pmd-textfield-floating-label.pmd-textfield-floating-label-completed.has-warning label {
+  color: #ffc107;
+}
+
+.has-warning .control-label,
+.has-warning .help-block {
+  color: #ffc107;
+}
+
+.pmd-textfield.has-error .form-control {
+  color: #ff5722;
+  border-color: #ff5722;
+}
+
+.pmd-textfield.has-error .form-control ~ .pmd-textfield-focused {
+  background-color: #ff5722;
+}
+
+.pmd-textfield.has-error .form-control ~ .has-error-text {
+  display: block;
+  color: #ff5722;
+}
+
+.pmd-textfield.has-error .form-control:focus {
+  box-shadow: none;
+}
+
+.pmd-textfield-floating-label.pmd-textfield-floating-label-completed.has-error label {
+  color: #ff5722;
+}
+
+.has-error .control-label,
+.has-error .help-block {
+  color: #ff5722;
+}
+
+.pmd-textfield.has-error .form-control:invalid {
+  color: form-state-colors("error");
+}
+
+.pmd-textfield.has-error .form-control:invalid ~ .pmd-textfield-focused {
+  background-color: form-state-colors("error");
+}
+
+.pmd-textfield.has-error .form-control:invalid ~ .has-error-text {
+  display: block;
+  color: form-state-colors("error");
+}
+
+.help-block {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.has-error-text {
+  display: none;
+}
+
+.form-group-lg.pmd-textfield .form-control {
+  height: 44px;
+  font-size: 1.25rem;
+  line-height: 1.33333;
+}
+
+.form-group-lg.pmd-textfield label {
+  font-size: 1rem;
+}
+
+.form-group-lg.pmd-textfield-floating-label label {
+  font-size: 1.25rem;
+  -ms-transform: translateY(36px);
+      transform: translateY(36px);
+}
+
+.form-group-lg.pmd-textfield-floating-label.pmd-textfield-floating-label-completed label {
+  font-size: 1rem;
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+}
+
+.form-group-sm.pmd-textfield .form-control {
+  height: 30px;
+  font-size: .875rem;
+  line-height: 1.33333;
+}
+
+.form-group-sm.pmd-textfield label {
+  font-size: .625rem;
+}
+
+.form-group-sm.pmd-textfield-floating-label label {
+  font-size: .875rem;
+  -ms-transform: translateY(28px);
+      transform: translateY(28px);
+}
+
+.form-group-sm.pmd-textfield-floating-label.pmd-textfield-floating-label-completed label {
+  font-size: .625rem;
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+}
+
+.pmd-textfield .input-group-addon {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.pmd-textfield .input-group-addon:first-child {
+  padding-right: 16px;
+}
+
+.pmd-textfield .input-group-addon:last-child {
+  padding-left: 16px;
+}
+
+.pmd-textfield .input-group .form-control {
+  z-index: inherit;
+  float: inherit;
+}
+
+.pmd-input-group-label {
+  padding-left: 40px;
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in): checkbox.css
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.pmd-checkbox-ripple-effect {
+  -ms-transform: translateZ(0px);
+      transform: translateZ(0px);
+}
+
+.checkbox .pmd-checkbox-ripple-effect {
+  padding-left: 0;
+}
+
+.checkbox .pmd-checkbox {
+  padding-left: 0;
+}
+
+.pmd-checkbox [type="checkbox"] {
+  /* Disabled checkbox */
+}
+
+.pmd-checkbox [type="checkbox"]:not(:checked), .pmd-checkbox [type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+.pmd-checkbox [type="checkbox"]:not(:checked) + .pmd-checkbox-label, .pmd-checkbox [type="checkbox"]:checked + .pmd-checkbox-label {
+  position: relative;
+  padding-left: 1.5625rem;
+  cursor: pointer;
+}
+
+.pmd-checkbox [type="checkbox"]:not(:checked) + .pmd-checkbox-label:before, .pmd-checkbox [type="checkbox"]:checked + .pmd-checkbox-label:before {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  content: '';
+  border-color: rgba(0, 0, 0, .54);
+  border-style: solid;
+  border-width: .125rem;
+  border-radius: .125rem;
+}
+
+.pmd-checkbox [type="checkbox"]:not(:checked) + .pmd-checkbox-label:after, .pmd-checkbox [type="checkbox"]:checked + .pmd-checkbox-label:after {
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  display: table;
+  width: 6px;
+  height: 12px;
+  color: #fff;
+  content: "";
+  border-style: none solid solid none;
+  border-width: 0 .125rem .125rem 0;
+  border-image: none;
+  transition: all .2s;
+}
+
+.pmd-checkbox [type="checkbox"]:checked + .pmd-checkbox-label:before {
+  background-color: #4285f4;
+  border-color: #4285f4;
+}
+
+.pmd-checkbox [type="checkbox"]:checked + .pmd-checkbox-label:after {
+  opacity: 1;
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+}
+
+.pmd-checkbox [type="checkbox"]:not(:checked) + .pmd-checkbox-label:after {
+  opacity: 0;
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+}
+
+.pmd-checkbox [type="checkbox"]:disabled:not(:checked) + .pmd-checkbox-label:before, .pmd-checkbox [type="checkbox"]:disabled:checked + .pmd-checkbox-label:before {
+  cursor: not-allowed;
+  border-color: rgba(0, 0, 0, .26);
+  box-shadow: none;
+}
+
+.checkbox.disabled label.pmd-checkbox,
+fieldset[disabled] .checkbox label.pmd-checkbox {
+  color: rgba(0, 0, 0, .26);
+}
+
+/* hover style just for information */
+.pmd-checkbox label:hover:before {
+  border: 1px solid #4778d9;
+}
+
+.pmd-checkbox.pmd-checkbox-ripple-effect {
+  position: relative;
+}
+
+.pmd-checkbox .pmd-checkboxwrap {
+  position: absolute;
+  top: -8px;
+  left: -11px;
+  z-index: -1;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.checkbox-inline.pmd-checkbox {
+  padding-left: 0;
+}
+
+.pmd-checkbox-ripple-effect .ink {
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.pmd-card-inverse .pmd-checkbox [type="checkbox"]:not(:checked) + .pmd-checkbox-label:before,
+.pmd-card-inverse .pmd-checkbox [type="checkbox"] :checked + .pmd-checkbox-label:before {
+  border-color: rgba(255, 255, 255, .54);
+}
+
+.pmd-card-inverse .pmd-checkbox [type="checkbox"]:checked + .pmd-checkbox-label:before {
+  background-color: #4285f4;
+}
+
+.pmd-card-inverse .checkbox.disabled label.pmd-checkbox,
+.pmd-card-inverse fieldset[disabled] .checkbox label.pmd-checkbox {
+  color: rgba(255, 255, 255, .54);
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in): radio.css
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.pmd-radio {
+  position: relative;
+  /*Radio input Hide*/
+  /*Custamize Radio*/
+  /*Select Radio*/
+}
+
+.pmd-radio span.pmd-radiobutton {
+  margin-bottom: 0;
+}
+
+.pmd-radio input {
+  display: none;
+}
+
+.pmd-radio > span.pmd-radio-label {
+  position: relative;
+  display: inline-block;
+  padding-left: 1rem;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.pmd-radio > span.pmd-radio-label:before {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  display: block;
+  width: 18px;
+  height: 18px;
+  content: "";
+  border: .125rem solid rgba(0, 0, 0, .54);
+  border-radius: 18px;
+}
+
+.pmd-radio > span.pmd-radio-label:after {
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin-top: -5px;
+  content: "";
+  background: #4285f4;
+  border-radius: 4px;
+  transition: .2s ease-in-out;
+  -ms-transform: scale(0);
+      transform: scale(0);
+}
+
+.pmd-radio :checked + span.pmd-radio-label:before {
+  border-color: #4285f4;
+}
+
+.pmd-radio :checked + span.pmd-radio-label:after {
+  -ms-transform: scale(1);
+      transform: scale(1);
+}
+
+.pmd-radio .ink {
+  background-color: rgba(0, 0, 0, .2);
+}
+
+/*Radio Layput*/
+.radio-inline.pmd-radio {
+  padding-left: 0;
+}
+
+.radio .pmd-radio {
+  padding-left: 0;
+}
+
+/* Disabled Radio */
+.radio.disabled label {
+  color: rgba(0, 0, 0, .26);
+}
+
+.radio.disabled .pmd-radio > span.pmd-radio-label::before {
+  cursor: not-allowed;
+  border-color: rgba(0, 0, 0, .26);
+}
+
+fieldset[disabled] .radio label {
+  color: rgba(0, 0, 0, .26);
+}
+
+/* Card Inverse Radio */
+.pmd-card-inverse {
+  /* Card Inverse Disabled Radio */
+}
+
+.pmd-card-inverse .pmd-radio > span.pmd-radio-label::before {
+  border-color: rgba(255, 255, 255, .87);
+}
+
+.pmd-card-inverse .pmd-radio > span.pmd-radio-label::after {
+  background-color: #4285f4;
+}
+
+.pmd-card-inverse .radio.disabled label {
+  color: rgba(255, 255, 255, .54);
+}
+
+.pmd-card-inverse .radio.disabled .pmd-radio > span.pmd-radio-label::before {
+  border-color: rgba(255, 255, 255, .26);
+}
+
+.pmd-card-inverse :checked + span.pmd-radio-label:before {
+  border-color: #4285f4;
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in): toggle-switch.css
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.pmd-switch {
+  vertical-align: middle;
+  -moz-user-select: none;
+}
+
+.pmd-switch label,
+.pmd-switch input,
+.pmd-switch .pmd-switch-label {
+  -moz-user-select: none;
+}
+
+.pmd-switch label {
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.pmd-switch label input[type="checkbox"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.pmd-switch label .pmd-switch-label,
+.pmd-switch label input[type="checkbox][disabled"] + .pmd-switch-label {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 15px;
+  vertical-align: middle;
+  content: "";
+  background-color: rgba(0, 0, 0, .54);
+  border-radius: 15px;
+  transition: all .2s ease-in-out;
+}
+
+.pmd-switch label .pmd-switch-label::after {
+  position: absolute;
+  top: -2px;
+  left: -6px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  content: "";
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  transition: all .2s ease-in-out;
+}
+
+.pmd-switch label input[type="checkbox][disabled"] + .pmd-switch-label::after,
+.pmd-switch label input[type="checkbox][disabled"]:checked + .pmd-switch-label::after {
+  background-color: rgba(0, 0, 0, .25);
+}
+
+.pmd-switch label input[type="checkbox"] + .pmd-switch-label:active::after,
+.pmd-switch label input[type="checkbox][disabled"] + .pmd-switch-label:active::after {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+}
+
+.pmd-switch label input[type="checkbox"]:checked + .pmd-switch-label::after {
+  left: 15px;
+  background-color: #4285f4;
+}
+
+.pmd-switch label input[type="checkbox"]:checked + .pmd-switch-label {
+  background-color: rgba(66, 133, 244, .54);
+}
+
+.pmd-switch label input[type="checkbox"]:checked + .pmd-switch-label:active::after {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in): list.css
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.pmd-card-list {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+
+.list-group-item {
+  margin-bottom: -1px;
+  line-height: 1.4;
+  border: inherit;
+}
+
+.list-group-item:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.list-group-item:last-child {
+  margin-bottom: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.list-group-item-heading {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.list-group-item-text {
+  margin-bottom: 0;
+  font-size: .875rem;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, .54);
+}
+
+.pmd-list .list-group-item {
+  padding: .75rem 1rem;
+}
+
+.pmd-list .media-left,
+.pmd-list .media > .pull-left {
+  padding-right: 1rem;
+}
+
+.pmd-list-icon .list-group-item {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+}
+
+.pmd-list-twoline .list-group-item {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+}
+
+.pmd-list-avatar {
+  padding: .5rem 0;
+}
+
+.pmd-list-avatar .list-group-item {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.avatar-list-img {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.material-icons.media-left {
+  display: table-cell;
+  padding-right: 32px;
+  vertical-align: top;
+}
+
+.material-icons.media-right {
+  display: table-cell;
+  padding-left: 32px;
+  vertical-align: top;
+}
+
+.material-icons.media-middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.media-body.pmd-word-break {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in): navbar.css
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+@media (min-width: 768px) {
+  .pmd-navbar .navbar {
+    border-radius: 0;
+  }
+}
+
+.pmd-navbar.navbar > .container .navbar-brand,
+.pmd-navbar.navbar > .container-fluid .navbar-brand {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .pmd-navbar.navbar > .container .navbar-brand,
+  .pmd-navbar.navbar > .container-fluid .navbar-brand {
+    margin-left: 0;
+  }
+}
+
+.pmd-navbar .navbar-brand {
+  float: left;
+  height: inherit;
+  padding: .5rem 1rem .5rem .5rem;
+  font-size: 1.5rem;
+  line-height: 48px;
+}
+
+@media (max-width: 767px) {
+  .pmd-navbar .navbar-brand {
+    line-height: 40px;
+  }
+}
+
+.pmd-navbar .navbar-nav > li > a {
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .pmd-navbar .navbar-nav > li > a {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .pmd-navbar .navbar-nav {
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .pmd-navbar .navbar-nav a {
+    position: relative;
+    display: block;
+    padding: .75rem 1rem;
+    overflow: hidden;
+    clear: both;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    transition: all .2s ease-in-out;
+  }
+  .pmd-navbar .navbar-nav a:hover,
+  .pmd-navbar .navbar-nav a :focus {
+    outline: none;
+    box-shadow: none;
+  }
+  .pmd-navbar .navbar-nav .dropdown-menu {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .pmd-navbar .navbar-nav .dropdown-menu > li > a,
+  .pmd-navbar .navbar-nav .dropdown-menu .dropdown-header {
+    padding: .25rem 1rem .25rem 2rem;
+    line-height: 24px;
+  }
+}
+
+.pmd-navbar .navbar-toggle {
+  float: left;
+  width: 40px;
+  height: 40px;
+  padding: .625rem;
+  margin-top: 12px;
+  margin-right: .5rem;
+  border: none;
+  border-radius: 50%;
+}
+
+.pmd-navbar .navbar-toggle .icon-bar {
+  width: 20px;
+}
+
+@media (max-width: 767px) {
+  .pmd-navbar .navbar-toggle {
+    margin-top: .5rem;
+  }
+}
+
+.pmd-navbar .pmd-navbar-right-icon {
+  margin-left: 1rem;
+}
+
+.pmd-navbar .pmd-navbar-right-icon a {
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  .pmd-navbar .pmd-navbar-right-icon {
+    position: absolute;
+    top: 0;
+    right: 8px;
+  }
+}
+
+.pmd-navbar .btn.pmd-btn-fab {
+  padding: 0;
+  margin: .75rem 0;
+}
+
+@media (max-width: 767px) {
+  .pmd-navbar .btn.pmd-btn-fab {
+    margin: .5rem 0;
+  }
+}
+
+.pmd-navbar .navbar-form {
+  padding-top: 7px;
+  padding-bottom: 6px;
+}
+
+.pmd-navbar .navbar-form .btn {
+  padding: 9px 14px;
+}
+
+.pmd-sidebar-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 998;
+  visibility: hidden;
+  background: #000;
+  opacity: 0;
+  transition: visibility 0 linear .4s, opacity .4s cubic-bezier(.4, 0, .2, 1);
+  -ms-transform: translateZ(0);
+      transform: translateZ(0);
+}
+
+.pmd-sidebar-overlay.pmd-sidebar-overlay-active, .pmd-sidebar-overlay.active {
+  visibility: visible;
+  opacity: .5;
+  transition-delay: 0;
+}
+
+/* Menu in right sidebar */
+@media (max-width: 767px) {
+  .pmd-navbar .navbar-header {
+    padding: 0 .5rem;
+  }
+  .pmd-navbar.navbar-fixed-top, .pmd-navbar.navbar-fixed-bottom {
+    z-index: 998;
+  }
+}
+
+@media (max-width: 767px) {
+  .pmd-navbar-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    display: block;
+    width: 85%;
+    min-width: 85%;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #fff;
+    border: none;
+    transition: all .5s cubic-bezier(.55, 0, .1, 1);
+    transform: translate3d(-100%, 0, 0);
+  }
+  .pmd-navbar-sidebar:before,
+  .pmd-navbar-sidebar :after {
+    display: table;
+    content: " ";
+  }
+  .pmd-navbar-sidebar:after {
+    clear: both;
+  }
+  .pmd-navbar-sidebar::-webkit-scrollbar-track {
+    border-radius: 2px;
+  }
+  .pmd-navbar-sidebar::-webkit-scrollbar {
+    width: 5px;
+    background-color: #f7f7f7;
+  }
+  .pmd-navbar-sidebar::-webkit-scrollbar-thumb {
+    background-color: #bfbfbf;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  }
+  .pmd-navbar-sidebar.pmd-sidebar-open {
+    box-shadow: 2px 0 15px rgba(0, 0, 0, .35);
+    transform: translate3d(0, 0, 0);
+  }
+  /* -- sidebar nav ------------------------------- */
+  .container > .navbar-collapse.pmd-navbar-sidebar,
+  .container-fluid > .navbar-collapse.pmd-navbar-sidebar {
+    padding: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  /* -- sidebar inverse ------------------------------- */
+  .navbar-inverse .pmd-navbar-sidebar {
+    background-color: #222;
+  }
+  .navbar-inverse .pmd-navbar-sidebar .dropdown-menu > li > a {
+    color: rgba(255, 255, 255, .75);
+  }
+  .navbar-inverse .pmd-navbar-sidebar .dropdown-menu > li > a:hover,
+  .navbar-inverse .pmd-navbar-sidebar .dropdown-menu > li > a :focus {
+    color: white;
+    background-color: transparent;
+  }
+  .navbar-inverse .pmd-user-info .dropdown-menu {
+    border-color: #080808;
+  }
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #9d9d9d;
+  }
+}
+
+/* -- My Account -------------------------------- */
+.pmd-user-info > a {
+  display: block;
+  padding: .5rem .5rem;
+}
+
+.pmd-user-info .dropdown-menu {
+  min-width: 100%;
+}
+
+.pmd-navbar .pmd-user-info {
+  margin-right: -15px;
+  margin-left: 1rem;
+}
+
+.pmd-navbar .pmd-user-info .media-body {
+  width: auto;
+  height: 40px;
+}
+
+@media (max-width: 767px) {
+  .pmd-navbar .pmd-user-info > a {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .pmd-navbar .pmd-navbar-sidebar .pmd-user-info {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .pmd-navbar .pmd-navbar-sidebar .pmd-user-info a {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .pmd-navbar .pmd-navbar-sidebar .pmd-user-info .dropdown-menu {
+    position: relative;
+    border-color: #3c3b3b;
+    border-bottom: transparent solid 1px;
+    box-shadow: none;
+  }
+  .pmd-navbar .pmd-navbar-sidebar .pmd-user-info > a {
+    color: rgba(255, 255, 255, .75);
+    background-color: #3c3b3b;
+    background-size: cover;
+  }
+  .pmd-navbar .pmd-navbar-sidebar .pmd-user-info > a:hover,
+  .pmd-navbar .pmd-navbar-sidebar .pmd-user-info > a :focus {
+    background-color: #3c3b3b;
+  }
+  .pmd-navbar .pmd-navbar-sidebar .pmd-user-info .media-body {
+    width: 100%;
+  }
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in): popover.css
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.popover.default {
+  color: #fff;
+  background-color: #fff;
+  border-color: white;
+}
+
+.popover.default.left > .arrow:after {
+  border-left-color: #fff;
+}
+
+.popover.default.right > .arrow:after {
+  border-right-color: #fff;
+}
+
+.popover.default.top > .arrow:after {
+  border-top-color: #fff;
+}
+
+.popover.default.bottom > .arrow:after {
+  border-bottom-color: #fff;
+}
+
+.popover.primary {
+  color: #fff;
+  background-color: #4285f4;
+  border-color: #caddfc;
+}
+
+.popover.primary.left > .arrow:after {
+  border-left-color: #4285f4;
+}
+
+.popover.primary.right > .arrow:after {
+  border-right-color: #4285f4;
+}
+
+.popover.primary.top > .arrow:after {
+  border-top-color: #4285f4;
+}
+
+.popover.primary.bottom > .arrow:after {
+  border-bottom-color: #4285f4;
+}
+
+.popover.secondary {
+  color: #fff;
+  background-color: #ffc107;
+  border-color: #ffeeba;
+}
+
+.popover.secondary.left > .arrow:after {
+  border-left-color: #ffc107;
+}
+
+.popover.secondary.right > .arrow:after {
+  border-right-color: #ffc107;
+}
+
+.popover.secondary.top > .arrow:after {
+  border-top-color: #ffc107;
+}
+
+.popover.secondary.bottom > .arrow:after {
+  border-bottom-color: #ffc107;
+}
+
+.popover.success {
+  color: #fff;
+  background-color: #259b24;
+  border-color: #c2e3c2;
+}
+
+.popover.success.left > .arrow:after {
+  border-left-color: #259b24;
+}
+
+.popover.success.right > .arrow:after {
+  border-right-color: #259b24;
+}
+
+.popover.success.top > .arrow:after {
+  border-top-color: #259b24;
+}
+
+.popover.success.bottom > .arrow:after {
+  border-bottom-color: #259b24;
+}
+
+.popover.info {
+  color: #fff;
+  background-color: #03a9f4;
+  border-color: #b8e7fc;
+}
+
+.popover.info.left > .arrow:after {
+  border-left-color: #03a9f4;
+}
+
+.popover.info.right > .arrow:after {
+  border-right-color: #03a9f4;
+}
+
+.popover.info.top > .arrow:after {
+  border-top-color: #03a9f4;
+}
+
+.popover.info.bottom > .arrow:after {
+  border-bottom-color: #03a9f4;
+}
+
+.popover.warning {
+  color: #fff;
+  background-color: #ffc107;
+  border-color: #ffeeba;
+}
+
+.popover.warning.left > .arrow:after {
+  border-left-color: #ffc107;
+}
+
+.popover.warning.right > .arrow:after {
+  border-right-color: #ffc107;
+}
+
+.popover.warning.top > .arrow:after {
+  border-top-color: #ffc107;
+}
+
+.popover.warning.bottom > .arrow:after {
+  border-bottom-color: #ffc107;
+}
+
+.popover.danger {
+  color: #fff;
+  background-color: #ff5722;
+  border-color: #ffd0c1;
+}
+
+.popover.danger.left > .arrow:after {
+  border-left-color: #ff5722;
+}
+
+.popover.danger.right > .arrow:after {
+  border-right-color: #ff5722;
+}
+
+.popover.danger.top > .arrow:after {
+  border-top-color: #ff5722;
+}
+
+.popover.danger.bottom > .arrow:after {
+  border-bottom-color: #ff5722;
+}
+
+.popover.light {
+  color: #fff;
+  background-color: #f8f9fa;
+  border-color: #fdfdfe;
+}
+
+.popover.light.left > .arrow:after {
+  border-left-color: #f8f9fa;
+}
+
+.popover.light.right > .arrow:after {
+  border-right-color: #f8f9fa;
+}
+
+.popover.light.top > .arrow:after {
+  border-top-color: #f8f9fa;
+}
+
+.popover.light.bottom > .arrow:after {
+  border-bottom-color: #f8f9fa;
+}
+
+.popover.dark {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #c6c8ca;
+}
+
+.popover.dark.left > .arrow:after {
+  border-left-color: #343a40;
+}
+
+.popover.dark.right > .arrow:after {
+  border-right-color: #343a40;
+}
+
+.popover.dark.top > .arrow:after {
+  border-top-color: #343a40;
+}
+
+.popover.dark.bottom > .arrow:after {
+  border-bottom-color: #343a40;
+}
+
+.popover.error {
+  color: #fff;
+  background-color: #ff5722;
+  border-color: #ffd0c1;
+}
+
+.popover.error.left > .arrow:after {
+  border-left-color: #ff5722;
+}
+
+.popover.error.right > .arrow:after {
+  border-right-color: #ff5722;
+}
+
+.popover.error.top > .arrow:after {
+  border-top-color: #ff5722;
+}
+
+.popover.error.bottom > .arrow:after {
+  border-bottom-color: #ff5722;
+}
+
+.popover.inverse {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #c6c8ca;
+}
+
+.popover.inverse.left > .arrow:after {
+  border-left-color: #343a40;
+}
+
+.popover.inverse.right > .arrow:after {
+  border-right-color: #343a40;
+}
+
+.popover.inverse.top > .arrow:after {
+  border-top-color: #343a40;
+}
+
+.popover.inverse.bottom > .arrow:after {
+  border-bottom-color: #343a40;
+}
+
+.popover.information {
+  color: #fff;
+  background-color: #03a9f4;
+  border-color: #b8e7fc;
+}
+
+.popover.information.left > .arrow:after {
+  border-left-color: #03a9f4;
+}
+
+.popover.information.right > .arrow:after {
+  border-right-color: #03a9f4;
+}
+
+.popover.information.top > .arrow:after {
+  border-top-color: #03a9f4;
+}
+
+.popover.information.bottom > .arrow:after {
+  border-bottom-color: #03a9f4;
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in): progressbar.css
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.pmd-progress {
+  height: 4px;
+  background: none repeat scroll 0 0 #ced4da;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.progress-bar {
+  box-shadow: none;
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in): sidebar.css
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.constructor,
+.pmd-content {
+  position: relative;
+  padding-top: 4.625rem;
+  padding-right: 1.875rem;
+  padding-left: 1.875rem;
+  margin: 0;
+  transition: all .3s cubic-bezier(.55, 0, .1, 1);
+}
+
+@media (max-width: 767px) {
+  .constructor,
+  .pmd-content {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    transition: none;
+  }
+}
+
+@media (max-width: 767px) {
+  body.pmd-body-open {
+    overflow: hidden;
+  }
+}
+
+.pmd-sidebar,
+.wrapper,
+.pmd-content {
+  vertical-align: top;
+}
+
+.pmd-sidebar-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 998;
+  visibility: hidden;
+  background: #000;
+  opacity: 0;
+  transition: all .3s cubic-bezier(.55, 0, .1, 1);
+  -ms-transform: translateZ(0);
+      transform: translateZ(0);
+}
+
+.pmd-sidebar-overlay.pmd-sidebar-overlay-active {
+  visibility: visible;
+  opacity: .5;
+  transition-delay: 0;
+}
+
+.pmd-sidebar {
+  position: relative;
+  display: block;
+  width: 280px;
+  min-height: 100%;
+  padding-top: 4rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+  border: none;
+  transition: all .3s cubic-bezier(.55, 0, .1, 1);
+}
+
+@media (max-width: 767px) {
+  .pmd-sidebar {
+    padding-top: 0;
+    transform: translate3d(-280px, 0, 0);
+  }
+}
+
+.pmd-sidebar:before, .pmd-sidebar:after {
+  display: table;
+  content: " ";
+}
+
+.pmd-sidebar:after {
+  clear: both;
+}
+
+.pmd-sidebar::-webkit-scrollbar-track {
+  border-radius: 2px;
+}
+
+.pmd-sidebar::-webkit-scrollbar-track {
+  border-radius: 2px;
+}
+
+.pmd-sidebar::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f7f7f7;
+}
+
+.pmd-sidebar::-webkit-scrollbar-thumb {
+  background-color: #bfbfbf;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+}
+
+.pmd-sidebar .pmd-user-info > a {
+  color: #fff;
+  background-color: #333;
+  background-size: cover;
+}
+
+.pmd-sidebar .pmd-user-info > a:hover, .pmd-sidebar .pmd-user-info > a:focus {
+  background-color: #333;
+}
+
+.pmd-sidebar.pmd-sidebar-open {
+  width: 280px;
+  min-width: 280px;
+  -ms-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+}
+
+@media (max-width: 767px) {
+  .pmd-sidebar.pmd-sidebar-open {
+    width: 280px;
+    min-width: 280px;
+  }
+}
+
+.pmd-sidebar-slide-push {
+  left: 0;
+  -ms-transform: translate3d(-280px, 0, 0);
+      transform: translate3d(-280px, 0, 0);
+}
+
+@media (max-width: 767px) {
+  .pmd-sidebar-slide-push {
+    left: 0;
+  }
+}
+
+.pmd-sidebar-slide-push.pmd-sidebar-open ~ .pmd-content,
+.pmd-sidebar-slide-push.pmd-sidebar-open ~ .wrapper .constructor {
+  margin-left: 280px;
+}
+
+@media (max-width: 767px) {
+  .pmd-sidebar-slide-push.pmd-sidebar-open ~ .pmd-content,
+  .pmd-sidebar-slide-push.pmd-sidebar-open ~ .wrapper .constructor {
+    margin-left: 0;
+  }
+}
+
+.pmd-sidebar-left-fixed,
+.pmd-sidebar-right-fixed,
+.pmd-sidebar-slide-push {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.pmd-sidebar-left-fixed {
+  left: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  -ms-transform: translate3d(-280px, 0, 0);
+      transform: translate3d(-280px, 0, 0);
+}
+
+.pmd-sidebar-right-fixed {
+  right: 0;
+  -ms-transform: translate3d(280px, 0, 0);
+      transform: translate3d(280px, 0, 0);
+}
+
+.pmd-sidebar-right-fixed.pmd-sidebar-open {
+  -ms-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+}
+
+.pmd-sidebar .pmd-sidebar-nav li {
+  position: relative;
+}
+
+.pmd-sidebar .pmd-sidebar-nav li a {
+  position: relative;
+  overflow: hidden;
+  clear: both;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.pmd-sidebar .dropdown-menu {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.pmd-sidebar .dropdown-menu li a {
+  padding-left: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .pmd-sidebar .dropdown-menu li a {
+    padding-left: 1rem;
+  }
+}
+
+/* -- Topbar --*/
+.topbar-fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1030;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: all .3s cubic-bezier(.55, 0, .1, 1);
+  -ms-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+}
+
+.topbar-fixed.pmd-sidebar-open {
+  width: 100%;
+  height: 200%;
+  -ms-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+}
+
+.topbar-fixed.pmd-sidebar-open::before {
+  bottom: 50%;
+  left: 50%;
+  display: block;
+  width: 3000px;
+  height: 3000px;
+  margin-bottom: -1500px;
+  margin-left: -1500px;
+  border-radius: 50%;
+  opacity: 1;
+  -ms-transform: scale(1);
+      transform: scale(1);
+}
+
+.topbar-fixed.pmd-sidebar-open .topbar-container {
+  opacity: 1;
+  transition-delay: 1s;
+}
+
+.topbar-fixed::before {
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  width: 3000px;
+  height: 3000px;
+  color: #fff;
+  content: "";
+  background: white none repeat scroll 0 0;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all .3s cubic-bezier(.55, 0, .1, 1);
+  -ms-transform: scale(0);
+      transform: scale(0);
+  -ms-transform-origin: top right;
+      transform-origin: top right;
+
+  will-change: transform;
+}
+
+.topbar-fixed .topbar-container {
+  opacity: 0;
+  transition: all .3s cubic-bezier(.55, 0, .1, 1);
+  transition-delay: 0s;
+}
+
+.topbar-close {
+  margin-top: 12px;
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in): tab.css
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.pmd-tabs {
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .pmd-tabs {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+.pmd-tabs .nav-tabs {
+  border-bottom: none;
+}
+
+.pmd-tabs .nav-tabs.nav-justified > li > a {
+  border: none;
+  border-radius: 0;
+}
+
+.pmd-tabs .nav-tabs.nav-justified > .active > a,
+.pmd-tabs .nav-tabs.nav-justified > .active > a:hover,
+.pmd-tabs .nav-tabs.nav-justified > .active > a:focus {
+  border: none;
+}
+
+.pmd-tabs .nav-tabs > li.active > a,
+.pmd-tabs .nav-tabs > li.active > a:hover,
+.pmd-tabs .nav-tabs > li.active > a:focus {
+  color: black;
+  cursor: default;
+  background-color: transparent;
+  border: none;
+  border-bottom-color: transparent;
+  opacity: 1;
+}
+
+.pmd-tabs .nav-tabs > li {
+  margin-bottom: 0;
+}
+
+.pmd-tabs .nav-tabs > li > a {
+  padding: 1.125rem 1.5rem 1.0625rem;
+  margin-right: 0;
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1;
+  color: rgba(0, 0, 0, .54);
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;
+}
+
+.pmd-tabs .nav-tabs > li > a:hover, .pmd-tabs .nav-tabs > li > a:focus {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.pmd-tabs .pmd-tab-active-bar {
+  position: absolute;
+  bottom: 0;
+  width: 25%;
+  height: 3px;
+  background: #ffc107;
+  transition: all .2s ease-in-out;
+}
+
+.pmd-tabs-bg {
+  background-color: #4285f4;
+}
+
+.pmd-tabs-bg .nav-tabs > li > a {
+  color: rgba(255, 255, 255, .54);
+}
+
+.pmd-tabs-bg .nav-tabs > li .dropdown-menu a {
+  color: #333;
+}
+
+.pmd-tabs-bg .nav-tabs > li.active > a,
+.pmd-tabs-bg .nav-tabs > li.active > a:hover,
+.pmd-tabs-bg .nav-tabs > li.active > a:focus {
+  color: white;
+  background-color: transparent;
+}
+
+.pmd-tabs-bg .pmd-tabs-scroll-right,
+.pmd-tabs-bg .pmd-tabs-scroll-left {
+  color: rgba(255, 255, 255, .54);
+  background-color: #4285f4;
+}
+
+.pmd-tabs-scroll-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.pmd-tabs-scroll-right {
+  top: 0;
+  right: 0;
+  float: right;
+}
+
+.pmd-tabs-scroll-left {
+  left: 0;
+  float: left;
+}
+
+.pmd-tabs-scroll-right,
+.pmd-tabs-scroll-left {
+  position: absolute;
+  z-index: 99;
+  display: none;
+  padding: .75rem 1.5rem .375rem;
+  line-height: 1.7;
+  color: #868e96;
+  text-align: center;
+  white-space: no-wrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in): table.css
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: .75rem;
+  line-height: 1.5;
+  vertical-align: top;
+  border-top: 1px solid #e9ecef;
+}
+
+.pmd-table.table .table {
+  background-color: #fff;
+}
+
+.pmd-table.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.pmd-table.table tbody + tbody {
+  border-top: 2px solid #e9ecef;
+}
+
+.pmd-table.table-sm th,
+.pmd-table.table-sm td {
+  padding: .25rem;
+}
+
+.table-bordered {
+  border: 1px solid #e9ecef;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #e9ecef;
+}
+
+.table-bordered thead th,
+.table-bordered thead td {
+  border-bottom-width: 2px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, .05);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, .075);
+}
+
+.table-default,
+.table-default > th,
+.table-default > td {
+  background-color: white;
+}
+
+.table-hover .table-default:hover {
+  background-color: #f2f2f2;
+}
+
+.table-hover .table-default:hover > td,
+.table-hover .table-default:hover > th {
+  background-color: #f2f2f2;
+}
+
+.table-primary,
+.table-primary > th,
+.table-primary > td {
+  background-color: #d9e7fd;
+}
+
+.table-hover .table-primary:hover {
+  background-color: #c1d8fc;
+}
+
+.table-hover .table-primary:hover > td,
+.table-hover .table-primary:hover > th {
+  background-color: #c1d8fc;
+}
+
+.table-secondary,
+.table-secondary > th,
+.table-secondary > td {
+  background-color: #fff3cd;
+}
+
+.table-hover .table-secondary:hover {
+  background-color: #ffedb4;
+}
+
+.table-hover .table-secondary:hover > td,
+.table-hover .table-secondary:hover > th {
+  background-color: #ffedb4;
+}
+
+.table-success,
+.table-success > th,
+.table-success > td {
+  background-color: #d3ebd3;
+}
+
+.table-hover .table-success:hover {
+  background-color: #c1e3c1;
+}
+
+.table-hover .table-success:hover > td,
+.table-hover .table-success:hover > th {
+  background-color: #c1e3c1;
+}
+
+.table-info,
+.table-info > th,
+.table-info > td {
+  background-color: #cdeefd;
+}
+
+.table-hover .table-info:hover {
+  background-color: #b4e6fc;
+}
+
+.table-hover .table-info:hover > td,
+.table-hover .table-info:hover > th {
+  background-color: #b4e6fc;
+}
+
+.table-warning,
+.table-warning > th,
+.table-warning > td {
+  background-color: #fff3cd;
+}
+
+.table-hover .table-warning:hover {
+  background-color: #ffedb4;
+}
+
+.table-hover .table-warning:hover > td,
+.table-hover .table-warning:hover > th {
+  background-color: #ffedb4;
+}
+
+.table-danger,
+.table-danger > th,
+.table-danger > td {
+  background-color: #ffddd3;
+}
+
+.table-hover .table-danger:hover {
+  background-color: #ffc9ba;
+}
+
+.table-hover .table-danger:hover > td,
+.table-hover .table-danger:hover > th {
+  background-color: #ffc9ba;
+}
+
+.table-light,
+.table-light > th,
+.table-light > td {
+  background-color: #fefefe;
+}
+
+.table-hover .table-light:hover {
+  background-color: #f1f1f1;
+}
+
+.table-hover .table-light:hover > td,
+.table-hover .table-light:hover > th {
+  background-color: #f1f1f1;
+}
+
+.table-dark,
+.table-dark > th,
+.table-dark > td {
+  background-color: #d6d8d9;
+}
+
+.table-hover .table-dark:hover {
+  background-color: #c9cbcd;
+}
+
+.table-hover .table-dark:hover > td,
+.table-hover .table-dark:hover > th {
+  background-color: #c9cbcd;
+}
+
+.table-error,
+.table-error > th,
+.table-error > td {
+  background-color: #ffddd3;
+}
+
+.table-hover .table-error:hover {
+  background-color: #ffc9ba;
+}
+
+.table-hover .table-error:hover > td,
+.table-hover .table-error:hover > th {
+  background-color: #ffc9ba;
+}
+
+.table-inverse,
+.table-inverse > th,
+.table-inverse > td {
+  background-color: #d6d8d9;
+}
+
+.table-hover .table-inverse:hover {
+  background-color: #c9cbcd;
+}
+
+.table-hover .table-inverse:hover > td,
+.table-hover .table-inverse:hover > th {
+  background-color: #c9cbcd;
+}
+
+.table-information,
+.table-information > th,
+.table-information > td {
+  background-color: #cdeefd;
+}
+
+.table-hover .table-information:hover {
+  background-color: #b4e6fc;
+}
+
+.table-hover .table-information:hover > td,
+.table-hover .table-information:hover > th {
+  background-color: #b4e6fc;
+}
+
+.table-active,
+.table-active > th,
+.table-active > td {
+  background-color: rgba(0, 0, 0, .075);
+}
+
+.table-hover .table-active:hover {
+  background-color: rgba(0, 0, 0, .075);
+}
+
+.table-hover .table-active:hover > td,
+.table-hover .table-active:hover > th {
+  background-color: rgba(0, 0, 0, .075);
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-inverse {
+  color: #f8f9fa;
+  background-color: #333;
+}
+
+.table-inverse.table-bordered {
+  border: 0;
+}
+
+.table-inverse.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, .02);
+}
+
+.table-inverse.table-hover tbody tr:hover,
+.table-inverse.table-hover tbody tr:nth-of-type(odd):hover {
+  background: rgba(255, 255, 255, .075);
+}
+
+.table.table-inverse > thead > tr > th,
+.table.table-inverse > thead > tr > td,
+.table.table-inverse > tbody > tr > th,
+.table.table-inverse > tbody > tr > td,
+.table.table-inverse > tfoot > tr > th,
+.table.table-inverse > tfoot > tr > td {
+  border-color: #464646;
+}
+
+.table-reflow thead {
+  float: left;
+}
+
+.table-reflow tbody {
+  display: block;
+  white-space: nowrap;
+}
+
+.table.table-reflow tr {
+  float: left;
+}
+
+.table.table-reflow > thead > tr > th,
+.table.table-reflow > thead > tr > td,
+.table.table-reflow > tbody > tr > th,
+.table.table-reflow > tbody > tr > td,
+.table.table-reflow > tfoot > tr > th,
+.table.table-reflow > tfoot > tr > td {
+  display: block !important;
+  border: 1px solid #e9ecef;
+  border-top: 1px solid #e9ecef;
+  border-left: 1px solid #e9ecef;
+}
+
+.table.table-reflow > thead > tr > th:last-child,
+.table.table-reflow > thead > tr > td:last-child,
+.table.table-reflow > tbody > tr > th:last-child,
+.table.table-reflow > tbody > tr > td:last-child,
+.table.table-reflow > tfoot > tr > th:last-child,
+.table.table-reflow > tfoot > tr > td:last-child {
+  border-right: 1px solid #e9ecef;
+}
+
+.table.table-reflow thead:last-child tr:last-child > th,
+.table.table-reflow thead:last-child tr:last-child > td,
+.table.table-reflow tbody:last-child tr:last-child > th,
+.table.table-reflow tbody:last-child tr:last-child > td,
+.table.table-reflow tfoot:last-child tr:last-child > th,
+.table.table-reflow tfoot:last-child tr:last-child > td {
+  border-bottom: 1px solid #e9ecef;
+}
+
+.pmd-table.table > thead > tr,
+.pmd-table.table > tbody > tr,
+.pmd-table.table > tfoot > tr {
+  transition: all .2s ease-in-out;
+}
+
+.pmd-table.table > thead > tr > th,
+.pmd-table.table > thead > tr > td,
+.pmd-table.table > tbody > tr > th,
+.pmd-table.table > tbody > tr > td,
+.pmd-table.table > tfoot > tr > th,
+.pmd-table.table > tfoot > tr > td {
+  text-align: left;
+  vertical-align: middle;
+  transition: all .2s ease-in-out;
+}
+
+.pmd-table.table > thead > tr > th,
+.pmd-table.table > tbody > tr > th,
+.pmd-table.table > tfoot > tr > th {
+  font-size: .8rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, .54);
+  border-top: none;
+  border-bottom-width: 1px;
+}
+
+.pmd-table.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, .075);
+}
+
+.pmd-table .table-bordered th,
+.pmd-table .table-bordered td {
+  border: none;
+  border-top: 1px solid #e9ecef;
+}
+
+.pmd-table.table-inverse > thead > tr > th {
+  color: rgba(255, 255, 255, .54);
+}
+
+.pmd-table.table-striped.table-inverse tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, .02);
+}
+
+.pmd-table.table-hover.table-inverse tbody tr:hover {
+  background-color: rgba(255, 255, 255, .075);
+}
+
+.pmd-table.table-bordered .table-heading,
+.pmd-table.table-bordered .table-footer {
+  border: none;
+}
+
+/* -- Table in card-------------- */
+.table-heading {
+  min-height: 64px;
+  padding: 4px 24px 4px 24px;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-footer {
+  display: inline-block;
+  width: 100%;
+  padding: 8px 24px 8px 24px;
+  border-top: 1px solid #ddd;
+}
+
+.shoarting {
+  margin-left: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  /* -------------------------------------
+	   Table Card
+	--------------------------------------*/
+  .pmd-table-card .pmd-table .table {
+    margin-bottom: 0;
+  }
+  .pmd-table-card.pmd-card-main {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .pmd-table-card .table.pmd-table thead,
+  .pmd-table-card .table.pmd-table tfoot {
+    display: none;
+  }
+  .pmd-table-card .table.pmd-table tbody {
+    display: block;
+  }
+  .pmd-table-card .table.pmd-table tbody tr {
+    display: block;
+    margin-bottom: 1.25rem;
+    border-radius: .125rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  }
+  .pmd-table-card .table.pmd-table tbody tr td {
+    display: block;
+    text-align: right;
+    vertical-align: middle;
+    background-color: #fff;
+  }
+  .pmd-table-card .table.pmd-table tbody tr td[data-title]:before {
+    float: left;
+    font-size: inherit;
+    font-weight: 400;
+    color: rgba(0, 0, 0, .54);
+    content: attr(data-title);
+  }
+  .pmd-table-card > .pmd-table.table-striped > tbody > tr > td, .pmd-table-card > .pmd-table.table-striped > tbody > tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  .pmd-table-card > .pmd-table.table-striped > tbody > tr > td:nth-child(odd) {
+    background-color: rgba(0, 0, 0, .05);
+  }
+  .pmd-table-card > .pmd-table.table-inverse > tbody > tr > td[data-title]:before {
+    color: rgba(255, 255, 255, .54);
+  }
+  .pmd-table-card > .pmd-table.table-hover.table-inverse > tbody > tr > td:hover {
+    background-color: rgba(255, 255, 255, .075);
+  }
+  .pmd-table-card > .pmd-table.table-striped.table-inverse > tbody > tr > td, .pmd-table-card > .pmd-table.table-striped.table-inverse > tbody > tr:nth-child(odd) {
+    background-color: #333;
+  }
+  .pmd-table-card > .pmd-table.table-striped.table-inverse > tbody > tr > td:nth-child(odd) {
+    background-color: rgba(255, 255, 255, .02);
+  }
+  .pmd-table-card > .table-hover > tbody > tr > td:hover {
+    background-color: rgba(0, 0, 0, .075);
+  }
+  .pmd-table-card.pmd-z-depth {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .pmd-table.table-bordered.table-inverse th,
+  .pmd-table.table-bordered.table-inverse td {
+    border-color: #464646;
+  }
+}
+
+/* -------------------------------------
+Child Table
+--------------------------------------*/
+.pmd-table {
+  margin-bottom: 0;
+}
+
+.pmd-table .child-table {
+  background-color: #fff;
+}
+
+.pmd-table .child-table > td {
+  padding: 0 !important;
+}
+
+.pmd-table .child-table > td .table > thead > tr {
+  background-color: #fff;
+}
+
+.pmd-table .child-table .table-sm th,
+.pmd-table .child-table .table-sm td {
+  padding: .25rem .75rem;
+}
+
+@media screen and (max-width: 768px) {
+  .pmd-table .child-table {
+    margin-top: -20px;
+  }
+}
+
+/* -------------------------------------
+Ttable Reflow
+--------------------------------------*/
+.pmd-table.table-reflow {
+  display: block;
+  overflow-x: scroll;
+}
+
+.pmd-table.table-reflow thead,
+.pmd-table.table-reflow tr {
+  display: table-cell;
+  float: none;
+  vertical-align: top;
+}
+
+.pmd-table.table-reflow tr {
+  width: 130px;
+  background-color: #fff;
+}
+
+.pmd-table.table-reflow thead {
+  position: absolute;
+}
+
+.pmd-table.table-reflow tbody {
+  margin-left: 130px;
+}
+
+.pmd-table.table-reflow > thead > tr > th {
+  width: 131px;
+  overflow: hidden;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pmd-table.table-reflow > tbody > tr > td {
+  border: none;
+  border-bottom: 1px solid #e9ecef;
+  border-left: 1px solid #e9ecef;
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in): tooltip.css
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.pmd-tooltip ~ .tooltip {
+  filter: alpha(opacity=0);
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity .3s ease-in-out, margin ease-in-out .3s;
+}
+
+.pmd-tooltip ~ .tooltip:before {
+  position: absolute;
+  left: 50%;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  content: "";
+  background-color: #000;
+  opacity: 1;
+  transition: all .2s ease-in-out;
+  -ms-transform: scale(0);
+      transform: scale(0);
+}
+
+.pmd-tooltip ~ .tooltip .tooltip-arrow {
+  display: none;
+}
+
+.pmd-tooltip ~ .tooltip .tooltip-inner {
+  padding: .1875rem .5rem;
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.pmd-tooltip ~ .tooltip.in {
+  filter: alpha(opacity=100);
+  opacity: 100;
+}
+
+.pmd-tooltip ~ .tooltip.in:before {
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  -ms-transform: scale(1);
+      transform: scale(1);
+}
+
+.pmd-tooltip ~ .tooltip.top:before {
+  top: 100%;
+}
+
+.pmd-tooltip ~ .tooltip.in.top {
+  margin-top: -10px;
+}
+
+.pmd-tooltip ~ .tooltip.in.top:before {
+  top: 0;
+  -ms-transform-origin: 50% 100% 0;
+      transform-origin: 50% 100% 0;
+
+  will-change: transform;
+}
+
+.pmd-tooltip ~ .tooltip.bottom:before {
+  top: 0;
+}
+
+.pmd-tooltip ~ .tooltip.in.bottom {
+  margin-top: 10px;
+}
+
+.pmd-tooltip ~ .tooltip.in.bottom:before {
+  -ms-transform-origin: 50% 0 0;
+      transform-origin: 50% 0 0;
+
+  will-change: transform;
+}
+
+.pmd-tooltip ~ .tooltip.right:before {
+  top: 50%;
+  left: 0;
+}
+
+.pmd-tooltip ~ .tooltip.right .tooltip-arrow {
+  left: 0;
+}
+
+.pmd-tooltip ~ .tooltip.in.right {
+  margin-left: 10px;
+}
+
+.pmd-tooltip ~ .tooltip.in.right:before {
+  top: 0;
+  -ms-transform-origin: 0 50% 0;
+      transform-origin: 0 50% 0;
+
+  will-change: transform;
+}
+
+.pmd-tooltip ~ .tooltip.left:before {
+  top: 50%;
+  left: 100%;
+}
+
+.pmd-tooltip ~ .tooltip.left .tooltip-arrow {
+  right: 0;
+}
+
+.pmd-tooltip ~ .tooltip.in.left {
+  margin-left: -10px;
+}
+
+.pmd-tooltip ~ .tooltip.in.left .tooltip-arrow {
+  right: 0;
+}
+
+.pmd-tooltip ~ .tooltip.in.left:before {
+  top: 0;
+  left: 0;
+  -ms-transform-origin: 100% 50% 0;
+      transform-origin: 100% 50% 0;
+
+  will-change: transform;
+}
+
+/*!
+ * Propeller v1.3.2 (http://propeller.in): floating-action-button.css
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+.pmd-floating-action {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1000;
+}
+
+.pmd-floating-action:hover .pmd-floating-action-btn,
+.menu--floating--open .pmd-floating-action-btn {
+  position: relative;
+  bottom: auto;
+  overflow: hidden;
+  opacity: 1;
+  -ms-transform: none;
+      transform: none;
+}
+
+.pmd-floating-action:hover .pmd-floating-action-btn:before,
+.menu--floating--open .pmd-floating-action-btn:before {
+  opacity: 1;
+}
+
+.pmd-floating-action-btn {
+  position: relative;
+  display: block;
+  transition: all .2s ease-in-out;
+  transition: all .3s cubic-bezier(.55, 0, .1, 1);
+}
+
+.pmd-floating-action-btn:before {
+  position: absolute;
+  right: 100%;
+  bottom: 10%;
+  display: inline-block;
+  padding: .375rem .75rem;
+  margin-right: .3125rem;
+  font-size: .75rem;
+  color: rgba(0, 0, 0, .87);
+  white-space: nowrap;
+  content: attr(data-title);
+  background-color: #fff;
+  border-radius: .125rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  opacity: 0;
+  transition: all .2s ease-in-out;
+}
+
+.pmd-floating-action-btn:last-child:before {
+  bottom: 25%;
+  font-size: 14px;
+}
+
+.pmd-floating-action-btn:hover, .pmd-floating-action-btn:focus, .pmd-floating-action-btn:active {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+}
+
+.pmd-floating-action-btn:not(:last-child) {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: .9375rem;
+  margin-left: .5rem;
+  opacity: 0;
+  -ms-transform: translateY(20px) scale(.3);
+      transform: translateY(20px) scale(.3);
+}
+
+.pmd-floating-action-btn:not(:last-child):nth-last-child(1) {
+  transition-delay: 50ms;
+}
+
+.pmd-floating-action-btn:not(:last-child):nth-last-child(2) {
+  transition-delay: 100ms;
+}
+
+.pmd-floating-action-btn:not(:last-child):nth-last-child(3) {
+  transition-delay: 150ms;
+}
+
+.pmd-floating-action-btn:not(:last-child):nth-last-child(4) {
+  transition-delay: 200ms;
+}
+
+.pmd-floating-action-btn:not(:last-child):nth-last-child(5) {
+  transition-delay: 250ms;
+}
+
+.pmd-floating-action-btn:not(:last-child):nth-last-child(6) {
+  transition-delay: 300ms;
+}
+
+.pmd-floating-action-btn.btn:hover {
+  overflow: visible;
+}
+
+.pmd-floating-action-btn .ink {
+  width: 50px;
+  height: 50px;
+}
+
+.pmd-floating-hidden {
+  display: none;
+}
+
+.margin-r8 {
+  margin-right: 8px !important;
+}

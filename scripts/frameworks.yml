@@ -75,6 +75,13 @@ frameworks:
     license_url: https://github.com/cardinalcss/cardinalcss/blob/master/LICENSE.md
     repo: https://github.com/cardinalcss/cardinalcss
     url: https://github.com/cardinalcss/cardinalcss/blob/master/cardinal.css
+  centurion:
+    author: justinhough
+    author_name: Justin Hough
+    license: GPL
+    license_url: https://github.com/justinhough/Centurion/blob/master/LICENSE.md
+    repo: https://github.com/justinhough/Centurion
+    url: https://github.com/justinhough/Centurion/blob/gh-pages/css/centurion.css
   chota:
     author: jenil
     author_name: Jenil Gogari
@@ -82,6 +89,13 @@ frameworks:
     license_url: https://github.com/jenil/chota/blob/master/LICENSE
     repo: https://github.com/jenil/chota
     url: https://github.com/jenil/chota/blob/master/dist/chota.css
+  cirrus:
+    author: spiderpig86
+    author_name: Stanley Lim
+    license: MIT
+    license_url: https://github.com/Spiderpig86/Cirrus/blob/master/LICENSE
+    repo: https://github.com/Spiderpig86/Cirrus
+    url: https://github.com/Spiderpig86/Cirrus/blob/master/dist/cirrus.css
   clmaterial:
     author: 24aitor
     author_name: Aitor Riba Archilla
@@ -117,6 +131,13 @@ frameworks:
     license_url: https://github.com/louismerlin/concrete.css/blob/master/LICENSE
     repo: https://github.com/louismerlin/concrete.css
     url: https://github.com/louismerlin/concrete.css/blob/master/concrete.css
+  cutestrap:
+    author: tylerchilds
+    author_name: Tyler Childs
+    license: GPL
+    license_url: https://github.com/tylerchilds/cutestrap/blob/master/LICENSE
+    repo: https://github.com/tylerchilds/cutestrap
+    url: https://github.com/tylerchilds/cutestrap/blob/master/dist/css/cutestrap.css
   flat-ui:
     author: Designmodo
     author_name: Designmodo
@@ -151,8 +172,15 @@ frameworks:
     license: MIT
     license_url: https://github.com/sindresorhus/github-markdown-css/blob/gh-pages/license
     repo: https://github.com/sindresorhus/github-markdown-css
-    url: https://github.com/dohliam/dropin-minimal-css/blob/7ba270ca/vendor/github-markdown.min.css
+    url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/github-markdown.css
     min_only: true
+  gutenberg:
+    author: bafs
+    author_name: Fabien Salathe
+    license: MIT
+    license_url: https://github.com/BafS/Gutenberg/blob/master/LICENSE
+    repo: https://github.com/bafs/Gutenberg/
+    url: https://github.com/BafS/Gutenberg/blob/master/dist/gutenberg.css
   hack:
     author: egoist
     author_name: Kevin Titor
@@ -160,6 +188,21 @@ frameworks:
     license_url: https://github.com/egoist/hack/blob/master/LICENSE
     repo: https://github.com/egoist/hack
     url: https://unpkg.com/hack/dist/hack.css
+    min_only: true
+  hello:
+    author: arp242
+    author_name: Martin Tournoij
+    license: PD/ISC
+    license_url: https://github.com/arp242/hello-css
+    repo: https://github.com/arp242/hello-css
+    url: https://github.com/arp242/hello-css/blob/master/dist/all.css
+  hiq:
+    author: jonathanharrell
+    author_name: Jonathan Harrell
+    license: MIT
+    license_url: https://github.com/jonathanharrell/hiq/blob/master/license.md
+    repo: https://github.com/jonathanharrell/hiq
+    url: https://github.com/jonathanharrell/hiq/blob/gh-pages/assets/css/0.styles.5cbc7fcb.css
     min_only: true
   holiday:
     author: EvgenyOrekhov
@@ -246,7 +289,7 @@ frameworks:
     license: MIT
     license_url: https://github.com/mrcoles/markdown-css/blob/master/license.txt
     repo: https://github.com/mrcoles/markdown-css
-    url: https://github.com/mrcoles/markdown-css/blob/master/markdown.css
+    url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/markdown.css
   marx:
     author: mblode
     author_name: Matthew Blode
@@ -254,6 +297,13 @@ frameworks:
     license_url: https://github.com/mblode/marx/blob/master/LICENSE.md
     repo: https://github.com/mblode/marx
     url: https://github.com/mblode/marx/blob/master/css/marx.css
+  material:
+    author: daemonite
+    author_name: Daemon Internet Consultants
+    license: MIT
+    license_url: https://github.com/Daemonite/material/blob/master/LICENSE
+    repo: https://github.com/daemonite/material
+    url: https://github.com/Daemonite/material/blob/master/css/material.css
   materialize:
     author: Dogfalo
     author_name: Alvin Wang
@@ -290,6 +340,13 @@ frameworks:
     license_url: https://github.com/Chalarangelo/mini.css/blob/master/LICENSE
     repo: https://github.com/Chalarangelo/mini.css
     url: https://github.com/Chalarangelo/mini.css/blob/master/dist/mini-default.css
+  minimal:
+    author: billyshall
+    author_name: Billy Shall
+    license: MIT
+    license_url: https://github.com/billyshall/minimalcss/blob/master/license.txt
+    repo: https://github.com/billyshall/minimalcss
+    url: https://github.com/billyshall/minimalcss/blob/master/minimal.css
   mobi:
     author: xcatliu
     author_name: xcatliu
@@ -319,6 +376,14 @@ frameworks:
     license_url: https://github.com/muicss/mui/blob/master/LICENSE.txt
     repo: https://github.com/muicss/mui
     url: https://github.com/muicss/mui/blob/master/packages/cdn/css/mui.css
+  #mustard-ui:
+    #author: kylelogue
+    #author_name: Kyle Logue
+    #license: MIT
+    #license_url: https://github.com/kylelogue/mustard-ui/blob/master/LICENSE
+    #repo: https://github.com/kylelogue/mustard-ui
+    #url: https://github.com/kylelogue/mustard-ui/blob/master/dist/css/mustard-ui.min.css
+    #min_only: true
   new:
     author: 3x
     author_name: Example
@@ -397,6 +462,13 @@ frameworks:
     repo: https://github.com/primer/css
     url: https://unpkg.com/@primer/css@14.3.0/dist/primer.css
     min_only: true
+  propeller:
+    author: digicorp
+    author_name: Digicorp
+    license: MIT
+    license_url: https://github.com/digicorp/propeller/blob/master/LICENSE
+    repo: https://github.com/digicorp/propeller
+    url: https://github.com/digicorp/propeller/blob/master/dist/css/propeller.css
   pure:
     author: yahoo
     author_name: Yahoo
@@ -404,6 +476,14 @@ frameworks:
     license_url: https://github.com/yahoo/pure/blob/master/LICENSE.md
     repo: https://github.com/yahoo/pure/
     url: https://unpkg.com/purecss/build/pure.css
+  roble:
+    author: violapeter
+    author_name: Péter Viola
+    license: MIT
+    license_url: https://gitlab.com/violapeter/roble/-/blob/master/package.json
+    repo: https://gitlab.com/violapeter/roble
+    url: https://gitlab.com/violapeter/roble/-/blob/master/dist/roble.css
+    min_only: true
   sakura:
     author: oxalorg
     author_name: Mitesh Shah
@@ -418,6 +498,13 @@ frameworks:
     license_url: https://github.com/csstools/sanitize.css/blob/master/LICENSE.md
     repo: https://github.com/csstools/sanitize.css
     url: https://github.com/csstools/sanitize.css/blob/master/sanitize.css
+  scooter:
+    author: dropbox
+    author_name: Dropbox
+    license: Apache
+    license_url: https://github.com/dropbox/scooter/blob/master/LICENSE.md
+    repo: https://github.com/dropbox/scooter
+    url: https://github.com/dropbox/scooter/blob/master/css/scooter.css
   semantic-ui:
     author: Semantic-Org
     author_name: Semantic Org
