@@ -2192,11 +2192,9 @@ tr:nth-child(even) {
     margin-left: 16.66666%; } }
 
 nav {
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 3em;
   padding: 0 0.6em;
   background: #fff;
   box-shadow: 0 0 0.2em rgba(17, 17, 17, 0.2);
