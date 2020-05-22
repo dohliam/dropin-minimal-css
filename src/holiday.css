@@ -290,6 +290,7 @@ summary,
 [type="submit"],
 [type="color"],
 [type="file"],
+[type="range"],
 label > [type="checkbox"]:not(:disabled),
 label > [type="radio"]:not(:disabled) {
     cursor: pointer;
@@ -310,6 +311,10 @@ label > [type="radio"]:not(:disabled) {
 abbr {
     cursor: help;
 }
+:root {
+    --max-body-width: 48rem;
+}
+
 [href^="mailto:"]::before,
 [href^="sms:"]::before {
     content: "✉ ";
@@ -321,19 +326,18 @@ abbr {
     content: "✆ ";
 }
 
-@media (min-width: 768px) {
-    body {
-        max-width: 768px;
-    }
+body {
+    max-width: var(--max-body-width);
 }
 body {
-    margin: 0.5rem auto;
+    margin: 0 auto 0.5rem;
     width: calc(100% - 1rem);
     overflow-wrap: break-word;
 }
 
 img {
     max-width: 100%;
+    max-height: 100vh;
 }
 
 table {
@@ -421,7 +425,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"],
-input:not([type="checkbox"]):not([type="image"]):not([type="radio"]):not([type="color"]):not([type="file"]):not([type="date"]):not([type="datetime-local"]):not([type="time"]):not([type="month"]):not([type="week"]) {
+input:not([type="checkbox"]):not([type="image"]):not([type="radio"]):not([type="color"]):not([type="file"]):not([type="date"]):not([type="datetime-local"]):not([type="time"]):not([type="month"]):not([type="week"]):not([type="range"]) {
     padding: 0.5rem;
 }
 
@@ -561,9 +565,70 @@ li {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
+
+picture {
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    display: block;
+    text-align: center;
+}
+
+@media (max-width: 50rem) {
+    table {
+        width: calc(100% + 1rem);
+        margin-left: -0.5rem;
+    }
+
+    video {
+        width: calc(100% + 1rem);
+        margin-left: -0.5rem;
+        max-height: 100vh;
+    }
+
+    pre {
+        width: calc(100% + 1rem);
+        margin-left: -0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    pre code {
+        border-left: 0.5rem solid transparent;
+        border-right: 0.5rem solid transparent;
+        box-sizing: content-box;
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
 @media (hover: hover) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        border-bottom: var(--border-width) solid var(--border-color);
+        background-color: var(--background-color);
+        display: flex;
+    }
+
+    body > nav {
+        width: 100vw;
+        position: relative;
+        left: calc(-50vw + 50%);
+    }
+
     nav ul {
         padding-left: 0;
+    }
+
+    body > nav > ul {
+        width: calc(var(--max-body-width) + 2rem);
+        margin: 0.5rem auto;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
 
     nav ul li {
@@ -625,11 +690,13 @@ li {
 @media not all and (hover: hover) {
     nav {
         padding-top: 2rem;
-        border-radius: var(--border-radius);
-        border: var(--border-width) solid var(--border-color);
+        border-bottom: var(--border-width) solid var(--border-color);
         background-image: url('data:image/svg+xml;utf8,<svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>');
         background-repeat: no-repeat;
         background-position: top;
+        width: 100vw;
+        position: relative;
+        left: calc(-50vw + 50%);
     }
 
     /* stylelint-disable-next-line selector-max-universal */
@@ -716,7 +783,7 @@ button:not([type]):hover:not(:disabled) {
     background-color: var(--success-hover-color);
 }
 
-input:not([type="button"]):not([type="checkbox"]):not([type="color"]):not([type="image"]):not([type="radio"]):not([type="reset"]):not([type="submit"]):not([type="file"]):not(:invalid),
+input:not([type="button"]):not([type="checkbox"]):not([type="color"]):not([type="image"]):not([type="radio"]):not([type="reset"]):not([type="submit"]):not([type="file"]):not([type="range"]):not(:invalid),
 textarea,
 select,
 fieldset {
@@ -768,6 +835,7 @@ tfoot > tr:nth-child(even) {
 
 code {
     background-color: var(--highlighted-background-color);
+    border-color: var(--highlighted-background-color);
 }
 
 kbd {
