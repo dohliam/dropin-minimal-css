@@ -185,9 +185,6 @@ header {
 
 	margin-left: calc(0px - (50vw - 50%));
 	margin-right: calc(0px - (50vw - 50%)); */
-	
-	padding-left: calc(50vw - 50%);
-	padding-right: calc(50vw - 50%);
 }
 
 header h1,

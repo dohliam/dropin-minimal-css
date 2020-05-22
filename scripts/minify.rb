@@ -21,10 +21,12 @@ def strip_css(css)
   select_none = "select \{\n  display: none;\n\}"
   nav_broken = /nav \{\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  height: 3em;\n/
   nav_fixed = "nav {\n  top: 0;\n  left: 0;\n  right: 0;\n"
+  header_broken = /\t\n\tpadding\-left: calc\(50vw \- 50%\);\n\tpadding\-right: calc\(50vw \- 50%\);\n/
   css
     .gsub(/\n*\/\*#{sourcemap}.*\n*/, "")
     .gsub(/#{select_none}\n\n/, "")
     .gsub(nav_broken, nav_fixed)
+    .gsub(header_broken, "")
 end
 
 def update_css(name, url)
