@@ -107,6 +107,7 @@ If you know of a minimal framework that hasn't been included here, please create
 * [min](https://dohliam.github.io/dropin-minimal-css/?min) by @owenversteeg ([Source](https://github.com/owenversteeg/min) · [MIT](https://github.com/owenversteeg/min#license))
 * [mini](https://dohliam.github.io/dropin-minimal-css/?mini) by @Chalarangelo ([Source](https://github.com/Chalarangelo/mini.css) · [MIT](https://github.com/Chalarangelo/mini.css/blob/master/LICENSE))
 * [minimal](https://dohliam.github.io/dropin-minimal-css/?minimal) by @billyshall ([Source](https://github.com/billyshall/minimalcss) · [MIT](https://github.com/billyshall/minimalcss/blob/master/license.txt))
+* [minimal-stylesheet](https://dohliam.github.io/dropin-minimal-css/?minimal-stylesheet) by @chr15m ([Source](https://github.com/chr15m/minimal-stylesheet) · [MIT](https://github.com/chr15m/minimal-stylesheet/blob/master/LICENSE))
 * [mobi](https://dohliam.github.io/dropin-minimal-css/?mobi) by @xcatliu ([Source](https://github.com/mobi-css/mobi.css) · [MIT](https://github.com/mobi-css/mobi.css/blob/master/LICENSE))
 * [motherplate](https://dohliam.github.io/dropin-minimal-css/?motherplate) by @leemunroe ([Source](https://github.com/leemunroe/motherplate) · [MIT](https://github.com/leemunroe/motherplate/blob/master/LICENSE))
 * [mu](https://dohliam.github.io/dropin-minimal-css/?mu) by @BafS ([Source](https://github.com/BafS/mu) · [MIT](https://github.com/BafS/mu/blob/gh-pages/LICENSE))

@@ -1,0 +1,66 @@
+/* Hacked together based on:
+ * https://jgthms.com/web-design-in-4-minutes/ 
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #555;
+  margin: 0 auto;
+  max-width: 50em;
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+  padding: 2em 1em;
+}
+
+h1 {
+  font-size: 2.5em
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em
+}
+
+h2, h3 {
+  margin-top: 1.5em;
+}
+
+h1, h2, strong {
+  color: #333;
+}
+
+code, pre {
+  background: #eee;
+}
+
+code {
+  padding: 2px 4px;
+  vertical-align: text-bottom;
+}
+
+pre {
+  border-left: 2px solid #bbb;
+  padding: 1em;
+}
+
+a {
+  color: #f56a6a;
+}
+
+blockquote, q {
+  border-left: solid 4px #bbb;
+  font-style: italic;
+  margin: 0 0 2em 0;
+  padding: 0.5em 0 0.5em 2em;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+    content: '';
+    content: none;
+}

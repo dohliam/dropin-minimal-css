@@ -347,6 +347,13 @@ frameworks:
     license_url: https://github.com/billyshall/minimalcss/blob/master/license.txt
     repo: https://github.com/billyshall/minimalcss
     url: https://github.com/billyshall/minimalcss/blob/master/minimal.css
+  minimal-stylesheet:
+    author: chr15m
+    author_name: Chris McCormick
+    license: MIT
+    license_url: https://github.com/chr15m/minimal-stylesheet/blob/master/LICENSE
+    repo: https://github.com/chr15m/minimal-stylesheet
+    url: https://github.com/chr15m/minimal-stylesheet/blob/master/minimal.css
   mobi:
     author: xcatliu
     author_name: xcatliu
