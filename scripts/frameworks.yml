@@ -1,0 +1,895 @@
+# Frameworks Data
+
+frameworks:
+  a11yana:
+    author: alexandersandberg
+    author_name: Alexander Sandberg
+    license: MIT
+    license_url: https://github.com/alexandersandberg/a11yana/blob/master/LICENSE.md
+    repo: https://github.com/alexandersandberg/a11yana
+    url: https://github.com/alexandersandberg/a11yana/blob/master/dist/a11yana.css
+  awsm:
+    author: igoradamenko
+    author_name: Igor Adamenko
+    license: MIT
+    license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
+    repo: https://github.com/igoradamenko/awsm.css
+    url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm.css
+  bahunya:
+    author: Kimeiga
+    author_name: Hakan Alpay
+    license: MIT
+    license_url: https://github.com/Kimeiga/bahunya/blob/master/LICENSE
+    repo: https://github.com/Kimeiga/bahunya
+    url: https://github.com/Kimeiga/bahunya/blob/css/bahunya-0.1.3.css
+    min_only: true
+  bare:
+    author: longsien
+    author_name: Long
+    license: MIT
+    license_url: https://github.com/longsien/BareCSS/blob/master/LICENSE
+    repo: https://github.com/longsien/BareCSS
+    url: https://github.com/longsien/BareCSS/blob/master/css/bare.min.css
+    min_only: true
+  base:
+    author: matthewhartman
+    author_name: Matthew Hartman
+    license: MIT
+    license_url: https://github.com/matthewhartman/base#license
+    repo: https://github.com/matthewhartman/base
+    url: https://unpkg.com/@getbase/base/index.css
+    min_only: true
+  bullframe:
+    author: marcop135
+    author_name: Marco Pontili
+    license: MIT
+    license_url: https://github.com/marcop135/bullframe.css/blob/master/LICENSE.md
+    repo: https://github.com/marcop135/bullframe.css
+    url: https://github.com/marcop135/bullframe.css/blob/master/dist/css/bullframe.css
+  bulma:
+    author: jgthms
+    author_name: Jeremy Thomas
+    license: MIT
+    license_url: https://github.com/jgthms/bulma/blob/master/LICENSE
+    repo: https://github.com/jgthms/bulma
+    url: https://github.com/jgthms/bulma/blob/master/css/bulma.css
+  caiuss:
+    author: IonicaBizau
+    author_name: Ionică Bizău
+    license: MIT
+    license_url: https://github.com/IonicaBizau/CaiuSS/blob/master/LICENSE
+    repo: https://github.com/IonicaBizau/CaiuSS
+    url: https://github.com/IonicaBizau/CaiuSS/blob/master/dist/caiuss.min.css
+    min_only: true
+  caramel:
+    author: Lumios
+    author_name: Lumios
+    license: MIT
+    license_url: https://github.com/lumios/caramel/blob/master/LICENSE
+    repo: https://github.com/lumios/caramel
+    url: https://github.com/caramelcss/caramel/blob/v2/dist/css/caramel.css
+  cardinal:
+    author: cbracco
+    author_name: Chris Bracco
+    license: MIT
+    license_url: https://github.com/cardinalcss/cardinalcss/blob/master/LICENSE.md
+    repo: https://github.com/cardinalcss/cardinalcss
+    url: https://github.com/cardinalcss/cardinalcss/blob/master/cardinal.css
+  centurion:
+    author: justinhough
+    author_name: Justin Hough
+    license: GPL
+    license_url: https://github.com/justinhough/Centurion/blob/master/LICENSE.md
+    repo: https://github.com/justinhough/Centurion
+    url: https://github.com/justinhough/Centurion/blob/gh-pages/css/centurion.css
+  chota:
+    author: jenil
+    author_name: Jenil Gogari
+    license: MIT
+    license_url: https://github.com/jenil/chota/blob/master/LICENSE
+    repo: https://github.com/jenil/chota
+    url: https://github.com/jenil/chota/blob/master/dist/chota.css
+  cirrus:
+    author: spiderpig86
+    author_name: Stanley Lim
+    license: MIT
+    license_url: https://github.com/Spiderpig86/Cirrus/blob/master/LICENSE
+    repo: https://github.com/Spiderpig86/Cirrus
+    url: https://github.com/Spiderpig86/Cirrus/blob/master/dist/cirrus.css
+  clmaterial:
+    author: 24aitor
+    author_name: Aitor Riba Archilla
+    license: MIT
+    license_url: https://github.com/24aitor/CLMaterial/blob/master/LICENSE
+    repo: https://github.com/24aitor/CLMaterial
+    url: https://github.com/24aitor/CLMaterial/blob/master/src/css/clmaterial.css
+  codify:
+    author: zdroid
+    author_name: Zlatan Vasović
+    license: MIT
+    license_url: https://github.com/zdroid/codify.css/blob/master/LICENSE.md
+    repo: https://github.com/zdroid/codify.css
+    url: https://github.com/zdroid/codify.css/blob/master/dist/codify.css
+  comet:
+    author: marcbruederlin
+    author_name: Marc Brüderlin
+    license: MIT
+    license_url: https://github.com/marcbruederlin/comet/blob/master/LICENSE
+    repo: https://github.com/marcbruederlin/comet
+    url: https://github.com/marcbruederlin/comet/blob/master/dist/comet.css
+  concise:
+    author: ConciseCSS
+    author_name: Concise CSS
+    license: MIT
+    license_url: https://github.com/ConciseCSS/concise.css/blob/master/LICENSE
+    repo: https://github.com/ConciseCSS/concise.css
+    url: https://github.com/ConciseCSS/concise.css/blob/master/dist/concise.css
+  concrete:
+    author: louismerlin
+    author_name: Louis Merlin
+    license: MIT
+    license_url: https://github.com/louismerlin/concrete.css/blob/master/LICENSE
+    repo: https://github.com/louismerlin/concrete.css
+    url: https://github.com/louismerlin/concrete.css/blob/master/concrete.css
+  cutestrap:
+    author: tylerchilds
+    author_name: Tyler Childs
+    license: GPL
+    license_url: https://github.com/tylerchilds/cutestrap/blob/master/LICENSE
+    repo: https://github.com/tylerchilds/cutestrap
+    url: https://github.com/tylerchilds/cutestrap/blob/master/dist/css/cutestrap.css
+  flat-ui:
+    author: Designmodo
+    author_name: Designmodo
+    license: CC BY & MIT
+    license_url: https://github.com/designmodo/Flat-UI#copyright-and-license
+    repo: https://github.com/designmodo/Flat-UI
+    url: https://github.com/designmodo/Flat-UI/blob/master/dist/css/flat-ui.css
+  fluidity:
+    author: mrmrs
+    author_name: murmurs
+    license: MIT
+    license_url: https://github.com/mrmrs/fluidity/blob/master/README.md
+    repo: https://github.com/mrmrs/fluidity
+    url: https://github.com/mrmrs/fluidity/blob/master/css/fluidity.css
+  furtive:
+    author: johno
+    author_name: John Otander
+    license: MIT
+    license_url: https://github.com/johno/furtive/blob/master/LICENSE
+    repo: https://github.com/johno/furtive
+    url: https://github.com/johno/furtive/blob/master/css/furtive.css
+  generic:
+    author: Vereis
+    author_name: Chris Bailey
+    license: MIT
+    license_url: https://github.com/Vereis/generic.css
+    repo: https://github.com/Vereis/generic.css
+    url: https://github.com/Vereis/generic.css/blob/master/css/generic.css
+  github-markdown:
+    author: sindresorhus
+    author_name: Sindre Sorhus
+    license: MIT
+    license_url: https://github.com/sindresorhus/github-markdown-css/blob/gh-pages/license
+    repo: https://github.com/sindresorhus/github-markdown-css
+    url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/github-markdown.css
+    min_only: true
+  gutenberg:
+    author: bafs
+    author_name: Fabien Salathe
+    license: MIT
+    license_url: https://github.com/BafS/Gutenberg/blob/master/LICENSE
+    repo: https://github.com/bafs/Gutenberg/
+    url: https://github.com/BafS/Gutenberg/blob/master/dist/gutenberg.css
+  hack:
+    author: egoist
+    author_name: Kevin Titor
+    license: MIT
+    license_url: https://github.com/egoist/hack/blob/master/LICENSE
+    repo: https://github.com/egoist/hack
+    url: https://unpkg.com/hack/dist/hack.css
+    min_only: true
+  hello:
+    author: arp242
+    author_name: Martin Tournoij
+    license: PD/ISC
+    license_url: https://github.com/arp242/hello-css
+    repo: https://github.com/arp242/hello-css
+    url: https://github.com/arp242/hello-css/blob/master/dist/all.css
+  hiq:
+    author: jonathanharrell
+    author_name: Jonathan Harrell
+    license: MIT
+    license_url: https://github.com/jonathanharrell/hiq/blob/master/license.md
+    repo: https://github.com/jonathanharrell/hiq
+    url: https://github.com/jonathanharrell/hiq/blob/gh-pages/assets/css/0.styles.5cbc7fcb.css
+    min_only: true
+  holiday:
+    author: EvgenyOrekhov
+    author_name: Evgeny Orekhov
+    license: MIT
+    license_url: https://github.com/EvgenyOrekhov/holiday.css/blob/master/LICENSE
+    repo: https://github.com/EvgenyOrekhov/holiday.css
+    url: https://github.com/EvgenyOrekhov/holiday.css/blob/master/dist/holiday.css
+  html-starterkit:
+    author: zitrusfrisch
+    author_name: Daniel Riemer
+    license: MIT
+    license_url: https://github.com/zitrusfrisch/HTML-StarterKit#its-free
+    repo: https://github.com/zitrusfrisch/HTML-StarterKit
+    url: https://github.com/zitrusfrisch/HTML-StarterKit/blob/master/css/styles.css
+  hyp:
+    author: krszwsk
+    author_name: Krzysztof Kraszewski
+    license: MIT
+    license_url: https://github.com/krszwsk/hyp/blob/master/LICENSE
+    repo: https://github.com/krszwsk/hyp
+    url: https://github.com/krszwsk/hyp/blob/master/dist/hyp.min.css
+    min_only: true
+  kathamo:
+    author: debashisbarman
+    author_name: Debashis Barman
+    license: MIT
+    license_url: https://github.com/kathamo/Kathamo/blob/master/LICENSE
+    repo: https://github.com/kathamo/Kathamo
+    url: https://github.com/debashisbarman/Kathamo/blob/master/Kathamo-3.0.0/kathamo.css
+  koochak:
+    author: peyman3d
+    author_name: Peyman Eskandari
+    license: MIT
+    license_url: https://github.com/peyman3d/koochak/blob/master/LICENSE
+    repo: https://github.com/peyman3d/koochak
+    url: https://github.com/peyman3d/koochak/blob/master/dist/koochak.css
+  kraken:
+    author: cferdinandi
+    author_name: Chris Ferdinandi
+    license: MIT
+    license_url: https://github.com/cferdinandi/kraken/blob/master/LICENSE.md
+    repo: https://github.com/cferdinandi/kraken
+    url: https://github.com/cferdinandi/kraken/blob/master/dist/main.css
+  kube:
+    author: imperavi
+    author_name: imperavi
+    license: MIT
+    license_url: https://github.com/imperavi/kube/blob/master/LICENSE
+    repo: https://github.com/imperavi/kube
+    url: https://github.com/imperavi/kube/blob/master/dist/css/kube.css
+  latex:
+    author: davidrzs
+    author_name: David Zollikofer
+    license: MIT
+    license_url: https://github.com/davidrzs/latexcss/blob/master/LICENSE
+    repo: https://github.com/davidrzs/latexcss
+    url: https://github.com/davidrzs/latexcss/blob/master/latex.css
+  lemon:
+    author: appalaszynski
+    author_name: Adam
+    license: MIT
+    license_url: https://github.com/lucasarvelo/lemon/blob/master/LICENSE
+    repo: https://github.com/lucasarvelo/lemon
+    url: https://github.com/lucasarvelo/lemon/blob/master/dist/lemon.css
+  lit:
+    author: Ajusa
+    author_name: Arham Jain
+    license: MIT
+    license_url: https://github.com/Ajusa/lit/blob/master/LICENSE
+    repo: https://github.com/Ajusa/lit
+    url: https://github.com/ajusa/lit/blob/master/src/lit.css
+  lotus:
+    author: goatslacker
+    author_name: Josh Perez
+    license: MIT
+    license_url: https://github.com/goatslacker/lotus.css#license
+    repo: https://github.com/goatslacker/lotus.css
+    url: https://github.com/goatslacker/lotus.css/blob/gh-pages/dist/lotus.min.css
+    min_only: true
+  markdown:
+    author: mrcoles
+    author_name: Peter Coles
+    license: MIT
+    license_url: https://github.com/mrcoles/markdown-css/blob/master/license.txt
+    repo: https://github.com/mrcoles/markdown-css
+    url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/markdown.css
+  marx:
+    author: mblode
+    author_name: Matthew Blode
+    license: MIT
+    license_url: https://github.com/mblode/marx/blob/master/LICENSE.md
+    repo: https://github.com/mblode/marx
+    url: https://github.com/mblode/marx/blob/master/css/marx.css
+  material:
+    author: daemonite
+    author_name: Daemon Internet Consultants
+    license: MIT
+    license_url: https://github.com/Daemonite/material/blob/master/LICENSE
+    repo: https://github.com/daemonite/material
+    url: https://github.com/Daemonite/material/blob/master/css/material.css
+  materialize:
+    author: Dogfalo
+    author_name: Alvin Wang
+    license: MIT
+    license_url: https://github.com/Dogfalo/materialize/blob/v1-dev/LICENSE
+    repo: https://github.com/Dogfalo/materialize
+    url: https://github.com/Dogfalo/materialize/blob/v1-dev/dist/css/materialize.css
+  mercury:
+    author: wmeredith
+    author_name: Wade Meredith
+    license: MIT
+    license_url: https://github.com/wmeredith/MercuryCSS/blob/master/LICENSE
+    repo: https://github.com/wmeredith/MercuryCSS
+    url: https://github.com/wmeredith/MercuryCSS/blob/master/dist/mercury.css
+  milligram:
+    author: cjpatoilo
+    author_name: CJ Patoilo
+    license: MIT
+    license_url: http://cjpatoilo.mit-license.org/
+    repo: https://github.com/milligram/milligram
+    url: https://github.com/milligram/milligram/blob/master/dist/milligram.css
+  min:
+    author: owenversteeg
+    author_name: Owen Versteeg
+    license: MIT
+    license_url: https://github.com/owenversteeg/min#license
+    repo: https://github.com/owenversteeg/min
+    url: https://github.com/owenversteeg/min/blob/gh-pages/entireframework.min.css
+    min_only: true
+  mini:
+    author: Chalarangelo
+    author_name: Angelos Chalaris
+    license: MIT
+    license_url: https://github.com/Chalarangelo/mini.css/blob/master/LICENSE
+    repo: https://github.com/Chalarangelo/mini.css
+    url: https://github.com/Chalarangelo/mini.css/blob/master/dist/mini-default.css
+  minimal:
+    author: billyshall
+    author_name: Billy Shall
+    license: MIT
+    license_url: https://github.com/billyshall/minimalcss/blob/master/license.txt
+    repo: https://github.com/billyshall/minimalcss
+    url: https://github.com/billyshall/minimalcss/blob/master/minimal.css
+  mobi:
+    author: xcatliu
+    author_name: xcatliu
+    license: MIT
+    license_url: https://github.com/mobi-css/mobi.css/blob/master/LICENSE
+    repo: https://github.com/mobi-css/mobi.css
+    url: https://github.com/mobi-css/mobi.css/blob/master/packages/mobi.css/dist/mobi.css
+  motherplate:
+    author: leemunroe
+    author_name: Lee Munroe
+    license: MIT
+    license_url: https://github.com/leemunroe/motherplate/blob/master/LICENSE
+    repo: https://github.com/leemunroe/motherplate
+    url: https://github.com/leemunroe/motherplate/blob/master/css/main.css
+    min_only: true
+  mu:
+    author: BafS
+    author_name: Fabien Salathe
+    license: MIT
+    license_url: https://github.com/BafS/mu/blob/gh-pages/LICENSE
+    repo: https://github.com/BafS/mu
+    url: https://github.com/BafS/mu/blob/gh-pages/mu.css
+  mui:
+    author: amorey
+    author_name: Andres Morey
+    license: MIT
+    license_url: https://github.com/muicss/mui/blob/master/LICENSE.txt
+    repo: https://github.com/muicss/mui
+    url: https://github.com/muicss/mui/blob/master/packages/cdn/css/mui.css
+  #mustard-ui:
+    #author: kylelogue
+    #author_name: Kyle Logue
+    #license: MIT
+    #license_url: https://github.com/kylelogue/mustard-ui/blob/master/LICENSE
+    #repo: https://github.com/kylelogue/mustard-ui
+    #url: https://github.com/kylelogue/mustard-ui/blob/master/dist/css/mustard-ui.min.css
+    #min_only: true
+  new:
+    author: 3x
+    author_name: Example
+    license: MIT
+    license_url: https://github.com/xz/new.css/blob/master/LICENSE
+    repo: https://github.com/xz/new.css
+    url: https://github.com/xz/new.css/blob/master/new.css
+  mvp:
+    author: andybrewer
+    author_name: Andy Brewer
+    license: MIT
+    license_url: https://github.com/andybrewer/mvp/blob/master/LICENSE
+    repo: https://github.com/andybrewer/mvp
+    url: https://github.com/andybrewer/mvp/blob/master/mvp.css
+  no-class:
+    author: davidpaulsson
+    author_name: David Paulsson
+    license: MIT
+    license_url: https://github.com/davidpaulsson/no-class/blob/master/LICENSE.txt
+    repo: https://github.com/davidpaulsson/no-class
+    url: https://github.com/davidpaulsson/no-class/releases/download/1.0.1/no-class.css
+  normalize:
+    author: necolas
+    author_name: Nicolas Gallagher
+    license: MIT
+    license_url: https://github.com/necolas/normalize.css/blob/master/LICENSE.md
+    repo: https://github.com/necolas/normalize.css
+    url: https://github.com/necolas/normalize.css/blob/master/normalize.css
+  oh-my-css:
+    author: egoist
+    author_name: Kevin Titor
+    license: MIT
+    license_url: https://github.com/egoist/oh-my-css/blob/gh-pages/LICENSE
+    repo: https://github.com/egoist/oh-my-css
+    url: https://github.com/egoist/oh-my-css/blob/gh-pages/dist/css/ohmycss.css
+  paper:
+    author: rhyneav
+    author_name: Rhyne
+    license: ISC
+    license_url: https://github.com/papercss/papercss/blob/master/license
+    repo: https://github.com/papercss/papercss
+    url: https://unpkg.com/papercss/dist/paper.css
+  papier:
+    author: alexanderGugel
+    author_name: Alexander Gugel
+    license: MIT
+    license_url: https://github.com/alexanderGugel/papier/blob/master/LICENSE.md
+    repo: https://github.com/alexanderGugel/papier
+    url: https://github.com/alexanderGugel/papier/blob/master/dist/papier.css
+  pavilion:
+    author: getpavilion
+    author_name: Wessel Grift
+    license: MIT
+    license_url: https://github.com/getpavilion/pavilion/blob/master/license
+    repo: https://github.com/getpavilion/pavilion
+    url: https://github.com/getpavilion/pavilion/blob/master/dist/pavilion.css
+  picnic:
+    author: FranciscoP
+    author_name: Francisco Presencia
+    license: MIT
+    license_url: https://github.com/picnicss/picnic/blob/master/LICENSE
+    repo: https://github.com/picnicss/picnic
+    url: https://github.com/franciscop/picnic/blob/master/picnic.css
+  preface:
+    author: cluzier
+    author_name: Conner Luzier
+    license: MIT
+    license_url: https://github.com/cluzier/PrefaceCSS/blob/master/LICENSE
+    repo: https://github.com/cluzier/PrefaceCSS
+    url: https://github.com/cluzier/PrefaceCSS/blob/master/dist/preface.css
+  primer:
+    author: primer
+    author_name: Primer
+    license: MIT
+    license_url: https://github.com/primer/css/blob/master/LICENSE
+    repo: https://github.com/primer/css
+    url: https://unpkg.com/@primer/css@14.3.0/dist/primer.css
+    min_only: true
+  propeller:
+    author: digicorp
+    author_name: Digicorp
+    license: MIT
+    license_url: https://github.com/digicorp/propeller/blob/master/LICENSE
+    repo: https://github.com/digicorp/propeller
+    url: https://github.com/digicorp/propeller/blob/master/dist/css/propeller.css
+  pure:
+    author: yahoo
+    author_name: Yahoo
+    license: BSD
+    license_url: https://github.com/yahoo/pure/blob/master/LICENSE.md
+    repo: https://github.com/yahoo/pure/
+    url: https://unpkg.com/purecss/build/pure.css
+  roble:
+    author: violapeter
+    author_name: Péter Viola
+    license: MIT
+    license_url: https://gitlab.com/violapeter/roble/-/blob/master/package.json
+    repo: https://gitlab.com/violapeter/roble
+    url: https://gitlab.com/violapeter/roble/-/blob/master/dist/roble.css
+    min_only: true
+  sakura:
+    author: oxalorg
+    author_name: Mitesh Shah
+    license: MIT
+    license_url: https://github.com/oxalorg/sakura/blob/master/LICENSE.txt
+    repo: https://github.com/oxalorg/sakura
+    url: https://github.com/oxalorg/sakura/blob/master/css/sakura.css
+  sanitize:
+    author: csstools
+    author_name: CSS Tools
+    license: CC0
+    license_url: https://github.com/csstools/sanitize.css/blob/master/LICENSE.md
+    repo: https://github.com/csstools/sanitize.css
+    url: https://github.com/csstools/sanitize.css/blob/master/sanitize.css
+  scooter:
+    author: dropbox
+    author_name: Dropbox
+    license: Apache
+    license_url: https://github.com/dropbox/scooter/blob/master/LICENSE.md
+    repo: https://github.com/dropbox/scooter
+    url: https://github.com/dropbox/scooter/blob/master/css/scooter.css
+  semantic-ui:
+    author: Semantic-Org
+    author_name: Semantic Org
+    license: MIT
+    license_url: https://github.com/Semantic-Org/Semantic-UI/blob/master/LICENSE.md
+    repo: https://github.com/Semantic-Org/Semantic-UI
+    url: https://github.com/Semantic-Org/Semantic-UI/blob/master/dist/semantic.css
+  shoelace:
+    author: claviska
+    author_name: Cory LaViska
+    license: MIT
+    license_url: https://github.com/claviska/shoelace-css/blob/master/LICENSE.md
+    repo: https://github.com/claviska/shoelace-css
+    url: https://github.com/claviska/shoelace-css/blob/master/dist/shoelace.css
+    min_only: true
+  siimple:
+    author: jmjuanes
+    author_name: Josemi Juanes
+    license: MIT
+    license_url: https://github.com/siimple/siimple/blob/master/LICENSE.md
+    repo: https://github.com/siimple/siimple
+    url: https://unpkg.com/siimple
+  simple:
+    author: neculaesei
+    author_name: Andrei Neculaesei
+    license: MIT
+    license_url: https://opensource.org/licenses/mit-license.php
+    repo: https://github.com/tukangslicing/simplecss
+    url: https://github.com/tukangslicing/simplecss/blob/master/src/simple.css
+  skeleton:
+    author: dhg
+    author_name: Dave Gamache
+    license: MIT
+    license_url: https://github.com/dhg/Skeleton/blob/master/LICENSE.md
+    repo: https://github.com/dhg/Skeleton
+    url: https://github.com/dhg/Skeleton/blob/master/css/skeleton.css
+  skeleton-framework:
+    author: skeleton-framework
+    author_name: Skeleton Framework
+    license: MIT
+    license_url: https://github.com/skeleton-framework/skeleton-framework/blob/master/LICENSE
+    repo: https://github.com/skeleton-framework/skeleton-framework
+    url: https://github.com/skeleton-framework/skeleton-framework/blob/master/dist/skeleton.css
+  skeleton-plus:
+    author: oltdaniel
+    author_name: Daniel Oltmanns
+    license: MIT
+    license_url: https://github.com/oltdaniel/skeleton-plus/blob/master/LICENSE
+    repo: https://github.com/oltdaniel/skeleton-plus
+    url: https://github.com/oltdaniel/skeleton-plus/blob/master/dist/skeleton-plus.css
+  snack:
+    author: nzbin
+    author_name: Zongbin
+    license: MIT
+    license_url: https://github.com/snack-ui/snack/blob/master/LICENSE
+    repo: https://github.com/snack-ui/snack
+    url: https://github.com/snack-ui/snack/blob/master/dist/snack.css
+  spectre:
+    author: picturepan2
+    author_name: Yan Zhu
+    license: MIT
+    license_url: https://github.com/picturepan2/spectre/blob/master/LICENSE
+    repo: https://github.com/picturepan2/spectre
+    url: https://github.com/picturepan2/spectre/blob/master/dist/spectre.css
+  style:
+    author: ungoldman
+    author_name: Nate Goldman
+    license: ISC
+    license_url: https://github.com/ungoldman/style.css/blob/master/license.md
+    repo: https://github.com/ungoldman/style.css
+    url: https://github.com/css-pkg/style.css/blob/master/style.css
+  stylize:
+    author: vasanthv
+    author_name: Vasanth
+    license: MIT
+    license_url: https://github.com/vasanthv/stylize.css/blob/master/LICENSE
+    repo: https://github.com/vasanthv/stylize.css
+    url: https://github.com/vasanthv/stylize.css/blob/master/stylize.css
+  tachyons:
+    author: tachyons-css
+    author_name: Tachyons CSS Toolkit
+    license: MIT
+    license_url: https://github.com/tachyons-css/tachyons/blob/master/license
+    repo: https://github.com/tachyons-css/tachyons/
+    url: https://github.com/tachyons-css/tachyons/blob/master/css/tachyons.css
+  tacit:
+    author: yegor256
+    author_name: Yegor Bugayenko
+    license: MIT
+    license_url: https://github.com/yegor256/tacit/blob/master/LICENSE
+    repo: https://github.com/yegor256/tacit
+    url: https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css.min.css
+    min_only: true
+  tent:
+    author: ulinaaron
+    author_name: Aaron Mazade
+    license: MIT
+    license_url: https://github.com/sitetent/tentcss/blob/master/LICENSE
+    repo: https://github.com/sitetent/tentcss
+    url: https://github.com/sitetent/tentcss/blob/master/dist/tent.css
+  thao:
+    author: Sanfra1407
+    author_name: Giuseppe Sanfrancesco
+    license: Apache
+    license_url: http://www.apache.org/licenses/LICENSE-2.0
+    repo: https://github.com/ThaoFramework/Thao/
+    url: https://github.com/ThaoFramework/Thao/blob/master/css/thao.css
+  vanilla:
+    author: bradleytaunt
+    author_name: Bradley Taunt
+    license: MIT
+    license_url: https://github.com/bradleytaunt/vanilla-css/blob/master/LICENSE
+    repo: https://github.com/bradleytaunt/vanilla-css
+    url: https://github.com/bradleytaunt/vanilla-css/blob/master/vanilla.css
+  vital:
+    author: doximity
+    author_name: Doximity, Inc.
+    license: Apache
+    license_url: https://github.com/doximity/vital/blob/master/LICENSE.md
+    repo: https://github.com/doximity/vital
+    url: https://github.com/doximity/vital/blob/master/dist/css/vital.css
+  water:
+    author: kognise
+    author_name: Kognise
+    license: MIT
+    license_url: https://github.com/kognise/water.css/blob/master/LICENSE.md
+    repo: https://github.com/kognise/water.css
+    url: https://github.com/kognise/water.css/blob/master/dist/light.css
+  wing:
+    author: KingPixil
+    author_name: KingPixil
+    license: MIT
+    license_url: https://github.com/KingPixil/wing/blob/master/LICENSE
+    repo: https://github.com/KingPixil/wing/
+    url: https://github.com/kbrsh/wing/blob/master/dist/wing.css
+  writ:
+    author: causal-agent
+    author_name: causal-agent
+    license: ISC
+    license_url: https://github.com/programble/writ/blob/master/LICENSE
+    repo: https://github.com/programble/writ
+    url: https://github.com/causal-agent/writ/blob/master/writ.css
+  yamb:
+    author: runxel
+    author_name: Lucas Becker
+    license: Blue Oak
+    license_url: https://github.com/runxel/yamb-css/blob/master/LICENSE.md
+    repo: https://github.com/runxel/yamb-css
+    url: https://github.com/runxel/yamb-css/blob/master/yamb.css
+  yorha:
+    author: metakirby5
+    author_name: Ethan Chan
+    license: MIT
+    license_url: https://github.com/metakirby5/yorha/blob/master/LICENSE
+    repo: https://github.com/metakirby5/yorha
+    url: https://github.com/metakirby5/yorha/blob/master/dist/yorha.css
+
+collections:
+  asciidoctor-skins:
+    info:
+      author: darshandsoni
+      repo: https://github.com/darshandsoni/asciidoctor-skins
+    ads-gazette:
+      author: darshandsoni
+      license: MIT
+      license_url: https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/LICENSE
+      name: Gazette
+      repo: https://github.com/darshandsoni/asciidoctor-skins
+      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/min/ads-gazette.min.css
+      min_only: true
+    ads-medium:
+      author: darshandsoni
+      license: MIT
+      license_url: https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/LICENSE
+      name: Medium
+      repo: https://github.com/darshandsoni/asciidoctor-skins
+      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/min/ads-medium.min.css
+      min_only: true
+    ads-notebook:
+      author: darshandsoni
+      license: MIT
+      license_url: https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/LICENSE
+      name: Notebook
+      repo: https://github.com/darshandsoni/asciidoctor-skins
+      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/min/ads-notebook.min.css
+      min_only: true
+    ads-tufte:
+      author: darshandsoni
+      license: MIT
+      license_url: https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/LICENSE
+      name: Tufte
+      repo: https://github.com/darshandsoni/asciidoctor-skins
+      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/min/ads-tufte.min.css
+      min_only: true
+  bootswatch:
+    info:
+      author: thomaspark
+      repo: https://github.com/thomaspark/bootswatch
+    boot-cerulean:
+      author: thomaspark
+      license: MIT
+      license_url: https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE
+      name: Cerulean
+      repo: https://github.com/thomaspark/bootswatch
+      url: https://github.com/thomaspark/bootswatch/blob/master/dist/cerulean/bootstrap.css
+    boot-cosmo:
+      author: thomaspark
+      license: MIT
+      license_url: https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE
+      name: Cosmo
+      repo: https://github.com/thomaspark/bootswatch
+      url: https://github.com/thomaspark/bootswatch/blob/master/dist/cosmo/bootstrap.css
+    boot-cyborg:
+      author: thomaspark
+      license: MIT
+      license_url: https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE
+      name: Cyborg
+      repo: https://github.com/thomaspark/bootswatch
+      url: https://github.com/thomaspark/bootswatch/blob/master/dist/cyborg/bootstrap.css
+    boot-darkly:
+      author: thomaspark
+      license: MIT
+      license_url: https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE
+      name: Darkly
+      repo: https://github.com/thomaspark/bootswatch
+      url: https://github.com/thomaspark/bootswatch/blob/master/dist/darkly/bootstrap.css
+    boot-flatly:
+      author: thomaspark
+      license: MIT
+      license_url: https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE
+      name: Flatly
+      repo: https://github.com/thomaspark/bootswatch
+      url: https://github.com/thomaspark/bootswatch/blob/master/dist/flatly/bootstrap.css
+    boot-journal:
+      author: thomaspark
+      license: MIT
+      license_url: https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE
+      name: Journal
+      repo: https://github.com/thomaspark/bootswatch
+      url: https://github.com/thomaspark/bootswatch/blob/master/dist/journal/bootstrap.css
+    boot-lumen:
+      author: thomaspark
+      license: MIT
+      license_url: https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE
+      name: Lumen
+      repo: https://github.com/thomaspark/bootswatch
+      url: https://github.com/thomaspark/bootswatch/blob/master/dist/lumen/bootstrap.css
+    boot-paper:
+      author: thomaspark
+      license: MIT
+      license_url: https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE
+      name: Paper
+      repo: https://github.com/thomaspark/bootswatch
+      url: https://github.com/thomaspark/bootswatch/blob/a25c2b861dafa6ffec6c343f0f68e3ee1bbdee2d/paper/bootstrap.css
+    boot-readable:
+      author: thomaspark
+      license: MIT
+      license_url: https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE
+      name: Readable
+      repo: https://github.com/thomaspark/bootswatch
+      url: https://github.com/thomaspark/bootswatch/blob/a25c2b861dafa6ffec6c343f0f68e3ee1bbdee2d/readable/bootstrap.css
+    boot-sandstone:
+      author: thomaspark
+      license: MIT
+      license_url: https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE
+      name: Sandstone
+      repo: https://github.com/thomaspark/bootswatch
+      url: https://github.com/thomaspark/bootswatch/blob/master/dist/sandstone/bootstrap.css
+    boot-slate:
+      author: thomaspark
+      license: MIT
+      license_url: https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE
+      name: Slate
+      repo: https://github.com/thomaspark/bootswatch
+      url: https://github.com/thomaspark/bootswatch/blob/master/dist/slate/bootstrap.css
+    boot-spacelab:
+      author: thomaspark
+      license: MIT
+      license_url: https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE
+      name: Spacelab
+      repo: https://github.com/thomaspark/bootswatch
+      url: https://github.com/thomaspark/bootswatch/blob/master/dist/spacelab/bootstrap.css
+    boot-superhero:
+      author: thomaspark
+      license: MIT
+      license_url: https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE
+      name: Superhero
+      repo: https://github.com/thomaspark/bootswatch
+      url: https://github.com/thomaspark/bootswatch/blob/master/dist/superhero/bootstrap.css
+    boot-yeti:
+      author: thomaspark
+      license: MIT
+      license_url: https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE
+      name: and Yeti
+      repo: https://github.com/thomaspark/bootswatch
+      url: https://github.com/thomaspark/bootswatch/blob/master/dist/yeti/bootstrap.css
+  markdowncss:
+    info:
+      author: johnotander
+      repo: https://github.com/markdowncss
+    md-air:
+      author: johnotander
+      license: MIT
+      license_url: https://github.com/markdowncss/air/blob/master/LICENSE
+      name: Air
+      repo: https://github.com/markdowncss/air
+      url: https://github.com/markdowncss/air/blob/master/css/air.css
+    md-modest:
+      author: johnotander
+      license: MIT
+      license_url: https://github.com/markdowncss/modest/blob/master/LICENSE
+      name: Modest
+      repo: https://github.com/markdowncss/modest
+      url: https://github.com/markdowncss/modest/blob/master/css/modest.css
+    md-retro:
+      author: johnotander
+      license: MIT
+      license_url: https://github.com/markdowncss/retro/blob/master/LICENSE
+      name: Retro
+      repo: https://github.com/markdowncss/retro
+      url: https://github.com/markdowncss/retro/blob/master/css/retro.css
+    md-splendor:
+      author: johnotander
+      license: MIT
+      license_url: https://github.com/markdowncss/splendor/blob/master/LICENSE
+      name: Splendor
+      repo: https://github.com/markdowncss/splendor
+      url: https://github.com/markdowncss/splendor/blob/master/css/splendor.css
+  w3c-core:
+    info:
+      author: Bert Bos
+      repo: https://www.w3.org/StyleSheets/Core/
+    w3c-chocolate:
+      author: Bert Bos
+      license: W3C
+      license_url: https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+      name: Chocolate
+      repo: https://www.w3.org/StyleSheets/Core/
+      url: https://www.w3.org/StyleSheets/Core/Chocolate.css
+    w3c-midnight:
+      author: Bert Bos
+      license: W3C
+      license_url: https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+      name: Midnight
+      repo: https://www.w3.org/StyleSheets/Core/
+      url: https://www.w3.org/StyleSheets/Core/Midnight.css
+    w3c-modernist:
+      author: Bert Bos
+      license: W3C
+      license_url: https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+      name: Modernist
+      repo: https://www.w3.org/StyleSheets/Core/
+      url: https://www.w3.org/StyleSheets/Core/Modernist.css
+    w3c-oldstyle:
+      author: Bert Bos
+      license: W3C
+      license_url: https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+      name: Oldstyle
+      repo: https://www.w3.org/StyleSheets/Core/
+      url: https://www.w3.org/StyleSheets/Core/Oldstyle.css
+    w3c-steely:
+      author: Bert Bos
+      license: W3C
+      license_url: https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+      name: Steely
+      repo: https://www.w3.org/StyleSheets/Core/
+      url: https://www.w3.org/StyleSheets/Core/Steely.css
+    w3c-swiss:
+      author: Bert Bos
+      license: W3C
+      license_url: https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+      name: Swiss
+      repo: https://www.w3.org/StyleSheets/Core/
+      url: https://www.w3.org/StyleSheets/Core/Swiss.css
+    w3c-traditional:
+      author: Bert Bos
+      license: W3C
+      license_url: https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+      name: Traditional
+      repo: https://www.w3.org/StyleSheets/Core/
+      url: https://www.w3.org/StyleSheets/Core/Traditional.css
+    w3c-ultramarine:
+      author: Bert Bos
+      license: W3C
+      license_url: https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+      name: Ultramarine
+      repo: https://www.w3.org/StyleSheets/Core/
+      url: https://www.w3.org/StyleSheets/Core/Ultramarine.css
