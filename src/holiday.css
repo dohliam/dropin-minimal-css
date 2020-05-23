@@ -311,10 +311,6 @@ label > [type="radio"]:not(:disabled) {
 abbr {
     cursor: help;
 }
-:root {
-    --max-body-width: 48rem;
-}
-
 [href^="mailto:"]::before,
 [href^="sms:"]::before {
     content: "✉ ";
@@ -325,13 +321,14 @@ abbr {
 [href^="skype:"]::before {
     content: "✆ ";
 }
-
-body {
-    max-width: var(--max-body-width);
+:root {
+    --max-body-width: 48rem;
 }
+
 body {
     margin: 0 auto 0.5rem;
     width: calc(100% - 1rem);
+    max-width: var(--max-body-width);
     overflow-wrap: break-word;
 }
 
@@ -718,15 +715,43 @@ picture {
     --border-hover-color: #b5b5b5;
     --background-color: #fff;
     --highlighted-background-color: #f5f5f5;
-    --text-color: #000;
-    --danger-color: #ff3860;
-    --danger-hover-color: #f7375d;
-    --success-color: #23d160;
-    --success-hover-color: #22c65b;
-    --danger-text-background-color: #ffe7ec;
-    --success-text-background-color: #e4faec;
+    --text-color: #363636;
+    --danger-color: #f14668;
+    --danger-hover-color: #f03a5f;
+    --success-color: #48c774;
+    --success-hover-color: #3ec46d;
+    --danger-text-background-color: #fde0e6;
+    --success-text-background-color: #effaf3;
     --border-radius: 0.25rem;
     --border-width: 1px;
+    --code-text-color: #f14668;
+    --code-background-color: #f5f5f5;
+    --link-color: #3273dc;
+    --link-visited-color: #b86bff;
+    --link-hover-color: #363636;
+    --link-active-color: #363636;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--link-visited-color);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+a:active {
+    color: var(--link-active-color);
 }
 
 button,
@@ -799,6 +824,12 @@ select:not(:disabled),
     background: var(--background-color);
 }
 
+input:not([type="button"]):not([type="checkbox"]):not([type="color"]):not([type="image"]):not([type="radio"]):not([type="reset"]):not([type="submit"]):not([type="file"]):not([type="range"]):disabled,
+textarea:disabled,
+select:disabled {
+    background-color: var(--highlighted-background-color);
+}
+
 input:not([type="button"]):not([type="checkbox"]):not([type="color"]):not([type="image"]):not([type="radio"]):not([type="reset"]):not([type="submit"]):not([type="file"]):hover:not(:disabled):not(:invalid),
 textarea:hover:not(:disabled),
 select:hover:not(:disabled) {
@@ -834,8 +865,9 @@ tfoot > tr:nth-child(even) {
 }
 
 code {
-    background-color: var(--highlighted-background-color);
-    border-color: var(--highlighted-background-color);
+    background-color: var(--code-background-color);
+    border-color: var(--code-background-color);
+    color: var(--code-text-color);
 }
 
 kbd {
