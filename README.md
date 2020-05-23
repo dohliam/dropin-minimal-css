@@ -174,10 +174,19 @@ If you know of a minimal framework that hasn't been included here, please create
   * [boot-superhero](https://dohliam.github.io/dropin-minimal-css/?boot-superhero) by @thomaspark ([Source](https://github.com/thomaspark/bootswatch) · [MIT](https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE))
   * [boot-yeti](https://dohliam.github.io/dropin-minimal-css/?boot-yeti) by @thomaspark ([Source](https://github.com/thomaspark/bootswatch) · [MIT](https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE))
 * **[markdowncss](https://github.com/https://github.com/markdowncss)** by @johnotander:
-  * [air](https://dohliam.github.io/dropin-minimal-css/?air) by @johnotander ([Source](https://github.com/markdowncss/air) · [MIT](https://github.com/markdowncss/air/blob/master/LICENSE))
-  * [modest](https://dohliam.github.io/dropin-minimal-css/?modest) by @johnotander ([Source](https://github.com/markdowncss/modest) · [MIT](https://github.com/markdowncss/modest/blob/master/LICENSE))
-  * [retro](https://dohliam.github.io/dropin-minimal-css/?retro) by @johnotander ([Source](https://github.com/markdowncss/retro) · [MIT](https://github.com/markdowncss/retro/blob/master/LICENSE))
-  * [splendor](https://dohliam.github.io/dropin-minimal-css/?splendor) by @johnotander ([Source](https://github.com/markdowncss/splendor) · [MIT](https://github.com/markdowncss/splendor/blob/master/LICENSE))
+  * [md-air](https://dohliam.github.io/dropin-minimal-css/?md-air) by @johnotander ([Source](https://github.com/markdowncss/air) · [MIT](https://github.com/markdowncss/air/blob/master/LICENSE))
+  * [md-modest](https://dohliam.github.io/dropin-minimal-css/?md-modest) by @johnotander ([Source](https://github.com/markdowncss/modest) · [MIT](https://github.com/markdowncss/modest/blob/master/LICENSE))
+  * [md-retro](https://dohliam.github.io/dropin-minimal-css/?md-retro) by @johnotander ([Source](https://github.com/markdowncss/retro) · [MIT](https://github.com/markdowncss/retro/blob/master/LICENSE))
+  * [md-splendor](https://dohliam.github.io/dropin-minimal-css/?md-splendor) by @johnotander ([Source](https://github.com/markdowncss/splendor) · [MIT](https://github.com/markdowncss/splendor/blob/master/LICENSE))
+* **[w3c-core](https://github.com/https://www.w3.org/StyleSheets/Core/)** by @Bert Bos:
+  * [w3c-chocolate](https://dohliam.github.io/dropin-minimal-css/?w3c-chocolate) by @Bert Bos ([Source](https://www.w3.org/StyleSheets/Core/) · [W3C](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document))
+  * [w3c-midnight](https://dohliam.github.io/dropin-minimal-css/?w3c-midnight) by @Bert Bos ([Source](https://www.w3.org/StyleSheets/Core/) · [W3C](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document))
+  * [w3c-modernist](https://dohliam.github.io/dropin-minimal-css/?w3c-modernist) by @Bert Bos ([Source](https://www.w3.org/StyleSheets/Core/) · [W3C](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document))
+  * [w3c-oldstyle](https://dohliam.github.io/dropin-minimal-css/?w3c-oldstyle) by @Bert Bos ([Source](https://www.w3.org/StyleSheets/Core/) · [W3C](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document))
+  * [w3c-steely](https://dohliam.github.io/dropin-minimal-css/?w3c-steely) by @Bert Bos ([Source](https://www.w3.org/StyleSheets/Core/) · [W3C](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document))
+  * [w3c-swiss](https://dohliam.github.io/dropin-minimal-css/?w3c-swiss) by @Bert Bos ([Source](https://www.w3.org/StyleSheets/Core/) · [W3C](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document))
+  * [w3c-traditional](https://dohliam.github.io/dropin-minimal-css/?w3c-traditional) by @Bert Bos ([Source](https://www.w3.org/StyleSheets/Core/) · [W3C](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document))
+  * [w3c-ultramarine](https://dohliam.github.io/dropin-minimal-css/?w3c-ultramarine) by @Bert Bos ([Source](https://www.w3.org/StyleSheets/Core/) · [W3C](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document))
 
 ## See also
 

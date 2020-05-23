@@ -1,0 +1,205 @@
+/* The W3C Core Styles Copyright (c) 1998 W3C (mit, inria, Keio), All Rights
+Reserved. W3C liability, trademark, document use and software licensing rules
+apply. See http://www.w3.org/Consortium/Legal/ipr-notice.html
+
+This stylesheet has been served in a form to avoid known bugs in your user
+agent's css implementation. Copying and serving this stylesheet to other
+agents may lead to unexpected results. Please refer to its address rather than
+copy it. */
+
+
+
+
+
+/* MacNS4.0 */
+
+
+
+
+/* MacNS4.0 */
+h1, h2, h3, h4, h5, h6, th, dt	{ font-family:	Tahoma, Verdana, 'Myriad Web', Syntax, sans-serif; } 
+
+
+
+
+/* MacNS4.0 */
+p, div, ul, dl, dt, dd, pre, ol, li, blockquote, address	{
+	color: black;
+	}
+	/* begin affordances */	/* 1 - blue orange */
+		
+a, address, blockquote, body, cite, code, dd, del, dfn,		
+div, dl, dt, em, form, h1, h2, h3, h4, h5, h6, iframe, img, kbd,		
+li, object, ol, p, q, samp, small, span, strong, sub, sup, ul, var, 		
+applet, big, center, dir, font, hr, menu, pre,		
+abbr, acronym, bdo, button, fieldset, ins, label	{	
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	text-decoration:	none;
+	border-color:	#036;
+	border-style:	none;
+	}	
+		
+body	{	
+	color:	black;
+	background:	white;
+	}	
+		
+em	{	
+	font-style:	normal;
+	font-weight:	bold;
+	color:	black;
+	background:	white;
+	}	
+		
+strong	{	
+	font-style:	italic;
+	background:	white;
+	font-weight:	bold;
+	color:	black;
+	}	
+		
+em strong, strong em	{	
+	text-transform:	uppercase;
+	font-style:	normal;
+	font-weight:	bolder;
+	background:	white;
+	color:	black;
+	}	
+
+b	{
+	font-weight:	bold;
+	}
+	
+i	{
+	font-style:	italic;
+	}
+		
+.warning	{	
+	text-transform:	none;
+	font-style:	normal;
+	font-weight:	bolder;
+	background:	yellow;
+	color:	black;
+	}	
+		
+del	{	
+	text-decoration:	line-through;
+	background:	#F66;
+	}	
+		
+ins	{	
+	text-decoration:	none;
+	background:	yellow;
+	}	
+		
+var, cite, dfn, .note	{	
+	font-style:	italic;
+	}	
+		
+address	{	
+	font-style:	normal;
+	letter-spacing:	.1em;
+	}	
+		
+acronym	{	
+	font-variant:	small-caps;
+	letter-spacing:	0.1em;
+	}	
+		
+h1, h2, h3, h4, h5, h6, dt, th, thead, tfoot	{	
+	color:	#036;
+	background:	white;
+	}	
+		
+hr	{	
+	color:	#036;
+	}	
+		
+#colophon	{	
+	display:	none;
+	}	
+		
+col, colgroup, table, tbody, td, tr	{	
+	color:	black;
+	text-decoration:	none;
+	border-color:	black;
+	border-style:	none;
+	background:	white;
+	}	
+		
+a:link	{	
+	text-decoration:	none;
+	font-weight:	bold;
+	color:	#F30;
+	background:	white;
+	}	
+		
+a:visited	{	
+	text-decoration:	none;
+	font-weight:	bold;
+	color:	#996;
+	background:	white;
+	}	
+		
+a:active	{	
+	text-decoration:	none;
+	font-weight:	bold;
+	color:	#F30;
+	background:	#FF0;
+	}	
+		
+a:hover	{	
+	text-decoration:	none;
+	color:	#F30;
+	background:	white;
+	}	
+		
+a.offsite	{	
+	text-decoration:	none;
+	font-weight:	normal;
+	color:	#C30;
+	background:	white;
+	}	
+		
+	/* end affordances */	
+
+
+
+
+
+/* MacNS4.0 */
+
+
+
+
+/* MacNS4.0 */
+
+
+
+
+/* MacNS4.0 */
+	/* begin body box */	/* 1 - 'em-based symmetric a' */
+
+body	{
+	margin-top:	1.58em;
+	margin-left:	1.58em;
+	margin-right:	1ex;
+	margin-bottom:	1.58em;
+	padding-top:	0;
+	padding-left:	0;
+	padding-right:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-left:	0;
+	border-bottom:	0;
+	border-right:	0;
+	width:	auto;
+	}
+	/* end body box */
+
+
+
+
+

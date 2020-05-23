@@ -805,31 +805,91 @@ collections:
     info:
       author: johnotander
       repo: https://github.com/markdowncss
-    air:
+    md-air:
       author: johnotander
       license: MIT
       license_url: https://github.com/markdowncss/air/blob/master/LICENSE
       name: Air
       repo: https://github.com/markdowncss/air
       url: https://github.com/markdowncss/air/blob/master/css/air.css
-    modest:
+    md-modest:
       author: johnotander
       license: MIT
       license_url: https://github.com/markdowncss/modest/blob/master/LICENSE
       name: Modest
       repo: https://github.com/markdowncss/modest
       url: https://github.com/markdowncss/modest/blob/master/css/modest.css
-    retro:
+    md-retro:
       author: johnotander
       license: MIT
       license_url: https://github.com/markdowncss/retro/blob/master/LICENSE
       name: Retro
       repo: https://github.com/markdowncss/retro
       url: https://github.com/markdowncss/retro/blob/master/css/retro.css
-    splendor:
+    md-splendor:
       author: johnotander
       license: MIT
       license_url: https://github.com/markdowncss/splendor/blob/master/LICENSE
       name: Splendor
       repo: https://github.com/markdowncss/splendor
       url: https://github.com/markdowncss/splendor/blob/master/css/splendor.css
+  w3c-core:
+    info:
+      author: Bert Bos
+      repo: https://www.w3.org/StyleSheets/Core/
+    w3c-chocolate:
+      author: Bert Bos
+      license: W3C
+      license_url: https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+      name: Chocolate
+      repo: https://www.w3.org/StyleSheets/Core/
+      url: https://www.w3.org/StyleSheets/Core/Chocolate.css
+    w3c-midnight:
+      author: Bert Bos
+      license: W3C
+      license_url: https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+      name: Midnight
+      repo: https://www.w3.org/StyleSheets/Core/
+      url: https://www.w3.org/StyleSheets/Core/Midnight.css
+    w3c-modernist:
+      author: Bert Bos
+      license: W3C
+      license_url: https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+      name: Modernist
+      repo: https://www.w3.org/StyleSheets/Core/
+      url: https://www.w3.org/StyleSheets/Core/Modernist.css
+    w3c-oldstyle:
+      author: Bert Bos
+      license: W3C
+      license_url: https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+      name: Oldstyle
+      repo: https://www.w3.org/StyleSheets/Core/
+      url: https://www.w3.org/StyleSheets/Core/Oldstyle.css
+    w3c-steely:
+      author: Bert Bos
+      license: W3C
+      license_url: https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+      name: Steely
+      repo: https://www.w3.org/StyleSheets/Core/
+      url: https://www.w3.org/StyleSheets/Core/Steely.css
+    w3c-swiss:
+      author: Bert Bos
+      license: W3C
+      license_url: https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+      name: Swiss
+      repo: https://www.w3.org/StyleSheets/Core/
+      url: https://www.w3.org/StyleSheets/Core/Swiss.css
+    w3c-traditional:
+      author: Bert Bos
+      license: W3C
+      license_url: https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+      name: Traditional
+      repo: https://www.w3.org/StyleSheets/Core/
+      url: https://www.w3.org/StyleSheets/Core/Traditional.css
+    w3c-ultramarine:
+      author: Bert Bos
+      license: W3C
+      license_url: https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+      name: Ultramarine
+      repo: https://www.w3.org/StyleSheets/Core/
+      url: https://www.w3.org/StyleSheets/Core/Ultramarine.css
