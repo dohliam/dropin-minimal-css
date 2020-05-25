@@ -531,7 +531,7 @@ frameworks:
     author: jmjuanes
     author_name: Josemi Juanes
     license: MIT
-    license_url: https://github.com/siimple/siimple/blob/master/LICENSE.md
+    license_url: https://github.com/siimple/siimple/blob/develop/LICENSE
     repo: https://github.com/siimple/siimple
     url: https://unpkg.com/siimple
   simple:
