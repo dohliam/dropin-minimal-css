@@ -688,7 +688,7 @@ picture {
     nav {
         padding-top: 2rem;
         border-bottom: var(--border-width) solid var(--border-color);
-        background-image: url('data:image/svg+xml;utf8,<svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>');
+        background-image: url('data:image/svg+xml;utf8,<svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="%23363636" d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>');
         background-repeat: no-repeat;
         background-position: top;
         width: 100vw;
@@ -709,16 +709,27 @@ picture {
     nav:hover > *:not(ul) {
         display: unset;
     }
+
+    @media (prefers-color-scheme: dark) {
+        nav {
+            background-image: url('data:image/svg+xml;utf8,<svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="%23fff" d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>');
+        }
+    }
 }
 :root {
+    /* stylelint-disable-next-line scale-unlimited/declaration-strict-value */
+    color-scheme: light dark;
+
     --border-color: #dbdbdb;
     --border-hover-color: #b5b5b5;
     --background-color: #fff;
     --highlighted-background-color: #f5f5f5;
     --text-color: #363636;
     --danger-color: #f14668;
+    --danger-text-color: #fff;
     --danger-hover-color: #f03a5f;
     --success-color: #48c774;
+    --success-text-color: #fff;
     --success-hover-color: #3ec46d;
     --danger-text-background-color: #fde0e6;
     --success-text-background-color: #effaf3;
@@ -730,6 +741,30 @@ picture {
     --link-visited-color: #b86bff;
     --link-hover-color: #363636;
     --link-active-color: #363636;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --border-color: #5f6267;
+        --border-hover-color: #bcbebd;
+        --background-color: #202124;
+        --highlighted-background-color: #292b2e;
+        --text-color: #fff;
+        --danger-color: #770018;
+        --danger-text-color: #fff;
+        --danger-hover-color: #6b0015;
+        --success-color: #006624;
+        --success-text-color: #fff;
+        --success-hover-color: #006122;
+        --danger-text-background-color: #770018;
+        --success-text-background-color: #006624;
+        --code-text-color: #f1a0b0;
+        --code-background-color: #292b2e;
+        --link-color: #90b3ed;
+        --link-visited-color: #cb93ff;
+        --link-hover-color: #fff;
+        --link-active-color: #fff;
+    }
 }
 
 body {
@@ -779,14 +814,14 @@ button,
 [type="reset"] {
     background-color: var(--danger-color);
     border-color: transparent;
-    color: var(--background-color);
+    color: var(--danger-text-color);
 }
 
 [type="submit"],
 button:not([type]) {
     background-color: var(--success-color);
     border-color: transparent;
-    color: var(--background-color);
+    color: var(--success-text-color);
 }
 
 button:hover:not(:disabled),
@@ -806,6 +841,13 @@ button:hover:not(:disabled),
 button:not([type]):hover:not(:disabled) {
     border-color: transparent;
     background-color: var(--success-hover-color);
+}
+
+input:not([type="button"]):not([type="checkbox"]):not([type="color"]):not([type="image"]):not([type="radio"]):not([type="reset"]):not([type="submit"]):not([type="file"]):not([type="range"]),
+textarea,
+select {
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 input:not([type="button"]):not([type="checkbox"]):not([type="color"]):not([type="image"]):not([type="radio"]):not([type="reset"]):not([type="submit"]):not([type="file"]):not([type="range"]):not(:invalid),
@@ -884,7 +926,10 @@ kbd kbd {
 }
 
 dialog {
+    border: var(--border-width) solid var(--border-color);
     border-radius: var(--border-radius);
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 /* stylelint-disable-next-line selector-no-qualifying-type */
