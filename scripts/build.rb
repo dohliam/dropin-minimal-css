@@ -53,7 +53,7 @@ def frameworks_attribution(data)
     repo = root["repo"]
     license = root["license"]
     license_url = root["license_url"]
-    list << "* [#{name}](https://dohliam.github.io/dropin-minimal-css/?#{name}) by @#{author} ([Source](#{repo}) · [#{license}](#{license_url}))\n"
+    list << "* [#{name}](#{repo}) by @#{author} ([Preview](https://dohliam.github.io/dropin-minimal-css/?#{name}) · [#{license}](#{license_url}))\n"
   end
   list
 end
@@ -74,7 +74,7 @@ def collections_attribution(data)
         list << "* **[#{collection}](https://github.com/#{repo})** by @#{author}:\n"
         next
       end
-      list << "  * [#{name}](https://dohliam.github.io/dropin-minimal-css/?#{name}) by @#{author} ([Source](#{repo}) · [#{license}](#{license_url}))\n"
+      list << "  * [#{name}](#{repo}) by @#{author} ([Preview](https://dohliam.github.io/dropin-minimal-css/?#{name}) · [#{license}](#{license_url}))\n"
     end
   end
   list
