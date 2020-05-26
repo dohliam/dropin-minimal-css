@@ -27,6 +27,7 @@ def strip_css(css)
     .gsub(/#{select_none}\n\n/, "")
     .gsub(nav_broken, nav_fixed)
     .gsub(header_broken, "")
+    .gsub(/\r\n?/, "\n")
 end
 
 def update_css(name, url)
