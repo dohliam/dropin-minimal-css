@@ -60,7 +60,6 @@ If you know of a minimal framework that hasn't been included here, please create
 ### List of frameworks
 
 * [a11yana](https://github.com/alexandersandberg/a11yana) by @alexandersandberg ([Preview](https://dohliam.github.io/dropin-minimal-css/?a11yana) · [MIT](https://github.com/alexandersandberg/a11yana/blob/master/LICENSE.md))
-* [awsm](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([Preview](https://dohliam.github.io/dropin-minimal-css/?awsm) · [MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
 * [bahunya](https://github.com/Kimeiga/bahunya) by @Kimeiga ([Preview](https://dohliam.github.io/dropin-minimal-css/?bahunya) · [MIT](https://github.com/Kimeiga/bahunya/blob/master/LICENSE))
 * [bare](https://github.com/longsien/BareCSS) by @longsien ([Preview](https://dohliam.github.io/dropin-minimal-css/?bare) · [MIT](https://github.com/longsien/BareCSS/blob/master/LICENSE))
 * [base](https://github.com/matthewhartman/base) by @matthewhartman ([Preview](https://dohliam.github.io/dropin-minimal-css/?base) · [MIT](https://github.com/matthewhartman/base#license))
@@ -159,6 +158,16 @@ If you know of a minimal framework that hasn't been included here, please create
   * [ads-medium](https://github.com/darshandsoni/asciidoctor-skins) by @darshandsoni ([Preview](https://dohliam.github.io/dropin-minimal-css/?ads-medium) · [MIT](https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/LICENSE))
   * [ads-notebook](https://github.com/darshandsoni/asciidoctor-skins) by @darshandsoni ([Preview](https://dohliam.github.io/dropin-minimal-css/?ads-notebook) · [MIT](https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/LICENSE))
   * [ads-tufte](https://github.com/darshandsoni/asciidoctor-skins) by @darshandsoni ([Preview](https://dohliam.github.io/dropin-minimal-css/?ads-tufte) · [MIT](https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/LICENSE))
+* **[awsm](https://github.com/https://github.com/igoradamenko/awsm.css)** by @igoradamenko:
+  * [awsm-default](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([Preview](https://dohliam.github.io/dropin-minimal-css/?awsm-default) · [MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
+  * [awsm-black](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([Preview](https://dohliam.github.io/dropin-minimal-css/?awsm-black) · [MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
+  * [awsm-bigstone](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([Preview](https://dohliam.github.io/dropin-minimal-css/?awsm-bigstone) · [MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
+  * [awsm-gondola](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([Preview](https://dohliam.github.io/dropin-minimal-css/?awsm-gondola) · [MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
+  * [awsm-mischka](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([Preview](https://dohliam.github.io/dropin-minimal-css/?awsm-mischka) · [MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
+  * [awsm-pastelpink](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([Preview](https://dohliam.github.io/dropin-minimal-css/?awsm-pastelpink) · [MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
+  * [awsm-pearllusta](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([Preview](https://dohliam.github.io/dropin-minimal-css/?awsm-pearllusta) · [MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
+  * [awsm-tasman](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([Preview](https://dohliam.github.io/dropin-minimal-css/?awsm-tasman) · [MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
+  * [awsm-white](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([Preview](https://dohliam.github.io/dropin-minimal-css/?awsm-white) · [MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
 * **[bootswatch](https://github.com/https://github.com/thomaspark/bootswatch)** by @thomaspark:
   * [boot-cerulean](https://github.com/thomaspark/bootswatch) by @thomaspark ([Preview](https://dohliam.github.io/dropin-minimal-css/?boot-cerulean) · [MIT](https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE))
   * [boot-cosmo](https://github.com/thomaspark/bootswatch) by @thomaspark ([Preview](https://dohliam.github.io/dropin-minimal-css/?boot-cosmo) · [MIT](https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE))

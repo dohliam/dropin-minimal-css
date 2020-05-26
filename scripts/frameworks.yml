@@ -8,13 +8,6 @@ frameworks:
     license_url: https://github.com/alexandersandberg/a11yana/blob/master/LICENSE.md
     repo: https://github.com/alexandersandberg/a11yana
     url: https://github.com/alexandersandberg/a11yana/blob/master/dist/a11yana.css
-  awsm:
-    author: igoradamenko
-    author_name: Igor Adamenko
-    license: MIT
-    license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
-    repo: https://github.com/igoradamenko/awsm.css
-    url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm.css
   bahunya:
     author: Kimeiga
     author_name: Hakan Alpay
@@ -706,6 +699,73 @@ collections:
       repo: https://github.com/darshandsoni/asciidoctor-skins
       url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/min/ads-tufte.min.css
       min_only: true
+  awsm:
+    info:
+      author: igoradamenko
+      repo: https://github.com/igoradamenko/awsm.css
+    awsm-default:
+      author: igoradamenko
+      license: MIT
+      license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
+      name: Awsm.css
+      repo: https://github.com/igoradamenko/awsm.css
+      url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm.css
+    awsm-black:
+      author: igoradamenko
+      license: MIT
+      license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
+      name: Awsm-black.css
+      repo: https://github.com/igoradamenko/awsm.css
+      url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm_theme_black.css
+    awsm-bigstone:
+      author: igoradamenko
+      license: MIT
+      license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
+      name: Awsm-big-stone.css
+      repo: https://github.com/igoradamenko/awsm.css
+      url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm_theme_big-stone.css
+    awsm-gondola:
+      author: igoradamenko
+      license: MIT
+      license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
+      name: Awsm-gondola.css
+      repo: https://github.com/igoradamenko/awsm.css
+      url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm_theme_gondola.css
+    awsm-mischka:
+      author: igoradamenko
+      license: MIT
+      license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
+      name: Awsm-mischka.css
+      repo: https://github.com/igoradamenko/awsm.css
+      url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm_theme_mischka.css
+    awsm-pastelpink:
+      author: igoradamenko
+      license: MIT
+      license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
+      name: Awsm-pastel-pink.css
+      repo: https://github.com/igoradamenko/awsm.css
+      url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm_theme_pastel-pink.css
+    awsm-pearllusta:
+      author: igoradamenko
+      license: MIT
+      license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
+      name: Awsm-pearl-lusta.css
+      repo: https://github.com/igoradamenko/awsm.css
+      url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm_theme_pearl-lusta.css
+    awsm-tasman:
+      author: igoradamenko
+      license: MIT
+      license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
+      name: Awsm-tasman.css
+      repo: https://github.com/igoradamenko/awsm.css
+      url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm_theme_tasman.css
+    awsm-white:
+      author: igoradamenko
+      license: MIT
+      license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
+      name: Awsm-white.css
+      repo: https://github.com/igoradamenko/awsm.css
+      url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm_theme_white.css
   bootswatch:
     info:
       author: thomaspark
