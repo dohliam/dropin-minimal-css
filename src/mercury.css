@@ -1,0 +1,190 @@
+/*! mercury.css v1.0 | MIT License | https://github.com/wmeredith/MercuryCSS */
+html {
+  font-family: "Georgia", serif;
+  font-size: 62.5%; }
+
+body {
+  background-color: #FBFBFB;
+  color: #222;
+  font-size: 1.618rem;
+  font-weight: 400;
+  line-height: 1.325;
+  margin: auto;
+  max-width: 90%;
+  padding: 1.325;
+  width: 42em; }
+
+h1, h2, h3, h4, h5, th, h6 {
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  font-family: "Verdana", sans-serif;
+  font-weight: 600;
+  letter-spacing: .05em;
+  line-height: 1.325;
+  margin: .66em 0 0; }
+
+h1 {
+  font-size: 4.98703rem; }
+
+h2 {
+  font-size: 3.7638rem; }
+
+h3 {
+  font-size: 2.8406rem; }
+
+h4 {
+  font-size: 2.14385rem; }
+
+h5, th {
+  font-size: 1.618rem; }
+
+h6 {
+  font-size: 1.22113rem; }
+
+small, sub, sup, caption {
+  font-size: 1.22113rem;
+  font-weight: 400;
+  letter-spacing: 0; }
+
+a {
+  border-bottom: 1px dotted #1F5AFF;
+  color: #1F5AFF;
+  text-decoration: none; }
+  a:hover {
+    border-bottom: 1px solid #1F5AFF; }
+  a:visited {
+    border-bottom: 1px dotted #9D32FF;
+    color: #9D32FF; }
+
+p, fieldset {
+  margin-bottom: 1.325em; }
+
+b, strong {
+  font-weight: 600; }
+
+i, em {
+  font-style: italic; }
+
+ul, ol {
+  padding-left: 2.65em; }
+  ul ul, ul ol, ol ul, ol ol {
+    padding-bottom: 0;
+    padding-top: 0.6625em; }
+
+li {
+  margin-bottom: 0.6625em; }
+
+blockquote {
+  border-left: 1px solid #919191;
+  margin-bottom: 1.325em;
+  margin-left: 0.6625em;
+  padding-left: 1.325em; }
+
+hr {
+  border: 0;
+  border-top: 1px solid #919191; }
+
+pre {
+  background-color: #eaeaea;
+  color: #000;
+  display: block;
+  overflow-x: auto;
+  padding: 1.325em; }
+
+code {
+  color: #000;
+  white-space: pre-wrap; }
+
+pre > code {
+  background-color: transparent;
+  padding: 0;
+  white-space: pre; }
+
+img {
+  max-width: 100%; }
+
+table {
+  border-collapse: collapse;
+  text-align: justify;
+  width: 100%; }
+
+th {
+  border-bottom: 1px solid #919191;
+  font-family: "Verdana", sans-serif;
+  padding: 0.6625em 0.6625em; }
+
+td {
+  padding: 0.44167em 0.6625em; }
+
+tbody tr {
+  border-bottom: 1px solid #d5d5d5; }
+  tbody tr:last-of-type {
+    border: 0; }
+
+input, textarea {
+  border: 1px solid #222; }
+  input:focus, textarea:focus {
+    border: 1px solid #1F5AFF; }
+
+textarea {
+  width: 100%; }
+
+textarea, select, input[type] {
+  color: #222;
+  padding: 0.44167em;
+  margin-bottom: 0.6625em;
+  background-color: #FFF;
+  border: 1px solid #eaeaea;
+  border-radius: 2px;
+  box-shadow: 0;
+  box-sizing: border-box; }
+  textarea:focus, select:focus, input[type]:focus {
+    border: 1px solid #1F5AFF;
+    outline: 0; }
+
+input:invalid {
+  border: 1px solid #FC2B07;
+  outline: 0; }
+
+label, legend, fieldset {
+  display: block; }
+
+label {
+  margin-bottom: 0.33125em; }
+
+fieldset {
+  border-radius: 4px;
+  box-shadow: 0 2px 3px -1px rgba(34, 34, 34, 0.1); }
+
+.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+  background-color: #4878ff;
+  border: 1px solid #0446ff;
+  border-radius: 4px;
+  box-shadow: 0 3px 4px -2px rgba(34, 34, 34, 0.5);
+  box-sizing: border-box;
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.44167em 0.6625em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap; }
+  .button:focus, .button:hover, button:focus, button:hover, input[type="submit"]:focus, input[type="submit"]:hover, input[type="reset"]:focus, input[type="reset"]:hover, input[type="button"]:focus, input[type="button"]:hover {
+    background-color: #2d64ff;
+    border-color: #0032bf;
+    outline: 0; }
+  .button[disabled], button[disabled], input[type="submit"][disabled], input[type="reset"][disabled], input[type="button"][disabled] {
+    box-shadow: none;
+    cursor: default;
+    opacity: .5; }
+    .button[disabled]:hover, button[disabled]:hover, input[type="submit"][disabled]:hover, input[type="reset"][disabled]:hover, input[type="button"][disabled]:hover {
+      background-color: #4878ff;
+      border-color: #1f5aff;
+      cursor: default; }
