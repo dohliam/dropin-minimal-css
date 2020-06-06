@@ -3,7 +3,7 @@ var frameworks = "a11yana,bahunya,bare,base,bullframe,bulma,caiuss,caramel,cardi
 add_switcher();
 
 function switch_css(css) {
-  document.getElementsByTagName("link")[0].href = "https://dohliam.github.io/dropin-minimal-css/min/" + css + ".min.css";
+  css_link.href = "https://dohliam.github.io/dropin-minimal-css/min/" + css + ".min.css";
 }
 
 function capitalize(s) {
@@ -11,6 +11,12 @@ function capitalize(s) {
     return l.toUpperCase();
   });
   return u;
+}
+
+function on_css_load() {
+  var bgColor = getComputedStyle(document.body).backgroundColor;
+  if (bgColor.match(/^rgba\(.*\)/) ) bgColor = 'white';
+  switcher.style.backgroundColor = bgColor;
 }
 
 function inline_switcher() {
@@ -30,20 +36,23 @@ function inline_switcher() {
 }
 
 function add_switcher() {
-  stylesheet = document.getElementsByTagName("link")[0];
-  if (stylesheet == undefined) {
+  css_link = document.getElementsByTagName("link")[0];
+  if (css_link == undefined) {
     head = document.getElementsByTagName('head')[0];
-    link = document.createElement('link');
-    link.rel="stylesheet";
-    link.type="text/css";
-    link.href="https://dohliam.github.io/dropin-minimal-css/min/" + frameworks.split(",")[0] + ".min.css";
-    head.appendChild(link);
+    css_link = document.createElement('link');
+    css_link.rel="stylesheet";
+    css_link.type="text/css";
+    css_link.href="https://dohliam.github.io/dropin-minimal-css/min/" + frameworks.split(",")[0] + ".min.css";
+    head.appendChild(css_link);
   }
 
-  var new_div = document.createElement("div");
-  new_div.innerHTML = '      <div id="switcher">&nbsp;</div>\n      <script type="text/javascript">inline_switcher();</script>';
-  document.body.insertBefore(new_div, document.body.firstChild);
-  document.body.style.paddingLeft = "24px"
+  var new_div = document.createElement('div');
+  new_div.id = 'switcher';
+  new_div.innerHTML = '      <div>&nbsp;</div>\n      <script type="text/javascript">inline_switcher();</script>';
+  document.body.prepend(new_div);
+  document.body.style.paddingLeft = "24px";
 
   inline_switcher();
+
+  css_link.onload = on_css_load;
 }
