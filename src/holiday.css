@@ -283,6 +283,10 @@ Add the correct display in Chrome and Safari.
 summary {
 	display: list-item;
 }
+abbr {
+    cursor: help;
+}
+
 button,
 summary,
 [type="button"],
@@ -291,8 +295,8 @@ summary,
 [type="color"],
 [type="file"],
 [type="range"],
-label > [type="checkbox"]:not(:disabled),
-label > [type="radio"]:not(:disabled) {
+label > [type="checkbox"]:enabled,
+label > [type="radio"]:enabled {
     cursor: pointer;
 }
 
@@ -307,29 +311,33 @@ label > [type="radio"]:not(:disabled) {
     cursor: not-allowed;
 }
 /* stylelint-enable */
-
-abbr {
-    cursor: help;
-}
-[href^="mailto:"]::before,
-[href^="sms:"]::before {
-    content: "✉ ";
-}
-
-[href^="tel:"]::before,
-[href^="callto:"]::before,
-[href^="skype:"]::before {
-    content: "✆ ";
-}
 :root {
     --max-body-width: 48rem;
 }
 
+html {
+    height: 100%;
+    line-height: 1.4;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.15;
+}
+
 body {
-    margin: 0 auto 0.5rem;
+    margin: 0 auto;
     width: calc(100% - 1rem);
     max-width: var(--max-body-width);
     overflow-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main {
+    flex-grow: 1;
 }
 
 img {
@@ -344,6 +352,7 @@ table {
 
 pre {
     overflow-x: auto;
+    line-height: 1.15;
 }
 
 code {
@@ -357,13 +366,13 @@ pre code {
 }
 
 kbd {
-    padding: 0.5rem;
-    min-width: 2.25rem;
-    min-height: 2rem;
+    padding: 0 0.25rem;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 0 0.25rem;
+    margin: 0 0.1rem;
     max-width: 100%;
     overflow: hidden;
 }
@@ -530,6 +539,10 @@ body > footer {
     text-align: center;
 }
 
+body > footer {
+    padding-bottom: 1rem;
+}
+
 td,
 th {
     padding: 0.5rem;
@@ -674,8 +687,8 @@ picture {
     }
 
     /* stylelint-disable-next-line selector-max-universal */
-    nav li > *:not(ul):not(:only-child) {
-        cursor: pointer;
+    nav li > *:not(ul):not(a):not(:only-child) {
+        cursor: default;
     }
 
     /* stylelint-disable-next-line selector-max-universal */
@@ -717,7 +730,6 @@ picture {
     }
 }
 :root {
-    /* stylelint-disable-next-line scale-unlimited/declaration-strict-value */
     color-scheme: light dark;
 
     --border-color: #dbdbdb;
@@ -772,20 +784,30 @@ body {
     color: var(--text-color);
 }
 
-a {
+code {
+    background-color: var(--code-background-color);
+    border-color: var(--code-background-color);
+    color: var(--code-text-color);
+}
+
+a,
+a code {
     color: var(--link-color);
     text-decoration: none;
 }
 
-a:visited {
+a:visited,
+a:visited code {
     color: var(--link-visited-color);
 }
 
-a:hover {
+a:hover,
+a:hover code {
     color: var(--link-hover-color);
 }
 
-a:active {
+a:active,
+a:active code {
     color: var(--link-active-color);
 }
 
@@ -797,48 +819,44 @@ fieldset {
     border-radius: var(--border-radius);
 }
 
-[type="image"]:hover:not(:disabled) {
+[type="image"]:hover:enabled {
     filter: brightness(95%);
 }
 
 button,
 [type="button"],
-[type="reset"],
-[type="submit"],
 [type="color"] {
     border: var(--border-width) solid var(--border-color);
-    background: var(--background-color);
+    background-color: var(--background-color);
     color: var(--text-color);
 }
 
 [type="reset"] {
+    border: var(--border-width) solid transparent;
     background-color: var(--danger-color);
-    border-color: transparent;
     color: var(--danger-text-color);
 }
 
 [type="submit"],
 button:not([type]) {
+    border: var(--border-width) solid transparent;
     background-color: var(--success-color);
-    border-color: transparent;
     color: var(--success-text-color);
 }
 
-button:hover:not(:disabled),
-[type="button"]:hover:not(:disabled),
-[type="reset"]:hover:not(:disabled),
-[type="submit"]:hover:not(:disabled),
-[type="color"]:hover:not(:disabled) {
+button:hover:enabled,
+[type="button"]:hover:enabled,
+[type="color"]:hover:enabled {
     border-color: var(--border-hover-color);
 }
 
-[type="reset"]:hover:not(:disabled) {
+[type="reset"]:hover:enabled {
     border-color: transparent;
     background-color: var(--danger-hover-color);
 }
 
-[type="submit"]:hover:not(:disabled),
-button:not([type]):hover:not(:disabled) {
+[type="submit"]:hover:enabled,
+button:not([type]):hover:enabled {
     border-color: transparent;
     background-color: var(--success-hover-color);
 }
@@ -857,13 +875,13 @@ fieldset {
     border: var(--border-width) solid var(--border-color);
 }
 
-select:not(:disabled),
-[type="date"]:not(:disabled),
-[type="datetime-local"]:not(:disabled),
-[type="time"]:not(:disabled),
-[type="month"]:not(:disabled),
-[type="week"]:not(:disabled) {
-    background: var(--background-color);
+select:enabled,
+[type="date"]:enabled,
+[type="datetime-local"]:enabled,
+[type="time"]:enabled,
+[type="month"]:enabled,
+[type="week"]:enabled {
+    background-color: var(--background-color);
 }
 
 input:not([type="button"]):not([type="checkbox"]):not([type="color"]):not([type="image"]):not([type="radio"]):not([type="reset"]):not([type="submit"]):not([type="file"]):not([type="range"]):disabled,
@@ -872,9 +890,9 @@ select:disabled {
     background-color: var(--highlighted-background-color);
 }
 
-input:not([type="button"]):not([type="checkbox"]):not([type="color"]):not([type="image"]):not([type="radio"]):not([type="reset"]):not([type="submit"]):not([type="file"]):hover:not(:disabled):not(:invalid),
-textarea:hover:not(:disabled),
-select:hover:not(:disabled) {
+input:not([type="button"]):not([type="checkbox"]):not([type="color"]):not([type="image"]):not([type="radio"]):not([type="reset"]):not([type="submit"]):not([type="file"]):hover:enabled:not(:invalid),
+textarea:hover:enabled,
+select:hover:enabled {
     border-color: var(--border-hover-color);
 }
 
@@ -904,12 +922,6 @@ thead > tr:nth-child(even),
 tbody > tr:nth-child(even),
 tfoot > tr:nth-child(even) {
     background-color: var(--highlighted-background-color);
-}
-
-code {
-    background-color: var(--code-background-color);
-    border-color: var(--code-background-color);
-    color: var(--code-text-color);
 }
 
 kbd {
@@ -998,6 +1010,6 @@ hr {
     opacity: unset;
 }
 
-:invalid:not(form):hover:not(:disabled) {
+:invalid:not(form):hover:enabled {
     border-color: var(--danger-hover-color);
 }
