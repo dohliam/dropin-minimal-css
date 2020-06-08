@@ -117,7 +117,10 @@ def frameworks_routine(data)
     root = data["frameworks"][name]
     url = root["url"]
     min_only = root["min_only"]
-    update_css(name, url)
+    skip = root["skip"]
+    if !skip
+      update_css(name, url)
+    end
   end
   puts "  Update complete."
   puts
