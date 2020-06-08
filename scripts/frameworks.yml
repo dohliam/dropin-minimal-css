@@ -32,6 +32,20 @@ frameworks:
     repo: https://github.com/matthewhartman/base
     url: https://unpkg.com/@getbase/base/index.css
     min_only: true
+  basic:
+    author: vladocar
+    author_name: Vladimir Carrer
+    license: MIT
+    license_url: https://github.com/vladocar/Basic.css/blob/master/LICENSE
+    repo: https://github.com/vladocar/Basic.css
+    url: https://github.com/vladocar/Basic.css/blob/master/css/basic.css
+  bonsai:
+    author: ciar4n
+    author_name: Ciaran Walsh
+    license: MIT
+    license_url: https://github.com/bonsaicss/bonsai.css/blob/master/LICENSE.md
+    repo: https://github.com/bonsaicss/bonsai.css
+    url: https://github.com/bonsaicss/bonsai.css/blob/master/dist/bonsai.css
   bullframe:
     author: marcop135
     author_name: Marco Pontili
@@ -318,6 +332,7 @@ frameworks:
     license_url: http://cjpatoilo.mit-license.org/
     repo: https://github.com/milligram/milligram
     url: https://github.com/milligram/milligram/blob/master/dist/milligram.css
+    skip: true
   min:
     author: owenversteeg
     author_name: Owen Versteeg
