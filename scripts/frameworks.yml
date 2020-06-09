@@ -339,7 +339,6 @@ frameworks:
     license_url: http://cjpatoilo.mit-license.org/
     repo: https://github.com/milligram/milligram
     url: https://github.com/milligram/milligram/blob/master/dist/milligram.css
-    skip: true
   min:
     author: owenversteeg
     author_name: Owen Versteeg

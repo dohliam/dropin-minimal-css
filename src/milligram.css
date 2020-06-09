@@ -1,9 +1,9 @@
 /*!
- * Milligram v1.3.0
- * https://milligram.github.io
- *
- * Copyright (c) 2018 CJ Patoilo
- * Licensed under the MIT license
+  * Milligram v1.4.0
+  * https://milligram.io
+  *
+  * Copyright (c) 2020 CJ Patoilo
+  * Licensed under the MIT license
  */
 
 *,
@@ -197,48 +197,46 @@ hr {
   margin: 3.0rem 0;
 }
 
+input[type='color'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
 input[type='email'],
+input[type='month'],
 input[type='number'],
 input[type='password'],
 input[type='search'],
 input[type='tel'],
 input[type='text'],
 input[type='url'],
-input[type='color'],
-input[type='date'],
-input[type='month'],
 input[type='week'],
-input[type='datetime'],
-input[type='datetime-local'],
 input:not([type]),
 textarea,
 select {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
   background-color: transparent;
   border: 0.1rem solid #d1d1d1;
   border-radius: .4rem;
   box-shadow: none;
   box-sizing: inherit;
   height: 3.8rem;
-  padding: .6rem 1.0rem;
+  padding: .6rem 1.0rem .7rem;
   width: 100%;
 }
 
+input[type='color']:focus,
+input[type='date']:focus,
+input[type='datetime']:focus,
+input[type='datetime-local']:focus,
 input[type='email']:focus,
+input[type='month']:focus,
 input[type='number']:focus,
 input[type='password']:focus,
 input[type='search']:focus,
 input[type='tel']:focus,
 input[type='text']:focus,
 input[type='url']:focus,
-input[type='color']:focus,
-input[type='date']:focus,
-input[type='month']:focus,
 input[type='week']:focus,
-input[type='datetime']:focus,
-input[type='datetime-local']:focus,
 input:not([type]):focus,
 textarea:focus,
 select:focus {
@@ -247,12 +245,17 @@ select:focus {
 }
 
 select {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="%23d1d1d1" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>') center right no-repeat;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23d1d1d1" d="M0,0l6,8l6-8"/></svg>') center right no-repeat;
   padding-right: 3.0rem;
 }
 
 select:focus {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="%239b4dca" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%239b4dca" d="M0,0l6,8l6-8"/></svg>');
+}
+
+select[multiple] {
+  background: none;
+  height: auto;
 }
 
 textarea {
@@ -354,8 +357,16 @@ input[type='radio'] {
   margin-left: 33.3333%;
 }
 
+.row .column.column-offset-40 {
+  margin-left: 40%;
+}
+
 .row .column.column-offset-50 {
   margin-left: 50%;
+}
+
+.row .column.column-offset-60 {
+  margin-left: 60%;
 }
 
 .row .column.column-offset-66, .row .column.column-offset-67 {
@@ -438,8 +449,7 @@ input[type='radio'] {
 }
 
 .row .column .column-center {
-  -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 @media (min-width: 40rem) {
@@ -521,6 +531,9 @@ ul {
 
 table {
   border-spacing: 0;
+  display: block;
+  overflow-x: auto;
+  text-align: left;
   width: 100%;
 }
 
@@ -528,7 +541,6 @@ td,
 th {
   border-bottom: 0.1rem solid #e1e1e1;
   padding: 1.2rem 1.5rem;
-  text-align: left;
 }
 
 td:first-child,
@@ -539,6 +551,13 @@ th:first-child {
 td:last-child,
 th:last-child {
   padding-right: 0;
+}
+
+@media (min-width: 40rem) {
+  table {
+    display: table;
+    overflow-x: initial;
+  }
 }
 
 b,
