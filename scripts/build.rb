@@ -71,7 +71,7 @@ def collections_attribution(data)
       license = root["license"]
       license_url = root["license_url"]
       if name == "info"
-        list << "* **[#{collection}](https://github.com/#{repo})** by @#{author}:\n"
+        list << "* **[#{collection}](#{repo})** by @#{author}:\n"
         next
       end
       list << "  * [#{name}](#{repo}) by @#{author} ([Preview](https://dohliam.github.io/dropin-minimal-css/?#{name}) · [#{license}](#{license_url}))\n"
