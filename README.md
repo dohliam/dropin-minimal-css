@@ -156,12 +156,12 @@ If you know of a minimal framework that hasn't been included here, please create
 
 ### Theme collections
 
-* **[asciidoctor-skins](https://github.com/https://github.com/darshandsoni/asciidoctor-skins)** by @darshandsoni:
+* **[asciidoctor-skins](https://github.com/darshandsoni/asciidoctor-skins)** by @darshandsoni:
   * [ads-gazette](https://github.com/darshandsoni/asciidoctor-skins) by @darshandsoni ([Preview](https://dohliam.github.io/dropin-minimal-css/?ads-gazette) · [MIT](https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/LICENSE))
   * [ads-medium](https://github.com/darshandsoni/asciidoctor-skins) by @darshandsoni ([Preview](https://dohliam.github.io/dropin-minimal-css/?ads-medium) · [MIT](https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/LICENSE))
   * [ads-notebook](https://github.com/darshandsoni/asciidoctor-skins) by @darshandsoni ([Preview](https://dohliam.github.io/dropin-minimal-css/?ads-notebook) · [MIT](https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/LICENSE))
   * [ads-tufte](https://github.com/darshandsoni/asciidoctor-skins) by @darshandsoni ([Preview](https://dohliam.github.io/dropin-minimal-css/?ads-tufte) · [MIT](https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/LICENSE))
-* **[awsm](https://github.com/https://github.com/igoradamenko/awsm.css)** by @igoradamenko:
+* **[awsm](https://github.com/igoradamenko/awsm.css)** by @igoradamenko:
   * [awsm-default](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([Preview](https://dohliam.github.io/dropin-minimal-css/?awsm-default) · [MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
   * [awsm-black](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([Preview](https://dohliam.github.io/dropin-minimal-css/?awsm-black) · [MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
   * [awsm-bigstone](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([Preview](https://dohliam.github.io/dropin-minimal-css/?awsm-bigstone) · [MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
@@ -171,7 +171,7 @@ If you know of a minimal framework that hasn't been included here, please create
   * [awsm-pearllusta](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([Preview](https://dohliam.github.io/dropin-minimal-css/?awsm-pearllusta) · [MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
   * [awsm-tasman](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([Preview](https://dohliam.github.io/dropin-minimal-css/?awsm-tasman) · [MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
   * [awsm-white](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([Preview](https://dohliam.github.io/dropin-minimal-css/?awsm-white) · [MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
-* **[bootswatch](https://github.com/https://github.com/thomaspark/bootswatch)** by @thomaspark:
+* **[bootswatch](https://github.com/thomaspark/bootswatch)** by @thomaspark:
   * [boot-cerulean](https://github.com/thomaspark/bootswatch) by @thomaspark ([Preview](https://dohliam.github.io/dropin-minimal-css/?boot-cerulean) · [MIT](https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE))
   * [boot-cosmo](https://github.com/thomaspark/bootswatch) by @thomaspark ([Preview](https://dohliam.github.io/dropin-minimal-css/?boot-cosmo) · [MIT](https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE))
   * [boot-cyborg](https://github.com/thomaspark/bootswatch) by @thomaspark ([Preview](https://dohliam.github.io/dropin-minimal-css/?boot-cyborg) · [MIT](https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE))
@@ -186,12 +186,12 @@ If you know of a minimal framework that hasn't been included here, please create
   * [boot-spacelab](https://github.com/thomaspark/bootswatch) by @thomaspark ([Preview](https://dohliam.github.io/dropin-minimal-css/?boot-spacelab) · [MIT](https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE))
   * [boot-superhero](https://github.com/thomaspark/bootswatch) by @thomaspark ([Preview](https://dohliam.github.io/dropin-minimal-css/?boot-superhero) · [MIT](https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE))
   * [boot-yeti](https://github.com/thomaspark/bootswatch) by @thomaspark ([Preview](https://dohliam.github.io/dropin-minimal-css/?boot-yeti) · [MIT](https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE))
-* **[markdowncss](https://github.com/https://github.com/markdowncss)** by @johnotander:
+* **[markdowncss](https://github.com/markdowncss)** by @johnotander:
   * [md-air](https://github.com/markdowncss/air) by @johnotander ([Preview](https://dohliam.github.io/dropin-minimal-css/?md-air) · [MIT](https://github.com/markdowncss/air/blob/master/LICENSE))
   * [md-modest](https://github.com/markdowncss/modest) by @johnotander ([Preview](https://dohliam.github.io/dropin-minimal-css/?md-modest) · [MIT](https://github.com/markdowncss/modest/blob/master/LICENSE))
   * [md-retro](https://github.com/markdowncss/retro) by @johnotander ([Preview](https://dohliam.github.io/dropin-minimal-css/?md-retro) · [MIT](https://github.com/markdowncss/retro/blob/master/LICENSE))
   * [md-splendor](https://github.com/markdowncss/splendor) by @johnotander ([Preview](https://dohliam.github.io/dropin-minimal-css/?md-splendor) · [MIT](https://github.com/markdowncss/splendor/blob/master/LICENSE))
-* **[w3c-core](https://github.com/https://www.w3.org/StyleSheets/Core/)** by @Bert Bos:
+* **[w3c-core](https://www.w3.org/StyleSheets/Core/)** by @Bert Bos:
   * [w3c-chocolate](https://www.w3.org/StyleSheets/Core/) by @Bert Bos ([Preview](https://dohliam.github.io/dropin-minimal-css/?w3c-chocolate) · [W3C](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document))
   * [w3c-midnight](https://www.w3.org/StyleSheets/Core/) by @Bert Bos ([Preview](https://dohliam.github.io/dropin-minimal-css/?w3c-midnight) · [W3C](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document))
   * [w3c-modernist](https://www.w3.org/StyleSheets/Core/) by @Bert Bos ([Preview](https://dohliam.github.io/dropin-minimal-css/?w3c-modernist) · [W3C](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document))
