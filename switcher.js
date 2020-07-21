@@ -22,7 +22,7 @@ function on_css_load() {
 function inline_switcher() {
   switcher = document.getElementById("switcher");
   frameworks_array = frameworks.split(",");
-  select_open = '\n        <select name="switcher_dropdown" id="switcher_dropdown" accesskey="s" onchange="switch_css(this.value)">\n';
+  select_open = '\n        <select name="switcher_dropdown" id="switcher_dropdown" accesskey="s" onchange="switch_css(this.value)" title="keyboard shortcuts at https://github.com/dohliam/dropin-minimal-css">\n';
   dropdown = select_open;
   for (i = 0; i < frameworks_array.length; i++) {
     f = frameworks_array[i];
