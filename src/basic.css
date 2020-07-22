@@ -100,3 +100,4 @@ section {display: flex; flex-flow: row wrap}
 article {background: var(--c2); border-radius: var(--rc); padding: 1em; box-shadow: 0px 1px 0px rgba(0,0,0,0.3)}
 
 [style*="--c:"]:first-child, section>section:first-child, article:first-child {margin-left:0}
+[style*="--c:"]:last-child, section>section:last-child, article:last-child {margin-right:0}
