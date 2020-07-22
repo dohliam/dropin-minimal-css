@@ -640,6 +640,13 @@ frameworks:
     license_url: http://www.apache.org/licenses/LICENSE-2.0
     repo: https://github.com/ThaoFramework/Thao/
     url: https://github.com/ThaoFramework/Thao/blob/master/css/thao.css
+  tufte:
+    author: edwardtufte
+    author_name: Edward Tufte
+    license: MIT
+    license_url: https://github.com/edwardtufte/tufte-css/blob/gh-pages/LICENSE
+    repo: https://github.com/edwardtufte/tufte-css
+    url: https://github.com/edwardtufte/tufte-css/blob/gh-pages/tufte.css
   vanilla:
     author: bradleytaunt
     author_name: Bradley Taunt
