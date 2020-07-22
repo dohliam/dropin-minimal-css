@@ -216,7 +216,7 @@ frameworks:
     license: MIT
     license_url: https://github.com/jonathanharrell/hiq/blob/master/license.md
     repo: https://github.com/jonathanharrell/hiq
-    url: https://github.com/jonathanharrell/hiq/blob/gh-pages/assets/css/0.styles.5cbc7fcb.css
+    url: https://github.com/jonathanharrell/hiq/blob/gh-pages/assets/css/0.styles.3e8978f5.css
     min_only: true
   holiday:
     author: EvgenyOrekhov
@@ -539,7 +539,7 @@ frameworks:
     license: MIT
     license_url: https://github.com/claviska/shoelace-css/blob/master/LICENSE.md
     repo: https://github.com/claviska/shoelace-css
-    url: https://github.com/claviska/shoelace-css/blob/master/dist/shoelace.css
+    url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/shoelace.css
     min_only: true
   siimple:
     author: jmjuanes
