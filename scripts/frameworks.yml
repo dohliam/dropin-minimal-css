@@ -8,6 +8,13 @@ frameworks:
     license_url: https://github.com/alexandersandberg/a11yana/blob/master/LICENSE.md
     repo: https://github.com/alexandersandberg/a11yana
     url: https://github.com/alexandersandberg/a11yana/blob/master/dist/a11yana.css
+  attri:
+    author: raj457036
+    author_name: Raj Singh
+    license: MIT
+    license_url: https://github.com/raj457036/attriCSS/blob/master/LICENSE
+    repo: https://github.com/raj457036/attriCSS
+    url: https://github.com/raj457036/attriCSS/blob/master/themes/brightlight-green.css
   axist:
     author: ruanmartinelli
     author_name: Ruan Martinelli
