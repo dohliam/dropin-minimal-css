@@ -146,7 +146,6 @@ If you know of a minimal framework that hasn't been included here, please create
 * [tacit](https://github.com/yegor256/tacit) by @yegor256 ([Preview](https://dohliam.github.io/dropin-minimal-css/?tacit) · [MIT](https://github.com/yegor256/tacit/blob/master/LICENSE))
 * [tent](https://github.com/sitetent/tentcss) by @ulinaaron ([Preview](https://dohliam.github.io/dropin-minimal-css/?tent) · [MIT](https://github.com/sitetent/tentcss/blob/master/LICENSE))
 * [thao](https://github.com/ThaoFramework/Thao/) by @Sanfra1407 ([Preview](https://dohliam.github.io/dropin-minimal-css/?thao) · [Apache](http://www.apache.org/licenses/LICENSE-2.0))
-* [tufte](https://github.com/edwardtufte/tufte-css) by @edwardtufte ([Preview](https://dohliam.github.io/dropin-minimal-css/?tufte) · [MIT](https://github.com/edwardtufte/tufte-css/blob/gh-pages/LICENSE))
 * [vanilla](https://github.com/bradleytaunt/vanilla-css) by @bradleytaunt ([Preview](https://dohliam.github.io/dropin-minimal-css/?vanilla) · [MIT](https://github.com/bradleytaunt/vanilla-css/blob/master/LICENSE))
 * [vital](https://github.com/doximity/vital) by @doximity ([Preview](https://dohliam.github.io/dropin-minimal-css/?vital) · [Apache](https://github.com/doximity/vital/blob/master/LICENSE.md))
 * [water](https://github.com/kognise/water.css) by @kognise ([Preview](https://dohliam.github.io/dropin-minimal-css/?water) · [MIT](https://github.com/kognise/water.css/blob/master/LICENSE.md))
