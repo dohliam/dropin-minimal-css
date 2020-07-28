@@ -8,13 +8,6 @@ frameworks:
     license_url: https://github.com/alexandersandberg/a11yana/blob/master/LICENSE.md
     repo: https://github.com/alexandersandberg/a11yana
     url: https://github.com/alexandersandberg/a11yana/blob/master/dist/a11yana.css
-  attri:
-    author: raj457036
-    author_name: Raj Singh
-    license: MIT
-    license_url: https://github.com/raj457036/attriCSS/blob/master/LICENSE
-    repo: https://github.com/raj457036/attriCSS
-    url: https://github.com/raj457036/attriCSS/blob/master/themes/brightlight-green.css
   axist:
     author: ruanmartinelli
     author_name: Ruan Martinelli
@@ -734,6 +727,45 @@ collections:
       repo: https://github.com/darshandsoni/asciidoctor-skins
       url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/min/ads-tufte.min.css
       min_only: true
+  attri:
+    info:
+      author: raj457036
+      repo: https://github.com/raj457036/attriCSS
+    attri-bright-light-green:
+      author: raj457036
+      license: MIT
+      license_url: https://github.com/raj457036/attriCSS/blob/master/LICENSE
+      name: Bright Light green
+      repo: https://github.com/raj457036/attriCSS
+      url: https://github.com/raj457036/attriCSS/blob/master/themes/brightlight-green.css
+    attri-midnight-green:
+      author: raj457036
+      license: MIT
+      license_url: https://github.com/raj457036/attriCSS/blob/master/LICENSE
+      name: Midnight green
+      repo: https://github.com/raj457036/attriCSS
+      url: https://github.com/raj457036/attriCSS/blob/master/themes/midnight-green.css
+    attri-dark-forest-green:
+      author: raj457036
+      license: MIT
+      license_url: https://github.com/raj457036/attriCSS/blob/master/LICENSE
+      name: Dark forest green
+      repo: https://github.com/raj457036/attriCSS
+      url: https://github.com/raj457036/attriCSS/blob/master/themes/darkforest-green.css
+    attri-dark-fairy-pink:
+      author: raj457036
+      license: MIT
+      license_url: https://github.com/raj457036/attriCSS/blob/master/LICENSE
+      name: Dark fairy pink
+      repo: https://github.com/raj457036/attriCSS
+      url: https://github.com/raj457036/attriCSS/blob/master/themes/darkfairy-pink.css
+    attri-light-fairy-pink:
+      author: raj457036
+      license: MIT
+      license_url: https://github.com/raj457036/attriCSS/blob/master/LICENSE
+      name: Light fairy pink
+      repo: https://github.com/raj457036/attriCSS
+      url: https://github.com/raj457036/attriCSS/blob/master/themes/lightfairy-pink.css
   awsm:
     info:
       author: igoradamenko
