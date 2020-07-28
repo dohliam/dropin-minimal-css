@@ -161,6 +161,12 @@ If you know of a minimal framework that hasn't been included here, please create
   * [ads-medium](https://github.com/darshandsoni/asciidoctor-skins) by @darshandsoni ([Preview](https://dohliam.github.io/dropin-minimal-css/?ads-medium) · [MIT](https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/LICENSE))
   * [ads-notebook](https://github.com/darshandsoni/asciidoctor-skins) by @darshandsoni ([Preview](https://dohliam.github.io/dropin-minimal-css/?ads-notebook) · [MIT](https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/LICENSE))
   * [ads-tufte](https://github.com/darshandsoni/asciidoctor-skins) by @darshandsoni ([Preview](https://dohliam.github.io/dropin-minimal-css/?ads-tufte) · [MIT](https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/LICENSE))
+* **[attri](https://github.com/raj457036/attriCSS)** by @raj457036:
+  * [attri-bright-light-green](https://github.com/raj457036/attriCSS) by @raj457036 ([Preview](https://dohliam.github.io/dropin-minimal-css/?attri-bright-light-green) · [MIT](https://github.com/raj457036/attriCSS/blob/master/LICENSE))
+  * [attri-midnight-green](https://github.com/raj457036/attriCSS) by @raj457036 ([Preview](https://dohliam.github.io/dropin-minimal-css/?attri-midnight-green) · [MIT](https://github.com/raj457036/attriCSS/blob/master/LICENSE))
+  * [attri-dark-forest-green](https://github.com/raj457036/attriCSS) by @raj457036 ([Preview](https://dohliam.github.io/dropin-minimal-css/?attri-dark-forest-green) · [MIT](https://github.com/raj457036/attriCSS/blob/master/LICENSE))
+  * [attri-dark-fairy-pink](https://github.com/raj457036/attriCSS) by @raj457036 ([Preview](https://dohliam.github.io/dropin-minimal-css/?attri-dark-fairy-pink) · [MIT](https://github.com/raj457036/attriCSS/blob/master/LICENSE))
+  * [attri-light-fairy-pink](https://github.com/raj457036/attriCSS) by @raj457036 ([Preview](https://dohliam.github.io/dropin-minimal-css/?attri-light-fairy-pink) · [MIT](https://github.com/raj457036/attriCSS/blob/master/LICENSE))
 * **[awsm](https://github.com/igoradamenko/awsm.css)** by @igoradamenko:
   * [awsm-default](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([Preview](https://dohliam.github.io/dropin-minimal-css/?awsm-default) · [MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))
   * [awsm-black](https://github.com/igoradamenko/awsm.css) by @igoradamenko ([Preview](https://dohliam.github.io/dropin-minimal-css/?awsm-black) · [MIT](https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md))

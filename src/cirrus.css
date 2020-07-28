@@ -1370,6 +1370,60 @@ fieldset {
 /* Spacing */
 /* Fonts */
 /* Media Queries */
+/*
+  Functions
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/* Spacing */
+/* Fonts */
+/* Media Queries */
+/* Color scheme for Cirrus */
+/* v2 Colors */
+:root {
+  /* v1 Colors */
+  --cirrus-fg: #374054;
+  --cirrus-bg: #fff;
+  --cirrus-primary: #f03d4d;
+  --cirrus-primary-rgb: 240, 61, 77;
+  --cirrus-primary-light: #ffdadd;
+  --cirrus-accent-hover: #d62939;
+  --cirrus-accent-border: #c21b2b;
+  --cirrus-light: #f6f9fc;
+  --cirrus-light-gray: #f8f9fa;
+  --cirrus-gray: #d5d7dc;
+  --cirrus-dark-gray: #909090;
+  --cirrus-dark: #363636;
+  --cirrus-link: #5e5cc7;
+  --cirrus-link-dark: #4643e2;
+  --cirrus-info: #2972fa;
+  --cirrus-success: #0dd157;
+  --cirrus-success-rgb: 13, 209, 87;
+  --cirrus-warning: #fab633;
+  --cirrus-danger: #fb4143;
+  --cirrus-light-hover: #d0e0ef;
+  --cirrus-dark-hover: #505050;
+  --cirrus-info-hover: #1062f9;
+  --cirrus-link-hover: #f8f7ff;
+  --cirrus-success-hover: #0cb94d;
+  --cirrus-warning-hover: #f9ad1a;
+  --cirrus-danger-hover: #eb0507;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-code-bg: var(--cirrus-primary-light);
+  --cirrus-code-fg: #dc4753;
+  --cirrus-form-group-bg: var(--cirrus-light-gray);
+  --cirrus-form-group-fg: var(--cirrus-dark-gray);
+  --toast-primary-bg: rgba(49, 59, 80, 0.9);
+  --animation-duration: 0.2s;
+  --focus-opacity: 0.55;
+  --space-size: 0.5rem;
+  --font-size-xs: 0.7rem;
+  --font-size-s: 0.85rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.35rem;
+  --font-size-xl: 1.75rem; }
+
 /* The base of the modal dialog, which is an overlay of the webpage */
 .modal {
   position: fixed;
@@ -1414,7 +1468,7 @@ fieldset {
       right: 0;
       bottom: 0;
       display: block;
-      background-color: rgba(54, 59, 68, 0.5); }
+      background-color: rgba(54, 54, 54, 0.5); }
     .modal:target .modal-container,
     .modal:target .modal-container, .modal.shown .modal-container,
     .modal.shown .modal-container {
@@ -1432,7 +1486,7 @@ fieldset {
     padding: 0;
     display: block;
     border-radius: 3px;
-    box-shadow: 0 0.4rem 1rem rgba(54, 59, 68, 0.3);
+    box-shadow: 0 0.4rem 1rem rgba(54, 54, 54, 0.3);
     z-index: 1;
     color: var(--cirrus-fg);
     max-width: 40rem;
@@ -1604,98 +1658,135 @@ fieldset {
 .text-info {
   color: var(--cirrus-info) !important; }
 
+/*
+  Functions
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/* Spacing */
+/* Fonts */
+/* Media Queries */
+/* Color scheme for Cirrus */
+/* v2 Colors */
+:root {
+  /* v1 Colors */
+  --cirrus-fg: #374054;
+  --cirrus-bg: #fff;
+  --cirrus-primary: #f03d4d;
+  --cirrus-primary-rgb: 240, 61, 77;
+  --cirrus-primary-light: #ffdadd;
+  --cirrus-accent-hover: #d62939;
+  --cirrus-accent-border: #c21b2b;
+  --cirrus-light: #f6f9fc;
+  --cirrus-light-gray: #f8f9fa;
+  --cirrus-gray: #d5d7dc;
+  --cirrus-dark-gray: #909090;
+  --cirrus-dark: #363636;
+  --cirrus-link: #5e5cc7;
+  --cirrus-link-dark: #4643e2;
+  --cirrus-info: #2972fa;
+  --cirrus-success: #0dd157;
+  --cirrus-success-rgb: 13, 209, 87;
+  --cirrus-warning: #fab633;
+  --cirrus-danger: #fb4143;
+  --cirrus-light-hover: #d0e0ef;
+  --cirrus-dark-hover: #505050;
+  --cirrus-info-hover: #1062f9;
+  --cirrus-link-hover: #f8f7ff;
+  --cirrus-success-hover: #0cb94d;
+  --cirrus-warning-hover: #f9ad1a;
+  --cirrus-danger-hover: #eb0507;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-code-bg: var(--cirrus-primary-light);
+  --cirrus-code-fg: #dc4753;
+  --cirrus-form-group-bg: var(--cirrus-light-gray);
+  --cirrus-form-group-fg: var(--cirrus-dark-gray);
+  --toast-primary-bg: rgba(49, 59, 80, 0.9);
+  --animation-duration: 0.2s;
+  --focus-opacity: 0.55;
+  --space-size: 0.5rem;
+  --font-size-xs: 0.7rem;
+  --font-size-s: 0.85rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.35rem;
+  --font-size-xl: 1.75rem; }
+
 /* PAGINATION */
 /* Parent contianer for page navigation */
 .pagination {
   display: flex;
-  display: -ms-flexbox; }
-
-/* Use for the major pagination meant to display about 2 items */
-.pagination-item {
-  -webkit-flex: 1 0 50%;
-  /* Flex to fill */
-  -ms-flex: 1 0 50%;
-  flex: 1 0 50%; }
-
-.pagination a {
-  color: #5d6c7b; }
-
-.pagination .pagination-item a[disabled] {
-  cursor: pointer;
-  opacity: 0.5;
-  pointer-events: none;
-  user-select: none; }
-
-.pagination .pagination-item {
-  margin: 1rem 0.1rem;
-  transition: all 0.3s; }
-
-.pagination .pagination-item.pagination-next {
-  text-align: right; }
-
-.pagination .pagination-item.pagination-prev {
-  text-align: left; }
-
-/* Pagination Item */
-.pagination-item-subtitle {
-  opacity: 0.7;
-  margin: 0;
-  /* Needed to override style after formatting paragraph update */ }
-
-/* Color the selected pagination item with accent color */
-.pagination .pagination-item.short.selected {
-  background-color: var(--cirrus-primary);
-  color: #fff; }
-
-.pagination .pagination-item.short.selected a {
-  color: #fff; }
-
-.pagination .pagination-item.short a {
-  display: inline-block;
-  line-height: 1.25;
-  padding: 0.5rem 0.75rem; }
-
-/* Used to display many pagination items */
-.pagination .pagination-item.short {
-  border-radius: 0.1rem;
-  margin: 0.2rem 0;
-  -webkit-flex: 0;
-  /* Flex to fill */
-  -ms-flex: 0;
-  flex: 0; }
-
-.pagination .pagination-item.short:first-child a {
-  border-top-left-radius: .25rem;
-  border-bottom-left-radius: .25rem; }
-
-.pagination .pagination-item.short:last-child a {
-  border-top-right-radius: .25rem;
-  border-bottom-right-radius: .25rem; }
-
-.pagination .pagination-item.short:not(.selected):hover {
-  background-color: rgba(0, 0, 0, 0.1); }
-
-.pagnation .pagination-item.ellipses {
-  color: #b5b5b5;
-  pointer-events: none; }
-
-/* Bordered pagination */
-.pagination.pagination-bordered .pagination-item.short a {
-  border: 1px solid #dedede;
-  border-radius: 0;
-  margin-left: -1px; }
-
-/* Not good but CSS does not have heading selectors. Need to move to SASS */
-.pagination .pagination-item:hover p,
-.pagination .pagination-item:hover h1,
-.pagination .pagination-item:hover h2,
-.pagination .pagination-item:hover h3,
-.pagination .pagination-item:hover h4,
-.pagination .pagination-item:hover h5,
-.pagination .pagination-item:hover h6,
-.pagination .pagination-item:not(.selected):hover *:not([disabled]):not(.ellipses) {
-  transition: all 0.3s;
-  color: var(--cirrus-primary); }
+  display: -ms-flexbox;
+  /* Use for the major pagination meant to display about 2 items */
+  /* Bordered pagination */ }
+  .pagination .pagination-item {
+    -webkit-flex: 1 0 50%;
+    /* Flex to fill */
+    -ms-flex: 1 0 50%;
+    flex: 1 0 50%;
+    margin: 1rem 0.1rem;
+    transition: all 0.3s;
+    /* Pagination Item */
+    /* Used to display many pagination items */ }
+    .pagination .pagination-item:hover p,
+    .pagination .pagination-item:hover h1,
+    .pagination .pagination-item:hover h2,
+    .pagination .pagination-item:hover h3,
+    .pagination .pagination-item:hover h4,
+    .pagination .pagination-item:hover h5,
+    .pagination .pagination-item:hover h6 {
+      transition: all 0.3s;
+      color: var(--cirrus-primary); }
+    .pagination .pagination-item:not(.selected):hover *:not([disabled]):not(.ellipses) {
+      transition: all 0.3s;
+      color: var(--cirrus-primary); }
+    .pagination .pagination-item.pagination-next {
+      text-align: right; }
+    .pagination .pagination-item.pagination-prev {
+      text-align: left; }
+    .pagination .pagination-item a {
+      color: #495057; }
+      .pagination .pagination-item a[disabled] {
+        cursor: pointer;
+        opacity: 0.5;
+        pointer-events: none;
+        user-select: none; }
+    .pagination .pagination-item .pagination-item-subtitle {
+      opacity: 0.7;
+      margin: 0;
+      /* Needed to override style after formatting paragraph update */ }
+    .pagination .pagination-item.short {
+      border-radius: 0.1rem;
+      margin: 0.2rem 0;
+      -webkit-flex: 0;
+      /* Flex to fill */
+      -ms-flex: 0;
+      flex: 0;
+      /* Color the selected pagination item with accent color */ }
+      .pagination .pagination-item.short:first-child a {
+        border-top-left-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem; }
+      .pagination .pagination-item.short:last-child a {
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem; }
+      .pagination .pagination-item.short:not([disabled]):not(.selected):hover {
+        background-color: rgba(0, 0, 0, 0.07); }
+      .pagination .pagination-item.short.selected {
+        background-color: var(--cirrus-primary);
+        color: #fff; }
+        .pagination .pagination-item.short.selected a {
+          color: #fff; }
+      .pagination .pagination-item.short.ellipses {
+        color: #adb5bd;
+        pointer-events: none; }
+      .pagination .pagination-item.short a {
+        display: inline-block;
+        line-height: 1.25;
+        padding: 0.5rem 0.75rem; }
+  .pagination.pagination-bordered .pagination-item.short a {
+    border: 1px solid #dee2e6;
+    border-radius: 0;
+    margin-left: -1px; }
 
 /* PLACEHOLDER */
 /* Designed to be embedded in any parent container as placeholder when content is absent. */
