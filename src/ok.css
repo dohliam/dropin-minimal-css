@@ -1,0 +1,1335 @@
+@import url("https://rsms.me/inter/inter.css");
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+:root {
+  /* CONSTANTS */
+  /* ================================== */
+
+  /* font */
+  --ok-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --ok-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Ubuntu Mono",
+    "Liberation Mono", "Courier New", Courier, monospace;
+
+  /* font-weight */
+  /* body */
+  --ok-fw-0: 400;
+  /* buttons */
+  --ok-fw-1: 600;
+  /* bold */
+  --ok-fw-2: 700;
+  /* headings */
+  --ok-fw-3: 700;
+
+  /* font-size */
+  --ok-fs-0: 2.5rem; /* 40 */
+  --ok-fs-1: 2rem; /* 32 */
+  --ok-fs-2: 1.5rem; /* 24 */
+  --ok-fs-3: 1.25rem; /* 20 */
+  --ok-fs-4: 1rem; /* 16 */
+  --ok-fs-5: 0.75rem; /* 12 */
+
+  /* border-radius */
+  --ok-br: 0.25rem;
+
+  /* spacing */
+  --ok-s-0: 0;
+  --ok-s-1: 0.25rem; /* 4 */
+  --ok-s-2: 0.5rem; /* 8 */
+  --ok-s-3: 1rem; /* 16 */
+  --ok-s-4: 1.5rem; /* 24 */
+  --ok-s-5: 2rem; /* 32 */
+  --ok-s-6: 2.5rem; /* 40 */
+
+  /* VARIABLES */
+  /* ================================== */
+
+  /* line heights */
+  --ok-lh-body: 1.5;
+  --ok-lh-heading: 1.25;
+
+  /* text highlight background color */
+  --ok-t-hl: #ffcf30;
+
+  /* button backgrounds */
+  --ok-accent-0: #3e67fa;
+  --ok-accent-1: #4788ff;
+
+  /* link color */
+  --ok-tc-accent: #3173de;
+
+  /* code color */
+  --ok-tc-code: #c23a30;
+
+  /* primary text color */
+  --ok-tc-0: #000000;
+  /* secondary text color */
+  --ok-tc-1: #747474;
+  /* tertiary text color (for disabled fields, placeholder text) */
+  --ok-tc-2: #848484;
+
+  /* background color */
+  --ok-bg-0: #ffffff;
+  --ok-bg-1: #f0f0f0;
+  --ok-bg-2: #cccccc;
+
+  /* border */
+  --ok-b-0: 1px solid #cbcbcb;
+  /* border hover */
+  --ok-b-1: 1px solid #848484;
+
+  /*
+  down arrow for dropdown menu input
+  fill matches --ok-tc-1
+  */
+  --ok-down-0: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='8' viewBox='0 0 12 8' width='24' fill='none'%3E%3Cpath d='M6 6h0l4-4h1s0 0 0 0v1-1L6 7s0 0 0 0L1 2h1l4 4z' fill='%23747474'/%3E%3C/svg%3E");
+  /* fill matches --ok-tc-2 for disabled states */
+  --ok-down-1: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='8' viewBox='0 0 12 8' width='24' fill='none'%3E%3Cpath d='M6 6h0l4-4h1s0 0 0 0v1-1L6 7s0 0 0 0L1 2h1l4 4z' fill='%23848484'/%3E%3C/svg%3E");
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ok-tc-accent: #5c9aff;
+    --ok-tc-code: #ed5853;
+    --ok-tc-0: #ffffff;
+    --ok-tc-1: #ababab;
+    --ok-tc-2: #929292;
+
+    --ok-bg-0: #000000;
+    --ok-bg-1: #212121;
+    --ok-bg-2: #3e3e3e;
+
+    --ok-b-0: 1px solid #747474;
+    --ok-b-1: 1px solid #929292;
+
+    --ok-down-0: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='8' viewBox='0 0 12 8' width='24' fill='none'%3E%3Cpath d='M6 6h0l4-4h1s0 0 0 0v1-1L6 7s0 0 0 0L1 2h1l4 4z' fill='%23ababab'/%3E%3C/svg%3E");
+    --ok-down-1: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='8' viewBox='0 0 12 8' width='24' fill='none'%3E%3Cpath d='M6 6h0l4-4h1s0 0 0 0v1-1L6 7s0 0 0 0L1 2h1l4 4z' fill='%23929292'/%3E%3C/svg%3E");
+  }
+}
+
+/* Settings */
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+/* https://www.smashingmagazine.com/2019/07/margins-in-css/ */
+/* https://alistapart.com/article/settingtypeontheweb/ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--ok-sans);
+  line-sizing: normal;
+  line-height: var(--ok-lh-body);
+  font-weight: var(--ok-fw-0);
+  color: var(--ok-tc-0);
+  background-color: var(--ok-bg-0);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", var(--ok-sans);
+  }
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  line-height: var(--ok-lh-body);
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object,
+input,
+select,
+textarea {
+  display: block;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  padding: var(--ok-s-3);
+  max-width: 80ch;
+  margin: auto;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--ok-fs-0);
+  /* Remove margins added by normalize.css  */
+  margin: 0;
+}
+h2 {
+  font-size: var(--ok-fs-1);
+}
+h3 {
+  font-size: var(--ok-fs-2);
+}
+h4 {
+  font-size: var(--ok-fs-3);
+}
+h5 {
+  font-size: var(--ok-fs-4);
+}
+h6 {
+  font-size: var(--ok-fs-5);
+  text-transform: uppercase;
+  font-weight: var(--ok-fw-1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: var(--ok-lh-heading);
+  font-weight: var(--ok-fw-3);
+}
+
+p {
+  font-size: var(--ok-fs-4);
+}
+
+small {
+  font-size: var(--ok-fs-5);
+}
+
+/* https://csswizardry.com/2012/06/single-direction-margin-declarations/ */
+/* Add bottom margin to most block-level elements */
+/* https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements */
+
+address,
+article,
+aside,
+blockquote,
+details,
+dialog,
+dd,
+div,
+dl,
+dt,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+/* li, ignored */
+main,
+nav,
+ol,
+p,
+pre,
+section,
+summary,
+table,
+ul,
+/* buttons and inputs */
+button,
+input,
+select,
+textarea,
+/* other elements */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  margin-bottom: var(--ok-s-4);
+}
+
+address:last-child,
+article:last-child,
+aside:last-child,
+blockquote:last-child,
+details:last-child,
+dialog:last-child,
+dd:last-child,
+div:last-child,
+dl:last-child,
+dt:last-child,
+fieldset:last-child,
+figcaption:last-child,
+figure:last-child,
+footer:last-child,
+form:last-child,
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+header:last-child,
+hgroup:last-child,
+hr:last-child,
+main:last-child,
+nav:last-child,
+ol:last-child,
+p:last-child,
+pre:last-child,
+section:last-child,
+table:last-child,
+ul:last-child,
+
+/* inputs */
+input[type="checkbox"],
+input[type="radio"] {
+  margin-bottom: 0;
+}
+
+/* Input elements */
+
+fieldset {
+  padding: var(--ok-s-3);
+  border: var(--ok-b-0);
+  border-radius: var(--ok-br);
+}
+legend {
+  font-weight: var(--ok-fw-1);
+  text-transform: uppercase;
+  font-size: var(--ok-fs-5);
+}
+
+input,
+select {
+  padding: var(--ok-s-2);
+  background: var(--ok-bg-0);
+  border: var(--ok-b-0);
+  border-radius: var(--ok-br);
+  color: var(--ok-tc-0);
+  min-width: 25ch;
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+  color: var(--ok-tc-2);
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: var(--ok-tc-2);
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: var(--ok-tc-2);
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: var(--ok-tc-2);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--ok-tc-2);
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: var(--ok-tc-2);
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: var(--ok-tc-2);
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: var(--ok-tc-2);
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: var(--ok-tc-2);
+}
+
+/* There isn't good a way to remove the clear (x) button from the "date" and "time" input fields in Firefox without adding "required".
+ * See https://stackoverflow.com/a/47913738
+ */
+input::-webkit-clear-button,
+input::-webkit-inner-spin-button,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button {
+  display: none;
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+}
+
+input:disabled,
+textarea:disabled {
+  background-color: var(--ok-bg-1);
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type="file"] {
+  max-width: 300px;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  min-width: auto;
+}
+
+input[type="color"] {
+  height: 2.5rem;
+}
+
+input[type="datetime-local"],
+input[type="week"],
+input[type="month"],
+input[type="time"],
+input[type="date"] {
+  position: relative;
+  height: 2.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+}
+
+input[type="datetime-local"]::before,
+input[type="week"]::before,
+input[type="month"]::before,
+input[type="time"]::before,
+input[type="date"]::before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: var(--ok-down-0);
+  background-repeat: no-repeat;
+  background-position: right 0.2em top 50%;
+  background-size: 2em auto;
+  width: 2.5rem;
+  height: calc(2.5rem - 2px);
+  content: "";
+}
+
+input[type="datetime-local"]:disabled::before,
+input[type="week"]:disabled::before,
+input[type="month"]:disabled::before,
+input[type="time"]:disabled::before,
+input[type="date"]:disabled::before {
+  background-image: var(--ok-down-1);
+}
+
+input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  width: 2.5rem;
+  height: calc(2.5rem - 2px);
+  content: "";
+  opacity: 0;
+}
+
+input[type="range"] {
+  overflow: visible;
+  line-height: inherit;
+  font-family: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  vertical-align: middle;
+  border: none;
+  min-height: 2rem;
+  background-color: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  cursor: pointer;
+  -webkit-appearance: none;
+  border-radius: var(--ok-br);
+  border: var(--ok-b-0);
+  background-color: var(--ok-bg-1);
+  background-image: linear-gradient(var(--ok-bg-1), var(--ok-bg-1));
+  width: 100%;
+  height: 0.5rem;
+  color: transparent;
+  box-sizing: border-box;
+  position: relative;
+}
+
+input[type="range"]::-moz-range-track {
+  cursor: pointer;
+  -moz-appearance: none;
+  border-radius: var(--ok-br);
+  border: var(--ok-b-0);
+  background-color: var(--ok-bg-1);
+  background-image: linear-gradient(var(--ok-bg-1), var(--ok-bg-1));
+  width: 100%;
+  height: 0.5rem;
+  color: transparent;
+  box-sizing: border-box;
+}
+
+input[type="range"]::-ms-track {
+  cursor: pointer;
+  -ms-appearance: none;
+  border-radius: var(--ok-br);
+  border: var(--ok-b-0);
+  background-color: var(--ok-bg-1);
+  background-image: linear-gradient(var(--ok-bg-1), var(--ok-bg-1));
+  width: 100%;
+  height: 0.5rem;
+  color: transparent;
+  box-sizing: border-box;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  cursor: pointer;
+  -webkit-appearance: none;
+  border-radius: 50%;
+  background-color: var(--ok-accent-0);
+  width: 1.5rem;
+  height: 1.5rem;
+
+  /* Absolute positioning doesn't work in Safari, so we manually position here */
+  margin-top: calc(-0.5rem - 1px);
+}
+
+input[type="range"]::-moz-range-thumb {
+  cursor: pointer;
+  -moz-appearance: none;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--ok-accent-0);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+input[type="range"]::-ms-thumb {
+  cursor: pointer;
+  -ms-appearance: none;
+  border-radius: 50%;
+  background-color: var(--ok-accent-0);
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: translateY(0.25rem);
+}
+
+input[type="range"]:focus:not(:disabled)::-webkit-slider-thumb {
+  background-color: var(--ok-accent-1);
+}
+
+input[type="range"]:focus:not(:disabled)::-moz-range-thumb {
+  background-color: var(--ok-accent-1);
+}
+
+input[type="range"]:focus:not(:disabled)::-ms-thumb {
+  background-color: var(--ok-accent-1);
+}
+
+input[type="range"]:disabled {
+  cursor: default;
+}
+
+input[type="range"]:disabled::-webkit-slider-runnable-track {
+  cursor: default;
+}
+
+input[type="range"]:disabled::-moz-range-track {
+  cursor: default;
+}
+
+input[type="range"]:disabled::-ms-track {
+  cursor: default;
+}
+
+input[type="range"]:disabled::-webkit-slider-thumb {
+  background-color: var(--ok-bg-2);
+  cursor: default;
+}
+input[type="range"]:disabled::-moz-range-thumb {
+  background-color: var(--ok-bg-2);
+  cursor: default;
+}
+
+input[type="range"]:disabled::-ms-thumb {
+  background-color: var(--ok-bg-2);
+  cursor: default;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: var(--ok-b-0);
+  border-radius: var(--ok-br);
+  background-color: var(--ok-bg-0);
+  min-height: 2.5rem;
+  color: var(--ok-tc-0);
+}
+
+/* Adapted from https://codepen.io/chriscoyier/pen/zYYZaGP */
+select:not([multiple]) {
+  background-image: var(--ok-down-0);
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.2em top 50%;
+  background-size: 2em auto;
+  padding-right: 2.5em;
+  height: 2.5rem;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select:not([multiple]):disabled {
+  background-image: var(--ok-down-1);
+  background-color: var(--ok-bg-1);
+  cursor: default;
+}
+
+select[multiple] {
+  border-radius: var(--ok-br);
+}
+
+select[multiple]:disabled {
+  background-color: var(--ok-bg-1);
+}
+
+select[multiple] option {
+  color: var(--ok-t-);
+}
+
+select[multiple]:disabled option {
+  color: var(--ok-tc-2);
+}
+
+textarea {
+  padding: var(--ok-s-2);
+  resize: vertical;
+  background: var(--ok-bg-0);
+  border: var(--ok-b-0);
+  border-radius: var(--ok-br);
+  color: var(--ok-tc-0);
+  /* the 2px is for top and bottom borders */
+  min-height: calc(2.5rem - 2px);
+  min-width: 25ch;
+}
+
+/* Buttons */
+
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  display: inline-block;
+  background-color: var(--ok-accent-0);
+  border-radius: var(--ok-br);
+  color: #fff;
+  font-weight: var(--ok-fw-1);
+  height: 2.5rem;
+  border: none;
+  padding: var(--ok-s-2) var(--ok-s-3);
+  white-space: nowrap;
+  min-width: auto;
+}
+
+input::-webkit-file-upload-button {
+  display: inline-block;
+  background-color: var(--ok-accent-0);
+  border-radius: var(--ok-br);
+  color: #fff;
+  font-weight: var(--ok-fw-1);
+  height: 2.5rem;
+  border: none;
+  padding: var(--ok-s-2) var(--ok-s-3);
+  white-space: nowrap;
+}
+
+input:disabled::-webkit-file-upload-button {
+  cursor: default;
+  opacity: 0.5;
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  cursor: pointer;
+}
+
+input:not(:disabled)::-webkit-file-upload-button {
+  cursor: pointer;
+}
+
+button:disabled,
+input[type="submit"]:disabled,
+input[type="button"]:disabled,
+input[type="reset"]:disabled {
+  cursor: default;
+  opacity: 0.5;
+  background-color: var(--ok-accent-0);
+}
+
+button:focus:not(:disabled),
+input[type="submit"]:focus:not(:disabled),
+input[type="button"]:focus:not(:disabled),
+input[type="reset"]:focus:not(:disabled) {
+  background-color: var(--ok-accent-1);
+}
+
+input:not(:disabled):focus::-webkit-file-upload-button {
+  background-color: var(--ok-accent-1);
+}
+
+/* Tables */
+table {
+  border: var(--ok-b-0);
+  border-collapse: collapse;
+  border-radius: var(--ok-br);
+  width: 100%;
+}
+
+thead tr,
+tfoot tr {
+  background-color: var(--ok-bg-1);
+  font-size: var(--ok-fs-5);
+  text-transform: uppercase;
+  color: var(--ok-tc-0);
+}
+
+td,
+th {
+  border: var(--ok-b-0) 0;
+  text-align: left;
+  padding: 0.5rem;
+}
+
+tr {
+  border-bottom: var(--ok-b-0);
+}
+
+table caption {
+  font-size: var(--ok-fs-4);
+  font-weight: var(--ok-fw-3);
+  padding: 0.5rem;
+}
+
+/* Code */
+code,
+samp {
+  padding: 0.2em 0.4em;
+  color: var(--ok-tc-code);
+}
+
+pre,
+code,
+samp {
+  font-family: var(--ok-mono);
+  line-height: var(--ok-lh-body);
+  background-color: var(--ok-bg-1);
+  border-radius: var(--ok-br);
+  text-transform: none;
+}
+
+pre {
+  padding: var(--ok-s-3);
+  color: var(--ok-tc-0);
+  white-space: pre;
+  overflow-x: auto;
+}
+
+var {
+  font-family: var(--ok-mono);
+  color: var(--ok-tc-0);
+  font-style: normal;
+}
+
+pre code {
+  background: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+code pre {
+  display: inline;
+  background: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+kbd {
+  background-color: var(--ok-bg-1);
+  border: var(--ok-b-0);
+  border-radius: var(--ok-br);
+  border-bottom: 2px solid var(--ok-bg-2);
+  padding: var(--ok-s-1);
+  font-family: var(--ok-sans);
+  color: var(--ok-tc-0);
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: var(--ok-tc-accent);
+  font-weight: var(--ok-fw-1);
+}
+
+a:visited {
+  color: var(--ok-tc-accent);
+}
+
+/* Lists */
+ul,
+ol {
+  padding-left: var(--ok-s-5);
+}
+
+nav ul {
+  text-decoration: none;
+  padding-left: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1em;
+}
+
+/* Images, figures, and media*/
+
+img,
+video,
+audio {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  border-radius: var(--ok-br);
+}
+
+figure > img:not(:last-child) {
+  margin-bottom: var(--ok-s-1);
+}
+
+figure > figcaption {
+  text-align: center;
+}
+
+/* Other */
+time,
+figcaption {
+  font-size: var(--ok-fs-5);
+  color: var(--ok-tc-1);
+}
+
+mark {
+  padding: 0.2em 0.4em;
+  background: var(--ok-t-hl);
+  color: #000000;
+  border-radius: var(--ok-br);
+}
+
+iframe {
+  border: var(--ok-b-0);
+  border-radius: var(--ok-br);
+  width: 100%;
+}
+
+hr {
+  border: none;
+  border-bottom: var(--ok-b-0);
+}
+
+footer {
+  font-size: var(--ok-fs-5);
+  color: var(--ok-tc-1);
+}
+
+blockquote {
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: var(--ok-s-5);
+  color: var(--ok-tc-1);
+}
+
+blockquote::before {
+  position: absolute;
+  height: 100%;
+  content: "";
+  width: 4px;
+  left: 0;
+  border-radius: var(--ok-br);
+  background-color: var(--ok-bg-1);
+}
+
+dd {
+  margin: 0;
+  padding-left: var(--ok-s-5);
+}
+
+abbr {
+  cursor: help;
+}
+
+/* https://css-tricks.com/solving-sticky-hover-states-with-media-hover-hover/ */
+@media (hover: hover) {
+  a:hover {
+    text-decoration: underline;
+  }
+
+  input:hover:not(:disabled):not(:focus):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="range"]),
+  select:hover:not(:disabled):not(:focus),
+  textarea:hover:not(:disabled):not(:focus) {
+    border: var(--ok-b-1);
+  }
+
+  input[type="range"]:hover:not(:disabled)::-webkit-slider-runnable-track {
+    border: var(--ok-b-1);
+  }
+
+  input[type="range"]:hover:not(:disabled)::-moz-range-track {
+    border: var(--ok-b-1);
+  }
+
+  input[type="range"]:hover:not(:disabled)::-ms-track {
+    border: var(--ok-b-1);
+  }
+
+  select:not([multiple]):not(:disabled):hover {
+    cursor: pointer;
+  }
+
+  button:hover:not(:disabled),
+  input[type="submit"]:hover:not(:disabled),
+  input[type="button"]:hover:not(:disabled),
+  input[type="reset"]:hover:not(:disabled) {
+    background-color: var(--ok-accent-1);
+  }
+
+  input:not(:disabled):hover::-webkit-file-upload-button {
+    background-color: var(--ok-accent-1);
+  }
+}

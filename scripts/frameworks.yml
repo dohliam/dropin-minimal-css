@@ -682,6 +682,48 @@ frameworks:
     license_url: https://github.com/metakirby5/yorha/blob/master/LICENSE
     repo: https://github.com/metakirby5/yorha
     url: https://github.com/metakirby5/yorha/blob/master/dist/yorha.css
+  ok:
+    author: andrewh0
+    author_name: Andrew Ho
+    license: MIT
+    license_url: https://github.com/andrewh0/okcss/blob/main/LICENSE
+    repo: https://github.com/andrewh0/okcss
+    url: https://github.com/andrewh0/okcss/blob/main/src/ok.css
+  tui:
+    author: vinibiavatti1
+    author_name: Vinicius Reif Biavatti
+    license: MIT
+    license_url: https://github.com/vinibiavatti1/TuiCss/blob/master/LICENSE.md
+    repo: https://github.com/vinibiavatti1/TuiCss
+    url: https://github.com/vinibiavatti1/TuiCss/blob/master/dist/tuicss.css
+  pandoc-scholar:
+    author: pandoc-scholar
+    author_name:  Pandoc Scholar
+    license: GPL v2
+    license_url: https://github.com/pandoc-scholar/pandoc-scholar/blob/main/LICENSE
+    repo: https://github.com/pandoc-scholar/pandoc-scholar
+    url: https://github.com/pandoc-scholar/pandoc-scholar/blob/main/templates/styles/pandoc-scholar.css
+  spcss:
+    author: susam
+    author_name:  Susam Pal
+    license: MIT
+    license_url: https://github.com/susam/spcss/blob/master/LICENSE.md
+    repo: https://github.com/susam/spcss
+    url: https://github.com/susam/spcss/blob/master/sp.css
+  neat:
+    author: codazoda
+    author_name:  Joel Dare
+    license: MIT
+    license_url: https://neat.joeldare.com/#contributing
+    repo: https://github.com/codazoda/neatcss
+    url: https://github.com/codazoda/neatcss/blob/master/neat.css
+  pico:
+    author: picocss
+    author_name:  Pico CSS
+    license: MIT
+    license_url: https://github.com/picocss/pico/blob/master/LICENSE.md
+    repo: https://github.com/picocss/pico
+    url: https://github.com/picocss/pico/blob/master/css/pico.css
 
 collections:
   asciidoctor-skins:
