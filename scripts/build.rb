@@ -113,7 +113,7 @@ def frameworks_routine(data)
   puts "- Updating CSS frameworks..."
   frameworks = get_frameworks(data)
 
-  frameworks.each do |name|
+  frameworks.sort.each do |name|
     root = data["frameworks"][name]
     url = root["url"]
     min_only = root["min_only"]
