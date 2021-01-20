@@ -13,7 +13,7 @@ def get_css(url)
           "https://raw.githubusercontent.com/\\1//")
     .gsub(/https:\/\/gitlab\.com\/([^\/]+\/[^\/]+)\/-\/blob\//,
           "https://gitlab.com/\\1/-/raw/")
-  open(url).read
+  URI.open(url).read
 end
 
 def strip_css(css)
