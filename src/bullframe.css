@@ -1,4 +1,4 @@
-/*! bullframe.css v3.3.0 | MIT License | https://github.com/marcop135/bullframe.css */
+/*! bullframe.css v3.3.9 | MIT License | https://github.com/marcop135/bullframe.css */
 *,
 *::before,
 *::after {
@@ -293,7 +293,9 @@ a:not([href]):not([tabindex]) {
 }
 
 a:not([href]):not([tabindex]):hover,
-a:not([href]):not([tabindex]):focus {
+a:not([href]):not([tabindex]):focus,
+a:not([href]):not([class]),
+a:not([href]):not([class]):hover {
   color: inherit;
   text-decoration: none;
 }
@@ -598,6 +600,20 @@ label textarea {
   height: auto;
 }
 
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-minute,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field {
+  padding: 0;
+}
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
 [type="search"] {
   outline-offset: -2.5px;
   outline-offset: -0.25rem;
@@ -614,6 +630,10 @@ select {
 
 select {
   word-wrap: normal;
+}
+
+[list]::-webkit-calendar-picker-indicator {
+  display: none;
 }
 
 optgroup {
@@ -799,49 +819,6 @@ textarea {
   padding: 0.5rem 0.75rem;
 }
 
-@media \0screen {
-  [type="email"],
-  [type="number"],
-  [type="password"],
-  [type="tel"],
-  [type="search"],
-  [type="text"],
-  [type="date"],
-  [type="datetime-local"],
-  [type="month"],
-  [type="time"],
-  [type="week"],
-  [type="time"],
-  [type="url"],
-  [type="range"],
-  input[list] {
-    padding-top: 0;
-    padding-bottom: 0;
-    height: 32px;
-    line-height: 32px;
-  }
-}
-
-@media screen and (min-width: 0\0) and (-webkit-min-device-pixel-ratio: 0.75), screen and (min-width: 0\0) and (min-resolution: 72dpi) {
-  [type="email"],
-  [type="number"],
-  [type="password"],
-  [type="tel"],
-  [type="search"],
-  [type="text"],
-  [type="date"],
-  [type="datetime-local"],
-  [type="month"],
-  [type="time"],
-  [type="week"],
-  [type="time"],
-  [type="url"],
-  [type="range"],
-  input[list] {
-    line-height: 1.2;
-  }
-}
-
 [type="email"]:active, [type="email"]:focus,
 [type="number"]:active,
 [type="number"]:focus,
@@ -961,6 +938,49 @@ label[aria-disabled="true"] {
   opacity: 0.5 !important;
 }
 
+@media \0screen {
+  [type="email"],
+  [type="number"],
+  [type="password"],
+  [type="tel"],
+  [type="search"],
+  [type="text"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="time"],
+  [type="week"],
+  [type="time"],
+  [type="url"],
+  [type="range"],
+  input[list] {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 32px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (min-width: 0\0) and (-webkit-min-device-pixel-ratio: 0.75), screen and (min-width: 0\0) and (min-resolution: 72dpi) {
+  [type="email"],
+  [type="number"],
+  [type="password"],
+  [type="tel"],
+  [type="search"],
+  [type="text"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="time"],
+  [type="week"],
+  [type="time"],
+  [type="url"],
+  [type="range"],
+  input[list] {
+    line-height: 1.2;
+  }
+}
+
 select:not([size]):not([multiple]) {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1068,6 +1088,17 @@ table {
   border-collapse: collapse;
 }
 
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
 thead th {
   vertical-align: bottom;
 }
@@ -1079,6 +1110,7 @@ td {
 
 th {
   text-align: inherit;
+  font-weight: 700;
 }
 
 caption {
@@ -1091,10 +1123,6 @@ caption {
   caption-side: bottom;
   line-height: 1.375;
   font-size: 90%;
-}
-
-th {
-  font-weight: 700;
 }
 
 .bf-container,
@@ -1318,13 +1346,13 @@ table th[class^="bf-col"] {
 */
 .bf-sr-only.focusable:active,
 .bf-sr-only.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
+  clip: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  position: static !important;
+  white-space: inherit !important;
+  width: auto !important;
 }
 
 .bf-invisible {
@@ -1532,6 +1560,7 @@ table th[class^="bf-col"] {
 }
 
 .bf-t-shadow {
+  text-shadow: 0 0 2px #222 !important;
   text-shadow: 0 0 0.2rem #222 !important;
 }
 

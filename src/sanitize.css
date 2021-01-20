@@ -91,13 +91,15 @@ ul ul {
 }
 
 /**
- * 1. Add the correct sizing in Firefox.
- * 2. Show the overflow in Edge 18- and IE.
+ * 1. Correct the inheritance of border color in Firefox.
+ * 2. Add the correct box sizing in Firefox.
+ * 3. Show the overflow in Edge 18- and IE.
  */
 
 hr {
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+  color: inherit; /* 1 */
+  height: 0; /* 2 */
+  overflow: visible; /* 3 */
 }
 
 /**
@@ -119,13 +121,24 @@ nav ul {
 }
 
 /**
+ * Prevent VoiceOver from ignoring list semantics in Safari (opinionated).
+ */
+
+nav li::before {
+  content: "\200B";
+}
+
+/**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
+ * 3. Prevent overflow of the container in all browsers (opinionated).
  */
 
 pre {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
+  overflow: auto; /* 3 */
+  -ms-overflow-style: scrollbar; /* 3 */
 }
 
 /* Text-level semantics
@@ -247,11 +260,15 @@ svg:not(:root) {
  * ========================================================================== */
 
 /**
- * Collapse border spacing in all browsers (opinionated).
+ * 1. Collapse border spacing in all browsers (opinionated).
+ * 2. Correct table border color inheritance in all Chrome, Edge, and Safari.
+ * 3. Remove text indentation from table contents in Chrome, Edge, and Safari.
  */
 
 table {
-  border-collapse: collapse;
+  border-collapse: collapse; /* 1 */
+  border-color: inherit; /* 2 */
+  text-indent: 0; /* 3 */
 }
 
 /* Forms
@@ -346,6 +363,7 @@ textarea {
   margin: 0; /* 1 */
   overflow: auto; /* 2 */
   resize: vertical; /* 3 */
+  resize: block; /* 3 */
 }
 
 /**
@@ -496,9 +514,7 @@ template {
  * ========================================================================== */
 
 /*
- * 1. Remove the tapping delay in IE 10.
- * 2. Remove the tapping delay on clickable elements
-      in all browsers (opinionated).
+ * Remove the tapping delay in IE 10.
  */
 
 a,
@@ -510,8 +526,7 @@ select,
 summary,
 textarea,
 [tabindex] {
-  -ms-touch-action: manipulation; /* 1 */
-  touch-action: manipulation; /* 2 */
+  -ms-touch-action: manipulation;
 }
 
 /**

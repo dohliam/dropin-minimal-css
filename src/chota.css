@@ -29,6 +29,19 @@ html {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-lightGrey) var(--bg-primary);
+}
+*::-webkit-scrollbar {
+  width: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--color-lightGrey);
+}
 body {
   background-color: var(--bg-color);
   line-height: 1.6;
@@ -716,6 +729,7 @@ button:disabled:hover {
     padding: 1rem 2rem;
     color: var(--color-darkGrey);
 }
+.nav [aria-current="page"]:not(.button),
 .nav .active:not(.button) {
     color: #000; /* fallback */
     color: var(--color-primary);
@@ -763,11 +777,13 @@ button:disabled:hover {
     border-bottom: 2px solid var(--color-lightGrey);
     text-align: center;
 }
+.tabs > a[aria-current="page"],
 .tabs > a.active,
 .tabs > a:hover {
     opacity: 1;
     border-bottom: 2px solid var(--color-darkGrey);
 }
+.tabs > a[aria-current="page"],
 .tabs > a.active {
     border-color: var(--color-primary);
 }

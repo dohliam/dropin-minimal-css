@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * awsm.css v3.0.6 (https://igoradamenko.github.io/awsm.css/)
+ * awsm.css v3.0.7 (https://igoradamenko.github.io/awsm.css/)
  * Copyright 2015 Igor Adamenko <mail@igoradamenko.com> (https://igoradamenko.com)
  * Licensed under MIT (https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md)
  */
@@ -66,6 +66,9 @@ nav li{
   display:inline-block;
   margin-right:1em;
   margin-bottom:0.25em;
+}
+nav li:last-child{
+  margin-right:0;
 }
 nav a:visited{
   color:#418198;
@@ -453,7 +456,7 @@ select[disabled]{
   color:#9a5c37;
   cursor:not-allowed;
 }
-select:focus, select:hover{
+select:not([disabled]):focus, select:not([disabled]):hover{
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Cpath fill='rgb(116, 46, 30)' fill-rule='nonzero' d='M1.5 2L3 0H0z'/%3E%3C/svg%3E");
 }
 
