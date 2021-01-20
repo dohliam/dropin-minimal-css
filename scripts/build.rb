@@ -46,7 +46,7 @@ def frameworks_attribution(data)
   frameworks = get_frameworks(data)
   list = ""
 
-  frameworks.each do |name|
+  frameworks.sort.each do |name|
     root = data["frameworks"][name]
     url = root["url"]
     author = root["author"]
