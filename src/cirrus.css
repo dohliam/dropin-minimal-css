@@ -7422,14 +7422,69 @@ a.tag:hover {
     -moz-transform: translate(-0.5rem, 50%);
     -ms-transform: translate(-0.5rem, 50%); }
 
-.u-clear-left {
+/* Spacing */
+/* Fonts */
+/* Grid Count */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+.u-left {
   clear: left !important; }
 
-.u-clear-right {
+.u-right {
   clear: right !important; }
 
-.u-clear-both {
+.u-both {
   clear: both !important; }
+
+@media screen and (min-width: 640px) {
+  .u-left-sm {
+    clear: left !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-right-sm {
+    clear: right !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-both-sm {
+    clear: both !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-left-md {
+    clear: left !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-right-md {
+    clear: right !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-both-md {
+    clear: both !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-left-lg {
+    clear: left !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-right-lg {
+    clear: right !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-both-lg {
+    clear: both !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-left-xl {
+    clear: left !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-right-xl {
+    clear: right !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-both-xl {
+    clear: both !important; } }
 
 /*
    When using floats, clearfix allows the container to automatically resize so that
@@ -7459,6 +7514,12 @@ a.tag:hover {
 .u-block {
   display: block !important; }
 
+.u-flex {
+  display: flex !important; }
+
+.u-inline-flex {
+  display: inline-flex !important; }
+
 .u-table {
   display: table !important; }
 
@@ -7471,39 +7532,173 @@ a.tag:hover {
 .u-table-cell {
   display: table-cell !important; }
 
-.u-none {
-  /* Hide elements based on screen size */ }
-  @media screen and (max-width: 639px) {
-    .u-none-xs {
-      display: none !important; } }
-  @media screen and (min-width: 640px) and (max-width: 767px) {
-    .u-none-sm-only {
-      display: none !important; } }
-  @media screen and (min-width: 768px) {
-    .u-none {
-      /* Hide on devices that are tablets or larger */ }
-      .u-none-sm {
-        display: none !important; } }
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .u-none-md-only {
-      display: none !important; } }
-  @media screen and (min-width: 1024px) {
-    .u-none {
-      /* Hide element on laptops, desktops, etc */ }
-      .u-none-md {
-        display: none !important; } }
-  @media screen and (min-width: 1280px) {
-    .u-none {
-      /* Hide element on large desktops, etc */ }
-      .u-none-lg {
-        display: none !important; } }
+@media screen and (min-width: 640px) {
+  .u-none-sm {
+    display: none !important; } }
 
-.u-flex {
-  display: flex !important; }
+@media screen and (min-width: 640px) {
+  .u-inline-sm {
+    display: inline !important; } }
 
-.u-inline-flex {
-  display: inline-flex !important; }
+@media screen and (min-width: 640px) {
+  .u-inline-block-sm {
+    display: inline-block !important; } }
 
+@media screen and (min-width: 640px) {
+  .u-block-sm {
+    display: block !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-flex-sm {
+    display: flex !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-inline-flex-sm {
+    display: inline-flex !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-table-sm {
+    display: table !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-table-row-sm {
+    display: table-row !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-table-column-sm {
+    display: table-column !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-table-cell-sm {
+    display: table-cell !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-none-md {
+    display: none !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-inline-md {
+    display: inline !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-inline-block-md {
+    display: inline-block !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-block-md {
+    display: block !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-flex-md {
+    display: flex !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-inline-flex-md {
+    display: inline-flex !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-table-md {
+    display: table !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-table-row-md {
+    display: table-row !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-table-column-md {
+    display: table-column !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-table-cell-md {
+    display: table-cell !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-none-lg {
+    display: none !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-inline-lg {
+    display: inline !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-inline-block-lg {
+    display: inline-block !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-block-lg {
+    display: block !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-flex-lg {
+    display: flex !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-inline-flex-lg {
+    display: inline-flex !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-table-lg {
+    display: table !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-table-row-lg {
+    display: table-row !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-table-column-lg {
+    display: table-column !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-table-cell-lg {
+    display: table-cell !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-none-xl {
+    display: none !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-inline-xl {
+    display: inline !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-inline-block-xl {
+    display: inline-block !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-block-xl {
+    display: block !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-flex-xl {
+    display: flex !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-inline-flex-xl {
+    display: inline-flex !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-table-xl {
+    display: table !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-table-row-xl {
+    display: table-row !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-table-column-xl {
+    display: table-column !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-table-cell-xl {
+    display: table-cell !important; } }
+
+/* Spacing */
+/* Fonts */
+/* Grid Count */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 .u-flex-row {
   flex-direction: row !important; }
 
@@ -7626,36 +7821,6 @@ a.tag:hover {
   -moz-user-select: none !important;
   user-select: none !important; }
 
-/* Deprecated 0.5.6 */
-/* .u-box {
-  background-color: white;
-  border-radius: 3px;
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-  display: block;
-  padding: 1rem;
-}
-
-.u-box:not(:last-child) {
-  margin-bottom: 1rem;
-} */
-/* Deprecated 0.5.6 */
-/* .u-fill-width {
-  width: 100% !important;
-} */
-/* Deprecated 0.5.6 */
-/*
-.u-no-margin {
-  margin: 0 !important;
-}
-
-.u-no-padding {
-  padding: 0 !important;
-}
-
-.u-margin-auto {
-    margin: 0 auto !important;
-}
-*/
 /* Round the corners of the element */
 .u-round {
   border-radius: 0.25rem !important; }
@@ -7670,17 +7835,104 @@ a.tag:hover {
 .u-shadow {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.07); }
 
-.u-position-static {
+/* Spacing */
+/* Fonts */
+/* Grid Count */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+.u-static {
   position: static !important; }
 
-.u-position-fixed {
+.u-fixed {
   position: fixed !important; }
 
-.u-position-absolute {
+.u-absolute {
   position: absolute !important; }
 
-.u-position-relative {
+.u-relative {
   position: relative !important; }
 
-.u-position-sticky {
+.u-sticky {
   position: sticky !important; }
+
+@media screen and (min-width: 640px) {
+  .u-static-sm {
+    position: static !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-fixed-sm {
+    position: fixed !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-absolute-sm {
+    position: absolute !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-relative-sm {
+    position: relative !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-sticky-sm {
+    position: sticky !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-static-md {
+    position: static !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-fixed-md {
+    position: fixed !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-absolute-md {
+    position: absolute !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-relative-md {
+    position: relative !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-sticky-md {
+    position: sticky !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-static-lg {
+    position: static !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-fixed-lg {
+    position: fixed !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-absolute-lg {
+    position: absolute !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-relative-lg {
+    position: relative !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-sticky-lg {
+    position: sticky !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-static-xl {
+    position: static !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-fixed-xl {
+    position: fixed !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-absolute-xl {
+    position: absolute !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-relative-xl {
+    position: relative !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-sticky-xl {
+    position: sticky !important; } }

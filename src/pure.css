@@ -1,5 +1,5 @@
 /*!
-Pure v2.0.4
+Pure v2.0.5
 Copyright 2013 Yahoo!
 Licensed under the BSD License.
 https://github.com/pure-css/pure/blob/master/LICENSE
@@ -1286,7 +1286,6 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 }
 
 .pure-menu-link,
-.pure-menu-disabled,
 .pure-menu-heading {
     padding: .5em 1em;
 }
@@ -1297,6 +1296,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 
 .pure-menu-disabled .pure-menu-link:hover {
     background-color: transparent;
+    cursor: default;
 }
 
 .pure-menu-active > .pure-menu-link,

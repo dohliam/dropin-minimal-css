@@ -1099,10 +1099,19 @@ input:not(:disabled):focus::-webkit-file-upload-button {
 
 /* Tables */
 table {
-  border: var(--ok-b-0);
   border-collapse: collapse;
   border-radius: var(--ok-br);
-  width: 100%;
+  display: block;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+thead,
+tfoot {
+  border: var(--ok-b-0);
 }
 
 thead tr,
@@ -1120,8 +1129,13 @@ th {
   padding: 0.5rem;
 }
 
+td {
+  white-space: normal;
+  max-width: 20ch;
+}
+
 tr {
-  border-bottom: var(--ok-b-0);
+  border: var(--ok-b-0);
 }
 
 table caption {

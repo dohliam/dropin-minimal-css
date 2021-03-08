@@ -120,7 +120,7 @@ input:not([type="checkbox"]):not([type="radio"]),
 select {
   display: block;
 }
-input,
+input:not([type="image"]),
 button,
 textarea,
 select,
