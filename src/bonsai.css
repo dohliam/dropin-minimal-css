@@ -152,7 +152,7 @@ details > summary,
 .outline {
   background: transparent;
   box-shadow: none;
-  color: var(--form-text);
+  color: var(--element-bg);
   border: 2px solid var(--element-bg);
 }
 .outline:hover, .outline:focus, .outline:active {
@@ -943,6 +943,9 @@ mark {
   }
 [style*="--dir:"] {
     direction: var(--dir) !important;
+  }
+[style*="--hvr-c:"]:hover {
+    color: var(--hvr-c, var(--color));
   }
 [style*="--bi:"] {
     page-break-inside: var(--bi);

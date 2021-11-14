@@ -1,47 +1,48 @@
-/* ASIDE */
-/* Put content to the left or right of the page as an "aside". This is an
- * alternative to footnotes.
- */
+/*** Variables ***/
+:root {
+  --width-body:   54rem;   /* Width of main body text. */
+  --pad-x:        4rem;    /* Padding to the side of the body. */
+  --pad-y:        1rem;    /* Padding to the top and bottom of the body. */
+  --color-bg:     #fff;    /* Background colour of main body text. */
+  --color-text:   #252525; /* Colour of main body text. */
+  --color-border: #aaa;    /* Border colour for table, fieldset, input. */
 
-aside {
-  hyphens: auto;                       /* Hyphenate, as this text is quite narrow. */
+  /* A font I rather like.
+   *
+   * Possible sans-serif alternative; note you may want to adjust the
+   * line-height and font-size if you want the fonts. Different values work
+   * better for different fonts.
+   *
+   *    --font: 18px/160% Calibri, 'DejaVu Sans Serif', sans-serif;
+   *
+   * Note the full font is also defined in the media queries below.
+   */
+  --font: 16px/180% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
+
+  /* Padding for full-width pre, table, and figure (.full class); needs to be a
+   * variable here since we can't use variables inside media queries. */
+  --full-margin-left: calc(-1 * var(--pad-x));
+  --full-width: calc(100% + calc(var(--pad-x) * 2));
 }
 
-aside {
-  position: absolute;
-  left: /*padx*/-15em;
-  width: 14em;
-  text-align: right;
-  font-size: .9em;
-}
+/* Properties for screens that are narrower than the body width. */
+@media (max-width: 54rem) {
+  :root {
+    --font: 14px/160% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
 
-/* Alternative: place on the right.
-aside {
-  position: absolute;
-  right: -15em;
-  width: 14em;
-}
-*/
-
-@media (max-width: 83em) {             /* Place inline if it won't fit on the screen. */
-  aside {
-    position: static;
-    width: auto;
-    text-align: left;
-    background-color: #f7f7f7;
-    padding: .4em 2em;
-    border: 1px solid /*bordercolor*/#aaa;
-    hyphens: none;
+    --pad-x: 1rem;    /* Modest amount of padding to prevent wasting screen space. */
+    --pad-y: .5rem;
   }
 }
 
-/* Optional: place the page further to the right, so that there's more space for
- * the aside.
- * Adjust the media query above to max-width: 63em
-.page {
-  left: 10em;
+/* Even smaller screens, mostly mobile phones. */
+@media (max-width: 26rem) {
+  :root {
+    --font: 14px/140% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
+  }
 }
-*/
+
+
 /* FONTS */
 
 /* I like the Libre Baskerville typeface, which is a nice Serif font.
@@ -58,8 +59,8 @@ aside {
   font-weight: 400;
   font-display: fallback;
   src: local('Libre Baskerville'), local('LibreBaskerville-Regular'),
-    url(/fonts/libre-baskerville.woff2) format('woff2'),
-    url(./fonts/libre-baskerville.woff2) format('woff2');
+       url(/fonts/libre-baskerville.woff2) format('woff2'),
+       url(./fonts/libre-baskerville.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Libre Baskerville';
@@ -67,8 +68,8 @@ aside {
   font-weight: 700;
   font-display: fallback;
   src: local('Libre Baskerville Bold'), local('LibreBaskerville-Bold'),
-    url(/fonts/libre-baskerville-bold.woff2) format('woff2'),
-    url(./fonts/libre-baskerville-bold.woff2) format('woff2');
+       url(/fonts/libre-baskerville-bold.woff2) format('woff2'),
+       url(./fonts/libre-baskerville-bold.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Libre Baskerville';
@@ -76,27 +77,15 @@ aside {
   font-weight: 400;
   font-display: fallback;
   src: local('Libre Baskerville Italic'), local('LibreBaskerville-Italic'),
-    url(/fonts/libre-baskerville-italic.woff2) format('woff2'),
-    url(./fonts/libre-baskerville-italic.woff2) format('woff2');
+       url(/fonts/libre-baskerville-italic.woff2) format('woff2'),
+       url(./fonts/libre-baskerville-italic.woff2) format('woff2');
 }
 
 html {
-  font: 16px/180% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
-  /* Possible sans-serif alternative; note you may want to adjust the
-   * line-height and font-size if you want the fonts. Different values work
-   * better for different fonts.
-   * font: 18px/160% Calibri, 'DejaVu Sans Serif', sans-serif;
-   */
+  font: var(--font);
 
           text-size-adjust: none;      /* Disables text adjustment algorithm on some mobile browsers, this is */
   -webkit-text-size-adjust: none;      /* intended for sites that are not designed for mobile viewing. */
-}
-
-@media (max-width: /*bodywidth*/54em) { /* Use smaller fonts and line-height on smaller screens. */
-  html { font-size: 14px; line-height: 160%; }
-}
-@media (max-width: /*bodywidth*/26em) {
-  html { font-size: 12px; line-height: 150%; }
 }
 
 pre, code {
@@ -119,7 +108,6 @@ h1, h2, h3, h4, h5, h6 {
   font-feature-settings: 'liga' on, 'dlig' on;
 }
 
-
 /* DEFAULTS */
 * {
   box-sizing: border-box;              /* Element width/height includes the border. */
@@ -131,7 +119,7 @@ h1, h2, h3, h4, h5, h6 {
 
 html {
   background-color: #eee;              /* Neutral background to contrast with the page. */
-  color: /*textcolor*/#252525;         /* Slightly less "harsh" black; looks subtly better. */
+  color: var(--color-text);            /* Slightly less "harsh" black; looks subtly better. */
        tab-size: 4;                    /* Tab size of 4 is probably more common in editors etc. */
   -moz-tab-size: 4;                    /* Still needed as of Jan 2019 :-( https://bugzil.la/737785 */
 }
@@ -140,27 +128,37 @@ html, body {
   margin: 0;                           /* No extra margin; shows up in some cases (e.g. when printing). */
 }
 
+body {
+    display: flex;                     /* Display as flex. */
+    flex-direction: column;            /* Put things underneath eachother, rather than next to each other. */
+    align-items: center;               /* Put items in the centre. */
+}
+
 .center, .page {
-  max-width: /*bodywidth*/54rem;       /* Don't make it too wide, as that makes it harder to read. */
-  margin: .5rem auto;                  /* Add some extra space at top/bottom, and centre it. */
+  max-width: var(--width-body);        /* Don't make it too wide, as that makes it harder to read. */
+  width: 100%;                         /* Make sure it takes up the full width if the content is smaller. */
+  padding: 0 .5rem;                    /* Always a bit from the edge. */
+  margin: .5rem 0;                     /* Add some extra space at top/bottom. */
   position: relative;                  /* So that absolute/relative positioning is relative to the page, which is almost always what's desired. */
 }
 
 .page {
-  padding: /*pady*/1rem /*padx*/4rem;  /* Small padding on top, larger on sides. */
-  background-color: /*bgcolor*/#fff;   /* White background to override the html one */
+  padding: var(--pad-y) var(--pad-x);  /* Small padding on top, larger on sides. */
+  background-color: var(--color-bg);   /* White background to override the html one */
                                        /* A slightly grey or yellowish tint also works well, and gives a warmer feel.
                                         * Some suggestions: #fbfbf7, #fffff7 */
                                        /* Remove this and the box-shadow for an even background colour. */
   box-shadow: 0 0 6px rgba(0,0,0,.2);  /* Box-shadow effect looks quite handsome here. */
 }
-@media (max-width: /*bodywidth*/54em) {
-  .page, .center {
-    max-width: 100%;                   /* Full-width page. */
-    padding: 0 1rem;                   /* Modest amount of padding to prevent wasting screen space. */
-  }
+
+.page + .page {
+  margin-top: var(--pad-y);            /* Put some space between two adjacent pages. */
 }
 
+.full {                                /* Take up all the space in the .page padding. */
+  margin-left: var(--full-margin-left);
+  width: var(--full-width);
+}
 
 /* PRINTING */
 @page {
@@ -182,7 +180,7 @@ html, body {
   }
 }
 
-.page-a4, .page.page-a4 {              /* A4 paper used in most places */
+.page-a4, .page.page-a4 {              /* A4 paper used in most places. */
   width: 21cm;
   height: 29.7cm;
 }
@@ -191,7 +189,6 @@ html, body {
   width: 8.5in;
   height: 11in;
 }
-
 
 /* LINKS */
 a,
@@ -208,6 +205,8 @@ a:hover, .link:hover {
 a:hover code  {
   color: #6491ff;                      /* Also change colour of code on hover. */
 }
+button.link[disabled]       { color: #666; }
+button.link[disabled]:hover { text-decoration: none; cursor: not-allowed; }
 
 form {                                 /* Make sure forms don't affect visual layout. */
   display: inline;
@@ -230,19 +229,19 @@ form {                                 /* Make sure forms don't affect visual la
   -webkit-appearance: none;
 }
 
-
 /* HEADERS */
 
 /* The intention is that there is only one h1 on a page: at the top. If you use
  * h1 different, then you may want to add a border like in the h2. */
 h1 {
   text-align: center;
-  padding: .5em 0;                     /* More than default. */
+  padding: .4em 0;                     /* More than default. */
   font-size: 1.7em;                    /* Default of 2em is pretty large. */
+  line-height: 1.3;                    /* Otherwise looks funky if it overflows. */
 }
 
 h2 {
-  border-bottom: 1px solid /*textcolor*/#252525;  /* Underline to stand out more. */
+  border-bottom: 1px solid var(--color-text);  /* Underline to stand out more. */
   padding-bottom: .2em;                /* Border not too close to the text. */
   font-size: 1.5em;                    /* Default of 1.8em is pretty large. */
 }
@@ -259,12 +258,10 @@ h5, h6 {
   font-size: 1em;                      /* Don't make h5 and h6 smaller than base font. */
 }
 
-
 /* BLOCKQUOTE */
 blockquote {
   font-style: italic;                  /* Quotations are usually typeset in italics. */
 }
-
 
 /* IMAGES */
 img {
@@ -275,24 +272,16 @@ figure {
   margin: 1rem 0;                      /* Don't need 40px of margin on either side. */
 }
 
-figure.border {
-  border: 1px solid /*bordercolor*/#aaa; /* Add border. */
+figure.border:not(.full) {
+  border: 1px solid var(--color-border); /* Add border. */
   padding: 5px;                        /* Slight gap between image and border. */
   margin: -5px;                        /* Put the border in the margin, so the padding doesn't shrink the image. */
 }
 
-@media (min-width: /*bodywidth*/54em) { /* Only if the screen is wide enough. */
-  figure.full {                        /* Make sure this is after .border so that adding both works. */
-    margin-left: /*padx*/-4rem;
-    width: calc(100% + /*padx*/8rem);
-  }
-
-  figure.full.border {
-    border-left: none;                 /* Remove side borders on .full */
-    border-right: none;
-  }
+figure.full {                        /* Make sure this is after .border so that adding both works. */
+  margin-left: var(--full-margin-left);
+  width: var(--full-width);
 }
-
 
 /* CODE */
 code, pre, kbd, samp {
@@ -305,15 +294,8 @@ pre {
   max-height: 500px;                   /* Scroll content larger than this. */
   padding: .5em 1em;                   /* Don't put the text right on the edge. */
   border-radius: 2px;                  /* Looks better with subtly rounded corner. */
-  border-top: 1px solid #d5d5d5;          /* Looks better. */
-  border-bottom: 1px solid #d5d5d5;       /* Looks better. */
-}
-
-@media (min-width: /*bodywidth*/54em) { /* Only if the screen is wide enough. */
-  pre.full {
-    margin-left: /*padx*/-4rem;
-    width: calc(100% + /*padx*/8rem);
-  }
+  border-top: 1px solid #d5d5d5;       /* Looks better. */
+  border-bottom: 1px solid #d5d5d5;    /* Looks better. */
 }
 
 code, kbd, samp {
@@ -341,11 +323,9 @@ table + table {
   margin-top: 2em;                     /* Add margin for subsequent tables. */
 }
 
-@media (min-width: /*bodywidth*/54em) {  /* Only if the screen is wide enough. */
-  table.full {
-    margin-left: /*padx*/-3.5rem;
-    width: calc(100% + /*padx*/7rem);
-  }
+table.full {                           /* Not quite full width so text isn't flush against border. */
+  margin-left: calc(var(--full-margin-left) + .5rem);
+  width: calc(var(--full-width) - 1em);
 }
 
 caption {
@@ -388,12 +368,8 @@ sup, sub {                             /* Make sure the line height isn't affect
   vertical-align: baseline;
   position: relative;
 }
-sup {
-  bottom: 1ex;
-}
-sub {
-  top: .5ex;
-}
+sup { bottom: 1ex; }
+sub { top: .5ex; }
 
 /* HORIZONTAL RULER */
 
@@ -403,7 +379,7 @@ hr {
   border: none;                        /* Remove default border. */
   text-align: center;                  /* Centre the characters. */
   font-size: 60px;                     /* Make it larger; what looks good depends a bit on which character you choose. */
-  color: /*textcolor*/#252525;         /* Standard text colour; it's grey by default. */
+  color: var(--color-text);            /* Standard text colour; it's grey by default. */
   opacity: .9;                         /* But make it slightly less dark than regular text. */
 }
 
@@ -538,7 +514,7 @@ button:not(.link), input[type="submit"]:not(.link) {
   padding: .6em 1.5em;                 /* More padding for left/right. */
   background-color: #f6f5f4;           /* Background gets reset when border is set; defaults from Firefox. */
   background: linear-gradient(#f6f5f4, #edebe9);
-  border: .5px outset #e9e9e9;         /* More or less the same as the Firefox border. */
+  border: 1px outset #e9e9e9;          /* More or less the same as the Firefox border. */
   border-radius: 3px;
   border-top-color: #ccc;
   border-left-color: #ccc;
@@ -689,7 +665,7 @@ h2 a, h3 a, h4 a, h5 a, h6 a {
  */
 .postscript {
   margin-top: 3em;                     /* Clear a bit from regular content. */
-  border-top: 1px solid /*bordercolor*/#aaa; /* Border to separate. */
+  border-top: 1px solid var(--color-border); /* Border to separate. */
   font-size: .9em;                     /* Slightly smaller text. */
   position: relative;                  /* So we can place the header. */
 
@@ -703,7 +679,7 @@ h2 a, h3 a, h4 a, h5 a, h6 a {
   position: absolute;                  /* Move to the to align with the border. */
   top: -1em;
   left: 1em;
-  background-color: /*bgcolor*/#fff;   /* Add background colour and padding to hide the border. */
+  background-color: var(--color-bg);   /* Add background colour and padding to hide the border. */
   padding: 0 .5em;
 }
 
@@ -712,14 +688,58 @@ h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 /* Make the border take up the page padding if the screen is wide enough. */
-@media (min-width: /*bodywidth*/54rem) {
+@media (min-width: 54rem) {
   .postscript {
-    margin-left: /*padx*/-4em;           /* Put the div in the margin too, so the border is wider. */
-    width: calc(100% + /*padx*/8em);
-    padding: 0 /*padx*/4em;              /* Add page margin. */
+    margin-left: calc(-1 * var(--pad-x));           /* Put the div in the margin too, so the border is wider. */
+    width: calc(100% + var(--pad-x) * 2);
+    padding: 0 var(--pad-x);              /* Add page margin. */
   }
 
   .postscript > strong {
-    left: /*padx*/6em;
+    left: calc(var(--pad-x) * 1.5);
   }
 }
+/* ASIDE */
+/* Put content to the left or right of the page as an "aside". This is an
+ * alternative to footnotes.
+ */
+
+aside {
+  hyphens: auto;                       /* Hyphenate, as this text is quite narrow. */
+}
+
+aside {
+  position: absolute;
+  left: -15em;
+  width: 14em;
+  text-align: right;
+  font-size: .9em;
+}
+
+/* Alternative: place on the right.
+aside {
+  position: absolute;
+  right: -15em;
+  width: 14em;
+}
+*/
+
+@media (max-width: 83em) {             /* Place inline if it won't fit on the screen. */
+  aside {
+    position: static;
+    width: auto;
+    text-align: left;
+    background-color: #f7f7f7;
+    padding: .4em 2em;
+    border: 1px solid var(--color-border);
+    hyphens: none;
+  }
+}
+
+/* Optional: place the page further to the right, so that there's more space for
+ * the aside.
+ * Adjust the media query above to max-width: 63em
+.page {
+  left: 10em;
+}
+*/

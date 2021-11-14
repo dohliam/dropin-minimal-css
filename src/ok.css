@@ -1,3 +1,5 @@
+/*! OK.css v1.2.0 | MIT License | github.com/andrewh0/okcss */
+
 @import url("https://rsms.me/inter/inter.css");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -490,6 +492,7 @@ html {
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }
 
 @supports (font-variation-settings: normal) {
@@ -538,6 +541,10 @@ body {
   margin: auto;
 }
 
+article {
+  padding-bottom: var(--ok-s-6);
+}
+
 /* Typography */
 h1 {
   font-size: var(--ok-fs-0);
@@ -570,6 +577,18 @@ h5,
 h6 {
   line-height: var(--ok-lh-heading);
   font-weight: var(--ok-fw-3);
+  margin-top: var(--ok-s-6);
+  margin-bottom: var(--ok-s-3);
+}
+
+h1 + *,
+h2 + *,
+h3 + *,
+h4 + *,
+h5 + *,
+h6 + *,
+hr + * {
+  margin-top: 0;
 }
 
 p {
@@ -578,6 +597,12 @@ p {
 
 small {
   font-size: var(--ok-fs-5);
+}
+
+b,
+strong,
+dt {
+  font-weight: var(--ok-fw-2);
 }
 
 /* https://csswizardry.com/2012/06/single-direction-margin-declarations/ */
@@ -591,20 +616,13 @@ blockquote,
 details,
 dialog,
 dd,
-div,
 dl,
-dt,
+div,
 fieldset,
 figcaption,
 figure,
 footer,
 form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 header,
 hgroup,
 hr,
@@ -1100,18 +1118,32 @@ input:not(:disabled):focus::-webkit-file-upload-button {
 /* Tables */
 table {
   border-collapse: collapse;
-  border-radius: var(--ok-br);
-  display: block;
-  max-width: fit-content;
+  /*
+  Use `display: table` for proper screen reader support and
+  allow sticky header and footer
+  */
+  display: table;
   margin-left: auto;
   margin-right: auto;
-  overflow-x: auto;
   white-space: nowrap;
 }
 
 thead,
 tfoot {
   border: var(--ok-b-0);
+}
+
+/*
+tfoot is not sticky because captions are shown above the table
+and the footer can cover the caption.
+*/
+thead {
+  /*
+  In Chrome 91 there's a rendering bug that can show a 1px gap
+  when there's a border.
+  */
+  position: sticky;
+  top: 0;
 }
 
 thead tr,
@@ -1155,6 +1187,11 @@ pre,
 code,
 samp {
   font-family: var(--ok-mono);
+  /*
+  87.5% = 7/8
+  If 1rem is 16px, font-size is 14px.
+  */
+  font-size: 87.5%;
   line-height: var(--ok-lh-body);
   background-color: var(--ok-bg-1);
   border-radius: var(--ok-br);
@@ -1214,6 +1251,12 @@ a:visited {
   color: var(--ok-tc-accent);
 }
 
+a code,
+a samp,
+a mark {
+  color: var(--ok-tc-accent);
+}
+
 /* Lists */
 ul,
 ol {
@@ -1228,6 +1271,19 @@ nav ul {
 nav ul li {
   display: inline;
   margin-right: 1em;
+}
+
+li p {
+  margin-bottom: 0;
+}
+
+/*
+margin-top instead of margin-bottom to add space when
+a <ul> or <ol> is added as a nested list.
+*/
+li,
+li p + p {
+  margin-top: 0.5em;
 }
 
 /* Images, figures, and media*/
@@ -1300,7 +1356,6 @@ blockquote::before {
 }
 
 dd {
-  margin: 0;
   padding-left: var(--ok-s-5);
 }
 

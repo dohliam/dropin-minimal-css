@@ -1,6 +1,6 @@
 
 /*!
- * snack.css - v2.5.2
+ * snack.css - v2.5.3
  * A minimal CSS framework for web.
  * https://snack-ui.github.io/snack/
  *
@@ -820,6 +820,7 @@ label {
 .form-control {
   display: block;
   width: 100%;
+  min-height: 2.25rem;
   padding: .25rem .5rem;
   border: 2px solid rgba(0, 0, 0, 0.12);
   border-radius: 6px;
