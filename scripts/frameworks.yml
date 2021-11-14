@@ -289,7 +289,7 @@ frameworks:
     license: MIT
     license_url: https://github.com/lucasarvelo/lemon/blob/master/LICENSE
     repo: https://github.com/lucasarvelo/lemon
-    url: https://github.com/lucasarvelo/lemon/blob/master/dist/lemon.css
+    url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/lemon.css
   lit:
     author: Ajusa
     author_name: Arham Jain
