@@ -181,6 +181,13 @@ frameworks:
     license_url: https://github.com/johno/furtive/blob/master/LICENSE
     repo: https://github.com/johno/furtive
     url: https://github.com/johno/furtive/blob/master/css/furtive.css
+  gd:
+    author: hawkz
+    author_name: Stephen Hawkes
+    license: MIT
+    license_url: https://github.com/hawkz/gdcss/blob/master/LICENSE
+    repo: https://github.com/hawkz/gdcss
+    url: https://github.com/hawkz/gdcss/blob/master/gd.css
   generic:
     author: Vereis
     author_name: Chris Bailey
