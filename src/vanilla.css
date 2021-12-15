@@ -60,8 +60,6 @@ h5, h6 { text-transform: uppercase; }
 
 header h1 { border-bottom: 1px solid; }
 
-p { margin: 2rem 0; }
-
 a,a:visited { color: var(--link-color); }
 a:hover,a:focus { color: var(--link-color-alt); }
 

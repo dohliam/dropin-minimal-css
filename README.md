@@ -84,6 +84,7 @@ If you know of a minimal framework that hasn't been included here, please create
 * [flat-ui](https://github.com/designmodo/Flat-UI) by @Designmodo ([Preview](https://dohliam.github.io/dropin-minimal-css/?flat-ui) · [CC BY & MIT](https://github.com/designmodo/Flat-UI#copyright-and-license))
 * [fluidity](https://github.com/mrmrs/fluidity) by @mrmrs ([Preview](https://dohliam.github.io/dropin-minimal-css/?fluidity) · [MIT](https://github.com/mrmrs/fluidity/blob/master/README.md))
 * [furtive](https://github.com/johno/furtive) by @johno ([Preview](https://dohliam.github.io/dropin-minimal-css/?furtive) · [MIT](https://github.com/johno/furtive/blob/master/LICENSE))
+* [gd](https://github.com/hawkz/gdcss) by @hawkz ([Preview](https://dohliam.github.io/dropin-minimal-css/?gd) · [MIT](https://github.com/hawkz/gdcss/blob/master/LICENSE))
 * [generic](https://github.com/Vereis/generic.css) by @Vereis ([Preview](https://dohliam.github.io/dropin-minimal-css/?generic) · [MIT](https://github.com/Vereis/generic.css))
 * [github-markdown](https://github.com/sindresorhus/github-markdown-css) by @sindresorhus ([Preview](https://dohliam.github.io/dropin-minimal-css/?github-markdown) · [MIT](https://github.com/sindresorhus/github-markdown-css/blob/gh-pages/license))
 * [gutenberg](https://github.com/bafs/Gutenberg/) by @bafs ([Preview](https://dohliam.github.io/dropin-minimal-css/?gutenberg) · [MIT](https://github.com/BafS/Gutenberg/blob/master/LICENSE))
