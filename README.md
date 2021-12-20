@@ -140,7 +140,7 @@ If you know of a minimal framework that hasn't been included here, please create
 * [semantic-ui](https://github.com/Semantic-Org/Semantic-UI) by @Semantic-Org ([Preview](https://dohliam.github.io/dropin-minimal-css/?semantic-ui) · [MIT](https://github.com/Semantic-Org/Semantic-UI/blob/master/LICENSE.md))
 * [shoelace](https://github.com/claviska/shoelace-css) by @claviska ([Preview](https://dohliam.github.io/dropin-minimal-css/?shoelace) · [MIT](https://github.com/claviska/shoelace-css/blob/master/LICENSE.md))
 * [siimple](https://github.com/siimple/siimple) by @jmjuanes ([Preview](https://dohliam.github.io/dropin-minimal-css/?siimple) · [MIT](https://github.com/siimple/siimple/blob/develop/LICENSE))
-* [simple](https://github.com/tukangslicing/simplecss) by @neculaesei ([Preview](https://dohliam.github.io/dropin-minimal-css/?simple) · [MIT](https://opensource.org/licenses/mit-license.php))
+* [simple](https://github.com/kevquirk/simple.css) by @kevquirk ([Preview](https://dohliam.github.io/dropin-minimal-css/?simple) · [MIT](https://github.com/kevquirk/simple.css/blob/main/LICENSE))
 * [skeleton](https://github.com/dhg/Skeleton) by @dhg ([Preview](https://dohliam.github.io/dropin-minimal-css/?skeleton) · [MIT](https://github.com/dhg/Skeleton/blob/master/LICENSE.md))
 * [skeleton-framework](https://github.com/skeleton-framework/skeleton-framework) by @skeleton-framework ([Preview](https://dohliam.github.io/dropin-minimal-css/?skeleton-framework) · [MIT](https://github.com/skeleton-framework/skeleton-framework/blob/master/LICENSE))
 * [skeleton-plus](https://github.com/oltdaniel/skeleton-plus) by @oltdaniel ([Preview](https://dohliam.github.io/dropin-minimal-css/?skeleton-plus) · [MIT](https://github.com/oltdaniel/skeleton-plus/blob/master/LICENSE))
