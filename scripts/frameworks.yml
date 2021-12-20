@@ -564,12 +564,12 @@ frameworks:
     repo: https://github.com/siimple/siimple
     url: https://unpkg.com/siimple
   simple:
-    author: neculaesei
-    author_name: Andrei Neculaesei
+    author: kevquirk
+    author_name: Kev Quirk
     license: MIT
-    license_url: https://opensource.org/licenses/mit-license.php
-    repo: https://github.com/tukangslicing/simplecss
-    url: https://github.com/tukangslicing/simplecss/blob/master/src/simple.css
+    license_url: https://github.com/kevquirk/simple.css/blob/main/LICENSE
+    repo: https://github.com/kevquirk/simple.css
+    url: https://github.com/kevquirk/simple.css/blob/main/simple.css
   skeleton:
     author: dhg
     author_name: Dave Gamache
