@@ -33,6 +33,7 @@ function inline_switcher() {
   select_close = '        </select>\n      '
   dropdown = dropdown + select_close;
   switcher.innerHTML = dropdown;
+  dropdown = switcher.getElementById('switcher_dropdown');
 }
 
 function add_switcher() {
@@ -43,6 +44,8 @@ function add_switcher() {
     css_link.rel="stylesheet";
     css_link.type="text/css";
     css_link.href="https://dohliam.github.io/dropin-minimal-css/min/" + frameworks.split(",")[0] + ".min.css";
+    // Scroll to where we were and preserve combobox focus
+    css_link.onload= () => { window.location.hash = window.location.hash; dropdown.focus(); }
     head.appendChild(css_link);
   }
 
