@@ -1,4 +1,4 @@
-/*! style.css v1.0.0 | ISC License | https://github.com/ungoldman/style.css */
+/*! style.css v1.0.1 | ISC License | https://github.com/css-pkg/style.css */
 html {
   color: #303030;
   background-color: white;
@@ -6,11 +6,9 @@ html {
   font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "segoe ui", "fira sans", roboto, noto, "droid sans", "liberation sans", "lucida grande", "helvetica neue", helvetica, "franklin gothic medium", "century gothic", cantarell, oxygen, ubuntu, sans-serif;
   font-size: calc(14px + 0.25vw);
   line-height: 1.55;
-  -webkit-font-kerning: normal;
-          font-kerning: normal;
+  font-kerning: normal;
   text-rendering: optimizeLegibility;
-  -webkit-font-feature-settings: "kern", "liga" 1, "calt" 0;
-          font-feature-settings: "kern", "liga" 1, "calt" 0;
+  font-feature-settings: "kern", "liga" 1, "calt" 0;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }

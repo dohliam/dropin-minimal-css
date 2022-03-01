@@ -260,7 +260,7 @@ frameworks:
     license: MIT
     license_url: https://github.com/krszwsk/hyp/blob/master/LICENSE
     repo: https://github.com/krszwsk/hyp
-    url: https://github.com/krszwsk/hyp/blob/master/dist/hyp.min.css
+    url: https://unpkg.com/hypcss/dist/hyp.min.css
     min_only: true
   kathamo:
     author: debashisbarman

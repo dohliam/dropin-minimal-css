@@ -1,168 +1,151 @@
-/* Set the global variables for everything. Change these to use your own fonts and colours. */
+/* Global variables. */
 :root {
-
   /* Set sans-serif & mono fonts */
-  --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
+  --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+    "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica,
+    "Helvetica Neue", sans-serif;
   --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 
-  /* Body font size. By default, effectively 18.4px, based on 16px as 'root em' */
-  --base-fontsize: 1.15rem;
-
-  /* Major third scale progression - see https://type-scale.com/ */
-  --header-scale: 1.25;
-
-  /* Line height is set to the "Golden ratio" for optimal legibility */
-  --line-height: 1.618;
-
   /* Default (light) theme */
-  --bg: #FFF;
-  --accent-bg: #F5F7FF;
+  --bg: #fff;
+  --accent-bg: #f5f7ff;
   --text: #212121;
   --text-light: #585858;
-  --border: #D8DAE1;
-  --accent: #0D47A1;
-  --accent-light: #90CAF9;
-  --code: #D81B60;
+  --border: #d8dae1;
+  --accent: #0d47a1;
+  --code: #d81b60;
   --preformatted: #444;
-  --marked: #FFDD33;
-  --disabled: #EFEFEF;
+  --marked: #ffdd33;
+  --disabled: #efefef;
 }
 
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #212121;
-    --accent-bg: #2B2B2B;
-    --text: #DCDCDC;
-    --text-light: #ABABAB;
+    --accent-bg: #2b2b2b;
+    --text: #dcdcdc;
+    --text-light: #ababab;
     --border: #666;
-    --accent: #FFB300;
-    --accent-light: #FFECB3;
-    --code: #F06292;
-    --preformatted: #CCC;
+    --accent: #ffb300;
+    --code: #f06292;
+    --preformatted: #ccc;
     --disabled: #111;
   }
-
-  img, video {
-    opacity: .6;
+  /* Add a bit of transparancy so light media isn't so glaring in dark mode */
+  img,
+  video {
+    opacity: 0.8;
   }
 }
 
 html {
   /* Set the font globally */
   font-family: var(--sans-font);
+  scroll-behavior: smooth;
 }
 
 /* Make the body a nice central block */
 body {
   color: var(--text);
   background: var(--bg);
-  font-size: var(--base-fontsize);
-  line-height: var(--line-height);
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  flex: 1;
-  margin: 0 auto;
-  max-width: 45rem;
-  padding: 0 .5rem;
-  overflow-x: hidden;
-  word-break: break-word;
-  overflow-wrap: break-word;
-}
-
-/* Make the header bg full width, but the content inline with body */
-header {
-  background: var(--accent-bg);
-  border-bottom: 1px solid var(--border);
-  text-align: center;
-  padding: 2rem .5rem;
-  width: 100vw;
-  position: relative;
-  box-sizing: border-box;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-}
-
-
-/* Remove margins for header text */
-header h1,
-header p {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  display: grid;
+  grid-template-columns:
+    1fr min(45rem, 90%) 1fr;
   margin: 0;
 }
 
-/* Fix line height when title wraps */
-h1, h2, h3 {
-  line-height: 1.1;
+body>* {
+  grid-column: 2;
 }
 
-/* Format navigation */
-nav {
-  font-size: 1rem;
-  line-height: 2;
-  padding: 1rem 0;
+/* Make the header bg full width, but the content inline with body */
+body > header {
+  background: var(--accent-bg);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  padding: 0 0.5rem 2rem 0.5rem;
+  grid-column: 1 / -1;
+  box-sizing: border-box;
 }
 
-nav a {
-  margin: 1rem 1rem 0 0;
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  color: var(--text) !important;
-  display: inline-block;
-  padding: .1rem 1rem;
-  text-decoration: none;
-  transition: .4s;
+body > header h1 {
+  max-width: 1200px;
+  margin: 1rem auto;
 }
 
-nav a:hover {
-  color: var(--accent) !important;
-  border-color: var(--accent);
+body > header p {
+  max-width: 40rem;
+  margin: 1rem auto;
 }
 
-nav a.current:hover {
-  text-decoration: none;
+/* Add a little padding to ensure spacing is correct between content and nav */
+main {
+  padding-top: 1.5rem;
 }
 
-footer {
+body > footer {
   margin-top: 4rem;
   padding: 2rem 1rem 1.5rem 1rem;
   color: var(--text-light);
-  font-size: .9rem;
+  font-size: 0.9rem;
   text-align: center;
   border-top: 1px solid var(--border);
 }
 
 /* Format headers */
 h1 {
-  font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale) * var(--header-scale));
-  margin-top: calc(var(--line-height) * 1.5rem);
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale));
-  margin-top: calc(var(--line-height) * 1.5rem);
+  font-size: 2.6rem;
+  margin-top: 3rem;
 }
 
 h3 {
-  font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale));
-  margin-top: calc(var(--line-height) * 1.5rem);
+  font-size: 2rem;
+  margin-top: 3rem;
 }
 
 h4 {
-  font-size: calc(var(--base-fontsize) * var(--header-scale));
-  margin-top: calc(var(--line-height) * 1.5rem);
+  font-size: 1.44rem;
 }
 
 h5 {
-  font-size: var(--base-fontsize);
-  margin-top: calc(var(--line-height) * 1.5rem);
+  font-size: 1.15rem;
 }
 
 h6 {
-  font-size: calc(var(--base-fontsize) / var(--header-scale));
-  margin-top: calc(var(--line-height) * 1.5rem);
+  font-size: 0.96rem;
+}
+
+/* Fix line height when title wraps */
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+/* Reduce header size on mobile */
+@media only screen and (max-width: 720px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2.1rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
 }
 
 /* Format links & buttons */
@@ -175,7 +158,6 @@ a:hover {
   text-decoration: none;
 }
 
-a button,
 button,
 [role="button"],
 input[type="submit"],
@@ -186,12 +168,10 @@ input[type="button"] {
   background: var(--accent);
   font-size: 1rem;
   color: var(--bg);
-  padding: .7rem .9rem;
-  margin: .5rem 0;
-  transition: .4s;
+  padding: 0.7rem 0.9rem;
+  margin: 0.5rem 0;
 }
 
-a button[disabled],
 button[disabled],
 [role="button"][aria-disabled="true"],
 input[type="submit"][disabled],
@@ -201,7 +181,7 @@ input[type="checkbox"][disabled],
 input[type="radio"][disabled],
 select[disabled] {
   cursor: default;
-  opacity: .5;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
@@ -230,13 +210,47 @@ input[type="submit"]:enabled:hover,
 input[type="reset"]:focus,
 input[type="reset"]:enabled:hover,
 input[type="button"]:focus,
-input[type="button"]:enabled:hover,
-input[type="checkbox"]:focus,
-input[type="checkbox"]:enabled:hover,
-input[type="radio"]:focus,
-input[type="radio"]:enabled:hover{
-  opacity: .8;
+input[type="button"]:enabled:hover {
+  filter: brightness(1.4);
   cursor: pointer;
+}
+
+/* Format navigation */
+nav {
+  font-size: 1rem;
+  line-height: 2;
+  padding: 1rem 0 0 0;
+}
+
+nav a,
+nav a:visited {
+  margin: 0 1rem 1rem 0;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text);
+  display: inline-block;
+  padding: 0.1rem 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+/* Reduce nav side on mobile */
+@media only screen and (max-width: 750px) {
+  nav a {
+    border: none;
+    padding: 0;
+    color: var(--accent);
+    text-decoration: underline;
+    line-height: 1;
+  }
 }
 
 /* Format the expanding box */
@@ -250,19 +264,23 @@ details {
 summary {
   cursor: pointer;
   font-weight: bold;
-  padding: .6rem 1rem;
+  padding: 0.6rem 1rem;
 }
 
 details[open] {
-  padding: .6rem 1rem .75rem 1rem;
+  padding: 0.6rem 1rem 0.75rem 1rem;
+}
+
+details[open] summary + * {
+  margin-top: 0;
 }
 
 details[open] summary {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   padding: 0;
 }
 
-details[open]>*:last-child {
+details[open] > *:last-child {
   margin-bottom: 0;
 }
 
@@ -277,7 +295,7 @@ td,
 th {
   border: 1px solid var(--border);
   text-align: left;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 th {
@@ -292,13 +310,7 @@ tr:nth-child(even) {
 
 table caption {
   font-weight: bold;
-  margin-bottom: .5rem;
-}
-
-/* Lists */
-ol,
-ul {
-  padding-left: 3rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Format forms */
@@ -307,8 +319,8 @@ select,
 input {
   font-size: inherit;
   font-family: inherit;
-  padding: .5rem;
-  margin-bottom: .5rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
   color: var(--text);
   background: var(--bg);
   border: 1px solid var(--border);
@@ -321,17 +333,12 @@ input {
   appearance: none;
 }
 
-/* Add arrow to  */
+/* Add arrow to drop-down */
 select {
-  background-image:
-    linear-gradient(45deg, transparent 49%, var(--text) 51%),
+  background-image: linear-gradient(45deg, transparent 49%, var(--text) 51%),
     linear-gradient(135deg, var(--text) 51%, transparent 49%);
-  background-position:
-    calc(100% - 20px),
-    calc(100% - 15px);
-  background-size:
-    5px 5px,
-    5px 5px;
+  background-position: calc(100% - 20px), calc(100% - 15px);
+  background-size: 5px 5px, 5px 5px;
   background-repeat: no-repeat;
 }
 
@@ -340,11 +347,13 @@ select[multiple] {
 }
 
 /* checkbox and radio button style */
-input[type="checkbox"], input[type="radio"]{
+input[type="checkbox"],
+input[type="radio"] {
   vertical-align: bottom;
   position: relative;
 }
-input[type="radio"]{
+
+input[type="radio"] {
   border-radius: 100%;
 }
 
@@ -355,7 +364,7 @@ input[type="radio"]:checked {
 
 input[type="checkbox"]:checked::after {
   /* Creates a rectangle with colored right and bottom borders which is rotated to look like a check mark */
-  content: ' ';
+  content: " ";
   width: 0.1em;
   height: 0.25em;
   border-radius: 0;
@@ -370,9 +379,9 @@ input[type="checkbox"]:checked::after {
 }
 input[type="radio"]:checked::after {
   /* creates a colored circle for the checked radio button  */
-  content: ' ';
-  width: .25em;
-  height: .25em;
+  content: " ";
+  width: 0.25em;
+  height: 0.25em;
   border-radius: 100%;
   position: absolute;
   top: 0.125em;
@@ -383,7 +392,7 @@ input[type="radio"]:checked::after {
 
 /* Make the textarea wider than other inputs */
 textarea {
-  width: 80%
+  width: 80%;
 }
 
 /* Makes input fields wider on smaller screens */
@@ -396,7 +405,8 @@ textarea {
 }
 
 /* Ensures the checkbox and radio inputs do not have a set width like other input fields */
-input[type="checkbox"], input[type="radio"]{
+input[type="checkbox"],
+input[type="radio"] {
   width: auto;
 }
 
@@ -405,15 +415,7 @@ input[type="file"] {
   border: 0;
 }
 
-/* Without this any HTML using <fieldset> shows ugly borders and has additional padding/margin. (Issue #3) */
-fieldset {
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
-
 /* Misc body elements */
-
 hr {
   color: var(--border);
   border-top: 1px;
@@ -426,7 +428,8 @@ mark {
   background: var(--marked);
 }
 
-main img, main video {
+main img,
+main video {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
@@ -434,20 +437,20 @@ main img, main video {
 
 figure {
   margin: 0;
+  text-align: center;
 }
 
 figcaption {
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: var(--text-light);
-  text-align: center;
   margin-bottom: 1rem;
 }
 
 blockquote {
   margin: 2rem 0 2rem 2rem;
-  padding: .4rem .8rem;
-  border-left: .35rem solid var(--accent);
-  opacity: .8;
+  padding: 0.4rem 0.8rem;
+  border-left: 0.35rem solid var(--accent);
+  color: var(--text-light);
   font-style: italic;
 }
 
@@ -457,13 +460,12 @@ cite {
   font-style: normal;
 }
 
-/* Use mono font for code like elements */
+/* Use mono font for code elements */
 code,
 pre,
 pre span,
 kbd,
 samp {
-  font-size: 1.075rem;
   font-family: var(--mono-font);
   color: var(--code);
 }
@@ -473,7 +475,7 @@ kbd {
   border: 1px solid var(--preformatted);
   border-bottom: 3px solid var(--preformatted);
   border-radius: 5px;
-  padding: .1rem;
+  padding: 0.1rem;
 }
 
 pre {

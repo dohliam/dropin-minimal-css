@@ -970,6 +970,7 @@ html {
 p,
 a,
 button,
+li,
 table,
 thead,
 tbody,
@@ -1279,6 +1280,10 @@ table.table-alternating tbody tr:nth-of-type(even) {
 .child-shadows > * {
   transition: all 235ms ease 0s;
   box-shadow: 15px 28px 25px -18px rgba(0, 0, 0, 0.2);
+}
+
+.child-shadows .shadow-none {
+  box-shadow: none;
 }
 
 .child-shadows-hover > * {
