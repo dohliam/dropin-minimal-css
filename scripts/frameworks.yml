@@ -8,6 +8,13 @@ frameworks:
     license_url: https://github.com/alexandersandberg/a11yana/blob/master/LICENSE.md
     repo: https://github.com/alexandersandberg/a11yana
     url: https://github.com/alexandersandberg/a11yana/blob/master/dist/a11yana.css
+  almond:
+    author: alvaromontoro
+    author_name: Alvaro Montoro
+    license: MIT
+    license_url: https://github.com/alvaromontoro/almond.css/blob/master/LICENSE
+    repo: https://github.com/alvaromontoro/almond.css
+    url: https://github.com/alvaromontoro/almond.css/blob/master/dist/almond.css
   axist:
     author: ruanmartinelli
     author_name: Ruan Martinelli
