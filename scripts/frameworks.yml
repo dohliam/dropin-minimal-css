@@ -125,6 +125,13 @@ frameworks:
     license_url: https://github.com/Spiderpig86/Cirrus/blob/master/LICENSE
     repo: https://github.com/Spiderpig86/Cirrus
     url: https://github.com/Spiderpig86/Cirrus/blob/master/dist/cirrus.css
+  classless:
+    author: emareg
+    author_name: Emanuel Regnath
+    license: MIT
+    license_url: https://github.com/emareg/classlesscss/blob/master/LICENSE
+    repo: https://github.com/emareg/classlesscss
+    url: https://github.com/emareg/classlesscss/blob/master/docs/classless.css
   clmaterial:
     author: 24aitor
     author_name: Aitor Riba Archilla
