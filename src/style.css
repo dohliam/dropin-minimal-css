@@ -1,4 +1,4 @@
-/*! style.css v1.0.1 | ISC License | https://github.com/css-pkg/style.css */
+/*! style.css v1.0.3 | ISC License | https://github.com/ungoldman/style.css */
 html {
   color: #303030;
   background-color: white;
@@ -349,7 +349,8 @@ figcaption {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 dfn {

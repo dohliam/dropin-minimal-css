@@ -1,5 +1,5 @@
 /*
-* Cirrus 0.6.3
+* Cirrus 0.7.0
 * Stanley Lim, Copyright 2022
 * https://spiderpig86.github.io/Cirrus
 */
@@ -37,10 +37,31 @@
 /*
     Group selectors that share common styling.
 */
+/*
+    Global Mixins
+*/
+/*
+    Mixin that returns a property map as a series of CSS class properties.
+
+    E.g. $xs: (color: #fff, opacity: 0.5), $sm... =>
+
+    <class>--xs {
+        color: #fff;
+        opacity: 0.5;
+    }
+*/
+/*
+    Bring to front on focus.
+*/
 /* Breakpoints */
 /* Fonts */
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 /* Media Queries */
-/* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
 /**
  * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
@@ -59,28 +80,7 @@
  *           }
  *       }
  */
-/*
-    Global Mixins
-*/
-/*
-    Mixin that returns a property map as a series of CSS class properties.
-
-    E.g. $xs: (color: #fff, opacity: 0.5), $sm... =>
-
-    <class>--xs {
-        color: #fff;
-        opacity: 0.5;
-    }
-*/
-/*
-    Bring to front on focus.
-*/
-/*
-    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
-*/
-/*
-  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
-*/
+/* VALUE APIS */
 :root {
   /* v1 Colors */
   --cirrus-fg: #0f172a;
@@ -88,8 +88,8 @@
   --cirrus-select-bg: rgba(0, 161, 255, 0.2);
   --cirrus-code-bg: rgba(255, 218, 221, 1);
   --cirrus-code-fg: #dc4753;
-  --cirrus-form-group-bg: rgba(#f8f9fa, 1);
-  --cirrus-form-group-fg: rgba(#909090, 1);
+  --cirrus-form-group-bg: rgba(248, 249, 250, 1);
+  --cirrus-form-group-fg: rgba(144, 144, 144, 1);
   --toast-primary-bg: rgba(49, 59, 80, 0.9);
   --animation-duration: 0.2s;
   --focus-opacity: 0.55;
@@ -3531,43 +3531,47 @@ section {
 }
 
 /* Width/Height CSS */
-.h-10 {
+.h-0 {
+  height: 0 !important;
+}
+
+.h-10p {
   height: 10% !important;
 }
 
-.h-20 {
+.h-20p {
   height: 20% !important;
 }
 
-.h-30 {
+.h-30p {
   height: 30% !important;
 }
 
-.h-40 {
+.h-40p {
   height: 40% !important;
 }
 
-.h-50 {
+.h-50p {
   height: 50% !important;
 }
 
-.h-60 {
+.h-60p {
   height: 60% !important;
 }
 
-.h-70 {
+.h-70p {
   height: 70% !important;
 }
 
-.h-80 {
+.h-80p {
   height: 80% !important;
 }
 
-.h-90 {
+.h-90p {
   height: 90% !important;
 }
 
-.h-100 {
+.h-100p {
   height: 100% !important;
 }
 
@@ -3580,52 +3584,57 @@ section {
 }
 
 @media screen and (min-width: 640px) {
-  .h-10-sm {
+  .h-0-sm {
+    height: 0 !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .h-10p-sm {
     height: 10% !important;
   }
 }
 @media screen and (min-width: 640px) {
-  .h-20-sm {
+  .h-20p-sm {
     height: 20% !important;
   }
 }
 @media screen and (min-width: 640px) {
-  .h-30-sm {
+  .h-30p-sm {
     height: 30% !important;
   }
 }
 @media screen and (min-width: 640px) {
-  .h-40-sm {
+  .h-40p-sm {
     height: 40% !important;
   }
 }
 @media screen and (min-width: 640px) {
-  .h-50-sm {
+  .h-50p-sm {
     height: 50% !important;
   }
 }
 @media screen and (min-width: 640px) {
-  .h-60-sm {
+  .h-60p-sm {
     height: 60% !important;
   }
 }
 @media screen and (min-width: 640px) {
-  .h-70-sm {
+  .h-70p-sm {
     height: 70% !important;
   }
 }
 @media screen and (min-width: 640px) {
-  .h-80-sm {
+  .h-80p-sm {
     height: 80% !important;
   }
 }
 @media screen and (min-width: 640px) {
-  .h-90-sm {
+  .h-90p-sm {
     height: 90% !important;
   }
 }
 @media screen and (min-width: 640px) {
-  .h-100-sm {
+  .h-100p-sm {
     height: 100% !important;
   }
 }
@@ -3640,52 +3649,57 @@ section {
   }
 }
 @media screen and (min-width: 768px) {
-  .h-10-md {
+  .h-0-md {
+    height: 0 !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .h-10p-md {
     height: 10% !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .h-20-md {
+  .h-20p-md {
     height: 20% !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .h-30-md {
+  .h-30p-md {
     height: 30% !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .h-40-md {
+  .h-40p-md {
     height: 40% !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .h-50-md {
+  .h-50p-md {
     height: 50% !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .h-60-md {
+  .h-60p-md {
     height: 60% !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .h-70-md {
+  .h-70p-md {
     height: 70% !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .h-80-md {
+  .h-80p-md {
     height: 80% !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .h-90-md {
+  .h-90p-md {
     height: 90% !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .h-100-md {
+  .h-100p-md {
     height: 100% !important;
   }
 }
@@ -3700,52 +3714,57 @@ section {
   }
 }
 @media screen and (min-width: 1024px) {
-  .h-10-lg {
+  .h-0-lg {
+    height: 0 !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .h-10p-lg {
     height: 10% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .h-20-lg {
+  .h-20p-lg {
     height: 20% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .h-30-lg {
+  .h-30p-lg {
     height: 30% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .h-40-lg {
+  .h-40p-lg {
     height: 40% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .h-50-lg {
+  .h-50p-lg {
     height: 50% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .h-60-lg {
+  .h-60p-lg {
     height: 60% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .h-70-lg {
+  .h-70p-lg {
     height: 70% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .h-80-lg {
+  .h-80p-lg {
     height: 80% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .h-90-lg {
+  .h-90p-lg {
     height: 90% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .h-100-lg {
+  .h-100p-lg {
     height: 100% !important;
   }
 }
@@ -3760,52 +3779,57 @@ section {
   }
 }
 @media screen and (min-width: 1280px) {
-  .h-10-xl {
+  .h-0-xl {
+    height: 0 !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .h-10p-xl {
     height: 10% !important;
   }
 }
 @media screen and (min-width: 1280px) {
-  .h-20-xl {
+  .h-20p-xl {
     height: 20% !important;
   }
 }
 @media screen and (min-width: 1280px) {
-  .h-30-xl {
+  .h-30p-xl {
     height: 30% !important;
   }
 }
 @media screen and (min-width: 1280px) {
-  .h-40-xl {
+  .h-40p-xl {
     height: 40% !important;
   }
 }
 @media screen and (min-width: 1280px) {
-  .h-50-xl {
+  .h-50p-xl {
     height: 50% !important;
   }
 }
 @media screen and (min-width: 1280px) {
-  .h-60-xl {
+  .h-60p-xl {
     height: 60% !important;
   }
 }
 @media screen and (min-width: 1280px) {
-  .h-70-xl {
+  .h-70p-xl {
     height: 70% !important;
   }
 }
 @media screen and (min-width: 1280px) {
-  .h-80-xl {
+  .h-80p-xl {
     height: 80% !important;
   }
 }
 @media screen and (min-width: 1280px) {
-  .h-90-xl {
+  .h-90p-xl {
     height: 90% !important;
   }
 }
 @media screen and (min-width: 1280px) {
-  .h-100-xl {
+  .h-100p-xl {
     height: 100% !important;
   }
 }
@@ -3819,43 +3843,47 @@ section {
     height: 100vh !important;
   }
 }
-.w-10 {
+.w-0 {
+  width: 0 !important;
+}
+
+.w-10p {
   width: 10% !important;
 }
 
-.w-20 {
+.w-20p {
   width: 20% !important;
 }
 
-.w-30 {
+.w-30p {
   width: 30% !important;
 }
 
-.w-40 {
+.w-40p {
   width: 40% !important;
 }
 
-.w-50 {
+.w-50p {
   width: 50% !important;
 }
 
-.w-60 {
+.w-60p {
   width: 60% !important;
 }
 
-.w-70 {
+.w-70p {
   width: 70% !important;
 }
 
-.w-80 {
+.w-80p {
   width: 80% !important;
 }
 
-.w-90 {
+.w-90p {
   width: 90% !important;
 }
 
-.w-100 {
+.w-100p {
   width: 100% !important;
 }
 
@@ -3868,52 +3896,57 @@ section {
 }
 
 @media screen and (min-width: 640px) {
-  .w-10-sm {
+  .w-0-sm {
+    width: 0 !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .w-10p-sm {
     width: 10% !important;
   }
 }
 @media screen and (min-width: 640px) {
-  .w-20-sm {
+  .w-20p-sm {
     width: 20% !important;
   }
 }
 @media screen and (min-width: 640px) {
-  .w-30-sm {
+  .w-30p-sm {
     width: 30% !important;
   }
 }
 @media screen and (min-width: 640px) {
-  .w-40-sm {
+  .w-40p-sm {
     width: 40% !important;
   }
 }
 @media screen and (min-width: 640px) {
-  .w-50-sm {
+  .w-50p-sm {
     width: 50% !important;
   }
 }
 @media screen and (min-width: 640px) {
-  .w-60-sm {
+  .w-60p-sm {
     width: 60% !important;
   }
 }
 @media screen and (min-width: 640px) {
-  .w-70-sm {
+  .w-70p-sm {
     width: 70% !important;
   }
 }
 @media screen and (min-width: 640px) {
-  .w-80-sm {
+  .w-80p-sm {
     width: 80% !important;
   }
 }
 @media screen and (min-width: 640px) {
-  .w-90-sm {
+  .w-90p-sm {
     width: 90% !important;
   }
 }
 @media screen and (min-width: 640px) {
-  .w-100-sm {
+  .w-100p-sm {
     width: 100% !important;
   }
 }
@@ -3928,52 +3961,57 @@ section {
   }
 }
 @media screen and (min-width: 768px) {
-  .w-10-md {
+  .w-0-md {
+    width: 0 !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .w-10p-md {
     width: 10% !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .w-20-md {
+  .w-20p-md {
     width: 20% !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .w-30-md {
+  .w-30p-md {
     width: 30% !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .w-40-md {
+  .w-40p-md {
     width: 40% !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .w-50-md {
+  .w-50p-md {
     width: 50% !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .w-60-md {
+  .w-60p-md {
     width: 60% !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .w-70-md {
+  .w-70p-md {
     width: 70% !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .w-80-md {
+  .w-80p-md {
     width: 80% !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .w-90-md {
+  .w-90p-md {
     width: 90% !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .w-100-md {
+  .w-100p-md {
     width: 100% !important;
   }
 }
@@ -3988,52 +4026,57 @@ section {
   }
 }
 @media screen and (min-width: 1024px) {
-  .w-10-lg {
+  .w-0-lg {
+    width: 0 !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .w-10p-lg {
     width: 10% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .w-20-lg {
+  .w-20p-lg {
     width: 20% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .w-30-lg {
+  .w-30p-lg {
     width: 30% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .w-40-lg {
+  .w-40p-lg {
     width: 40% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .w-50-lg {
+  .w-50p-lg {
     width: 50% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .w-60-lg {
+  .w-60p-lg {
     width: 60% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .w-70-lg {
+  .w-70p-lg {
     width: 70% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .w-80-lg {
+  .w-80p-lg {
     width: 80% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .w-90-lg {
+  .w-90p-lg {
     width: 90% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .w-100-lg {
+  .w-100p-lg {
     width: 100% !important;
   }
 }
@@ -4048,52 +4091,57 @@ section {
   }
 }
 @media screen and (min-width: 1280px) {
-  .w-10-xl {
+  .w-0-xl {
+    width: 0 !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .w-10p-xl {
     width: 10% !important;
   }
 }
 @media screen and (min-width: 1280px) {
-  .w-20-xl {
+  .w-20p-xl {
     width: 20% !important;
   }
 }
 @media screen and (min-width: 1280px) {
-  .w-30-xl {
+  .w-30p-xl {
     width: 30% !important;
   }
 }
 @media screen and (min-width: 1280px) {
-  .w-40-xl {
+  .w-40p-xl {
     width: 40% !important;
   }
 }
 @media screen and (min-width: 1280px) {
-  .w-50-xl {
+  .w-50p-xl {
     width: 50% !important;
   }
 }
 @media screen and (min-width: 1280px) {
-  .w-60-xl {
+  .w-60p-xl {
     width: 60% !important;
   }
 }
 @media screen and (min-width: 1280px) {
-  .w-70-xl {
+  .w-70p-xl {
     width: 70% !important;
   }
 }
 @media screen and (min-width: 1280px) {
-  .w-80-xl {
+  .w-80p-xl {
     width: 80% !important;
   }
 }
 @media screen and (min-width: 1280px) {
-  .w-90-xl {
+  .w-90p-xl {
     width: 90% !important;
   }
 }
 @media screen and (min-width: 1280px) {
-  .w-100-xl {
+  .w-100p-xl {
     width: 100% !important;
   }
 }
@@ -4111,63 +4159,43 @@ section {
   min-height: 0 !important;
 }
 
-.min-h-xs {
-  min-height: 640px !important;
-}
-
-.min-h-sm {
-  min-height: 768px !important;
-}
-
-.min-h-md {
-  min-height: 1024px !important;
-}
-
-.min-h-lg {
-  min-height: 1280px !important;
-}
-
-.min-h-xl {
-  min-height: 1536px !important;
-}
-
-.min-h-10 {
+.min-h-10p {
   min-height: 10% !important;
 }
 
-.min-h-20 {
+.min-h-20p {
   min-height: 20% !important;
 }
 
-.min-h-30 {
+.min-h-30p {
   min-height: 30% !important;
 }
 
-.min-h-40 {
+.min-h-40p {
   min-height: 40% !important;
 }
 
-.min-h-50 {
+.min-h-50p {
   min-height: 50% !important;
 }
 
-.min-h-60 {
+.min-h-60p {
   min-height: 60% !important;
 }
 
-.min-h-70 {
+.min-h-70p {
   min-height: 70% !important;
 }
 
-.min-h-80 {
+.min-h-80p {
   min-height: 80% !important;
 }
 
-.min-h-90 {
+.min-h-90p {
   min-height: 90% !important;
 }
 
-.min-h-100 {
+.min-h-100p {
   min-height: 100% !important;
 }
 
@@ -4179,63 +4207,43 @@ section {
   min-width: 0 !important;
 }
 
-.min-w-xs {
-  min-width: 640px !important;
-}
-
-.min-w-sm {
-  min-width: 768px !important;
-}
-
-.min-w-md {
-  min-width: 1024px !important;
-}
-
-.min-w-lg {
-  min-width: 1280px !important;
-}
-
-.min-w-xl {
-  min-width: 1536px !important;
-}
-
-.min-w-10 {
+.min-w-10p {
   min-width: 10% !important;
 }
 
-.min-w-20 {
+.min-w-20p {
   min-width: 20% !important;
 }
 
-.min-w-30 {
+.min-w-30p {
   min-width: 30% !important;
 }
 
-.min-w-40 {
+.min-w-40p {
   min-width: 40% !important;
 }
 
-.min-w-50 {
+.min-w-50p {
   min-width: 50% !important;
 }
 
-.min-w-60 {
+.min-w-60p {
   min-width: 60% !important;
 }
 
-.min-w-70 {
+.min-w-70p {
   min-width: 70% !important;
 }
 
-.min-w-80 {
+.min-w-80p {
   min-width: 80% !important;
 }
 
-.min-w-90 {
+.min-w-90p {
   min-width: 90% !important;
 }
 
-.min-w-100 {
+.min-w-100p {
   min-width: 100% !important;
 }
 
@@ -4247,63 +4255,43 @@ section {
   max-height: none !important;
 }
 
-.max-h-xs {
-  max-height: 640px !important;
-}
-
-.max-h-sm {
-  max-height: 768px !important;
-}
-
-.max-h-md {
-  max-height: 1024px !important;
-}
-
-.max-h-lg {
-  max-height: 1280px !important;
-}
-
-.max-h-xl {
-  max-height: 1536px !important;
-}
-
-.max-h-10 {
+.max-h-10p {
   max-height: 10% !important;
 }
 
-.max-h-20 {
+.max-h-20p {
   max-height: 20% !important;
 }
 
-.max-h-30 {
+.max-h-30p {
   max-height: 30% !important;
 }
 
-.max-h-40 {
+.max-h-40p {
   max-height: 40% !important;
 }
 
-.max-h-50 {
+.max-h-50p {
   max-height: 50% !important;
 }
 
-.max-h-60 {
+.max-h-60p {
   max-height: 60% !important;
 }
 
-.max-h-70 {
+.max-h-70p {
   max-height: 70% !important;
 }
 
-.max-h-80 {
+.max-h-80p {
   max-height: 80% !important;
 }
 
-.max-h-90 {
+.max-h-90p {
   max-height: 90% !important;
 }
 
-.max-h-100 {
+.max-h-100p {
   max-height: 100% !important;
 }
 
@@ -4315,63 +4303,43 @@ section {
   max-width: none !important;
 }
 
-.max-w-xs {
-  max-width: 640px !important;
-}
-
-.max-w-sm {
-  max-width: 768px !important;
-}
-
-.max-w-md {
-  max-width: 1024px !important;
-}
-
-.max-w-lg {
-  max-width: 1280px !important;
-}
-
-.max-w-xl {
-  max-width: 1536px !important;
-}
-
-.max-w-10 {
+.max-w-10p {
   max-width: 10% !important;
 }
 
-.max-w-20 {
+.max-w-20p {
   max-width: 20% !important;
 }
 
-.max-w-30 {
+.max-w-30p {
   max-width: 30% !important;
 }
 
-.max-w-40 {
+.max-w-40p {
   max-width: 40% !important;
 }
 
-.max-w-50 {
+.max-w-50p {
   max-width: 50% !important;
 }
 
-.max-w-60 {
+.max-w-60p {
   max-width: 60% !important;
 }
 
-.max-w-70 {
+.max-w-70p {
   max-width: 70% !important;
 }
 
-.max-w-80 {
+.max-w-80p {
   max-width: 80% !important;
 }
 
-.max-w-90 {
+.max-w-90p {
   max-width: 90% !important;
 }
 
-.max-w-100 {
+.max-w-100p {
   max-width: 100% !important;
 }
 
@@ -14868,7 +14836,7 @@ ul .divider::after {
   line-height: 18px;
   text-align: right;
   top: 0;
-  width: 65%;
+  width: 55%;
   font-size: 12px;
 }
 .form-ext-control .form-ext-toggle .form-ext-toggle__toggler i::after {
