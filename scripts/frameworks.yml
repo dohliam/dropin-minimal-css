@@ -397,6 +397,13 @@ frameworks:
     license_url: https://github.com/chr15m/minimal-stylesheet/blob/master/LICENSE
     repo: https://github.com/chr15m/minimal-stylesheet
     url: https://github.com/chr15m/minimal-stylesheet/blob/master/minimal.css
+  missing-style:
+    author: dz4k
+    author_name: Deniz Akşimşek
+    license: BSD 2-Clause "Simplified" License
+    license_url: https://github.com/bigskysoftware/missing/blob/master/LICENSE
+    repo: https://github.com/bigskysoftware/missing
+    url: https://the.missing.style
   mobi:
     author: xcatliu
     author_name: xcatliu
