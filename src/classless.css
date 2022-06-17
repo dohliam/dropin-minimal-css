@@ -10,15 +10,14 @@ Table of Contents:
 
 /* 1. Theme Settings ––––––––––––––––––––-–––––––––––––– */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 
 :root, html[data-theme='light'] {
 	--rem: 12pt;
 	--width: 50rem;
 	--navpos: absolute;  /* fixed | absolute */
-	--font-p: 1em/1.7 'Open Sans', Helvetica, sans-serif;
-	--font-h: .9em/1.5 'Open Sans', Helvetica, sans-serif;
-	--font-c: .9em/1.4 monospace;
+	--font-p: 1em/1.7  'Open Sans', 'DejaVu Sans', FreeSans, Helvetica, sans-serif;
+	--font-h: .9em/1.5 'Open Sans', 'DejaVu Sans', FreeSans, Helvetica, sans-serif;
+	--font-c: .9em/1.4 'DejaVu Sans Mono', monospace;
 	--border: 1px solid var(--cmed);
 	--ornament: "‹‹‹ ›››";
 	/* foreground   | background color */
