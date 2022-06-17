@@ -28,8 +28,7 @@ frameworks:
     license: MIT
     license_url: https://github.com/Kimeiga/bahunya/blob/master/LICENSE
     repo: https://github.com/Kimeiga/bahunya
-    url: https://github.com/Kimeiga/bahunya/blob/css/bahunya-0.1.3.css
-    min_only: true
+    url: https://github.com/Kimeiga/bahunya/blob/master/dist/bahunya.css
   bamboo:
     author: rilwis
     author_name: Tran Ngoc Tuan Anh
