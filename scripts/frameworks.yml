@@ -245,7 +245,7 @@ frameworks:
     license: MIT
     license_url: https://github.com/jonathanharrell/hiq/blob/master/license.md
     repo: https://github.com/jonathanharrell/hiq
-    url: https://github.com/jonathanharrell/hiq/blob/gh-pages/assets/css/0.styles.89bf9b85.css
+    url: https://github.com/jonathanharrell/hiq/blob/6f88d9d2b227ac405d12eb350616517c49abcdc1/assets/css/0.styles.9ca64850.css
     min_only: true
   holiday:
     author: EvgenyOrekhov
