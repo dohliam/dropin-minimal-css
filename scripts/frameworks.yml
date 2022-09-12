@@ -67,6 +67,13 @@ frameworks:
     license_url: https://github.com/bonsaicss/bonsai.css/blob/master/LICENSE.md
     repo: https://github.com/bonsaicss/bonsai.css
     url: https://github.com/bonsaicss/bonsai.css/blob/master/dist/bonsai.css
+  brutalist:
+    author: blainsmith
+    author_name: Blain Smith
+    license: MIT
+    license_url: https://github.com/blainsmith/brutalist.css/blob/main/LICENSE
+    repo: https://github.com/blainsmith/brutalist.css
+    url: https://blainsmith.github.io/brutalist.css/brutalist.css
   bullframe:
     author: marcop135
     author_name: Marco Pontili
