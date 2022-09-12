@@ -155,6 +155,7 @@ If you know of a minimal framework that hasn't been included here, please create
 * [tachyons](https://github.com/tachyons-css/tachyons/) by @tachyons-css ([Preview](https://dohliam.github.io/dropin-minimal-css/?tachyons) · [MIT](https://github.com/tachyons-css/tachyons/blob/master/license))
 * [tacit](https://github.com/yegor256/tacit) by @yegor256 ([Preview](https://dohliam.github.io/dropin-minimal-css/?tacit) · [MIT](https://github.com/yegor256/tacit/blob/master/LICENSE))
 * [tent](https://github.com/sitetent/tentcss) by @ulinaaron ([Preview](https://dohliam.github.io/dropin-minimal-css/?tent) · [MIT](https://github.com/sitetent/tentcss/blob/master/LICENSE))
+* [terminal](https://github.com/Gioni06/terminal.css) by @Gioni06 ([Preview](https://dohliam.github.io/dropin-minimal-css/?terminal) · [MIT](https://github.com/Gioni06/terminal.css/blob/master/LICENSE))
 * [thao](https://github.com/ThaoFramework/Thao/) by @Sanfra1407 ([Preview](https://dohliam.github.io/dropin-minimal-css/?thao) · [Apache](http://www.apache.org/licenses/LICENSE-2.0))
 * [tui](https://github.com/vinibiavatti1/TuiCss) by @vinibiavatti1 ([Preview](https://dohliam.github.io/dropin-minimal-css/?tui) · [MIT](https://github.com/vinibiavatti1/TuiCss/blob/master/LICENSE.md))
 * [vanilla](https://github.com/bradleytaunt/vanilla-css) by @bradleytaunt ([Preview](https://dohliam.github.io/dropin-minimal-css/?vanilla) · [MIT](https://github.com/bradleytaunt/vanilla-css/blob/master/LICENSE))

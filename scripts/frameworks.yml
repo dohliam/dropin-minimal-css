@@ -661,6 +661,13 @@ frameworks:
     license_url: https://github.com/sitetent/tentcss/blob/master/LICENSE
     repo: https://github.com/sitetent/tentcss
     url: https://github.com/sitetent/tentcss/blob/master/dist/tent.css
+  terminal:
+    author: Gioni06
+    author_name: Jonas D.
+    license: MIT
+    license_url: https://github.com/Gioni06/terminal.css/blob/master/LICENSE
+    repo: https://github.com/Gioni06/terminal.css
+    url: https://github.com/Gioni06/terminal.css/blob/master/lib/terminal.css
   thao:
     author: Sanfra1407
     author_name: Giuseppe Sanfrancesco
