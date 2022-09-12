@@ -68,6 +68,7 @@ If you know of a minimal framework that hasn't been included here, please create
 * [base](https://github.com/matthewhartman/base) by @matthewhartman ([Preview](https://dohliam.github.io/dropin-minimal-css/?base) · [MIT](https://github.com/matthewhartman/base#license))
 * [basic](https://github.com/vladocar/Basic.css) by @vladocar ([Preview](https://dohliam.github.io/dropin-minimal-css/?basic) · [MIT](https://github.com/vladocar/Basic.css/blob/master/LICENSE))
 * [bonsai](https://github.com/bonsaicss/bonsai.css) by @ciar4n ([Preview](https://dohliam.github.io/dropin-minimal-css/?bonsai) · [MIT](https://github.com/bonsaicss/bonsai.css/blob/master/LICENSE.md))
+* [brutalist](https://github.com/blainsmith/brutalist.css) by @blainsmith ([Preview](https://dohliam.github.io/dropin-minimal-css/?brutalist) · [MIT](https://github.com/blainsmith/brutalist.css/blob/main/LICENSE))
 * [bullframe](https://github.com/marcop135/bullframe.css) by @marcop135 ([Preview](https://dohliam.github.io/dropin-minimal-css/?bullframe) · [MIT](https://github.com/marcop135/bullframe.css/blob/master/LICENSE.md))
 * [bulma](https://github.com/jgthms/bulma) by @jgthms ([Preview](https://dohliam.github.io/dropin-minimal-css/?bulma) · [MIT](https://github.com/jgthms/bulma/blob/master/LICENSE))
 * [caiuss](https://github.com/IonicaBizau/CaiuSS) by @IonicaBizau ([Preview](https://dohliam.github.io/dropin-minimal-css/?caiuss) · [MIT](https://github.com/IonicaBizau/CaiuSS/blob/master/LICENSE))
