@@ -2,7 +2,7 @@
 :root {
   /* Set sans-serif & mono fonts */
   --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
-    "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica,
+    "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
     "Helvetica Neue", sans-serif;
   --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 
@@ -22,6 +22,7 @@
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
   :root {
+    color-scheme: dark;
     --bg: #212121;
     --accent-bg: #2b2b2b;
     --text: #dcdcdc;
@@ -32,11 +33,26 @@
     --preformatted: #ccc;
     --disabled: #111;
   }
-  /* Add a bit of transparancy so light media isn't so glaring in dark mode */
+  /* Add a bit of transparency so light media isn't so glaring in dark mode */
   img,
   video {
     opacity: 0.8;
   }
+}
+
+/* Reset box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Reset default appearance */
+textarea,
+select,
+input,
+progress {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 html {
@@ -48,27 +64,24 @@ html {
 /* Make the body a nice central block */
 body {
   color: var(--text);
-  background: var(--bg);
+  background-color: var(--bg);
   font-size: 1.15rem;
   line-height: 1.5;
   display: grid;
-  grid-template-columns:
-    1fr min(45rem, 90%) 1fr;
+  grid-template-columns: 1fr min(45rem, 90%) 1fr;
   margin: 0;
 }
-
-body>* {
+body > * {
   grid-column: 2;
 }
 
 /* Make the header bg full width, but the content inline with body */
 body > header {
-  background: var(--accent-bg);
+  background-color: var(--accent-bg);
   border-bottom: 1px solid var(--border);
   text-align: center;
   padding: 0 0.5rem 2rem 0.5rem;
   grid-column: 1 / -1;
-  box-sizing: border-box;
 }
 
 body > header h1 {
@@ -81,7 +94,7 @@ body > header p {
   margin: 1rem auto;
 }
 
-/* Add a little padding to ensure spacing is correct between content and nav */
+/* Add a little padding to ensure spacing is correct between content and header > nav */
 main {
   padding-top: 1.5rem;
 }
@@ -120,6 +133,11 @@ h5 {
 
 h6 {
   font-size: 0.96rem;
+}
+
+/* Prevent long strings from overflowing container */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
 }
 
 /* Fix line height when title wraps */
@@ -162,10 +180,11 @@ button,
 [role="button"],
 input[type="submit"],
 input[type="reset"],
-input[type="button"] {
+input[type="button"],
+label[type="button"] {
   border: none;
   border-radius: 5px;
-  background: var(--accent);
+  background-color: var(--accent);
   font-size: 1rem;
   color: var(--bg);
   padding: 0.7rem 0.9rem;
@@ -209,7 +228,9 @@ input[type="submit"]:enabled:hover,
 input[type="reset"]:focus,
 input[type="reset"]:enabled:hover,
 input[type="button"]:focus,
-input[type="button"]:enabled:hover {
+input[type="button"]:enabled:hover,
+label[type="button"]:focus,
+label[type="button"]:hover {
   filter: brightness(1.4);
   cursor: pointer;
 }
@@ -224,14 +245,15 @@ header > nav {
 /* Use flexbox to allow items to wrap, as needed */
 header > nav ul,
 header > nav ol {
-  align-content:   space-around;
-  align-items:     center;
-  display:         flex;
-  flex-direction:  row;
+  align-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   list-style-type: none;
-  margin:          0;
-  padding:         0;
+  margin: 0;
+  padding: 0;
 }
 
 /* List items are inline elements, make them behave more like blocks */
@@ -242,7 +264,7 @@ header > nav ol li {
 
 header > nav a,
 header > nav a:visited {
-  margin: 0 1rem 1rem 0;
+  margin: 0 0.5rem 1rem 0.5rem;
   border: 1px solid var(--border);
   border-radius: 5px;
   color: var(--text);
@@ -252,12 +274,8 @@ header > nav a:visited {
 }
 
 header > nav a:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-}
-
-header > nav a:last-child {
-  margin-right: 0;
+  filter: brightness(1.4);
+  cursor: pointer;
 }
 
 /* Reduce nav side on mobile */
@@ -265,26 +283,41 @@ header > nav a:last-child {
   header > nav a {
     border: none;
     padding: 0;
-    color: var(--accent);
     text-decoration: underline;
     line-height: 1;
   }
 }
 
+/* Consolidate box styling */
+aside, details, pre, progress {
+  background-color: var(--accent-bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
 aside {
+  font-size: 1rem;
   width: 30%;
   padding: 0 15px;
   margin-left: 15px;
   float: right;
-  background: var(--accent-bg);
-  border: 1px solid var(--border);
-  border-radius: 5px;
 }
 
-article {
+/* Make aside full-width on mobile */
+@media only screen and (max-width: 720px) {
+  aside {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
+}
+
+article, fieldset {
   border: 1px solid var(--border);
   padding: 1rem;
   border-radius: 5px;
+  margin-bottom: 1rem;
 }
 
 article h2:first-child,
@@ -299,34 +332,39 @@ section {
   margin: 3rem 0;
 }
 
-/* Format the expanding box */
+/* Don't double separators when chaining sections */
+section + section,
+section:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+section:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
 details {
-  background: var(--accent-bg);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  margin-bottom: 1rem;
+  padding: 0.7rem 1rem;
 }
 
 summary {
   cursor: pointer;
   font-weight: bold;
-  padding: 0.6rem 1rem;
+  padding: 0.7rem 1rem;
+  margin: -0.7rem -1rem;
+  word-break: break-all;
 }
 
-details[open] {
-  padding: 0.6rem 1rem 0.75rem 1rem;
-}
-
-details[open] summary + * {
+details[open] > summary + * {
   margin-top: 0;
 }
 
-details[open] summary {
+details[open] > summary {
   margin-bottom: 0.5rem;
-  padding: 0;
 }
 
-details[open] > *:last-child {
+details[open] > :last-child {
   margin-bottom: 0;
 }
 
@@ -347,13 +385,13 @@ th {
 }
 
 th {
-  background: var(--accent-bg);
+  background-color: var(--accent-bg);
   font-weight: bold;
 }
 
 tr:nth-child(even) {
   /* Set every other cell slightly darker. Improves readability. */
-  background: var(--accent-bg);
+  background-color: var(--accent-bg);
 }
 
 table caption {
@@ -370,28 +408,28 @@ input {
   padding: 0.5rem;
   margin-bottom: 0.5rem;
   color: var(--text);
-  background: var(--bg);
+  background-color: var(--bg);
   border: 1px solid var(--border);
   border-radius: 5px;
   box-shadow: none;
-  box-sizing: border-box;
-  width: 60%;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
+  max-width: 100%;
+  display: inline-block;
+}
+label {
+  display: block;
+}
+textarea:not([cols]) {
+  width: 100%;
 }
 
 /* Add arrow to drop-down */
-select {
+select:not([multiple]) {
   background-image: linear-gradient(45deg, transparent 49%, var(--text) 51%),
     linear-gradient(135deg, var(--text) 51%, transparent 49%);
-  background-position: calc(100% - 20px), calc(100% - 15px);
+  background-position: calc(100% - 15px), calc(100% - 10px);
   background-size: 5px 5px, 5px 5px;
   background-repeat: no-repeat;
-}
-
-select[multiple] {
-  background-image: none !important;
+  padding-right: 25px;
 }
 
 /* checkbox and radio button style */
@@ -407,19 +445,19 @@ input[type="radio"] {
 
 input[type="checkbox"]:checked,
 input[type="radio"]:checked {
-  background: var(--accent);
+  background-color: var(--accent);
 }
 
 input[type="checkbox"]:checked::after {
   /* Creates a rectangle with colored right and bottom borders which is rotated to look like a check mark */
   content: " ";
-  width: 0.1em;
-  height: 0.25em;
+  width: 0.18em;
+  height: 0.32em;
   border-radius: 0;
   position: absolute;
   top: 0.05em;
-  left: 0.18em;
-  background: transparent;
+  left: 0.17em;
+  background-color: transparent;
   border-right: solid var(--bg) 0.08em;
   border-bottom: solid var(--bg) 0.08em;
   font-size: 1.8em;
@@ -433,14 +471,9 @@ input[type="radio"]:checked::after {
   border-radius: 100%;
   position: absolute;
   top: 0.125em;
-  background: var(--bg);
+  background-color: var(--bg);
   left: 0.125em;
   font-size: 32px;
-}
-
-/* Make the textarea wider than other inputs */
-textarea {
-  width: 80%;
 }
 
 /* Makes input fields wider on smaller screens */
@@ -458,6 +491,12 @@ input[type="radio"] {
   width: auto;
 }
 
+/* Set a height for color input */
+input[type="color"] {
+  height: 2.5rem;
+  padding:  0.2rem;
+}
+
 /* do not show border around file selector button */
 input[type="file"] {
   border: 0;
@@ -473,11 +512,11 @@ hr {
 mark {
   padding: 2px 5px;
   border-radius: 4px;
-  background: var(--marked);
+  background-color: var(--marked);
 }
 
-main img,
-main video {
+img,
+video {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
@@ -508,6 +547,20 @@ cite {
   font-style: normal;
 }
 
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+dl dt {
+  grid-column-start: 1;
+  color: var(--text-light);
+}
+
+dl dd {
+  grid-column-start: 2;
+}
+
 /* Use mono font for code elements */
 code,
 pre,
@@ -531,9 +584,6 @@ pre {
   max-width: 100%;
   overflow: auto;
   color: var(--preformatted);
-  background: var(--accent-bg);
-  border: 1px solid var(--border);
-  border-radius: 5px;
 }
 
 /* Fix embedded code within pre */
@@ -542,4 +592,36 @@ pre code {
   background: none;
   margin: 0;
   padding: 0;
+}
+
+/* Progress bars */
+/* Declarations are repeated because you */
+/* cannot combine vendor-specific selectors */
+progress {
+  width: 100%;
+}
+
+progress:indeterminate {
+  background-color: var(--accent-bg);
+}
+
+progress::-webkit-progress-bar {
+  border-radius: 5px;
+  background-color: var(--accent-bg);
+}
+
+progress::-webkit-progress-value {
+  border-radius: 5px;
+  background-color: var(--accent);
+}
+
+progress::-moz-progress-bar {
+  border-radius: 5px;
+  background-color: var(--accent);
+  transition-property: width;
+  transition-duration: 0.3s;
+}
+
+progress:indeterminate::-moz-progress-bar {
+  background-color: var(--accent-bg);
 }
