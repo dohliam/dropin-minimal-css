@@ -1,4 +1,4 @@
-/* MVP.css v1.9 - https://github.com/andybrewer/mvp */
+/* MVP.css v1.12 - https://github.com/andybrewer/mvp */
 
 :root {
     --active-brightness: 0.85;
@@ -286,7 +286,8 @@ a b,
 a em,
 a i,
 a strong,
-button {
+button,
+input[type="submit"] {
     border-radius: var(--border-radius);
     display: inline-block;
     font-size: medium;
@@ -296,22 +297,26 @@ button {
     padding: 1rem 2rem;
 }
 
-button {
+button,
+input[type="submit"] {
     font-family: var(--font-family);
 }
 
-button:active {
+button:active,
+input[type="submit"]:active {
     filter: brightness(var(--active-brightness));
 }
 
-button:hover {
+button:hover,
+input[type="submit"]:hover {
     cursor: pointer;
     filter: brightness(var(--hover-brightness));
 }
 
 a b,
 a strong,
-button {
+button,
+input[type="submit"] {
     background-color: var(--color-link);
     border: 2px solid var(--color-link);
     color: var(--color-bg);
@@ -345,7 +350,6 @@ figure figcaption {
 }
 
 /* Forms */
-
 button:disabled,
 input:disabled {
     background: var(--color-bg-secondary);
@@ -354,7 +358,8 @@ input:disabled {
     cursor: not-allowed;
 }
 
-button[disabled]:hover {
+button[disabled]:hover,
+input[type="submit"][disabled]:hover {
     filter: none;
 }
 
@@ -409,6 +414,11 @@ textarea {
     padding: 0.4rem 0.8rem;
 }
 
+input[type="text"],
+textarea {
+    width: calc(100% - 1.6rem);
+}
+
 input[readonly],
 textarea[readonly] {
     background-color: var(--color-bg-secondary);
@@ -417,6 +427,19 @@ textarea[readonly] {
 label {
     font-weight: bold;
     margin-bottom: 0.2rem;
+}
+
+/* Popups */
+dialog {
+    border: 1px solid var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow) var(--color-shadow);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    z-index: 999;
 }
 
 /* Tables */

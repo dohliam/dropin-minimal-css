@@ -19,12 +19,20 @@ html, button, input {
     font-family: sans-serif;
 }
 
+input {
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 5px; 
+}
+
 body {
     background-color: var(--light);
     margin: 0;
     max-width: 800px;
     padding: 0 20px 20px 20px;
     line-height: 1.4em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 p {
@@ -39,7 +47,7 @@ pre {
     overflow: auto;
 }
 
-button, .button {
+button, .button, input[type=submit] {
     display: inline-block;
     background-color: var(--dark);
     color: var(--light);
@@ -86,9 +94,23 @@ button:last-child, .button:last-child {
     ol {
         column-count: 2;
     }
-    body {
-        margin-left: 60px;
-        margin-right: 60px;
+    
+    .row {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        width: 100%;
+    }
+
+    .row .column {
+        display: block;
+        flex: 1 1 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .row .column:not(:last-child) {
+        margin-right: 10px;
     }
 }
 

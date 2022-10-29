@@ -11,7 +11,7 @@
   --accent-bg: #f5f7ff;
   --text: #212121;
   --text-light: #585858;
-  --border: #d8dae1;
+  --border: #898EA4;
   --accent: #0d47a1;
   --code: #d81b60;
   --preformatted: #444;
@@ -27,7 +27,6 @@
     --accent-bg: #2b2b2b;
     --text: #dcdcdc;
     --text-light: #ababab;
-    --border: #666;
     --accent: #ffb300;
     --code: #f06292;
     --preformatted: #ccc;
@@ -214,9 +213,11 @@ input[type="range"] {
   padding: 0;
 }
 
-/* Set the cursor to '?' while hovering over an abbreviation */
-abbr {
+/* Set the cursor to '?' on an abbreviation and style the abbreviation to show that there is more information underneath */
+abbr[title] {
   cursor: help;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
 }
 
 button:focus,
@@ -274,7 +275,8 @@ header > nav a:visited {
 }
 
 header > nav a:hover {
-  filter: brightness(1.4);
+  border-color: var(--accent);
+  color: var(--accent);
   cursor: pointer;
 }
 
@@ -437,6 +439,12 @@ input[type="checkbox"],
 input[type="radio"] {
   vertical-align: middle;
   position: relative;
+  width: min-content;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
 }
 
 input[type="radio"] {
@@ -485,12 +493,6 @@ input[type="radio"]:checked::after {
   }
 }
 
-/* Ensures the checkbox and radio inputs do not have a set width like other input fields */
-input[type="checkbox"],
-input[type="radio"] {
-  width: auto;
-}
-
 /* Set a height for color input */
 input[type="color"] {
   height: 2.5rem;
@@ -504,8 +506,9 @@ input[type="file"] {
 
 /* Misc body elements */
 hr {
-  color: var(--border);
-  border-top: 1px;
+  border: none;
+  height: 1px;
+  background: var(--border);
   margin: 1rem auto;
 }
 
@@ -547,18 +550,8 @@ cite {
   font-style: normal;
 }
 
-dl {
-  display: grid;
-  grid-template-columns: auto 1fr;
-}
-
-dl dt {
-  grid-column-start: 1;
-  color: var(--text-light);
-}
-
-dl dd {
-  grid-column-start: 2;
+dt {
+    color: var(--text-light);
 }
 
 /* Use mono font for code elements */
