@@ -154,6 +154,7 @@ If you know of a minimal framework that hasn't been included here, please create
 * [spectre](https://github.com/picturepan2/spectre) by @picturepan2 ([Preview](https://dohliam.github.io/dropin-minimal-css/?spectre) · [MIT](https://github.com/picturepan2/spectre/blob/master/LICENSE))
 * [style](https://github.com/ungoldman/style.css) by @ungoldman ([Preview](https://dohliam.github.io/dropin-minimal-css/?style) · [ISC](https://github.com/ungoldman/style.css/blob/master/license.md))
 * [stylize](https://github.com/vasanthv/stylize.css) by @vasanthv ([Preview](https://dohliam.github.io/dropin-minimal-css/?stylize) · [MIT](https://github.com/vasanthv/stylize.css/blob/master/LICENSE))
+* [superstylin](https://github.com/caiogondim/superstylin) by @caiogondim ([Preview](https://dohliam.github.io/dropin-minimal-css/?superstylin) · [MIT](https://github.com/caiogondim/superstylin/blob/master/package.json))
 * [tachyons](https://github.com/tachyons-css/tachyons/) by @tachyons-css ([Preview](https://dohliam.github.io/dropin-minimal-css/?tachyons) · [MIT](https://github.com/tachyons-css/tachyons/blob/master/license))
 * [tacit](https://github.com/yegor256/tacit) by @yegor256 ([Preview](https://dohliam.github.io/dropin-minimal-css/?tacit) · [MIT](https://github.com/yegor256/tacit/blob/master/LICENSE))
 * [tent](https://github.com/sitetent/tentcss) by @ulinaaron ([Preview](https://dohliam.github.io/dropin-minimal-css/?tent) · [MIT](https://github.com/sitetent/tentcss/blob/master/LICENSE))

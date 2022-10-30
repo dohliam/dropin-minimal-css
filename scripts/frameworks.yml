@@ -653,6 +653,13 @@ frameworks:
     license_url: https://github.com/vasanthv/stylize.css/blob/master/LICENSE
     repo: https://github.com/vasanthv/stylize.css
     url: https://github.com/vasanthv/stylize.css/blob/master/stylize.css
+  superstylin:
+    author: caiogondim
+    author_name: Caio Gondim
+    license: MIT
+    license_url: https://github.com/caiogondim/superstylin/blob/master/package.json
+    repo: https://github.com/caiogondim/superstylin
+    url: https://github.com/caiogondim/superstylin/blob/master/src/index.css
   tachyons:
     author: tachyons-css
     author_name: Tachyons CSS Toolkit
