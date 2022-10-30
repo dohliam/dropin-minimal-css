@@ -1,5 +1,5 @@
 /*
-* Cirrus 0.7.0-patch.1
+* Cirrus 0.7.1
 * Stanley Lim, Copyright 2022
 * https://spiderpig86.github.io/Cirrus
 */
@@ -15299,7 +15299,7 @@ details.accordion summary.accordion__summary {
   justify-content: space-between;
   list-style-type: none;
   opacity: 0.75;
-  transition: all 250ms ease-out;
+  transition: all 250ms;
 }
 
 details.accordion summary.accordion__summary:after {
@@ -15312,7 +15312,6 @@ details.accordion summary.accordion__summary:after {
   float: right;
   height: 1rem;
   transform: rotate(-90deg);
-  transition: all var(--animation-duration);
   width: 1rem;
 }
 
