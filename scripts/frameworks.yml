@@ -60,6 +60,13 @@ frameworks:
     license_url: https://github.com/vladocar/Basic.css/blob/master/LICENSE
     repo: https://github.com/vladocar/Basic.css
     url: https://github.com/vladocar/Basic.css/blob/master/css/basic.css
+  bolt:
+    author: tbolt
+    author_name: tbolt
+    license: MIT
+    license_url: https://github.com/tbolt/boltcss/blob/main/LICENSE
+    repo: https://github.com/tbolt/boltcss
+    url: https://github.com/tbolt/boltcss/blob/main/bolt.css
   bonsai:
     author: ciar4n
     author_name: Ciaran Walsh
