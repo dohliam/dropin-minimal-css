@@ -391,6 +391,9 @@ iframe,
 video {
   border: 0;
 }
+progress {
+  background-repeat: repeat;
+}
 body {
   color: var(--text);
   font-family: var(--font-family);

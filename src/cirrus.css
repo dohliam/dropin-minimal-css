@@ -231,7 +231,6 @@ textarea {
 /* Base styling for labels */
 label {
   display: inline-block;
-  margin: 0.25rem 0;
 }
 
 /* Base styling for fieldsets */
@@ -10208,6 +10207,7 @@ video.video-fullscreen {
   flex-shrink: 0;
   font-size: 0;
   height: 20px;
+  margin: 0;
   outline: 0;
   position: relative;
   vertical-align: top;
@@ -16076,7 +16076,7 @@ details.accordion[open] summary.accordion__summary:after {
   position: absolute;
   height: 2px;
   width: 0;
-  background: #4643e2;
+  background: currentColor;
   bottom: -0.25em;
 }
 
@@ -16121,7 +16121,7 @@ details.accordion[open] summary.accordion__summary:after {
   position: absolute;
   height: 2px;
   width: 0;
-  background: #4643e2;
+  background: currentColor;
 }
 
 .utb::before {
@@ -16182,7 +16182,7 @@ details.accordion[open] summary.accordion__summary:after {
   width: 2px;
   width: 0.1 rem;
   height: 0;
-  background: #4643e2;
+  background: currentColor;
 }
 
 .usquare::before {

@@ -1,6 +1,6 @@
 /**
  * Bolt.css
- * Version 0.4.0
+ * Version 0.5.0
  * https://github.com/tbolt/boltcss
  *
  * Sections
@@ -206,6 +206,12 @@ a {
   color: var(--links);
 }
 
+a:active,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
 mark,
 samp,
 kbd,
@@ -240,8 +246,7 @@ code,
 pre {
   font-size: 1em;
   padding: 2px 4px;
-  background-color: whitesmoke;
-  color: black;
+  background: var(--background-main);
   border: 1px solid darkgray;
   max-width: fit-content;
   overflow-x: auto;
