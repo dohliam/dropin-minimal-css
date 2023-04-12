@@ -117,6 +117,14 @@ frameworks:
     license_url: https://github.com/cardinalcss/cardinalcss/blob/master/LICENSE.md
     repo: https://github.com/cardinalcss/cardinalcss
     url: https://github.com/cardinalcss/cardinalcss/blob/master/cardinal.css
+  centigram:
+    author: milouse
+    author_name: Étienne Deparis
+    license: MIT
+    license_url: https://github.com/milouse/centigram/blob/main/LICENSE
+    repo: https://github.com/milouse/centigram
+    url: https://github.com/milouse/centigram/blob/main/dist/centigram.min.css
+    min_only: true
   centurion:
     author: justinhough
     author_name: Justin Hough
