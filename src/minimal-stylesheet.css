@@ -2,6 +2,10 @@
  * https://jgthms.com/web-design-in-4-minutes/ 
  */
 
+:root {
+  --color-hi: #f56a6a;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -50,7 +54,7 @@ pre {
 }
 
 a {
-  color: #f56a6a;
+  color: var(--color-hi);
 }
 
 blockquote, q {

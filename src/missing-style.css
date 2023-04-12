@@ -532,7 +532,24 @@ nav a {
 		color: var(--accent);
 	}
 
-/* SEE components/box.css */
+aside {
+	font-size: .8em;
+	line-height: calc(var(--rhythm) * 2 / 3);
+	--gap: calc(var(--rhythm) * var(--density) * 2 / 3)
+}
+
+aside>* { --rhythm: calc(var(--gap)) }
+
+aside {
+
+	border-block: 1px solid var(--graphical-fg);
+	padding-block: var(--gap);
+	margin-block: calc(var(--gap) * 3 / 2)
+}
+
+aside.bg {
+		padding-inline: var(--gap);
+	}
 
 aside h1,
 	aside h2,
@@ -633,6 +650,13 @@ header {
 
 footer {
 	font-family: var(--secondary-font);
+	font-size: .8em;
+	line-height: calc(var(--rhythm) * 2 / 3);
+}
+
+footer>* { --rhythm: calc(var(--rhythm) * 2 / 3) }
+
+footer {
 	border-block-start: 1px solid var(--graphical-fg);
 }
 
@@ -704,7 +728,8 @@ blockquote footer {
 	}
 
 ul, ol {
-	padding-inline-start: var(--rhythm)
+	padding-inline-start: var(--rhythm);
+	margin-block: var(--gap)
 }
 
 ul ul, ul ol, ol ul, ol ol {
@@ -729,6 +754,7 @@ dl {
 
 dt {
 		font-weight: bold;
+		font-family: var(--secondary-font);
 	}
 
 dd {
@@ -774,12 +800,13 @@ main:first-child { padding-top: var(--gap); }
 
 a, .\<a\> {
 	color: var(--link-fg, var(--accent));
-	font-family: var(--secondary-font);
 	border-radius: var(--border-radius);
 	outline-offset: 1px;
 	background: none;
 	border: none;
-	font-size: 1em
+	font-size: 1em;
+	-webkit-text-decoration: 1px dotted underline;
+	        text-decoration: 1px dotted underline
 }
 
 .list-of-links :is(a,.\<a\>) {
@@ -787,51 +814,51 @@ a, .\<a\> {
 }
 
 :is(a,.\<a\>):hover, :is(a,.\<a\>):focus {
-		text-decoration: none;
-		outline: 1px solid;
-		transition: outline-offset .1s ease-in-out;
-	}
-
-:is(a,.\<a\>):active {
-		outline-offset: 0;
+		-webkit-text-decoration: 2px solid underline;
+		        text-decoration: 2px solid underline;
+		cursor: pointer;
+		outline: none;
 	}
 
 small[role="note"] {
-		/***
-		 Sidenote
-		 ***/
-		display: block;
-		float: inline-end;
-		clear: inline-end;
+	/***
+	 Sidenote
+	 ***/
+	display: block;
+	float: inline-end;
+	clear: inline-end;
 
-		--sidenote-width: 20ch;
+	--sidenote-width: 20ch;
 
-		max-inline-size: var(--sidenote-width);
-		padding-inline: 1.5ch 1ch;
+	max-inline-size: var(--sidenote-width);
+	padding-inline: 1.5ch 1ch;
 
-		margin-inline-end: calc(1em - var(--sidenote-width));
-		margin-block-end: var(--rhythm);
+	margin-inline-end: calc(1em - var(--sidenote-width));
+	margin-block-end: var(--rhythm);
 
-		font-family: var(--secondary-font);
+	font-family: var(--secondary-font);
 
-		background: var(--bg);
-		border: 1px solid transparent;
+	background: var(--bg);
+	border: 1px solid transparent;
 
-		transition: transform .1s ease-in-out
-	}
+	transition: transform .1s ease-in-out
+}
 
 small[role="note"]:hover, small[role="note"]:focus-within {
-			border: 1px solid var(--graphical-fg);
-			border-radius: var(--border-radius);
-			transform: translateX(calc(
-				0px - var(--sidenote-width)
-				+ min(var(--gutter-width), var(--sidenote-width))
-			))
-		}
+		border: 1px solid var(--graphical-fg);
+		border-radius: var(--border-radius);
+		transform: translateX(calc(
+			0px - var(--sidenote-width)
+			+ min(var(--gutter-width), var(--sidenote-width))
+		))
+	}
 
 small, .\<small\> {
 	font-size: .8em;
+	line-height: calc(var(--rhythm) * 2 / 3)
 }
+
+:is(small,.\<small\>)>* { --rhythm: calc(var(--rhythm) * 2 / 3) }
 
 s {
 	color: var(--bad-fg);
@@ -984,7 +1011,8 @@ input::file-selector-button,
 	display: inline-block;
 	padding: 0 calc(var(--rhythm) / 4);
 	vertical-align: middle;
-
+	box-sizing: border-box;
+	
 	font-size: .8rem;
 	line-height: 1.125em;
 	font-family: var(--secondary-font);
@@ -993,34 +1021,47 @@ input::file-selector-button,
 	background: var(--interactive-bg);
 	color: var(--fg);
 	border: 1px solid var(--muted-fg);
-	box-sizing: border-box;
+	box-shadow: 0 2px 4px -2px var(--fg);
 	border-radius: var(--border-radius);
 
 	/* a-specific resets */
 	color: var(--fg);
 	text-decoration: none;
 	display: inline-flex;
-	place-items: center
+	justify-content: center;
+	align-items: center
 }
 
 :is(button,input[type="submit"],input[type="reset"],input[type="button"],input::file-selector-button,.\<button\>):hover, :is(button,input[type="submit"],input[type="reset"],input[type="button"],input::file-selector-button,.\<button\>):focus-visible {
 		filter: brightness(1.1);
+		box-shadow: 0 3px 6px -2px var(--fg);
 
 		/* a-specific resets */
 		text-decoration: none;
 	}
 
 :is(button,input[type="submit"],input[type="reset"],input[type="button"],input::file-selector-button,.\<button\>):active {
-		filter: brightness(.8);
+		box-shadow: none
 	}
 
-[aria-pressed="true"]:is(button,input[type="submit"],input[type="reset"],input[type="button"],input::file-selector-button,.\<button\>), [aria-expanded="true"]:is(button,input[type="submit"],input[type="reset"],input[type="button"],input::file-selector-button,.\<button\>) {
-		box-shadow: 0 .05em var(--accent) inset;
+:is(button,input[type="submit"],input[type="reset"],input[type="button"],input::file-selector-button,.\<button\>):active:is([aria-pressed], [aria-expanded]) {
+			color: var(--accent);
+			box-shadow: 0 1px 5px -1px var(--fg) inset;
+		}
+
+:is(button,input[type="submit"],input[type="reset"],input[type="button"],input::file-selector-button,.\<button\>):where([aria-pressed="true"], [aria-expanded="true"]) {
+		box-shadow: 0 2px 4px -1px var(--fg) inset;
 		background: var(--pressed-interactive-bg);
+		color: var(--accent)
 	}
+
+:is(button,input[type="submit"],input[type="reset"],input[type="button"],input::file-selector-button,.\<button\>):where([aria-pressed="true"], [aria-expanded="true"]):hover, :is(button,input[type="submit"],input[type="reset"],input[type="button"],input::file-selector-button,.\<button\>):where([aria-pressed="true"], [aria-expanded="true"]):focus-visible {
+			box-shadow: 0 1px 3px -1px var(--fg) inset;
+		}
 
 [disabled]:is(button,input[type="submit"],input[type="reset"],input[type="button"],input::file-selector-button,.\<button\>) {
 		color: var(--muted-fg);
+		box-shadow: none;
 	}
 
 strong > :is(button,input[type="submit"],input[type="reset"],input[type="button"],input::file-selector-button,.\<button\>) {
@@ -1215,8 +1256,7 @@ dialog:not([open]) {
 [role=tabpanel],
 figure,
 details,
-dialog,
-aside {
+dialog {
     margin: var(--gap) 0;
     padding: var(--gap);
     overflow: clip;
@@ -1473,33 +1513,32 @@ button.iconbutton[aria-pressed=true] {
     padding: 0 calc(var(--rhythm) / 4);
     margin: 0;
     min-height: var(--rhythm);
+    bottom: -1px;
+    position: relative;
     
     color: var(--fg);
     border: solid var(--graphical-fg);
-    border-width: 1px 1px 0 1px;
-    border-block-end-color: transparent;
+    border-width: 1px;
     background: var(--interactive-bg);
-
+    
     border-start-start-radius: .4em;
     border-start-end-radius: .4em
 }
 
 [role="tab"][role="tab"]:active, [role="tab"][role="tab"][aria-selected="true"] {
-        transform: none;
-        bottom: -1px;
-        position: relative;
         background: var(--box-bg);
-        border-block-end: 1px solid var(--box-bg);
+        border-block-end: 1px solid transparent;
     }
 
 [role="tab"][role="tab"]:hover {
         background-color: var(--box-bg);
+        box-shadow: none;
     }
 
-[role="tab"][role="tab"]:focus {
-        background-color: var(--box-bg);
-        border-color: var(--accent);
-        outline: 1px solid var(--accent);
+[role="tab"][role="tab"]:focus-visible {
+        box-shadow: none;
+        color: var(--accent);
+        text-decoration: underline;
     }
 
 [role="tabpanel"] {
@@ -1709,19 +1748,22 @@ button.iconbutton[aria-pressed=true] {
     	--box-bg: var(--gray-10);
     	--interactive-bg: var(--gray-8);
 
-		--plain-fg: (--blue-3);
-    	--info-fg: var(--blue-3);
-    	--ok-fg: var(--green-3);
-    	--bad-fg: var(--red-3);
-    	--warn-fg: var(--yellow-3);
+		--plain-fg: (--blue-2);
+    	--info-fg: var(--blue-2);
+    	--ok-fg: var(--green-2);
+    	--bad-fg: var(--red-2);
+    	--warn-fg: var(--yellow-2);
 
-    	--accent: var(--blue-3);
+    	--accent: var(--blue-2);
     	--muted-accent: var(--blue-5);
     }
 }
 
 * {
 	--gap: calc(var(--rhythm) * var(--density));
+}
+
+* {
 	accent-color: var(--accent);
 }
 
@@ -1933,7 +1975,7 @@ button.iconbutton[aria-pressed=true] {
 .margin-inline-end { margin-inline-end: var(--gap) }
 
 .flow-gap > :not(:last-child) {
-        margin-bottom: 1em;
+        margin-bottom: var(--gap);
     }
 
 /**/
@@ -1973,6 +2015,12 @@ button.iconbutton[aria-pressed=true] {
 .big {
     font-size: 1.4em;
     line-height: calc(1.5 * var(--rhythm));
+}
+
+/**/
+
+.nested-list ul, .nested-list ol {
+    margin-block: 0;
 }
 
 /**/

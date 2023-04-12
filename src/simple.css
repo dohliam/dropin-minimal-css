@@ -1,10 +1,12 @@
 /* Global variables. */
-:root {
+:root,
+::backdrop {
   /* Set sans-serif & mono fonts */
   --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
     "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
     "Helvetica Neue", sans-serif;
   --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --standard-border-radius: 5px;
 
   /* Default (light) theme */
   --bg: #fff;
@@ -21,7 +23,8 @@
 
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root,
+  ::backdrop {
     color-scheme: dark;
     --bg: #212121;
     --accent-bg: #2b2b2b;
@@ -182,7 +185,7 @@ input[type="reset"],
 input[type="button"],
 label[type="button"] {
   border: none;
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   background-color: var(--accent);
   font-size: 1rem;
   color: var(--bg);
@@ -198,15 +201,16 @@ input[type="button"][disabled],
 input[type="checkbox"][disabled],
 input[type="radio"][disabled],
 select[disabled] {
-  opacity: 0.5;
   cursor: not-allowed;
 }
 
 input:disabled,
 textarea:disabled,
-select:disabled {
+select:disabled,
+button[disabled] {
   cursor: not-allowed;
   background-color: var(--disabled);
+  color: var(--text-light)
 }
 
 input[type="range"] {
@@ -220,20 +224,24 @@ abbr[title] {
   text-decoration-style: dotted;
 }
 
-button:focus,
 button:enabled:hover,
-[role="button"]:focus,
 [role="button"]:not([aria-disabled="true"]):hover,
-input[type="submit"]:focus,
 input[type="submit"]:enabled:hover,
-input[type="reset"]:focus,
 input[type="reset"]:enabled:hover,
-input[type="button"]:focus,
 input[type="button"]:enabled:hover,
-label[type="button"]:focus,
 label[type="button"]:hover {
   filter: brightness(1.4);
   cursor: pointer;
+}
+
+button:focus-visible:where(:enabled, [role="button"]:not([aria-disabled="true"])),
+input:enabled:focus-visible:where(
+  [type="submit"],
+  [type="reset"],
+  [type="button"]
+) {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
 }
 
 /* Format navigation */
@@ -267,7 +275,7 @@ header > nav a,
 header > nav a:visited {
   margin: 0 0.5rem 1rem 0.5rem;
   border: 1px solid var(--border);
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   color: var(--text);
   display: inline-block;
   padding: 0.1rem 1rem;
@@ -294,7 +302,7 @@ header > nav a:hover {
 aside, details, pre, progress {
   background-color: var(--accent-bg);
   border: 1px solid var(--border);
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   margin-bottom: 1rem;
 }
 
@@ -315,10 +323,10 @@ aside {
   }
 }
 
-article, fieldset {
+article, fieldset, dialog {
   border: 1px solid var(--border);
   padding: 1rem;
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   margin-bottom: 1rem;
 }
 
@@ -373,10 +381,7 @@ details[open] > :last-child {
 /* Format tables */
 table {
   border-collapse: collapse;
-  display: block;
   margin: 1.5rem 0;
-  overflow: auto;
-  width: 100%;
 }
 
 td,
@@ -412,7 +417,7 @@ input {
   color: var(--text);
   background-color: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   box-shadow: none;
   max-width: 100%;
   display: inline-block;
@@ -514,23 +519,26 @@ hr {
 
 mark {
   padding: 2px 5px;
-  border-radius: 4px;
+  border-radius: var(--standard-border-radius);
   background-color: var(--marked);
+  color: black;
 }
 
 img,
 video {
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
 }
 
 figure {
   margin: 0;
-  text-align: center;
+  display: block;
+  overflow-x: auto;
 }
 
 figcaption {
+  text-align: center;
   font-size: 0.9rem;
   color: var(--text-light);
   margin-bottom: 1rem;
@@ -568,7 +576,7 @@ kbd {
   color: var(--preformatted);
   border: 1px solid var(--preformatted);
   border-bottom: 3px solid var(--preformatted);
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   padding: 0.1rem 0.4rem;
 }
 
@@ -599,17 +607,17 @@ progress:indeterminate {
 }
 
 progress::-webkit-progress-bar {
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   background-color: var(--accent-bg);
 }
 
 progress::-webkit-progress-value {
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   background-color: var(--accent);
 }
 
 progress::-moz-progress-bar {
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   background-color: var(--accent);
   transition-property: width;
   transition-duration: 0.3s;
@@ -617,4 +625,49 @@ progress::-moz-progress-bar {
 
 progress:indeterminate::-moz-progress-bar {
   background-color: var(--accent-bg);
+}
+
+dialog {
+  max-width: 40rem;
+  margin: auto;
+}
+
+dialog::backdrop {
+  background-color: var(--bg);
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 720px) {
+  dialog {
+    max-width: 100%;
+    margin: auto 1em;
+  }
+}
+
+/* Classes for buttons and notices */
+.button,
+.button:visited {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  background: var(--accent);
+  font-size: 1rem;
+  color: var(--bg);
+  padding: 0.7rem 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.button:hover,
+.button:focus {
+  filter: brightness(1.4);
+  cursor: pointer;
+}
+
+.notice {
+  background: var(--accent-bg);
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  padding: 1.5rem;
+  margin: 2rem 0;
 }

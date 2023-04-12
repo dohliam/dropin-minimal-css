@@ -11,7 +11,7 @@
  * 5. Tables
  * 6. Forms
  * 7. Interactive elements
- * 
+ *
  */
 
 :root {
@@ -254,6 +254,7 @@ pre {
 
 pre > code {
   padding: 10px;
+  border: 0;
   display: block;
   overflow-x: auto;
 }
@@ -358,7 +359,7 @@ button {
   padding: 6px 15px 6px 15px;
   border: 1px solid transparent;
   border-radius: 6px;
-  box-shadow: 0px 1px 1.5px rgb(158 158 158 / 60%);
+  box-shadow: 0px 1px 1.5px rgba(158, 158, 158, 0.6);
 }
 
 button:active {
