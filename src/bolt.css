@@ -1,6 +1,6 @@
 /**
  * Bolt.css
- * Version 0.5.0
+ * Version 0.6.0
  * https://github.com/tbolt/boltcss
  *
  * Sections
@@ -17,6 +17,7 @@
 :root {
   --highlight-border-radius: 7px;
   --border-radius: 11px;
+  --yellow-highlight: #fffab7;
 
   --links: #0f6dff;
   --background-body: #fff;
@@ -223,7 +224,7 @@ time {
 }
 
 mark {
-  background-color: #fffab7;
+  background-color: var(--yellow-highlight);
   padding: 3px 5px;
 }
 
@@ -483,8 +484,30 @@ select:hover {
 }
 
 meter {
-  height: 2.2em;
-  vertical-align: middle;
+  height: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+progress {
+  appearance: none;
+  height: 1rem;
+  margin: 0.75rem 0;
+}
+
+progress::-webkit-progress-bar {
+  background: var(--background-main);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+  border-radius: var(--highlight-border-radius);
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--links);
+  border-radius: var(--highlight-border-radius);
+}
+
+progress::-moz-progress-bar {
+  background-color: var(--links);
+  border-radius: var(--highlight-border-radius);
 }
 
 fieldset {

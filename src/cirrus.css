@@ -386,7 +386,7 @@ fieldset legend {
   display: block;
   height: 1rem;
   width: 1rem;
-  left: calc(50% - 0.8em);
+  left: calc(50% - 0.5714285714rem);
   top: calc(50% - 0.7407407407em);
   position: absolute;
   animation: loading 500ms infinite linear;
@@ -13465,6 +13465,7 @@ ul .divider::after {
   pointer-events: none; /* Remove pointer events to prevent mouse hover to show menu even though it is not visible */
   overflow: hidden;
   transition: all var(--animation-duration);
+  text-align: left;
 }
 
 @media screen and (max-width: 767px) {
@@ -16766,6 +16767,38 @@ ul .divider::after {
 
 .u-duration-1000 {
   transition-duration: 1000ms !important;
+}
+
+.u-align-baseline {
+  vertical-align: baseline !important;
+}
+
+.u-align-top {
+  vertical-align: top !important;
+}
+
+.u-align-middle {
+  vertical-align: middle !important;
+}
+
+.u-align-bottom {
+  vertical-align: bottom !important;
+}
+
+.u-align-text-top {
+  vertical-align: text-top !important;
+}
+
+.u-align-text-bottom {
+  vertical-align: text-bottom !important;
+}
+
+.u-align-sub {
+  vertical-align: sub !important;
+}
+
+.u-align-super {
+  vertical-align: super !important;
 }
 
 .u-z-n1 {

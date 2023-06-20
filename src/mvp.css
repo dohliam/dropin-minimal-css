@@ -1,4 +1,4 @@
-/* MVP.css v1.12 - https://github.com/andybrewer/mvp */
+/* MVP.css v1.13 - https://github.com/andybrewer/mvp */
 
 :root {
     --active-brightness: 0.85;
@@ -269,17 +269,15 @@ a {
     color: var(--color-link);
     display: inline-block;
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a:active {
     filter: brightness(var(--active-brightness));
-    text-decoration: underline;
 }
 
 a:hover {
     filter: brightness(var(--hover-brightness));
-    text-decoration: underline;
 }
 
 a b,
@@ -504,4 +502,24 @@ blockquote footer {
     font-size: small;
     line-height: var(--line-height);
     padding: 1.5rem 0;
+}
+
+/* Scrollbars */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: rgb(202, 202, 232) auto;
+}
+
+*::-webkit-scrollbar {
+	width: 5px;
+	height:5px;
+}
+
+*::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color:rgb(202, 202, 232);
+	border-radius: 10px;
 }
