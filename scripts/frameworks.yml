@@ -332,6 +332,13 @@ frameworks:
     license_url: https://github.com/lucasarvelo/lemon/blob/master/LICENSE
     repo: https://github.com/lucasarvelo/lemon
     url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/lemon.css
+  lissom:
+    author: Looky1173
+    author_name: Looky1173
+    license: MIT
+    license_url: https://github.com/lissomware/css/blob/main/LICENSE.md
+    repo: https://github.com/lissomware/css
+    url: https://github.com/lissomware/css/blob/main/lissom.css
   lit:
     author: Ajusa
     author_name: Arham Jain
