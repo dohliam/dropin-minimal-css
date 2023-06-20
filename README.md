@@ -105,7 +105,7 @@ If you know of a minimal framework that hasn't been included here, please create
 * [kube](https://github.com/imperavi/kube) by @imperavi ([Preview](https://dohliam.github.io/dropin-minimal-css/?kube) · [MIT](https://github.com/imperavi/kube/blob/master/LICENSE))
 * [latex](https://github.com/davidrzs/latexcss) by @davidrzs ([Preview](https://dohliam.github.io/dropin-minimal-css/?latex) · [MIT](https://github.com/davidrzs/latexcss/blob/master/LICENSE))
 * [lemon](https://github.com/lucasarvelo/lemon) by @appalaszynski ([Preview](https://dohliam.github.io/dropin-minimal-css/?lemon) · [MIT](https://github.com/lucasarvelo/lemon/blob/master/LICENSE))
-* [lissome](https://github.com/lissomware/css) by @Looky1173 ([Preview](https://dohliam.github.io/dropin-minimal-css/?lissome) · [MIT](https://github.com/lissomware/css/blob/main/LICENSE.md))
+* [lissom](https://github.com/lissomware/css) by @Looky1173 ([Preview](https://dohliam.github.io/dropin-minimal-css/?lissom) · [MIT](https://github.com/lissomware/css/blob/main/LICENSE.md))
 * [lit](https://github.com/Ajusa/lit) by @Ajusa ([Preview](https://dohliam.github.io/dropin-minimal-css/?lit) · [MIT](https://github.com/Ajusa/lit/blob/master/LICENSE))
 * [lotus](https://github.com/goatslacker/lotus.css) by @goatslacker ([Preview](https://dohliam.github.io/dropin-minimal-css/?lotus) · [MIT](https://github.com/goatslacker/lotus.css#license))
 * [markdown](https://github.com/mrcoles/markdown-css) by @mrcoles ([Preview](https://dohliam.github.io/dropin-minimal-css/?markdown) · [MIT](https://github.com/mrcoles/markdown-css/blob/master/license.txt))
