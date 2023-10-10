@@ -45,11 +45,13 @@ figcaption {
   font-size: small;
 }
 pre, code, samp, kbd {
-  color: #009;
   font-family: monospace, monospace;
 }
-pre kbd {
-  color: #060;
+pre, code, kbd {
+  color: #050;
+}
+samp {
+  color: #730;
 }
 pre, blockquote {
   background: #eee;
@@ -91,13 +93,14 @@ th, td {
     color: #9cf;
   }
   a:active {
-    color: #faa;
+    color: #f99;
   }
-  pre, code, samp, kbd {
-    color: #6cf;
-  }
-  pre kbd {
+  pre, code, kbd {
     color: #9c6;
+    font-family: monospace, monospace;
+  }
+  samp {
+    color: #db0;
   }
   pre, blockquote {
     background: #000;

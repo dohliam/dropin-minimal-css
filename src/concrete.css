@@ -1,108 +1,163 @@
-/*! concrete.css v1.3.0 | MIT License | github.com/louismerlin/concrete.css/ */
+/*! concrete.css v2.0.3 | MIT License | github.com/louismerlin/concrete.css */
 
-/* The Basics */
+/**
+ * 1. Modify the base font-size to 62.5% so that 1.6rem = 16px.
+ * 2. Set box-sizing globally to handle padding and border widths.
+ */
 
 html {
-  font-size: 62.5%;
-  box-sizing: border-box;
+  font-size: 62.5%; /* 1 */
+  box-sizing: border-box; /* 2 */
 }
 
-body {
-  font-size: 2rem;
-  font-weight: 400;
-  background: white;
-  color: #121212;
-  font-family: Helvetica, Arial, sans-serif;
-}
+/**
+ * 1. Continue the global box-sizing modification.
+ * 2. Set the underline size for all elements.
+ */
 
 *, ::after, ::before {
-  box-sizing: inherit;
+  box-sizing: inherit; /* 1 */
+  text-decoration-thickness: .2rem; /* 2 */
 }
+
+/**
+ * 1. Set global font size to 2rem (20px) with a normal weight.
+ * 2. Set the text and background color to white and black by default.
+ * 3. Set the font-family to Helvetica, or equivalent.
+ */
+
+body {
+  font-size: 2rem; /* 1 */
+  font-weight: 400; /* 1 */
+  background: #fff; /* 2 */
+  color: #111; /* 2 */
+  font-family: Helvetica, Arial, sans-serif; /* 3 */
+}
+
+/**
+ * Set the link color to black
+ */
 
 a {
-  color: #121212;
+  color: #111;
 }
 
-blockquote, dl, figure, form, ol, p, pre, table, ul {
-  margin-bottom: 2.2rem;
-}
+/**
+ * 1. Set the max width of images to 100%, so that they don't overflow.
+ * 2. Set the height of images relative to their width.
+ */
 
 img {
-  height: auto;
-  max-width: 100%;
+  max-width: 100%; /* 1 */
+  height: auto; /* 2 */
 }
 
-/* A Cool Container */
+/** 
+ * 1. Center the main element horizontally.
+ * 2. Set the width of the element to 640px, with padding for mobile screens.
+ */
 
-.container {
-  margin: 0 auto;
-  max-width: 66rem;
-  padding: 0 1rem;
-  width: 100%;
-  position: relative;
+main {
+  margin: auto; /* 1 */
+  max-width: 66rem; /* 2 */
+  padding: 0 1rem; /* 2 */
+  width: 100%; /* 2 */
 }
 
-/* The Button */
+/**
+ * 1. Add some padding around the header.
+ * 2. Increase the size of text in the header.
+ */
 
-.button {
-  text-decoration: none;
+header {
+  padding: 16rem 0; /* 1 */
+  font-size: 1.2em; /* 2 */
 }
+
+/**
+ * Center the text in the footer.
+ */
+
+footer {
+  text-align: center;
+}
+
+/**
+ * Add some padding around the sections.
+ */
+
+section {
+  padding: 4rem 0;
+}
+
+/**
+ * 1. Change the style of the button.
+ * 2. Set the color and border of the button.
+ * 3. Add the pointer cursor when hovering a button.
+ */
 
 button,
-.button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  display: inline-block;
-  vertical-align: middle;
-  border-radius: 0;
-  background: white;
-  line-height: 2.2rem;
-  font-size: 1.6rem;
-  color: #121212;
-  border: 0.3rem solid #121212;
-  padding: 0.4rem 1rem;
-  cursor: pointer;
+  display: inline-block; /* 1 */
+  vertical-align: middle; /* 1 */
+  padding: .4rem 1rem; /* 1 */
+  font-size: 2rem; /* 1 */
+  font-weight: normal; /* 1 */
+  margin-bottom: 1rem; /* 1 */
+  background: #fff; /* 2 */
+  color: #111; /* 2 */
+  border: .2rem solid #111; /* 2 */
+  border-radius: 0; /* 2 */
+  cursor: pointer; /* 3 */
 }
 
-button.filled,
-.button.filled,
-input[type="button"].filled,
-input[type="reset"].filled,
-input[type="submit"].filled {
-  color: white;
-  background: #121212;
+/**
+ * 1. Invert the colors of the disabled button.
+ * 2. Add the not-allowed cursor when hovering a disabled button.
+ */
+
+button:disabled,
+input[type="button"]:disabled,
+input[type="reset"]:disabled,
+input[type="submit"]:disabled{
+  color: #fff; /* 1 */
+  background: #111; /* 1 */
+  cursor: not-allowed; /* 2 */
 }
 
-.button,
-button,
-dd,
-dt,
-li,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  margin-bottom: 1.0rem;
-}
-
-/* The List */
+/**
+ * Set the list bullet to square.
+ */
 
 ul {
   list-style: square;
 }
 
-/* The Form */
+/**
+ * Set the border around a fieldset.
+ */
 
 fieldset {
-  border-width: 0;
-  padding: 0;
+  border: .2rem solid #111;
 }
 
+/**
+ * 1. Modify the display of labels and legends.
+ * 2. Add a margin underneath.
+ */
+
 label, legend {
-  display: block;
-  font-weight: bold;
-  margin-bottom: .5rem;
+  display: block; /* 1 */
+  font-weight: bold; /* 1 */
+  margin-bottom: .8rem; /* 2 */
 }
+
+/** 
+ * 1. Change the appearance of the text input.
+ * 2. Set the color and border of the text input.
+ */
 
 input[type="email"],
 input[type="number"],
@@ -113,126 +168,195 @@ input[type="text"],
 input[type="url"],
 textarea,
 select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  border: 0.1rem solid #121212;
-  border-radius: 0;
-  box-shadow: none;
-  box-sizing: inherit;
-  padding: .6rem 1.0rem;
-  width: 100%;
+  -webkit-appearance: none; /* 1 */
+  -moz-appearance: none; /* 1 */
+  appearance: none; /* 1 */
+  box-shadow: none; /* 1 */
+  box-sizing: inherit; /* 1 */
+  padding: .4rem 1rem; /* 1 */
+  width: 100%; /* 1 */
+  font-size: 2rem; /* 1 */
+  color: #111; /* 2 */
+  background-color: #fff; /* 2 */
+  border: .2rem solid #111; /* 2 */
+  border-radius: 0; /* 2 */
 }
+
+/**
+ * Set margin for form elements.
+ */
 
 fieldset, input, select, textarea {
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.6rem 0;
 }
 
-/* The Table */
+/**
+ * 1. Set the font color for the placeholder in inputs.
+ * 2. Set font-style to italic for the placeholder in inputs.
+ */
+
+input::placeholder,
+textarea::placeholder {
+  color: #111; /* 1 */
+  font-style: italic; /* 2 */
+}
+
+/**
+ * 1. Expand width to 100% for the table element.
+ * 2. Remove the distance between the borders of adjacent table cells.
+ */
 
 table {
-  width: 100%;
-  border-spacing: 0;
+  width: 100%; /* 1 */
+  border-spacing: 0; /* 2 */
 }
+
+/**
+ * Add padding around table cells.
+ */
 
 td, th {
-  padding: 0.6rem 0;
+  padding: .8rem;
 }
 
-td {
-  border-bottom: 0.1rem solid #121212;
+/**
+ * Remove left padding for first cell in a row.
+ */
+
+td:first-child, th:first-child {
+  padding-left: 0;
 }
+
+/**
+ * Remove right padding for last cell in a row.
+ */
+
+td:last-child, th:last-child {
+  padding-right: 0;
+}
+
+/**
+ * 1. Add a border under the table header.
+ * 2. Align the text to the left in the table header.
+ */
 
 th {
-  border-bottom: 0.3rem solid #121212;
-  text-align: left;
+  border-bottom: .2rem solid #111; /* 1 */
+  text-align: left; /* 2 */
 }
 
-/* The Blockquote and the Code */
+/**
+ * Add a thiner border under table rows.
+ */
+
+td {
+  border-bottom: .1rem solid #111;
+}
+
+/**
+ * 1. Change the margins and padding.
+ * 2. Add a border on the left of these elements.
+ * 3. Set the y overflow to hidden to hide the navigation bar.
+ */
 
 blockquote, pre {
-  border-left: 0.3rem solid #121212;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 1rem 1.5rem;
-  overflow-y: hidden;
+  margin-left: 0; /* 1 */
+  margin-right: 0; /* 1 */
+  padding: 1rem 1.6rem; /* 1 */
+  border-left: .2rem solid #111; /* 2 */
+  overflow-y: hidden; /* 3 */
 }
+
+/**
+ * 1. Set the rest of the border of the preformatted element to dotted.
+ * 2. Re-set the left border style.
+ */
 
 pre {
-  border: 0.1rem dotted #121212;
-  border-left: 0.3rem solid #121212;
+  border: 0.1rem dotted #111;
+  border-left: 0.2rem solid #111;
 }
+
+/**
+ * 1. Modify the display of the code block.
+ * 2. Reduce the font size of the code block.
+ */
 
 pre > code {
-  padding: 1rem 1.4rem;
-  font-size: 1.6rem;
-  white-space: pre;
-  display: block;
+  white-space: pre; /* 1 */
+  display: block; /* 1 */
+  font-size: 1.6rem; /* 2 */
 }
 
-/* The Progress Bar */
+/**
+ * 1. Modify the display of the progress bar in all browsers.
+ * 2. Set the colors and border of the progress bar.
+ */
 
 progress {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  border-radius: 0;
-  display: block;
-  height: 1rem;
-  border: 0.1rem solid #121212;
-  background: white;
-  color: #121212;
-  overflow: hidden;
-  padding: 0;
-  width: 100%;
-}
-progress::-webkit-progress-bar {
-  background-color: white;
-}
-progress::-webkit-progress-value {
-  background-color: #121212;
-}
-progress::-moz-progress-bar {
-  background-color: #121212;
-}
-progress::-ms-fill {
-  background-color: #121212;
+  -moz-appearance: none; /* 1 */
+  -webkit-appearance: none; /* 1 */
+  display: block; /* 1 */
+  height: 1rem; /* 1 */
+  overflow: hidden; /* 1 */
+  padding: 0; /* 1 */
+  width: 100%; /* 1 */
+  background: #fff; /* 2 */
+  color: #111; /* 2 */
+  border: .2rem solid #111; /* 2 */
+  border-radius: 0; /* 2 */
 }
 
-/* The Break Line */
+/**
+ * Set the background color of the webkit progress bar.
+ */
+
+progress::-webkit-progress-bar {
+  background-color: #fff;
+}
+
+/**
+ * Set the color of the webkit progress bar.
+ */
+
+progress::-webkit-progress-value {
+  background-color: #111;
+}
+
+/**
+ * Set the color of the mozilla progress bar.
+ */
+
+progress::-moz-progress-bar {
+  background-color: #111;
+}
+
+/**
+ * Set the border for the horizontal rule.
+ */
 
 hr {
-  border: 0.2rem solid #121212;
-  border-bottom-width: 0.1rem;
+  border: .1rem solid #111;
 }
 
-/* Dark Mode */
+/**
+ * Invert the colors if the user has dark mode activated.
+ */
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: #121212;
-    color: white;
+    background: #111;
+    color: #fff;
   }
-  a {
-    color: white;
+  a,
+  input::placeholder,
+  textarea::placeholder {
+    color: #fff;
   }
   button,
-  .button,
   input[type="button"],
   input[type="reset"],
-  input[type="submit"] {
-    background: #121212;
-    color: white;
-    border-color: white;
-  }
-  button.filled,
-  .button.filled,
-  input[type="button"].filled,
-  input[type="reset"].filled,
-  input[type="submit"].filled {
-    color: #121212;
-    background: white;
-  }
+  input[type="submit"],
   input[type="email"],
   input[type="number"],
   input[type="password"],
@@ -241,41 +365,36 @@ hr {
   input[type="text"],
   input[type="url"],
   textarea,
-  select {
-    color: white;
-    border-color: white;
-  }
-  td {
-    border-bottom-color: white;
-  }
-  th {
-    border-bottom-color: white;
-  }
-  blockquote, pre {
-    border-left-color: white;
-  }
-  pre {
-    border-color: white;
-    border-left-color: white;
-  }
+  select,
   progress {
-    border-color: white;
-    background: #121212;
-    color: white;
+    background: #111;
+    color: #fff;
+    border-color: #fff;
+  }
+  button:disabled,
+  input[type="button"]:disabled,
+  input[type="reset"]:disabled,
+  input[type="submit"]:disabled{
+    color: #111;
+    background: #fff;
+  }
+  fieldset {
+    border-color: #fff;
+  }
+  td,
+  th,
+  blockquote,
+  pre,
+  hr {
+    border-color: #fff;
   }
   progress::-webkit-progress-bar {
-    background-color: #121212;
+    background-color: #111;
   }
   progress::-webkit-progress-value {
-    background-color: white;
+    background-color: #fff;
   }
   progress::-moz-progress-bar {
-    background-color: white;
-  }
-  progress::-ms-fill {
-    background-color: white;
-  }
-  hr {
-    border-color: white;
+    background-color: #fff;
   }
 }

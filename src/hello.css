@@ -18,11 +18,6 @@
    * Note the full font is also defined in the media queries below.
    */
   --font: 16px/180% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
-
-  /* Padding for full-width pre, table, and figure (.full class); needs to be a
-   * variable here since we can't use variables inside media queries. */
-  --full-margin-left: calc(-1 * var(--pad-x));
-  --full-width: calc(100% + calc(var(--pad-x) * 2));
 }
 
 /* Properties for screens that are narrower than the body width. */
@@ -42,6 +37,14 @@
   }
 }
 
+
+/* "Internal" variables iwth padding for full-width pre, table, and figure
+ * (.full class); needs to be a variable here since we can't use variables
+ * inside media queries. */
+:root {
+  --full-margin-left: calc(-1 * var(--pad-x));
+  --full-width:       calc(100% + calc(var(--pad-x) * 2));
+}
 
 /* FONTS */
 
@@ -120,8 +123,7 @@ h1, h2, h3, h4, h5, h6 {
 html {
   background-color: #eee;              /* Neutral background to contrast with the page. */
   color: var(--color-text);            /* Slightly less "harsh" black; looks subtly better. */
-       tab-size: 4;                    /* Tab size of 4 is probably more common in editors etc. */
-  -moz-tab-size: 4;                    /* Still needed as of Jan 2019 :-( https://bugzil.la/737785 */
+  tab-size: 4;                         /* Tab size of 4 is probably more common in editors etc. */
 }
 
 html, body {
@@ -193,12 +195,14 @@ body {
 /* LINKS */
 a,
 a code,                                /* Otherwise it would just stay black text; common enough to include here. */
+summary,                               /* <summary> doesn't look very clickable by default. */
 .link {
   color: #00f;                         /* Make sure colour is the same in all browsers. */
   text-decoration: none;               /* Underlining can look "busy"; the colour on its own should be enough. */
   transition: color .2s;               /* Animate the change in colour effect on hover; subtle but noticeable. */
+  cursor: pointer;                     /* Always use pointer; otherwise <a> w/o href shows as text selection. */
 }
-a:hover, .link:hover {
+a:hover, .link:hover, summary:hover {
   text-decoration: underline;          /* Provide some feedback by underlining and changing colour. */
   color: #6491ff;                      /* Light blue */
 }
@@ -207,6 +211,7 @@ a:hover code  {
 }
 button.link[disabled]       { color: #666; }
 button.link[disabled]:hover { text-decoration: none; cursor: not-allowed; }
+summary                     { cursor: pointer; }
 
 form {                                 /* Make sure forms don't affect visual layout. */
   display: inline;

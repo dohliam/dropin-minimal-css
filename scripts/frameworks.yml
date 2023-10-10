@@ -8,6 +8,13 @@ frameworks:
     license_url: https://github.com/alexandersandberg/a11yana/blob/master/LICENSE.md
     repo: https://github.com/alexandersandberg/a11yana
     url: https://github.com/alexandersandberg/a11yana/blob/master/dist/a11yana.css
+  almond:
+    author: alvaromontoro
+    author_name: Alvaro Montoro
+    license: MIT
+    license_url: https://github.com/alvaromontoro/almond.css/blob/master/LICENSE
+    repo: https://github.com/alvaromontoro/almond.css
+    url: https://github.com/alvaromontoro/almond.css/blob/master/dist/almond.css
   axist:
     author: ruanmartinelli
     author_name: Ruan Martinelli
@@ -21,8 +28,7 @@ frameworks:
     license: MIT
     license_url: https://github.com/Kimeiga/bahunya/blob/master/LICENSE
     repo: https://github.com/Kimeiga/bahunya
-    url: https://github.com/Kimeiga/bahunya/blob/css/bahunya-0.1.3.css
-    min_only: true
+    url: https://github.com/Kimeiga/bahunya/blob/master/dist/bahunya.css
   bamboo:
     author: rilwis
     author_name: Tran Ngoc Tuan Anh
@@ -54,6 +60,13 @@ frameworks:
     license_url: https://github.com/vladocar/Basic.css/blob/master/LICENSE
     repo: https://github.com/vladocar/Basic.css
     url: https://github.com/vladocar/Basic.css/blob/master/css/basic.css
+  bolt:
+    author: tbolt
+    author_name: tbolt
+    license: MIT
+    license_url: https://github.com/tbolt/boltcss/blob/main/LICENSE
+    repo: https://github.com/tbolt/boltcss
+    url: https://github.com/tbolt/boltcss/blob/main/bolt.css
   bonsai:
     author: ciar4n
     author_name: Ciaran Walsh
@@ -61,6 +74,13 @@ frameworks:
     license_url: https://github.com/bonsaicss/bonsai.css/blob/master/LICENSE.md
     repo: https://github.com/bonsaicss/bonsai.css
     url: https://github.com/bonsaicss/bonsai.css/blob/master/dist/bonsai.css
+  brutalist:
+    author: blainsmith
+    author_name: Blain Smith
+    license: MIT
+    license_url: https://github.com/blainsmith/brutalist.css/blob/main/LICENSE
+    repo: https://github.com/blainsmith/brutalist.css
+    url: https://blainsmith.github.io/brutalist.css/brutalist.css
   bullframe:
     author: marcop135
     author_name: Marco Pontili
@@ -97,6 +117,14 @@ frameworks:
     license_url: https://github.com/cardinalcss/cardinalcss/blob/master/LICENSE.md
     repo: https://github.com/cardinalcss/cardinalcss
     url: https://github.com/cardinalcss/cardinalcss/blob/master/cardinal.css
+  centigram:
+    author: milouse
+    author_name: Étienne Deparis
+    license: MIT
+    license_url: https://github.com/milouse/centigram/blob/main/LICENSE
+    repo: https://github.com/milouse/centigram
+    url: https://github.com/milouse/centigram/blob/main/dist/centigram.min.css
+    min_only: true
   centurion:
     author: justinhough
     author_name: Justin Hough
@@ -118,6 +146,13 @@ frameworks:
     license_url: https://github.com/Spiderpig86/Cirrus/blob/master/LICENSE
     repo: https://github.com/Spiderpig86/Cirrus
     url: https://github.com/Spiderpig86/Cirrus/blob/master/dist/cirrus.css
+  classless:
+    author: emareg
+    author_name: Emanuel Regnath
+    license: MIT
+    license_url: https://github.com/emareg/classlesscss/blob/master/LICENSE
+    repo: https://github.com/emareg/classlesscss
+    url: https://github.com/emareg/classlesscss/blob/master/docs/classless.css
   clmaterial:
     author: 24aitor
     author_name: Aitor Riba Archilla
@@ -181,6 +216,13 @@ frameworks:
     license_url: https://github.com/johno/furtive/blob/master/LICENSE
     repo: https://github.com/johno/furtive
     url: https://github.com/johno/furtive/blob/master/css/furtive.css
+  gd:
+    author: hawkz
+    author_name: Stephen Hawkes
+    license: MIT
+    license_url: https://github.com/hawkz/gdcss/blob/master/LICENSE
+    repo: https://github.com/hawkz/gdcss
+    url: https://github.com/hawkz/gdcss/blob/master/gd.css
   generic:
     author: Vereis
     author_name: Chris Bailey
@@ -224,7 +266,7 @@ frameworks:
     license: MIT
     license_url: https://github.com/jonathanharrell/hiq/blob/master/license.md
     repo: https://github.com/jonathanharrell/hiq
-    url: https://github.com/jonathanharrell/hiq/blob/gh-pages/assets/css/0.styles.8982d96a.css
+    url: https://github.com/jonathanharrell/hiq/blob/6f88d9d2b227ac405d12eb350616517c49abcdc1/assets/css/0.styles.9ca64850.css
     min_only: true
   holiday:
     author: EvgenyOrekhov
@@ -246,7 +288,7 @@ frameworks:
     license: MIT
     license_url: https://github.com/krszwsk/hyp/blob/master/LICENSE
     repo: https://github.com/krszwsk/hyp
-    url: https://github.com/krszwsk/hyp/blob/master/dist/hyp.min.css
+    url: https://unpkg.com/hypcss/dist/hyp.min.css
     min_only: true
   kathamo:
     author: debashisbarman
@@ -290,6 +332,13 @@ frameworks:
     license_url: https://github.com/lucasarvelo/lemon/blob/master/LICENSE
     repo: https://github.com/lucasarvelo/lemon
     url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/lemon.css
+  lissom:
+    author: Looky1173
+    author_name: Looky1173
+    license: MIT
+    license_url: https://github.com/lissomware/css/blob/main/LICENSE.md
+    repo: https://github.com/lissomware/css
+    url: https://github.com/lissomware/css/blob/main/lissom.css
   lit:
     author: Ajusa
     author_name: Arham Jain
@@ -376,6 +425,13 @@ frameworks:
     license_url: https://github.com/chr15m/minimal-stylesheet/blob/master/LICENSE
     repo: https://github.com/chr15m/minimal-stylesheet
     url: https://github.com/chr15m/minimal-stylesheet/blob/master/minimal.css
+  missing-style:
+    author: dz4k
+    author_name: Deniz Akşimşek
+    license: BSD 2-Clause "Simplified" License
+    license_url: https://github.com/bigskysoftware/missing/blob/master/LICENSE
+    repo: https://github.com/bigskysoftware/missing
+    url: https://the.missing.style
   mobi:
     author: xcatliu
     author_name: xcatliu
@@ -557,12 +613,12 @@ frameworks:
     repo: https://github.com/siimple/siimple
     url: https://unpkg.com/siimple
   simple:
-    author: neculaesei
-    author_name: Andrei Neculaesei
+    author: kevquirk
+    author_name: Kev Quirk
     license: MIT
-    license_url: https://opensource.org/licenses/mit-license.php
-    repo: https://github.com/tukangslicing/simplecss
-    url: https://github.com/tukangslicing/simplecss/blob/master/src/simple.css
+    license_url: https://github.com/kevquirk/simple.css/blob/main/LICENSE
+    repo: https://github.com/kevquirk/simple.css
+    url: https://github.com/kevquirk/simple.css/blob/main/simple.css
   skeleton:
     author: dhg
     author_name: Dave Gamache
@@ -612,6 +668,13 @@ frameworks:
     license_url: https://github.com/vasanthv/stylize.css/blob/master/LICENSE
     repo: https://github.com/vasanthv/stylize.css
     url: https://github.com/vasanthv/stylize.css/blob/master/stylize.css
+  superstylin:
+    author: caiogondim
+    author_name: Caio Gondim
+    license: MIT
+    license_url: https://github.com/caiogondim/superstylin/blob/master/package.json
+    repo: https://github.com/caiogondim/superstylin
+    url: https://github.com/caiogondim/superstylin/blob/master/src/index.css
   tachyons:
     author: tachyons-css
     author_name: Tachyons CSS Toolkit
@@ -634,6 +697,13 @@ frameworks:
     license_url: https://github.com/sitetent/tentcss/blob/master/LICENSE
     repo: https://github.com/sitetent/tentcss
     url: https://github.com/sitetent/tentcss/blob/master/dist/tent.css
+  terminal:
+    author: Gioni06
+    author_name: Jonas D.
+    license: MIT
+    license_url: https://github.com/Gioni06/terminal.css/blob/master/LICENSE
+    repo: https://github.com/Gioni06/terminal.css
+    url: https://github.com/Gioni06/terminal.css/blob/master/lib/terminal.css
   thao:
     author: Sanfra1407
     author_name: Giuseppe Sanfrancesco

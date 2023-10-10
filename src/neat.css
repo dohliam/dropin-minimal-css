@@ -1,7 +1,13 @@
 :root {
-    color-scheme: dark light;
+    color-scheme: light dark;
     --light: #fff;
+    --lesslight: #efefef;
     --dark: #404040;
+    --moredark: #000;
+    border-top: 5px solid var(--dark);
+    line-height: 1.5em; /* This causes wrapping h1's to collapse too small */
+    font-family: sans-serif;
+    font-size: 16px;
 }
 
 * {
@@ -9,14 +15,26 @@
     color: var(--dark);
 }
 
-html {
-    border-style: solid;
-    border-width: 5px 0 0 0;
-    border-color: var(--dark);
+button, input {
+    font-size: 1em; /* Override browser default font shrinking*/
 }
 
-html, button, input {
-    font-family: sans-serif;
+input {
+    border: 1px solid var(--dark);
+    background-color: var(--lesslight);
+    border-radius: .25em;
+    padding: .5em;
+}
+
+pre {
+    background-color: var(--lesslight);
+    margin: 0.5em 0 0.5em 0;
+    padding: 0.5em;
+    overflow: auto;
+}
+
+code {
+    background-color: var(--lesslight);
 }
 
 body {
@@ -24,39 +42,35 @@ body {
     margin: 0;
     max-width: 800px;
     padding: 0 20px 20px 20px;
-    line-height: 1.4em;
-}
-
-p {
-    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
-pre {
-    overflow: auto;
-}
-
-button, .button {
+button, .button, input[type=submit] {
     display: inline-block;
     background-color: var(--dark);
     color: var(--light);
-    font-size: 1em;
     text-align: center;
-    padding: 8px;
-    margin-right: 5px;
-    border-radius: 5px;
+    padding: .5em;
+    border-radius: .25em;
     text-decoration: none;
     border: none;
-    line-height: normal;
     cursor: pointer;
 }
 
+button:hover, .button:hover, input[type=submit]:hover {
+    color: var(--lesslight);
+    background-color: var(--moredark);
+}
 
-button:last-child, .button:last-child {
-    margin-right: 0;
+/* Add a margin between side-by-side buttons */
+button + button, .button + .button, input[type=submit] + input[type=submit] {
+    margin-left: 1em;
 }
 
 .center {
@@ -83,31 +97,48 @@ button:last-child, .button:last-child {
 
 /* Desktop sizes */
 @media only screen and (min-width: 600px) {
-    ol {
+    ol.twocol {
         column-count: 2;
     }
-    body {
-        margin-left: 60px;
-        margin-right: 60px;
+    
+    .row {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        width: 100%;
+    }
+
+    /* Make everything in a row a column */
+    .row > * {
+        display: block;
+        flex: 1 1 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .row > *:not(:last-child) {
+        margin-right: 10px;
     }
 }
 
-/* Dark mode overrides */
+/* Dark mode overrides (confusingly inverse) */
 @media (prefers-color-scheme: dark) {
-    * {
-        color: var(--light);
+    :root {
+        --light: #222;
+        --lesslight: #333;
+        --dark: #eee;
+        --moredark: #fefefe;
     }
-
-    html {
-        border-color: var(--light);
+    /* This fixes an odd blue then white shadow on FF in dark mode */
+    *:focus {
+        outline: var(--light);
+        box-shadow: 0 0 0 .25em royalblue;
     }
+}
 
-    body {
-        background-color: var(--dark);
-    }
-
-    button, .button, .home, input {
-        background-color: var(--light);
-        color: var(--dark);
+/* Printing */
+@media print {
+    .home {
+        display: none;
     }
 }

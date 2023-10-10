@@ -26,8 +26,8 @@ time, mark, audio, video {
 
 /* Variables */
 :root {
-    --desktop-font-size: 1.2rem/1.5;
-    --mobile-font-size: 1rem/1.4;
+    --desktop-font-size: 1.2rem/1.55;
+    --mobile-font-size: 1rem/1.45;
     --text-color: #2d2d2d;
     --link-color: blue;
     --link-color-alt: darkblue;
@@ -60,8 +60,6 @@ h5, h6 { text-transform: uppercase; }
 
 header h1 { border-bottom: 1px solid; }
 
-p { margin: 2rem 0; }
-
 a,a:visited { color: var(--link-color); }
 a:hover,a:focus { color: var(--link-color-alt); }
 
@@ -86,13 +84,14 @@ cite {
     margin-top: 1rem;
 }
 
-kbd,code,samp,pre,var { font-family: monospace; }
+kbd,code,samp,pre,var { font: var(--mobile-font-size) monospace; }
 code, pre {
     background: var(--tertiary-color);
+    border: 1px solid;
     overflow: auto;
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 0.5rem;
 }
-code pre , pre code { padding: 0; }
+code pre , pre code { border: 0; padding: 0; }
 
 /* Elements */
 hr {
@@ -117,7 +116,10 @@ figure {
 figure img { margin: 0 auto; }
 figure figcaption { font-size: 80%; margin-top: 0.5rem; text-align: center; }
 
-ul, ol { margin: 2rem 0; padding: 0 0 0 4rem; }
+ul, ol { margin: 2rem 0; padding: 0 0 0 2rem; }
+ul li, ol li { margin-bottom: 1rem; }
+li > ul, li > ol { margin: 0.25rem 0 0.5rem; padding: 0 0 0 2rem; }
+li > ul li, li > ol li { margin-bottom: 0.5rem; }
 
 dl dd { padding-left: 2rem; }
 
@@ -130,10 +132,10 @@ table {
 }
 table caption { margin: 2rem 0; }
 table tr { border-bottom: 1px solid var(--primary-color); }
+table thead { position: sticky; top: 0; }
 table tbody tr:nth-child(even) { background: var(--tertiary-color); }
 table th { background: var(--secondary-color); font-weight: bold; }
-table th, table td { padding: 1rem; }
-table th:not(last-of-type), table td:not(last-of-type) { border-right: 1px solid var(--primary-color); }
+table th, table td { padding: 0.5rem; }
 
 input { 
     appearance: none; 
@@ -143,6 +145,8 @@ input {
     padding: 0.8rem; 
 }
 input:focus, input:active { background-color: var(--secondary-color); border-color: var(--link-color); }
+
+sup { font-size: 80%; vertical-align: top; }
 
 /* Mobile Styling */
 @media screen and (max-width: 75ch) {
@@ -161,11 +165,22 @@ input:focus, input:active { background-color: var(--secondary-color); border-col
         background-color: var(--text-color);
         color: var(--secondary-color);
     }
+    table,
+    table tr,
+    table th:not(:last-of-type),
+    table td:not(:last-of-type) {
+        border-color: var(--text-color);
+    }
+    table thead th,
+    table tfoot th {
+        background-color: var(--primary-color-light);
+    }
     :root {
         --text-color: #fff;
         --link-color: orange;
         --link-color-alt: yellow;
         --primary-color: orange;
+        --primary-color-light: dimgrey;
         --secondary-color: black;
         --tertiary-color: #2d2d2d;
     }
