@@ -27,10 +27,9 @@ function on_css_load() {
 function inline_switcher() {
   switcher = document.getElementById("switcher");
   frameworks_array = frameworks.split(",");
-  select_open = '\n        <select name="switcher_dropdown" id="switcher_dropdown" accesskey="s" onchange="switch_css(this.value)"';
-
+  select_open = '\n        <select name="switcher_dropdown" id="switcher_dropdown" accesskey="s" onchange="switch_css(this.value)">\n';
+  dropdown = select_open;
   var stored_f = localStorage.getItem(localStorageKey);
-  dropdown = select_open + '>\n';
   for (i = 0; i < frameworks_array.length; i++) {
     f = frameworks_array[i];
     framework_name = capitalize(f);
