@@ -1,9 +1,14 @@
+var host = "https://dohliam.github.io/dropin-minimal-css";
 var frameworks = "a11yana,almond,axist,bahunya,bamboo,bare,base,basic,bolt,bonsai,brutalist,bullframe,bulma,caiuss,caramel,cardinal,centigram,centurion,chota,cirrus,classless,clmaterial,codify,comet,concise,concrete,cutestrap,flat-ui,fluidity,furtive,gd,generic,github-markdown,gutenberg,hack,hello,hiq,holiday,html-starterkit,hyp,kathamo,koochak,kraken,kube,latex,lemon,lissom,lit,lotus,markdown,marx,material,materialize,mercury,milligram,min,mini,minimal,minimal-stylesheet,missing-style,mobi,motherplate,mu,mui,mvp,neat,new,no-class,normalize,oh-my-css,ok,pandoc-scholar,paper,papier,pavilion,picnic,pico,preface,primer,propeller,pure,roble,sakura,sanitize,scooter,semantic-ui,shoelace,siimple,simple,skeleton,skeleton-framework,skeleton-plus,snack,spcss,spectre,style,stylize,superstylin,tachyons,tacit,tent,terminal,thao,tui,vanilla,vital,water,wing,writ,yamb,yorha,ads-gazette,ads-medium,ads-notebook,ads-tufte,attri-bright-light-green,attri-midnight-green,attri-dark-forest-green,attri-dark-fairy-pink,attri-light-fairy-pink,awsm-default,awsm-black,awsm-bigstone,awsm-gondola,awsm-mischka,awsm-pastelpink,awsm-pearllusta,awsm-tasman,awsm-white,boot-cerulean,boot-cosmo,boot-cyborg,boot-darkly,boot-flatly,boot-journal,boot-lumen,boot-paper,boot-readable,boot-sandstone,boot-slate,boot-spacelab,boot-superhero,boot-yeti,md-air,md-modest,md-retro,md-splendor,w3c-chocolate,w3c-midnight,w3c-modernist,w3c-oldstyle,w3c-steely,w3c-swiss,w3c-traditional,w3c-ultramarine";
+var localStorageKey = "dropin-minimal-css-framework";
 
 add_switcher();
 
-function switch_css(css) {
-  css_link.href = "https://dohliam.github.io/dropin-minimal-css/min/" + css + ".min.css";
+function switch_css(f) {
+  css_link.href = host + "/min/" + f + ".min.css";
+
+  // Save framework to local storage.
+  localStorage.setItem(localStorageKey, f);
 }
 
 function capitalize(s) {
@@ -24,10 +29,16 @@ function inline_switcher() {
   frameworks_array = frameworks.split(",");
   select_open = '\n        <select name="switcher_dropdown" id="switcher_dropdown" accesskey="s" onchange="switch_css(this.value)">\n';
   dropdown = select_open;
+  var stored_f = localStorage.getItem(localStorageKey);
   for (i = 0; i < frameworks_array.length; i++) {
     f = frameworks_array[i];
     framework_name = capitalize(f);
-    option = '          <option value="' + f + '">' + framework_name + ' CSS</option>\n';
+    option = '          <option value="' + f + '"';
+    if (f == stored_f) {
+      option += ' selected';
+    }
+
+    option += '>' + framework_name + ' CSS</option>\n';
     dropdown = dropdown + option;
   }
   select_close = '        </select>\n      '
@@ -42,7 +53,11 @@ function add_switcher() {
     css_link = document.createElement('link');
     css_link.rel="stylesheet";
     css_link.type="text/css";
-    css_link.href="https://dohliam.github.io/dropin-minimal-css/min/" + frameworks.split(",")[0] + ".min.css";
+
+    // Check if framework is in local storage.
+    var f = localStorage.getItem(localStorageKey) || frameworks.split(",")[0];
+    css_link.href=host+"/min/" + f + ".min.css";
+
     head.appendChild(css_link);
   }
 
