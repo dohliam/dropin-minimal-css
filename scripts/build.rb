@@ -109,7 +109,7 @@ def switcher_routine(data)
   puts
 end
 
-def frameworks_routine(data)
+def frameworks_routine(data, options)
   puts "- Updating CSS frameworks..."
   frameworks = get_frameworks(data)
 
@@ -118,7 +118,11 @@ def frameworks_routine(data)
     url = root["url"]
     min_only = root["min_only"]
     skip = root["skip"]
-    if !skip
+    if options == []
+      if !skip
+        update_css(name, url)
+      end
+    elsif options.include?(name)
       update_css(name, url)
     end
   end
@@ -126,7 +130,7 @@ def frameworks_routine(data)
   puts
 end
 
-def collections_routine(data)
+def collections_routine(data, options)
   puts "- Updating CSS collections..."
   collections = get_collections(data)
 
@@ -136,7 +140,13 @@ def collections_routine(data)
       root = data["collections"][collection][name]
       url = root["url"]
       min_only = root["min_only"]
-      update_css(name, url)
+      if options == []
+        if !skip
+          update_css(name, url)
+        end
+      elsif options.include?(name)
+        update_css(name, url)
+      end
     end
   end
   puts "  Update complete."
@@ -150,13 +160,18 @@ def readme_routine(data)
   puts
 end
 
-def process_updates(data)
-  frameworks_routine(data)
-  collections_routine(data)
+def process_updates(data, options=[])
+  frameworks_routine(data, options)
+  collections_routine(data, options)
   switcher_routine(data)
   readme_routine(data)
 end
 
 data = YAML::load(File.read("frameworks.yml"))
 
-process_updates(data)
+if ARGV[0]
+  options = ARGV
+  process_updates(data, options)
+else
+  process_updates(data)
+end
