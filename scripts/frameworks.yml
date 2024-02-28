@@ -312,12 +312,12 @@ frameworks:
     repo: https://github.com/imperavi/kube
     url: https://github.com/imperavi/kube/blob/master/dist/css/kube.css
   latex:
-    author: davidrzs
-    author_name: David Zollikofer
+    author: vincentdoerig
+    author_name: Vincent Dörig
     license: MIT
-    license_url: https://github.com/davidrzs/latexcss/blob/master/LICENSE
-    repo: https://github.com/davidrzs/latexcss
-    url: https://github.com/davidrzs/latexcss/blob/master/latex.css
+    license_url: https://github.com/vincentdoerig/latex-css
+    repo: https://github.com/vincentdoerig/latex-css
+    url: https://github.com/vincentdoerig/latex-css/blob/master/style.css
   lemon:
     author: appalaszynski
     author_name: Adam

@@ -102,7 +102,7 @@ If you know of a minimal framework that hasn't been included here, please create
 * [koochak](https://github.com/peyman3d/koochak) by @peyman3d ([Preview](https://dohliam.github.io/dropin-minimal-css/?koochak) · [MIT](https://github.com/peyman3d/koochak/blob/master/LICENSE))
 * [kraken](https://github.com/cferdinandi/kraken) by @cferdinandi ([Preview](https://dohliam.github.io/dropin-minimal-css/?kraken) · [MIT](https://github.com/cferdinandi/kraken/blob/master/LICENSE.md))
 * [kube](https://github.com/imperavi/kube) by @imperavi ([Preview](https://dohliam.github.io/dropin-minimal-css/?kube) · [MIT](https://github.com/imperavi/kube/blob/master/LICENSE))
-* [latex](https://github.com/davidrzs/latexcss) by @davidrzs ([Preview](https://dohliam.github.io/dropin-minimal-css/?latex) · [MIT](https://github.com/davidrzs/latexcss/blob/master/LICENSE))
+* [latex](https://github.com/vincentdoerig/latex-css) by @vincentdoerig ([Preview](https://dohliam.github.io/dropin-minimal-css/?latex) · [MIT](https://github.com/vincentdoerig/latex-css))
 * [lemon](https://github.com/lucasarvelo/lemon) by @appalaszynski ([Preview](https://dohliam.github.io/dropin-minimal-css/?lemon) · [MIT](https://github.com/lucasarvelo/lemon/blob/master/LICENSE))
 * [lissom](https://github.com/lissomware/css) by @Looky1173 ([Preview](https://dohliam.github.io/dropin-minimal-css/?lissom) · [MIT](https://github.com/lissomware/css/blob/main/LICENSE.md))
 * [lit](https://github.com/Ajusa/lit) by @Ajusa ([Preview](https://dohliam.github.io/dropin-minimal-css/?lit) · [MIT](https://github.com/Ajusa/lit/blob/master/LICENSE))
