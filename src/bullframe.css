@@ -1,4 +1,4 @@
-/*! bullframe.css v4.0.1 | MIT License | https://github.com/marcop135/bullframe.css */
+/*! bullframe.css v4.1.2 | MIT License | https://github.com/marcop135/bullframe.css */
 *,
 *::before,
 *::after {
@@ -727,10 +727,6 @@ input[type=button],
   cursor: pointer;
 }
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #666;
-}
-
 input::-moz-placeholder, textarea::-moz-placeholder {
   color: #666;
 }
@@ -903,7 +899,7 @@ select[dir=rtl]:not([size]):not([multiple]) {
 
 @supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
   [type=checkbox],
-[type=radio] {
+  [type=radio] {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
@@ -914,27 +910,27 @@ select[dir=rtl]:not([size]):not([multiple]) {
     border: 1px solid #999;
   }
   [type=checkbox] + label,
-[type=radio] + label {
+  [type=radio] + label {
     line-height: 1.8rem;
     vertical-align: top;
     margin-left: 5px;
     margin-left: 0.5rem;
   }
   *[dir=rtl] [type=checkbox] + label, [type=checkbox][dir=rtl] + label,
-*[dir=rtl] [type=radio] + label,
-[type=radio][dir=rtl] + label {
+  *[dir=rtl] [type=radio] + label,
+  [type=radio][dir=rtl] + label {
     margin-left: 0;
     margin-right: 5px;
     margin-right: 0.5rem;
   }
   [type=checkbox]:after,
-[type=radio]:after {
+  [type=radio]:after {
     content: "";
     display: block;
     position: absolute;
   }
   [type=checkbox]:checked,
-[type=radio]:checked {
+  [type=radio]:checked {
     background-color: #007bff;
     border-color: #000;
   }
@@ -945,8 +941,7 @@ select[dir=rtl]:not([size]):not([multiple]) {
     top: -0.05rem;
     border-radius: 50%;
     background: #fff;
-    -webkit-transform: scale(0.35);
-            transform: scale(0.35);
+    transform: scale(0.35);
   }
   [type=checkbox]:after {
     width: 0.6rem;
@@ -956,8 +951,7 @@ select[dir=rtl]:not([size]):not([multiple]) {
     border-left: 0;
     left: 35%;
     top: 20%;
-    -webkit-transform: rotate(43deg);
-            transform: rotate(43deg);
+    transform: rotate(43deg);
   }
 }
 @supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
@@ -1332,38 +1326,31 @@ table th[class^=bf-col] {
 }
 
 .bf-display-flex {
-  display: -webkit-flex !important;
   display: flex !important;
 }
 
 .bf-display-inline-flex {
-  display: -webkit-inline-flex !important;
   display: inline-flex !important;
 }
 
 .bf-display-flex--justify-start {
-  -webkit-justify-content: flex-start !important;
-          justify-content: flex-start !important;
+  justify-content: flex-start !important;
 }
 
 .bf-display-flex--justify-end {
-  -webkit-justify-content: flex-end !important;
-          justify-content: flex-end !important;
+  justify-content: flex-end !important;
 }
 
 .bf-display-flex--justify-center {
-  -webkit-justify-content: center !important;
-          justify-content: center !important;
+  justify-content: center !important;
 }
 
 .bf-display-flex--wrap {
-  -webkit-flex-wrap: wrap !important;
-          flex-wrap: wrap !important;
+  flex-wrap: wrap !important;
 }
 
 .bf-display-flex--nowrap {
-  -webkit-flex-wrap: nowrap !important;
-          flex-wrap: nowrap !important;
+  flex-wrap: nowrap !important;
 }
 
 .bf-float-left {
@@ -1379,7 +1366,6 @@ table th[class^=bf-col] {
 }
 
 .bf-position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important;
   top: 0 !important;
 }
@@ -1392,17 +1378,13 @@ table th[class^=bf-col] {
   position: absolute !important;
   top: 50% !important;
   left: 50% !important;
-  -webkit-transform: translate(-50%, -50%) !important;
-          transform: translate(-50%, -50%) !important;
+  transform: translate(-50%, -50%) !important;
 }
 
 .bf-align-center-flex {
-  display: -webkit-flex;
   display: flex;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-justify-content: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .bf-width-25 {
@@ -2046,8 +2028,8 @@ dt {
    ========================================================================== */
 @media print {
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     background: #fff !important;
     color: #000 !important;
     /* Black prints faster */
@@ -2055,7 +2037,7 @@ dt {
     text-shadow: none !important;
   }
   a,
-a:visited {
+  a:visited {
     text-decoration: underline;
   }
   a[href]::after {
@@ -2069,35 +2051,35 @@ a:visited {
      * or use the `javascript:` pseudo protocol
      */
   a[href^="#"]::after,
-a[href^="javascript:"]::after {
+  a[href^="javascript:"]::after {
     content: "";
   }
   pre {
     white-space: pre-wrap !important;
   }
   pre,
-blockquote {
+  blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
   tr,
-img {
+  img {
     page-break-inside: avoid;
   }
   p,
-h2,
-h3 {
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
   }
   h2,
-h3 {
+  h3 {
     page-break-after: avoid;
   }
 }
 @media print {
   body,
-.bf-container {
+  .bf-container {
     min-width: 992px !important;
   }
   .bf-table-responsive {
@@ -2107,23 +2089,20 @@ h3 {
     width: auto;
   }
   .bf-table-responsive table,
-.bf-table {
+  .bf-table {
     border-collapse: collapse !important;
   }
 }
 @media (prefers-reduced-motion: reduce) {
   .bf-reduced-motion,
-.bf-reduced-motion::before,
-.bf-reduced-motion::after,
-.bf-reduced-motion *,
-.bf-reduced-motion *::before,
-.bf-reduced-motion *::after {
-    -webkit-animation-delay: -1ms !important;
-            animation-delay: -1ms !important;
-    -webkit-animation-duration: 1ms !important;
-            animation-duration: 1ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+  .bf-reduced-motion::before,
+  .bf-reduced-motion::after,
+  .bf-reduced-motion *,
+  .bf-reduced-motion *::before,
+  .bf-reduced-motion *::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
     background-attachment: initial !important;
     scroll-behavior: auto !important;
     transition-delay: 0s !important;

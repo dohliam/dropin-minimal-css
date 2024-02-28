@@ -296,6 +296,8 @@ textarea, input:not([type=range]), button, select {
 	border-radius: 4px;
 	border: 1.5px solid var(--cmed);
 	padding: 0.4em 0.8em;
+	color: var(--cfg);
+	background-color: var(--clight);
 }
 fieldset select, input:not([type=checkbox]):not([type=radio]) {
 	display: block;
@@ -304,7 +306,6 @@ fieldset select, input:not([type=checkbox]):not([type=radio]) {
 }
 button, select {
 	font-weight: bold;
-	background-color: var(--clight);
 	margin: .5em;
 	border: 1.5px solid var(--clink);
 }

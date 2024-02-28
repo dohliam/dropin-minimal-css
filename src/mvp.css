@@ -1,4 +1,4 @@
-/* MVP.css v1.13 - https://github.com/andybrewer/mvp */
+/* MVP.css v1.14 - https://github.com/andybrewer/mvp */
 
 :root {
     --active-brightness: 0.85;
@@ -37,6 +37,16 @@
         --color-table: #0097fc;
         --color-text: #f7f7f7;
         --color-text-secondary: #aaa;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
     }
 }
 
@@ -217,6 +227,7 @@ h4,
 h5,
 h6 {
     line-height: var(--line-height);
+    text-wrap: balance;
 }
 
 mark {
@@ -272,12 +283,12 @@ a {
     text-decoration: underline;
 }
 
-a:active {
-    filter: brightness(var(--active-brightness));
-}
-
 a:hover {
     filter: brightness(var(--hover-brightness));
+}
+
+a:active {
+    filter: brightness(var(--active-brightness));
 }
 
 a b,
@@ -300,15 +311,15 @@ input[type="submit"] {
     font-family: var(--font-family);
 }
 
-button:active,
-input[type="submit"]:active {
-    filter: brightness(var(--active-brightness));
-}
-
 button:hover,
 input[type="submit"]:hover {
     cursor: pointer;
     filter: brightness(var(--hover-brightness));
+}
+
+button:active,
+input[type="submit"]:active {
+    filter: brightness(var(--active-brightness));
 }
 
 a b,
@@ -468,11 +479,11 @@ table thead {
     padding: 0;
 }
 
-table thead th:first-child {
+table thead tr:first-child th:first-child {
     border-top-left-radius: var(--border-radius);
 }
 
-table thead th:last-child {
+table thead tr:first-child th:last-child {
     border-top-right-radius: var(--border-radius);
 }
 
@@ -506,20 +517,20 @@ blockquote footer {
 
 /* Scrollbars */
 * {
-	scrollbar-width: thin;
-	scrollbar-color: rgb(202, 202, 232) auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(202, 202, 232) auto;
 }
 
 *::-webkit-scrollbar {
-	width: 5px;
-	height:5px;
+    width: 5px;
+    height: 5px;
 }
 
 *::-webkit-scrollbar-track {
-	background: transparent;
+    background: transparent;
 }
 
 *::-webkit-scrollbar-thumb {
-	background-color:rgb(202, 202, 232);
-	border-radius: 10px;
+    background-color: rgb(202, 202, 232);
+    border-radius: 10px;
 }

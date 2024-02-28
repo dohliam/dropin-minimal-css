@@ -5,11 +5,13 @@
 :root {
     --primary: hsl(265, 38%, 13%);
     --secondary: hsl(283, 6%, 45%);
-    --tertiary: hsl(257, 15%, 91%);
+    --tertiary: hsl(257, 15%, 95%);
     --light: hsl(270, 100%, 99%);
     --accent: hsl(278, 100%, 92%);
     --accent-alt: hsl(279, 100%, 97%);
     --accent-ui: hsl(284, 55%, 66%);
+    --semantic-green: hsl(88, 76%, 83%);
+    --semantic-red: hsl(0, 76%, 83%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,6 +23,8 @@
         --accent: hsl(282, 25%, 40%);
         --accent-alt: hsl(278, 14%, 20%);
         --accent-ui: hsl(284, 55%, 66%);
+        --semantic-green: hsl(88, 35%, 40%);
+        --semantic-red: hsl(0, 35%, 40%);
     }
 }
 
@@ -141,6 +145,10 @@ input[type='submit'] {
     position: relative;
 }
 
+input::placeholder {
+    font-style: italic;
+}
+
 button:hover,
 input[type='submit']:hover {
     opacity: 0.7;
@@ -151,7 +159,8 @@ input[type='submit']:active {
     opacity: 0.9;
 }
 
-button[data-primary] {
+button[data-primary],
+input[type='submit'] {
     color: var(--light);
     background-color: var(--accent-ui);
     border-color: var(--accent-ui);
@@ -163,7 +172,8 @@ button[data-primary] {
     font-weight: bold;
 }
 
-button:disabled {
+button:disabled,
+input[type='submit']:disabled {
     cursor: not-allowed;
     background-color: var(--tertiary);
     color: var(--secondary);
@@ -173,11 +183,16 @@ button:disabled {
 
 button:focus-visible,
 input:focus-visible,
-textarea:focus-visible {
+textarea:focus-visible,
+details:has(summary:focus-visible) {
     box-shadow: 0 0 0 0.2em var(--light), 0 0 0 0.4em var(--accent-ui);
     outline: none;
     z-index: 2;
     animation: 1s infinite pulseBorder linear alternate-reverse;
+}
+
+details:has(summary:focus-visible) summary {
+    outline: none;
 }
 
 @keyframes pulseBorder {
@@ -195,6 +210,28 @@ code {
     border-radius: 0.3em;
     font-family: monospace;
     padding: 0.1em 0.2em;
+}
+
+details {
+    border: 0.1em solid var(--secondary);
+    border-radius: 0.3em;
+    padding: 0.5em;
+    margin: 1em 0;
+    background-color: var(--tertiary);
+}
+
+summary {
+    font-weight: bold;
+}
+
+details[open] {
+    background-color: var(--accent-alt);
+}
+
+details[open] summary {
+    border-bottom: 0.1em solid var(--accent);
+    padding-bottom: 0.3em;
+    margin-bottom: 0.7em;
 }
 
 dialog {
@@ -222,7 +259,7 @@ form > div {
     flex-direction: column;
 }
 
-form > div:has(input[type="checkbox"]) {
+form > div:has(input[type='checkbox']) {
     flex-direction: row;
     align-items: center;
     gap: 0.2em;
@@ -244,12 +281,20 @@ h1::before {
     color: var(--accent-ui);
 }
 
+h1:dir(rtl)::before {
+    right: -2ch;
+}
+
 h2::before {
     content: '##';
     position: absolute;
     left: -3ch;
     color: var(--accent-ui);
     opacity: 0.9;
+}
+
+h2:dir(rtl)::before {
+    right: -3ch;
 }
 
 h3::before {
@@ -260,12 +305,20 @@ h3::before {
     opacity: 0.8;
 }
 
+h3:dir(rtl)::before {
+    right: -4ch;
+}
+
 h4::before {
     content: '####';
     position: absolute;
     left: -5ch;
     color: var(--accent-ui);
     opacity: 0.7;
+}
+
+h4:dir(rtl)::before {
+    right: -5ch;
 }
 
 h5::before {
@@ -276,12 +329,20 @@ h5::before {
     opacity: 0.6;
 }
 
+h5:dir(rtl)::before {
+    right: -6ch;
+}
+
 h6::before {
     content: '######';
     position: absolute;
     left: -7ch;
     color: var(--accent-ui);
     opacity: 0.5;
+}
+
+h6:dir(rtl)::before {
+    right: -7ch;
 }
 
 h1[data-no-heading-level]::before,
@@ -328,7 +389,7 @@ textarea {
     background-color: var(--tertiary);
     border: 1px solid var(--secondary);
     padding: 0.4em 1em;
-    border-radius: 0.3em; 
+    border-radius: 0.3em;
     font-size: inherit;
     font-family: inherit;
     position: relative;
@@ -411,6 +472,10 @@ progress:indeterminate {
     background-size: 150% 150%;
 }
 
+progress:indeterminate:dir(rtl) {
+    animation-direction: reverse;
+}
+
 progress:indeterminate::-webkit-progress-bar {
     background-color: transparent;
 }
@@ -464,4 +529,12 @@ tr:nth-child(even) td {
 
 tr:nth-child(odd) td {
     background-color: var(--tertiary);
+}
+
+ins {
+    background-color: var(--semantic-green);
+}
+
+del {
+    background-color: var(--semantic-red);
 }

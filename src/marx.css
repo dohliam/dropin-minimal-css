@@ -1,4 +1,4 @@
-/*! Marx v4.0.1 - The classless CSS reset (perfect for Communists) | MIT License | https://github.com/mblode/marx */
+/*! Marx v4.1.1 - The classless CSS reset (perfect for Communists) | MIT License | https://github.com/mblode/marx */
 /* Document
  * ========================================================================== */
 /**
@@ -238,7 +238,6 @@
    border: solid;
    color: black;
    height: -moz-fit-content;
-   height: -webkit-fit-content;
    height: fit-content;
    left: 0;
    margin: auto;
@@ -246,7 +245,6 @@
    position: absolute;
    right: 0;
    width: -moz-fit-content;
-   width: -webkit-fit-content;
    width: fit-content;
  }
 :where(dialog:not([open])) {
@@ -433,7 +431,7 @@ h4 {
 }
 h5 {
   font-size: var(--font-size-h5);
-  margin: var(--md-pad 0) var(--xs-pad);
+  margin: var(--md-pad) 0 var(--xs-pad);
 }
 h6 {
   font-size: var(--font-size-h6);
@@ -449,7 +447,7 @@ pre {
   display: block;
   font-family: var(--monospace);
   font-size: var(--font-size-base);
-  margin: var(--md-pad 0);
+  margin: var(--md-pad) 0;
   padding: var(--md-pad);
   white-space: pre-wrap;
   overflow-wrap: break-word;
@@ -491,7 +489,7 @@ blockquote {
   border-left: 2px solid var(--text);
   font-family: var(--serif);
   font-style: italic;
-  margin: var(--md-pad 0);
+  margin: var(--md-pad) 0;
   padding-left: var(--md-pad);
 }
 figcaption {
@@ -694,7 +692,6 @@ button {
   vertical-align: middle;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   border: 1px solid transparent;
   font-size: 1rem;

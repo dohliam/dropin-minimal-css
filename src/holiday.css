@@ -1,4 +1,4 @@
-/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*! modern-normalize v2.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /*
 Document
@@ -15,46 +15,10 @@ Use a better box model (opinionated).
 	box-sizing: border-box;
 }
 
-/**
-Use a more readable tab size (opinionated).
-*/
-
 html {
-	-moz-tab-size: 4;
-	tab-size: 4;
-}
-
-/**
-1. Correct the line height in all browsers.
-2. Prevent adjustments of font size after orientation changes in iOS.
-*/
-
-html {
-	line-height: 1.15; /* 1 */
-	-webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/*
-Sections
-========
-*/
-
-/**
-Remove the margin in all browsers.
-*/
-
-body {
-	margin: 0;
-}
-
-/**
-Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
-*/
-
-body {
+	/* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
 	font-family:
 		system-ui,
-		-apple-system, /* Firefox supports this but not yet `system-ui` */
 		'Segoe UI',
 		Roboto,
 		Helvetica,
@@ -62,6 +26,19 @@ body {
 		sans-serif,
 		'Apple Color Emoji',
 		'Segoe UI Emoji';
+	line-height: 1.15; /* 1. Correct the line height in all browsers. */
+	-webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+	-moz-tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+	tab-size: 4; /* 3 */
+}
+
+/*
+Sections
+========
+*/
+
+body {
+	margin: 0; /* Remove the margin in all browsers. */
 }
 
 /*
@@ -155,7 +132,7 @@ Tabular data
 
 /**
 1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
-2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+2. Correct table border color inheritance in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
 */
 
 table {
@@ -186,11 +163,10 @@ textarea {
 
 /**
 Remove the inheritance of text transform in Edge and Firefox.
-1. Remove the inheritance of text transform in Firefox.
 */
 
 button,
-select { /* 1 */
+select {
 	text-transform: none;
 }
 
@@ -317,7 +293,6 @@ label > [type="radio"]:enabled {
   cursor: default;
 }
 
-/* stylelint-disable-next-line selector-max-specificity */
 :disabled,
 [aria-disabled="true"],
 [type="checkbox"][id]:disabled + [for],
@@ -374,8 +349,7 @@ table {
 pre {
   padding: 1rem;
 
-  /* Prism hack */
-  /* stylelint-disable declaration-no-important */
+  /* stylelint-disable declaration-no-important -- Prism hack */
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
   /* stylelint-enable */
@@ -537,6 +511,7 @@ label > [type="color"] {
 label {
   display: flex;
   flex-wrap: wrap;
+  column-gap: 0.25rem;
   align-items: center;
   width: 100%;
   margin-top: 1rem;
@@ -553,7 +528,6 @@ legend + label {
   vertical-align: text-bottom;
 }
 
-/* stylelint-disable-next-line plugin/stylelint-group-selectors */
 blockquote > p:first-child,
 fieldset > label:first-child {
   margin-top: 0;
@@ -562,7 +536,6 @@ fieldset > label:first-child {
 label > [type="checkbox"],
 label > [type="radio"] {
   min-height: 1rem;
-  margin-right: 0.25rem;
 }
 
 blockquote {
@@ -595,7 +568,6 @@ figure {
   text-align: center;
 }
 
-/* stylelint-disable-next-line selector-max-universal */
 figure > * {
   text-align: initial;
 }
@@ -629,14 +601,13 @@ picture {
 }
 
 /* highlight.js hack */
-/* stylelint-disable-next-line selector-max-class */
 .hljs {
-  /* stylelint-disable-next-line declaration-no-important */
+  /* stylelint-disable-next-line declaration-no-important -- highlight.js hack */
   padding: 1rem !important;
   margin: -1rem;
 }
 
-@media (max-width: 50rem) {
+@media (width <= 50rem) {
   table {
     width: calc(100% + 1rem);
     margin-left: -0.5rem;
@@ -651,8 +622,7 @@ picture {
   pre {
     width: calc(100% + 1rem);
 
-    /* !important is Prism hack */
-    /* stylelint-disable declaration-no-important */
+    /* stylelint-disable declaration-no-important -- Prism hack */
     padding-right: 0.5rem !important;
     padding-left: 0.5rem !important;
     margin-left: -0.5rem !important;
@@ -660,9 +630,8 @@ picture {
   }
 
   /* highlight.js hack */
-  /* stylelint-disable-next-line selector-max-class */
   .hljs {
-    /* stylelint-disable declaration-no-important */
+    /* stylelint-disable declaration-no-important -- highlight.js hack */
     padding-right: 0.5rem !important;
     padding-left: 0.5rem !important;
     /* stylelint-enable */
@@ -730,7 +699,10 @@ picture {
     width: 100%;
   }
 
-  /* stylelint-disable-next-line selector-max-compound-selectors, selector-max-type */
+  /* stylelint-disable-next-line
+  selector-max-compound-selectors,
+  selector-max-type
+  -- this HAS to be this complex */
   nav ul li ul li ul {
     min-width: calc(100% + 1rem + var(--border-width) * 2);
     margin-top: 0.75rem;
@@ -743,12 +715,10 @@ picture {
     left: initial;
   }
 
-  /* stylelint-disable-next-line selector-max-universal */
   nav li > *:not(ul, a, :only-child) {
     cursor: default;
   }
 
-  /* stylelint-disable-next-line selector-max-universal */
   nav li > *:not(ul, :only-child)::after {
     content: " ▾";
   }
@@ -766,7 +736,6 @@ picture {
     border-bottom: var(--border-width) solid var(--border-color);
   }
 
-  /* stylelint-disable-next-line selector-max-universal */
   nav > * {
     display: none;
   }
@@ -775,7 +744,6 @@ picture {
     display: inherit;
   }
 
-  /* stylelint-disable-next-line selector-max-universal */
   nav:hover > *:not(ul) {
     display: unset;
   }
@@ -785,13 +753,11 @@ picture {
       background-image: url('data:image/svg+xml;utf8,<svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="%23fff" d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>');
     }
 
-    /* stylelint-disable-next-line selector-max-class */
     .holiday-css-light nav {
       background-image: url('data:image/svg+xml;utf8,<svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="%23363636" d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>');
     }
   }
 
-  /* stylelint-disable-next-line selector-max-class */
   .holiday-css-dark nav {
     background-image: url('data:image/svg+xml;utf8,<svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="%23fff" d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>');
   }
@@ -891,7 +857,6 @@ picture {
   }
 }
 
-/* stylelint-disable-next-line selector-max-class */
 .holiday-css-light {
   color-scheme: light;
 
@@ -917,7 +882,6 @@ picture {
   --link-active-color: var(--light-link-active-color);
 }
 
-/* stylelint-disable-next-line selector-max-class */
 .holiday-css-dark {
   color-scheme: dark;
 
@@ -955,8 +919,7 @@ body {
 pre {
   background-color: var(--code-background-color);
 
-  /* Prism Dracula theme hack */
-  /* stylelint-disable-next-line declaration-no-important */
+  /* stylelint-disable-next-line declaration-no-important -- Prism Dracula theme hack */
   border-radius: 0 !important;
 }
 
@@ -980,7 +943,8 @@ a:visited code {
   color: var(--link-visited-color);
 }
 
-/* stylelint-disable-next-line selector-no-qualifying-type */
+/* stylelint-disable-next-line selector-no-qualifying-type -- `aria-current` can
+be used with any element, so limit the scope to `a` only */
 a:hover,
 a:hover code,
 a[aria-current="page"],
@@ -1110,7 +1074,6 @@ summary:focus {
   filter: brightness(95%);
 }
 
-/* stylelint-disable-next-line selector-max-specificity */
 button:enabled:hover,
 [type="button"]:enabled:hover,
 [type="color"]:enabled:hover,
@@ -1140,7 +1103,6 @@ summary:hover {
   border-color: transparent;
 }
 
-/* stylelint-disable-next-line selector-max-specificity */
 [type="submit"]:enabled:hover,
 button:not([type]):enabled:hover {
   background-color: var(--success-hover-color);
@@ -1169,7 +1131,6 @@ tfoot > tr:not(:first-child) {
   border-top: var(--border-width) solid var(--border-color);
 }
 
-/* stylelint-disable-next-line plugin/stylelint-group-selectors */
 thead > tr:nth-child(even),
 tbody > tr:nth-child(even),
 tfoot > tr:nth-child(even) {
@@ -1219,7 +1180,6 @@ hr {
   border-width: var(--border-width) 0 0;
 }
 
-/* stylelint-disable-next-line selector-max-specificity */
 :disabled,
 [aria-disabled="true"],
 [type="checkbox"][id]:disabled + [for],
@@ -1249,7 +1209,6 @@ hr {
   box-shadow: 0 0 0.2rem 0.05rem var(--danger-hover-color);
 }
 
-/* stylelint-disable-next-line selector-max-pseudo-class, selector-max-specificity */
 :invalid:not(form):enabled:hover {
   border-color: var(--danger-hover-color);
 }

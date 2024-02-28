@@ -1,4 +1,4 @@
-/* Sakura.css v1.4.1
+/* Sakura.css v1.5.0
  * ================
  * Minimal css theme.
  * Project: https://github.com/oxalorg/sakura/
@@ -153,6 +153,7 @@ table {
   text-align: justify;
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 2rem;
 }
 
 td, th {
@@ -172,7 +173,7 @@ textarea {
   width: 100%;
 }
 
-.button, button, input[type=submit], input[type=reset], input[type=button] {
+.button, button, input[type=submit], input[type=reset], input[type=button], input[type=file]::file-selector-button {
   display: inline-block;
   padding: 5px 10px;
   text-align: center;
@@ -185,15 +186,18 @@ textarea {
   cursor: pointer;
   box-sizing: border-box;
 }
-.button[disabled], button[disabled], input[type=submit][disabled], input[type=reset][disabled], input[type=button][disabled] {
+.button[disabled], button[disabled], input[type=submit][disabled], input[type=reset][disabled], input[type=button][disabled], input[type=file]::file-selector-button[disabled] {
   cursor: default;
   opacity: 0.5;
 }
-.button:focus:enabled, .button:hover:enabled, button:focus:enabled, button:hover:enabled, input[type=submit]:focus:enabled, input[type=submit]:hover:enabled, input[type=reset]:focus:enabled, input[type=reset]:hover:enabled, input[type=button]:focus:enabled, input[type=button]:hover:enabled {
+.button:hover, button:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover, input[type=file]::file-selector-button:hover {
   background-color: #982c61;
-  border-color: #982c61;
   color: #f9f9f9;
   outline: 0;
+}
+.button:focus-visible, button:focus-visible, input[type=submit]:focus-visible, input[type=reset]:focus-visible, input[type=button]:focus-visible, input[type=file]::file-selector-button:focus-visible {
+  outline-style: solid;
+  outline-width: 2px;
 }
 
 textarea, select, input {

@@ -5,14 +5,18 @@
     --dark: #404040;
     --moredark: #000;
     border-top: 5px solid var(--dark);
-    line-height: 1.5em; /* This causes wrapping h1's to collapse too small */
-    font-family: sans-serif;
+    line-height: 1.5em;
+    font-family: system-ui, sans-serif;
     font-size: 16px;
 }
 
 * {
     box-sizing: border-box;
     color: var(--dark);
+}
+
+h1 {
+    line-height: 1em;
 }
 
 button, input {
