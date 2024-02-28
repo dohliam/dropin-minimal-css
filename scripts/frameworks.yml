@@ -80,7 +80,8 @@ frameworks:
     license: MIT
     license_url: https://github.com/blainsmith/brutalist.css/blob/main/LICENSE
     repo: https://github.com/blainsmith/brutalist.css
-    url: https://blainsmith.github.io/brutalist.css/brutalist.css
+    url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/brutalist.css
+    maintained: false
   bullframe:
     author: marcop135
     author_name: Marco Pontili
@@ -331,6 +332,7 @@ frameworks:
     license_url: https://github.com/lucasarvelo/lemon/blob/master/LICENSE
     repo: https://github.com/lucasarvelo/lemon
     url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/lemon.css
+    maintained: false
   lissom:
     author: Looky1173
     author_name: Looky1173
@@ -888,63 +890,72 @@ collections:
       license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
       name: Awsm.css
       repo: https://github.com/igoradamenko/awsm.css
-      url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm.css
+      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/awsm-default.css
+      maintained: false
     awsm-black:
       author: igoradamenko
       license: MIT
       license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
       name: Awsm-black.css
       repo: https://github.com/igoradamenko/awsm.css
-      url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm_theme_black.css
+      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/awsm-black.css
+      maintained: false
     awsm-bigstone:
       author: igoradamenko
       license: MIT
       license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
       name: Awsm-big-stone.css
       repo: https://github.com/igoradamenko/awsm.css
-      url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm_theme_big-stone.css
+      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/awsm-bigstone.css
+      maintained: false
     awsm-gondola:
       author: igoradamenko
       license: MIT
       license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
       name: Awsm-gondola.css
       repo: https://github.com/igoradamenko/awsm.css
-      url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm_theme_gondola.css
+      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/awsm-gondola.css
+      maintained: false
     awsm-mischka:
       author: igoradamenko
       license: MIT
       license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
       name: Awsm-mischka.css
       repo: https://github.com/igoradamenko/awsm.css
-      url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm_theme_mischka.css
+      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/awsm-mischka.css
+      maintained: false
     awsm-pastelpink:
       author: igoradamenko
       license: MIT
       license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
       name: Awsm-pastel-pink.css
       repo: https://github.com/igoradamenko/awsm.css
-      url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm_theme_pastel-pink.css
+      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/awsm-pastelpink.css
+      maintained: false
     awsm-pearllusta:
       author: igoradamenko
       license: MIT
       license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
       name: Awsm-pearl-lusta.css
       repo: https://github.com/igoradamenko/awsm.css
-      url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm_theme_pearl-lusta.css
+      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/awsm-pearllusta.css
+      maintained: false
     awsm-tasman:
       author: igoradamenko
       license: MIT
       license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
       name: Awsm-tasman.css
       repo: https://github.com/igoradamenko/awsm.css
-      url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm_theme_tasman.css
+      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/awsm-tasman.css
+      maintained: false
     awsm-white:
       author: igoradamenko
       license: MIT
       license_url: https://github.com/igoradamenko/awsm.css/blob/master/LICENSE.md
       name: Awsm-white.css
       repo: https://github.com/igoradamenko/awsm.css
-      url: https://github.com/igoradamenko/awsm.css/blob/master/dist/awsm_theme_white.css
+      url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/awsm-white.css
+      maintained: false
   bootswatch:
     info:
       author: thomaspark
