@@ -81,7 +81,7 @@ frameworks:
     license_url: https://github.com/blainsmith/brutalist.css/blob/main/LICENSE
     repo: https://github.com/blainsmith/brutalist.css
     url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/brutalist.css
-    maintained: false
+    not_maintained: true
   bullframe:
     author: marcop135
     author_name: Marco Pontili
@@ -332,7 +332,7 @@ frameworks:
     license_url: https://github.com/lucasarvelo/lemon/blob/master/LICENSE
     repo: https://github.com/lucasarvelo/lemon
     url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/lemon.css
-    maintained: false
+    not_maintained: true
   lissom:
     author: Looky1173
     author_name: Looky1173
@@ -462,14 +462,6 @@ frameworks:
     license_url: https://github.com/muicss/mui/blob/master/LICENSE.txt
     repo: https://github.com/muicss/mui
     url: https://github.com/muicss/mui/blob/master/packages/cdn/css/mui.css
-  #mustard-ui:
-    #author: kylelogue
-    #author_name: Kyle Logue
-    #license: MIT
-    #license_url: https://github.com/kylelogue/mustard-ui/blob/master/LICENSE
-    #repo: https://github.com/kylelogue/mustard-ui
-    #url: https://github.com/kylelogue/mustard-ui/blob/master/dist/css/mustard-ui.min.css
-    #min_only: true
   new:
     author: 3x
     author_name: Example
@@ -891,7 +883,7 @@ collections:
       name: Awsm.css
       repo: https://github.com/igoradamenko/awsm.css
       url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/awsm-default.css
-      maintained: false
+      not_maintained: true
     awsm-black:
       author: igoradamenko
       license: MIT
@@ -899,7 +891,7 @@ collections:
       name: Awsm-black.css
       repo: https://github.com/igoradamenko/awsm.css
       url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/awsm-black.css
-      maintained: false
+      not_maintained: true
     awsm-bigstone:
       author: igoradamenko
       license: MIT
@@ -907,7 +899,7 @@ collections:
       name: Awsm-big-stone.css
       repo: https://github.com/igoradamenko/awsm.css
       url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/awsm-bigstone.css
-      maintained: false
+      not_maintained: true
     awsm-gondola:
       author: igoradamenko
       license: MIT
@@ -915,7 +907,7 @@ collections:
       name: Awsm-gondola.css
       repo: https://github.com/igoradamenko/awsm.css
       url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/awsm-gondola.css
-      maintained: false
+      not_maintained: true
     awsm-mischka:
       author: igoradamenko
       license: MIT
@@ -923,7 +915,7 @@ collections:
       name: Awsm-mischka.css
       repo: https://github.com/igoradamenko/awsm.css
       url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/awsm-mischka.css
-      maintained: false
+      not_maintained: true
     awsm-pastelpink:
       author: igoradamenko
       license: MIT
@@ -931,7 +923,7 @@ collections:
       name: Awsm-pastel-pink.css
       repo: https://github.com/igoradamenko/awsm.css
       url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/awsm-pastelpink.css
-      maintained: false
+      not_maintained: true
     awsm-pearllusta:
       author: igoradamenko
       license: MIT
@@ -939,7 +931,7 @@ collections:
       name: Awsm-pearl-lusta.css
       repo: https://github.com/igoradamenko/awsm.css
       url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/awsm-pearllusta.css
-      maintained: false
+      not_maintained: true
     awsm-tasman:
       author: igoradamenko
       license: MIT
@@ -947,7 +939,7 @@ collections:
       name: Awsm-tasman.css
       repo: https://github.com/igoradamenko/awsm.css
       url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/awsm-tasman.css
-      maintained: false
+      not_maintained: true
     awsm-white:
       author: igoradamenko
       license: MIT
@@ -955,7 +947,7 @@ collections:
       name: Awsm-white.css
       repo: https://github.com/igoradamenko/awsm.css
       url: https://github.com/dohliam/dropin-minimal-css/blob/gh-pages/src/awsm-white.css
-      maintained: false
+      not_maintained: true
   bootswatch:
     info:
       author: thomaspark
