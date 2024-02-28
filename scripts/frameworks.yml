@@ -89,13 +89,6 @@ frameworks:
     license_url: https://github.com/marcop135/bullframe.css/blob/master/LICENSE.md
     repo: https://github.com/marcop135/bullframe.css
     url: https://github.com/marcop135/bullframe.css/blob/master/dist/css/bullframe.css
-  bulma:
-    author: jgthms
-    author_name: Jeremy Thomas
-    license: MIT
-    license_url: https://github.com/jgthms/bulma/blob/master/LICENSE
-    repo: https://github.com/jgthms/bulma
-    url: https://github.com/jgthms/bulma/blob/master/css/bulma.css
   caiuss:
     author: IonicaBizau
     author_name: Ionică Bizău
@@ -668,13 +661,6 @@ frameworks:
     license_url: https://github.com/caiogondim/superstylin/blob/master/package.json
     repo: https://github.com/caiogondim/superstylin
     url: https://github.com/caiogondim/superstylin/blob/master/src/index.css
-  tachyons:
-    author: tachyons-css
-    author_name: Tachyons CSS Toolkit
-    license: MIT
-    license_url: https://github.com/tachyons-css/tachyons/blob/master/license
-    repo: https://github.com/tachyons-css/tachyons/
-    url: https://github.com/tachyons-css/tachyons/blob/master/css/tachyons.css
   tacit:
     author: yegor256
     author_name: Yegor Bugayenko
