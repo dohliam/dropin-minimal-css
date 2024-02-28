@@ -123,8 +123,7 @@ frameworks:
     license: MIT
     license_url: https://github.com/milouse/centigram/blob/main/LICENSE
     repo: https://github.com/milouse/centigram
-    url: https://github.com/milouse/centigram/blob/main/dist/centigram.min.css
-    min_only: true
+    url: https://github.com/milouse/centigram/blob/main/dist/centigram.css
   centurion:
     author: justinhough
     author_name: Justin Hough
