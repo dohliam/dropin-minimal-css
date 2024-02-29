@@ -22,7 +22,7 @@ This project only includes _minimal_ frameworks, in other words, boilerplate / c
 To use the CSS switcher, just add the following line anywhere within the body tag on your page:
 
 ```html
-<script src="https://dohliam.github.io/dropin-minimal-css/switcher.js" type="text/javascript"></script>
+<script src="https://dohliam.github.io/dropin-minimal-css/switcher.js" type="text/javascript" defer></script>
 ```
 
 That's it! You should now be able to cycle through the different frameworks by choosing them from the dropdown at the top of the page.
