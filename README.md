@@ -25,11 +25,22 @@ To use the CSS switcher, just add the following line anywhere within the body ta
 <script src="https://dohliam.github.io/dropin-minimal-css/switcher.js" type="text/javascript"></script>
 ```
 
+Alternatively, open Developer Console and enter the following code:
+
+```
+var body = document.getElementsByTagName('body')[0];
+script = document.createElement('script');
+script.type= 'text/javascript';script.src= 'https://dohliam.github.io/dropin-minimal-css/switcher.js';
+body.appendChild(script);
+```
+
 That's it! You should now be able to cycle through the different frameworks by choosing them from the dropdown at the top of the page.
 
-### Keyboard shortcut
+### Autoplay & Keyboard shortcut
 
 You can quickly switch between frameworks by pressing the [modifier key or keys on your keyboard](https://github.com/dohliam/xsampa#access-keys) + `s` to focus the switcher dropdown menu, followed by the up and down keys to move up and down the list.
+
+You can also let the script run through the list of frameworks by hit "Play" button. The button should now be focused and if you press `spacebar` anytime, the code will pause at the current theme. The +/- button makes the auto-play feature goes faster or slower.
 
 ### Bookmarklet
 

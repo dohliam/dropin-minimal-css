@@ -19,10 +19,46 @@ function on_css_load() {
   switcher.style.backgroundColor = bgColor;
 }
 
+waittime = 1500
+play = false
+
+async function autoplay() {
+    play = !play
+    if (play) {
+        document.getElementById("autoplay").innerText='Stop';
+    } else {
+        document.getElementById("autoplay").innerText='Play';
+    }
+    currentselection=document.getElementById("switcher_dropdown").selectedIndex;
+    for (currentselection;currentselection<switcher_dropdown.length;currentselection++){
+        if (play) {
+            switch_css(switcher_dropdown[currentselection].value);
+            switcher_dropdown.value=switcher_dropdown[currentselection].value;
+            await sleep(waittime);
+        } else {
+            break;
+        }
+    }
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function faster(){
+    if (waittime > 1000){
+        waittime -= 500;
+    }
+}
+function slower(){
+    waittime += 500;
+}
+
+
 function inline_switcher() {
   switcher = document.getElementById("switcher");
   frameworks_array = frameworks.split(",");
-  select_open = '\n        <select name="switcher_dropdown" id="switcher_dropdown" accesskey="s" onchange="switch_css(this.value)">\n';
+  select_open = '\n        <select name="switcher_dropdown" style="display: inline;width: 50%;" id="switcher_dropdown" accesskey="s" onchange="switch_css(this.value)">\n';
   dropdown = select_open;
   for (i = 0; i < frameworks_array.length; i++) {
     f = frameworks_array[i];
@@ -30,7 +66,7 @@ function inline_switcher() {
     option = '          <option value="' + f + '">' + framework_name + ' CSS</option>\n';
     dropdown = dropdown + option;
   }
-  select_close = '        </select>\n      '
+  select_close = '        </select>\n <div style="display: inline;width: 50%;"> <button style="display: inline;padding: 5px;" onclick=slower()>-</button><button style="display: inline;padding: 5px;" id="autoplay" onclick=autoplay()>Play</button><button style="display: inline;padding: 5px;" onclick=faster()>+</button></div>'
   dropdown = dropdown + select_close;
   switcher.innerHTML = dropdown;
 }
@@ -47,6 +83,11 @@ function add_switcher() {
   }
 
   var new_div = document.createElement('div');
+  new_div.style.top="0px"
+  new_div.style.right="0px"
+  new_div.style.position="absolute"
+  new_div.style.display="float"
+  new_div.style.top="0px"
   new_div.id = 'switcher';
   new_div.innerHTML = '      <div>&nbsp;</div>\n      <script type="text/javascript">inline_switcher();</script>';
   document.body.prepend(new_div);
