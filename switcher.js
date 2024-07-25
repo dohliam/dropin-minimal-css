@@ -36,14 +36,13 @@ function inline_switcher() {
 }
 
 function add_switcher() {
-  css_link = document.getElementsByTagName("link")[0];
+  css_link = document.querySelectorAll("link[rel='stylesheet']")[0];
   if (css_link == undefined) {
-    head = document.getElementsByTagName('head')[0];
     css_link = document.createElement('link');
     css_link.rel="stylesheet";
     css_link.type="text/css";
     css_link.href="https://dohliam.github.io/dropin-minimal-css/min/" + frameworks.split(",")[0] + ".min.css";
-    head.appendChild(css_link);
+    document.head.appendChild(css_link);
   }
 
   var new_div = document.createElement('div');
