@@ -227,6 +227,7 @@ If you know of a minimal framework that hasn't been included here, please create
 
 * [workflow](https://github.com/dohliam/workflow) - Quick prototyping script for creating rich html and pdfs from markdown documents (based on dropin-minimal-css)
 * [asciidoctor-skins](https://github.com/darshandsoni/asciidoctor-skins) - CSS stylesheets for asciidoctor (with a switcher based on dropin-minimal-css)
+* [blades](https://github.com/anydigital/blades) - Framework-agnostic, class-light CSS⁺ toolkit to be used with class-less/light CSS resets/frameworks
 
 ### Other similar collections
 
