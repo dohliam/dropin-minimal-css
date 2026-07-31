@@ -86,9 +86,9 @@ frameworks:
     author: marcop135
     author_name: Marco Pontili
     license: MIT
-    license_url: https://github.com/marcop135/bullframe.css/blob/master/LICENSE.md
+    license_url: https://github.com/marcop135/bullframe.css/blob/main/LICENSE
     repo: https://github.com/marcop135/bullframe.css
-    url: https://github.com/marcop135/bullframe.css/blob/master/dist/css/bullframe.css
+    url: https://github.com/marcop135/bullframe.css/blob/main/dist/css/bullframe-classless.css
   caiuss:
     author: IonicaBizau
     author_name: Ionică Bizău
