@@ -1,4 +1,80 @@
-/*! bullframe.css v4.1.2 | MIT License | https://github.com/marcop135/bullframe.css */
+/* ! Bullframe CSS v6.0.0 | MIT License | https://github.com/marcop135/bullframe.css  */
+
+/* Classless build: semantic element styles only (no .bf-* utilities). */
+
+/* Variables */
+/* Design tokens (--bf-*). Shared by every build variant.
+ * Override on :root (or a scope) to theme without rebuilding. */
+
+:root {
+  /* Neutrals */
+  --bf-white: rgb(255 255 255);
+  --bf-light: rgb(240 240 240);
+  --bf-gray-light-extra: rgb(233 233 233);
+  --bf-gray-light: rgb(204 204 204);
+  --bf-gray: rgb(153 153 153);
+  --bf-gray-dark: rgb(102 102 102);
+  --bf-gray-dark-extra: rgb(51 51 51);
+  --bf-dark: rgb(34 34 34);
+  --bf-dark-extra: rgb(17 17 17);
+  --bf-black: rgb(0 0 0);
+
+  /* Highlight / mark */
+  --bf-yellow-light: rgb(255 255 153);
+  --bf-yellow: rgb(255 255 0);
+  --bf-orange: rgb(255 165 0);
+
+  /* Accent: WCAG AA on white (links 4.5:1) and white-on-blue buttons (4.5:1) */
+  --bf-blue: rgb(0 86 179);
+  --bf-blue-light: rgb(0 65 135);
+  --bf-blue-light-extra: rgb(190 216 254);
+
+  /* Invalid / error */
+  --bf-red: rgb(255 0 0);
+
+  /* Dark-mode surfaces (used by utility-global-dark*.css) */
+  --bf-dark-bg: rgb(28 28 28);
+  --bf-dark-link: rgb(77 165 255);
+  --bf-dark-link-hover: rgb(77 165 255);
+  --bf-dark-border-focus: rgb(26 140 255);
+  --bf-dark-shadow-focus: rgb(3 102 214 / 50%);
+  --bf-dark-mark-bg: rgb(230 230 0);
+  --bf-dark-ins-bg: rgb(255 255 200);
+  --bf-dark-button-hover: rgb(184 184 184);
+  --bf-dark-button-shadow: rgb(255 255 255 / 45%);
+  --bf-dark-invalid: rgb(255 38 38);
+
+  /* Spacing scale + grid gutter */
+  --bf-spacing-sm: 0.25rem;
+  --bf-spacing-md: 0.5rem;
+  --bf-spacing-lg: 1rem;
+  --bf-spacing-xl: 2rem;
+  --bf-spacing-xxl: 3rem;
+  --bf-spacing-grid-gutter: 1.5rem;
+
+  /* Type */
+  --bf-font-sans-serif:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  --bf-font-serif: Georgia, Times, 'Times New Roman', serif;
+  --bf-font-monospace:
+    SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --bf-body-font-size-rem: 1.6rem;
+  --bf-body-line-height: 1.5;
+
+  /* Breakpoint tokens (documentation / tooling; media queries use literal px below) */
+  --bf-breakpoint-xs: 0;
+  --bf-breakpoint-sm: 576px;
+  --bf-breakpoint-md: 768px;
+  --bf-breakpoint-lg: 992px;
+  --bf-breakpoint-xl: 1200px;
+  --bf-breakpoint-xxl: 1400px;
+}
+
+/* Layout */
+/* Border-box and HTML5 block elements. */
+
 *,
 *::before,
 *::after {
@@ -25,33 +101,246 @@ template {
   display: none;
 }
 
-[hidden] {
+/* [hidden] stays hidden (except until-found). */
+[hidden]:where(:not([hidden='until-found'])) {
   display: none !important;
 }
+/* UA+ enhancements (adapted from https://fokus.dev/tools/uaplus/).
+ * Light UA improvements; complements Bullframe base styles. */
+
+@layer {
+  /* Spacing between content and focus outline (enhances focus.css). */
+  :focus-visible {
+    outline-offset: 3px;
+  }
+
+  /* Disable mobile landscape text inflation on optimized layouts. */
+  html {
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+         text-size-adjust: none;
+  }
+
+  /* Comfortable default root line-height (body still uses --bf-body-line-height). */
+  html {
+    line-height: 1.5;
+  }
+
+  /* Stable scrollbar gutter avoids layout jump on short pages. */
+  html {
+    scrollbar-gutter: stable;
+  }
+
+  /* Nested h1 size/margin: match modern UA (Safari still nests sectioning styles). */
+  h1 {
+    font-size: 2em;
+    margin-block: 0.67em;
+  }
+
+  /* abbr[title]: dotted underline + help cursor across engines. */
+  abbr[title] {
+    cursor: help;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+  }
+
+  /* mark: system Highlight colors under forced-colors. */
+  @media (forced-colors: active) {
+    mark {
+      color: HighlightText;
+      background-color: Highlight;
+    }
+  }
+
+  /* Embedded media: stay within container block/inline size. */
+  audio,
+  iframe,
+  img,
+  svg,
+  video {
+    max-block-size: 100%;
+    max-inline-size: 100%;
+  }
+
+  /* fieldset: avoid min-content overflow from children. */
+  fieldset {
+    min-inline-size: 0;
+  }
+
+  /* Labels for text-like controls are block; :has() gated for older engines. */
+  @supports selector(:has(*)) {
+    label:has(+ input:not([type='radio'], [type='checkbox']), select, textarea) {
+      display: block;
+    }
+  }
+
+  /* Taller default textarea when rows is omitted. */
+  textarea:not([rows]) {
+    min-block-size: 6em;
+  }
+
+  /* Form controls inherit page font family/size. */
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  /* Search: drop WebKit rounded search chrome. */
+  [type='search'] {
+    -webkit-appearance: textfield;
+  }
+
+  /* iOS only: system border/background for search. */
+  @supports (-webkit-touch-callout: none) {
+    [type='search'] {
+      border: 1px solid -apple-system-secondary-label;
+      background-color: canvas;
+    }
+  }
+
+  /* Keep tel/url/email/number LTR when a value is present (RTL placeholders stay). */
+  input:where([type='tel'], [type='url'], [type='email'], [type='number']):not(
+      :-moz-placeholder
+    ) {
+    direction: ltr;
+  }
+  input:where([type='tel'], [type='url'], [type='email'], [type='number']):not(
+      :placeholder-shown
+    ) {
+    direction: ltr;
+  }
+
+  /* Tables: collapsed borders + cell padding for scanability. */
+  table {
+    border: 1px solid currentColor;
+  }
+
+  th,
+  td {
+    border: 1px solid currentColor;
+    padding: 0.25em 0.5em;
+  }
+
+  /* Soft dialog / popover enter transitions (skip when reduced-motion is on). */
+  @media (prefers-reduced-motion: no-preference) {
+    dialog::backdrop {
+      background: rgb(0 0 0 / 0.3);
+    }
+
+    @supports (overlay: auto) {
+      dialog,
+      [popover],
+      dialog::backdrop {
+        opacity: 0;
+        transition:
+          opacity 300ms ease-out,
+          display 300ms allow-discrete,
+          overlay 300ms allow-discrete;
+      }
+
+      dialog[open],
+      :popover-open,
+      dialog[open]::backdrop {
+        opacity: 1;
+      }
+
+      @starting-style {
+        dialog[open],
+        :popover-open,
+        dialog[open]::backdrop {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  /* Keep [hidden] hard-hidden except until-found. */
+  [hidden]:not([hidden='until-found']) {
+    display: none !important;
+  }
+
+  /* Images as blocks (max-width still from embedded-content.css). */
+  img {
+    display: block;
+  }
+
+  /* summary: pointer on the whole control, not only ::marker. */
+  summary {
+    cursor: default;
+  }
+
+  /* iframes: no default border. */
+  iframe {
+    border: none;
+  }
+
+  /* Popovers: anchor near trigger when position-area is supported. */
+  @supports (position-area: block-end span-inline-end) {
+    [popover] {
+      margin: 0;
+      position-area: block-end span-inline-end;
+    }
+  }
+}
+
+/* Typography */
+/* Root type and page chrome. */
 
 html {
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
           text-size-adjust: 100%;
+
+  /* 62.5% root so 1rem ≈ 10px. */
   font-size: 62.5%;
-  color: #222;
-  font-family: sans-serif;
+
+  color: var(--bf-dark);
+  font-family: system-ui, sans-serif;
   line-height: 1.15;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  /* No tap flash on touch. */
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
 }
 
 body {
   margin: 0;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.5;
+  font-size: var(--bf-body-font-size-rem);
+  line-height: var(--bf-body-line-height);
   font-weight: 400;
   text-align: left;
-  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* System UI stack (OS-native). */
+  font-family:
+    /* Safari / iOS (San Francisco) */
+    -apple-system,
+    /* Chrome < 56 on macOS (San Francisco) */ BlinkMacSystemFont,
+    /* Windows */ 'Segoe UI',
+    /* Android */ Roboto,
+    /* KDE */ Oxygen-Sans,
+    /* Ubuntu */ Ubuntu,
+    /* GNOME */ Cantarell,
+    /* macOS 10.10 and below */ 'Helvetica Neue',
+    Helvetica,
+    /* Web fallback */ Arial,
+    'Noto Sans',
+    sans-serif,
+    /* Emoji */ 'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
+
+  /* Ligatures and kerning. */
   text-rendering: optimizeLegibility;
+
+  /* Long unbroken strings (e.g. headlines) wrap instead of overflowing. */
   word-wrap: break-word;
-  background-color: #fff;
+
+  background-color: var(--bf-white);
 }
+/* Heading scale and rhythm. */
 
 h1,
 h2,
@@ -60,13 +349,12 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  font-weight: 700;
   font-weight: 600;
   font-family: inherit;
   color: inherit;
   line-height: 1.25;
-  margin-bottom: 10px;
-  margin-bottom: 1rem;
+  margin-bottom: var(--bf-spacing-lg);
+  text-wrap: balance;
 }
 
 h1 {
@@ -94,10 +382,10 @@ h6 {
   font-size: 16px;
   font-size: 1.6rem;
 }
+/* Blockquote and citation. */
 
 blockquote {
-  margin: 0 0 20px 0;
-  margin-bottom: 2rem;
+  margin: 0 0 var(--bf-spacing-xl);
   padding-left: 0;
   font-style: italic;
 }
@@ -107,58 +395,24 @@ blockquote p {
 }
 
 blockquote small {
-  color: #999;
+  color: var(--bf-gray);
   display: block;
 }
 
-blockquote small:before {
-  content: "— ";
+blockquote small::before {
+  content: '\2014 \00A0';
 }
 
 q {
-  quotes: "“" "”" "‘" "’";
+  quotes: '\201C' '\201D' '\2018' '\2019';
 }
-
-pre {
-  margin: 0 0 20px 0;
-  margin: 0 0 2rem 0;
-  display: block;
-  overflow: auto;
-  word-break: break-all;
-  word-wrap: break-word;
-  white-space: pre;
-  -webkit-hyphens: none;
-          hyphens: none;
-  -ms-overflow-style: auto;
-}
-
-pre,
-code,
-kbd,
-samp {
-  font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 0.875em;
-}
-
-code {
-  word-wrap: break-word;
-}
-
-a > code {
-  color: inherit;
-}
-
-pre code {
-  font-size: inherit;
-  color: inherit;
-  word-break: normal;
-}
+/* Paragraphs, abbr, mark/ins, emphasis, sub/sup, small, hr. */
 
 p {
-  margin: 0 0 20px 0;
-  margin: 0 0 2rem 0;
+  margin: 0 0 var(--bf-spacing-xl) 0;
 }
 
+/* abbr (Bootstrap 4): dotted underline + help cursor. */
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
@@ -169,22 +423,22 @@ abbr[data-original-title] {
 }
 
 mark {
-  background-color: #ff0;
-  color: #000;
+  background-color: var(--bf-yellow);
+  color: var(--bf-black);
 }
 
 ins {
-  background-color: #ff9;
-  color: #000;
+  background-color: var(--bf-yellow-light);
+  color: var(--bf-black);
   text-decoration: none;
 }
 
+/* Inherit first so Safari does not double-apply bolder, then set bolder. */
 b,
 strong {
   font-weight: inherit;
 }
 
-/* stylelint-disable-next-line */
 b,
 strong {
   font-weight: bolder;
@@ -216,6 +470,13 @@ small {
   font-size: 80%;
 }
 
+/* Tighter leading when a paragraph contains <small>. */
+@supports selector(:has(*)) {
+  p:has(small) {
+    line-height: 1.25;
+  }
+}
+
 hr {
   box-sizing: content-box;
   display: block;
@@ -223,98 +484,686 @@ hr {
   border-style: solid;
   border-width: 1px 0 0;
   color: inherit;
-  margin: 20px 0;
-  margin: 2rem 0;
+  margin: var(--bf-spacing-xl) 0;
   padding: 0;
-  overflow: visible;
+  overflow: visible; /* Edge: show overflow. */
+}
+/* pre / code / kbd / samp. */
+
+pre {
+  margin: 0 0 var(--bf-spacing-xl) 0;
+
+  display: block;
+  overflow: auto;
+  word-break: break-all; /* WebKit */
+  word-wrap: break-word;
+  white-space: pre;
+  hyphens: none;
+
+  /* Keep scrollbars visible in legacy Edge.
+   * https://github.com/twbs/bootstrap/pull/30685 */
+  -ms-overflow-style: auto;
 }
 
-address {
-  font-style: normal;
-  margin-bottom: 10px;
-  margin-bottom: 1rem;
+pre,
+code,
+kbd,
+samp {
+  font-family:
+    /* macOS 10.10+ */
+    Menlo, Consolas, 'Roboto Mono', 'Ubuntu Monospace', 'Noto Mono', 'Oxygen Mono',
+    'Liberation Mono', monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+
+  /* Mono faces read large; use a slightly smaller size. */
+  font-size: 0.875em;
+}
+
+code {
+  word-wrap: break-word;
+}
+
+a > code {
+  color: inherit;
+}
+
+pre code {
+  font-size: inherit;
+  color: inherit;
+  word-break: normal;
+}
+
+/* Forms */
+/* Form control reset: inheritance, sizing, and UA quirks. */
+
+:where(html input, button, select, optgroup, textarea) {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
   line-height: inherit;
 }
 
-summary {
-  display: list-item;
+:where(html input, button, [type='radio'], [type='checkbox'], select, optgroup, textarea) {
+  margin: 0;
+}
+
+:where(html input, select, textarea, legend) {
+  width: 100%;
+}
+
+/* Shrink-to-content controls stay auto-width. */
+:where(
+  html label,
+  button,
+  [type='image'],
+  [type='submit'],
+  [type='reset'],
+  html [type='button'],
+  [type='radio'],
+  [type='checkbox']
+) {
+  width: auto;
+}
+
+/* inline-block: consistent sizing and vertical-align across engines. */
+:where(
+  html input,
+  label,
+  select,
+  textarea,
+  button,
+  html [type='button'],
+  [type='reset'],
+  [type='submit'],
+  output
+) {
+  display: inline-block;
+}
+
+:where([type='file']) {
+  display: block;
+  background-color: transparent;
+}
+
+:where(button, html input, select, textarea) {
+  background-image: none;
+}
+
+:where(input, select, textarea) {
+  vertical-align: baseline;
+}
+
+:where(form) {
+  margin: 0;
+}
+
+/* Drop fieldset min-content width so nested grids can shrink. */
+:where(fieldset) {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+:where(legend) {
+  display: table; /* Text wrapping in Edge / IE. */
+  max-width: 100%;
+  white-space: normal;
+  border: 0;
+  padding: 0;
+  font-weight: 400;
+  margin-bottom: var(--bf-spacing-md);
+  font-size: inherit;
+  line-height: 1.375;
+  color: inherit;
+}
+
+:where(label) {
+  font-weight: 400;
+  font-size: 90%;
+  line-height: 1.375;
+  margin-bottom: var(--bf-spacing-md);
+}
+
+:where(label input, label select, label textarea) {
+  font-size: 110%;
+}
+
+::-webkit-inner-spin-button {
+  height: auto;
+}
+
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-minute,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field {
+  padding: 0;
+}
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+:where([type='search']) {
+  outline-offset: calc(-1 * var(--bf-spacing-sm));
+}
+
+:where(output) {
+  vertical-align: middle;
+}
+
+:where(button, select) {
+  text-transform: none;
+}
+
+:where(select) {
+  word-wrap: normal;
+}
+
+/* Hide WebKit datalist picker chrome (Bootstrap Reboot 5.2).
+ * https://unpkg.com/browse/bootstrap@5.2.0/dist/css/bootstrap-reboot.css */
+:where([list]):not(
+    [type='date'],
+    [type='datetime-local'],
+    [type='month'],
+    [type='week'],
+    [type='time']
+  )::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+
+:where(optgroup) {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit; /* Families without a 600 face. */
+  font-weight: 600;
+}
+
+/* Reset WebKit / Blink appearance on text-like controls. */
+:where(
+  button,
+  html [type='button'],
+  [type='reset'],
+  [type='submit'],
+  [type='email'],
+  [type='number'],
+  [type='text'],
+  [type='tel'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='url'],
+  [type='image'],
+  [type='password'],
+  [type='search'],
+  [type='search']::-webkit-search-decoration,
+  [type='search']::-webkit-search-cancel-button,
+  input[list],
+  textarea
+) {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+::file-selector-button {
+  font: inherit;
+  -webkit-appearance: auto;
+     -moz-appearance: auto;
+          appearance: auto;
+}
+
+:where(button, input, select, textarea) {
+  border-radius: var(--bf-spacing-sm);
+}
+
+:where([type='radio']) {
+  border-radius: 50%;
+}
+
+:where([type='checkbox']) {
+  border-radius: var(--bf-spacing-md);
+}
+
+:where([type='radio'], [type='checkbox']) {
+  padding: 0;
+  background-color: var(--bf-white);
+}
+
+:where([type='range' i]) {
+  background-color: transparent;
+}
+
+:where(select[size], select[multiple]) {
+  height: auto;
+}
+
+:where(select[multiple]) {
+  background-image: none;
+}
+
+:where(textarea) {
+  height: auto;
+  min-height: 60px;
+  min-height: 6rem;
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/* Firefox: strip inner focus padding/border. */
+::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+:where(button, [type='button'], [type='reset'], [type='submit']) {
+  line-height: normal;
+  text-align: center;
+  margin: 0;
+  background-clip: padding-box;
+  vertical-align: baseline;
+  overflow: visible;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border: 0;
+  background-image: none; /* Firefox mobile */
+}
+
+:where(button, [type='button'], [type='reset'], [type='submit']):hover,
+:where(button, [type='button'], [type='reset'], [type='submit']):active,
+:where(button, [type='button'], [type='reset'], [type='submit']):focus {
+  text-decoration: none;
+  color: var(--bf-dark);
+}
+
+:where(
+  button:not(:disabled),
+  [type='button']:not(:disabled),
+  [type='reset']:not(:disabled),
+  [type='submit']:not(:disabled)
+) {
   cursor: pointer;
 }
 
+/* Firefox: input color must not override placeholder color.
+ * https://github.com/necolas/normalize.css/issues/150 */
+:where(input::-moz-placeholder, textarea::-moz-placeholder) {
+  color: var(--bf-gray-dark);
+}
+:where(input::placeholder, textarea::placeholder) {
+  color: var(--bf-gray-dark);
+}
+
+/* Firefox: modern focus ring on all focusable elements. */
+:-moz-focusring {
+  outline: auto;
+}
+
+/* Firefox: drop :-moz-ui-invalid glow; use .bf-invalid for JS validation.
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-ui-invalid */
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+/* Form field and button chrome (borders, focus, disabled). */
+
+:where(
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='tel'],
+  [type='search'],
+  [type='text'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='time'],
+  [type='url'],
+  input[list],
+  select,
+  textarea
+) {
+  background-color: var(--bf-white);
+  border: 1px solid var(--bf-gray);
+  padding: var(--bf-spacing-md) calc(var(--bf-spacing-lg) * 0.75);
+}
+
+:where(
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='tel'],
+  [type='search'],
+  [type='text'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='time'],
+  [type='url'],
+  input[list],
+  select,
+  textarea,
+  [type='radio'],
+  [type='checkbox']
+):active,
+:where(
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='tel'],
+  [type='search'],
+  [type='text'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='time'],
+  [type='url'],
+  input[list],
+  select,
+  textarea,
+  [type='radio'],
+  [type='checkbox']
+):focus {
+  transition:
+    border 0.2s,
+    background-color 0.2s,
+    box-shadow 0.2s;
+  border-color: var(--bf-blue);
+  box-shadow: 0 0 0 3px rgb(0 86 179 / 25%);
+}
+
+:where(button, [type='button'], [type='reset'], [type='submit']) {
+  color: var(--bf-dark);
+  padding: calc(var(--bf-spacing-xl) / 3) calc(calc(var(--bf-spacing-xl) / 3) * 2);
+  background: var(--bf-gray-light);
+  transition:
+    color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
+}
+
+:where(button, [type='button'], [type='reset'], [type='submit']):hover,
+:where(button, [type='button'], [type='reset'], [type='submit']):active,
+:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(.bf-disabled):not(
+    [aria-disabled='true']
+  ) {
+  text-decoration: none;
+  color: var(--bf-dark);
+  background: rgb(184 184 184); /* --bf-gray-light, ~10% darker */
+}
+
+:where(button, [type='button'], [type='reset'], [type='submit']):active,
+:where(button, [type='button'], [type='reset'], [type='submit']):focus:not(.bf-disabled):not(
+    [aria-disabled='true']
+  ) {
+  box-shadow: 0 0 0 3px rgb(0 0 0 / 15%);
+}
+
+/* Disabled / aria-disabled / fieldset[disabled]. */
+:where(
+  fieldset[disabled] button,
+  fieldset[disabled] input,
+  fieldset[disabled] input::after,
+  fieldset[disabled] input::before,
+  fieldset[disabled] input:checked,
+  fieldset[disabled] select,
+  fieldset[disabled] textarea,
+  fieldset[disabled] label,
+  button[disabled],
+  input[disabled],
+  input[disabled]::after,
+  input[disabled]::before,
+  input[disabled]:checked,
+  select[disabled],
+  textarea[disabled],
+  label[disabled],
+  button:disabled,
+  input:disabled,
+  input:disabled::after,
+  input:disabled::before,
+  input:disabled:checked,
+  select:disabled,
+  textarea:disabled,
+  label:disabled,
+  button[aria-disabled='true'],
+  input[aria-disabled='true'],
+  input[aria-disabled='true']::after,
+  input[aria-disabled='true']::before,
+  input[aria-disabled='true']:checked,
+  select[aria-disabled='true'],
+  textarea[aria-disabled='true'],
+  label[aria-disabled='true']
+) {
+  cursor: default !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  opacity: 0.5 !important;
+}
+/* Select: custom arrow for single-value controls.
+ * Skip [size] / [multiple] (native UI differs by engine). Inspired by water.css. */
+
+:where(select):not([size], select[multiple]) {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: var(--bf-white)
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
+    no-repeat right 0.85rem center/8px 10px;
+  padding-right: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
+}
+
+/* RTL: mirror arrow after appearance:none removes the native control. */
+:where(*[dir='rtl']) :where(select):not([size], select[multiple]),
+:where(select[dir='rtl']):not([size], select[multiple]) {
+  background-position: left 0.85rem top 50%;
+  padding-right: calc(var(--bf-spacing-lg) * 0.75);
+  padding-left: calc(var(--bf-spacing-lg) + var(--bf-spacing-lg));
+}
+/* Range: custom thumb/track when appearance:none is supported.
+ * CodePen: https://codepen.io/marcop135/pen/JjGrNMx */
+
+@supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
+  :where([type='range']) {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    width: 100%;
+    height: 1.4rem;
+  }
+
+  :where([type='range'])::-webkit-slider-thumb {
+    border: 0;
+    -webkit-appearance: none;
+            appearance: none;
+
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: -0.25rem;
+    background-color: var(--bf-blue);
+    border-radius: 1.5rem;
+    -webkit-transition:
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+    transition:
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+  }
+
+  :where([type='range'])::-webkit-slider-thumb:active {
+    background-color: var(--bf-blue);
+  }
+
+  :where([type='range'])::-moz-range-thumb {
+    border: 0;
+    -moz-appearance: none;
+         appearance: none;
+
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--bf-blue);
+    border-radius: 1.5rem;
+    -moz-transition:
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+    transition:
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+  }
+
+  :where([type='range'])::-moz-range-thumb:active {
+    background-color: var(--bf-blue);
+  }
+
+  :where([type='range'])::-webkit-slider-runnable-track {
+    color: transparent;
+    border-color: transparent;
+
+    width: 100%;
+    height: 0.65rem;
+    cursor: pointer;
+    background-color: var(--bf-gray-light-extra);
+  }
+
+  :where([type='range'])::-moz-range-track {
+    color: transparent;
+    border-color: transparent;
+
+    width: 100%;
+    height: 0.65rem;
+    cursor: pointer;
+    background-color: var(--bf-gray-light-extra);
+  }
+
+  :where([type='range']):focus {
+    outline: none;
+  }
+
+  :where([type='range']):focus::-webkit-slider-thumb {
+    box-shadow:
+      0 0 0 0.1rem var(--bf-white),
+      0 0 0 0.2rem rgb(0 123 255 / 25%);
+  }
+
+  :where([type='range']):focus::-moz-range-thumb {
+    box-shadow:
+      0 0 0 0.1rem var(--bf-white),
+      0 0 0 0.2rem rgb(0 123 255 / 25%);
+  }
+
+  :where([type='range'])::-moz-focus-outer {
+    border: 0;
+  }
+
+  :where([type='range']):disabled {
+    pointer-events: none;
+  }
+
+  :where([type='range']):disabled::-webkit-slider-thumb {
+    background-color: var(--bf-gray-light);
+  }
+
+  :where([type='range']):disabled::-moz-range-thumb {
+    background-color: var(--bf-gray-light);
+  }
+}
+
+/* Miscellaneous */
+/* Link defaults. --bf-blue meets WCAG AA 4.5:1 on white. */
+
 a {
-  color: #007bff;
+  color: var(--bf-blue);
   text-decoration: none;
-  background-color: transparent;
+  background-color: transparent; /* Legacy Edge active background. */
 }
-a:hover, a:focus {
+
+a:hover,
+a:focus {
   text-decoration: underline;
-  color: #0056b3;
+  color: var(--bf-blue-light);
 }
 
-a:not([href]):not([tabindex]) {
+/* Non-href anchors inherit text (Bootstrap reboot pattern). */
+a:not([href], [tabindex]) {
   color: inherit;
   text-decoration: none;
 }
 
-a:not([href]):not([tabindex]):hover,
-a:not([href]):not([tabindex]):focus,
-a:not([href]):not([class]),
-a:not([href]):not([class]):hover {
+a:not([href], [class]),
+a:not([href], [class]):hover {
   color: inherit;
   text-decoration: none;
 }
 
-a:not([href]):not([tabindex]):focus {
+a:not([href], [tabindex]):focus {
   outline: 0;
 }
+/* Keyboard-first focus: orange :focus-visible ring; mute mouse outline.
+ * Text-like controls clear UA outline here; field chrome is in forms/styling.css. */
 
-:focus:not(:focus-visible) {
+:where(:focus:not(:focus-visible)) {
   outline: none;
 }
 
-[tabindex="-1"]:focus:not(:focus-visible) {
+/* tabindex="-1" targets should not show a ring on programmatic focus. */
+:where([tabindex='-1']:focus:not(:focus-visible)) {
   outline: 0 !important;
 }
 
-a:focus,
-input:focus {
-  outline: 2px solid orange;
-}
-
 :focus-visible {
-  outline: 2px solid orange;
+  outline: 0.2rem solid var(--bf-orange);
+  outline-offset: 0.3rem;
 }
 
+/* Clear UA outline on text-like controls (styled fields keep their own chrome).
+ * Leave color / range / file alone; they often use custom widgets. */
 button:focus,
-[type=button]:focus,
-[type=reset]:focus,
-[type=submit]:focus,
-[type=email]:focus,
-[type=number]:focus,
-[type=password]:focus,
-[type=tel]:focus,
-[type=search]:focus,
-[type=text]:focus,
-[type=date]:focus,
-[type=datetime-local]:focus,
-[type=month]:focus,
-[type=time]:focus,
-[type=week]:focus,
-[type=url]:focus,
-[type=radio]:focus,
-[type=checkbox]:focus,
+[type='button']:focus,
+[type='reset']:focus,
+[type='submit']:focus,
+[type='email']:focus,
+[type='number']:focus,
+[type='password']:focus,
+[type='tel']:focus,
+[type='search']:focus,
+[type='text']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='time']:focus,
+[type='week']:focus,
+[type='url']:focus,
+[type='radio']:focus,
+[type='checkbox']:focus,
 input[list]:focus,
 select:focus,
-textarea:focus {
+textarea:focus,
+.bf-btn:focus {
   outline: 0;
 }
+/* List spacing and nav list reset. */
 
 menu,
 ol,
 ul,
 dl {
-  margin: 0 0 20px 0;
-  margin: 0 0 2rem 0;
+  margin: 0 0 var(--bf-spacing-xl) 0;
   padding: 0;
 }
 
@@ -330,8 +1179,7 @@ dd {
 
 ul,
 ol {
-  margin-left: 20px;
-  margin-left: 2rem;
+  margin-left: var(--bf-spacing-xl);
 }
 
 nav ol,
@@ -349,10 +1197,12 @@ dd {
   margin-left: 0;
 }
 
-nav li:before {
-  content: "​";
+/* VoiceOver: zero-width space so list-style:none lists stay announced. */
+nav li::before {
+  content: '\200B';
   position: absolute;
 }
+/* Media elements, figures, progress/meter, and iframes. */
 
 audio,
 canvas,
@@ -427,614 +1277,91 @@ meter {
   max-width: 100%;
 }
 
+/* progress[value] reset (https://css-tricks.com/html5-progress-element/). */
 progress[value] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  border: none;
+  border: none; /* Firefox default border. */
+
   height: 20px;
   height: 2rem;
-  background: #ccc;
-  color: #007bff;
+
+  background: var(--bf-gray-light);
+  color: var(--bf-blue); /* Progress fill in IE10+. */
 }
 
 progress[value]::-webkit-progress-bar {
-  background: #ccc;
+  background: var(--bf-gray-light);
 }
 
 progress[value]::-webkit-progress-value {
-  background: #007bff;
+  background: var(--bf-blue);
 }
 
+/* No default border (covers embeds that ignore frameborder="0"). */
 iframe {
   border-style: none;
 }
+/* Address, details/summary, and dialog defaults. */
 
-html input,
-button,
-select,
-optgroup,
-textarea {
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
+address {
+  font-style: normal;
+  margin-bottom: var(--bf-spacing-lg);
   line-height: inherit;
 }
 
-html input,
-button,
-[type=radio],
-[type=checkbox],
-select,
-optgroup,
-textarea {
-  margin: 0;
+details > summary:first-of-type {
+  display: list-item;
 }
 
-html input,
-select,
-textarea,
-legend {
-  width: 100%;
-}
-
-html label,
-button,
-[type=image],
-[type=submit],
-[type=reset],
-html [type=button],
-[type=radio],
-[type=checkbox] {
-  width: auto;
-}
-
-html input,
-label,
-select,
-textarea,
-button,
-html [type=button],
-[type=reset],
-[type=submit],
-output {
-  display: inline-block;
-}
-
-[type=file] {
-  display: block;
-  background-color: transparent;
-}
-
-button,
-html input,
-select,
-textarea {
-  background-image: none;
-}
-
-input,
-select,
-textarea {
-  vertical-align: baseline;
-}
-
-form {
-  margin: 0;
-}
-
-fieldset {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  min-width: 0;
-}
-
-legend {
-  display: table;
-  max-width: 100%;
-  white-space: normal;
-  border: 0;
-  padding: 0;
-  font-weight: 400;
-  margin-bottom: 5px;
-  margin-bottom: 0.5rem;
-  font-size: inherit;
-  line-height: 1.375;
-  color: inherit;
-}
-
-label {
-  font-weight: 400;
-  font-size: 90%;
-  line-height: 1.375;
-  margin-bottom: 5px;
-  margin-bottom: 0.5rem;
-}
-
-label input,
-label select,
-label textarea {
-  font-size: 110%;
-}
-
-[type=number]::-webkit-outer-spin-button,
-[type=number]::-webkit-inner-spin-button {
-  height: auto;
-}
-
-::-webkit-datetime-edit-fields-wrapper,
-::-webkit-datetime-edit-text,
-::-webkit-datetime-edit-minute,
-::-webkit-datetime-edit-hour-field,
-::-webkit-datetime-edit-day-field,
-::-webkit-datetime-edit-month-field,
-::-webkit-datetime-edit-year-field {
-  padding: 0;
-}
-
-::-webkit-color-swatch-wrapper {
-  padding: 0;
-}
-
-[type=search] {
-  outline-offset: -2.5px;
-  outline-offset: -0.25rem;
-}
-
-output {
-  vertical-align: middle;
-}
-
-button,
-select {
-  text-transform: none;
-}
-
-select {
-  word-wrap: normal;
-}
-
-[list]:not([type=date]):not([type=datetime-local]):not([type=month]):not([type=week]):not([type=time])::-webkit-calendar-picker-indicator {
-  display: none !important;
-}
-
-optgroup {
-  font-family: inherit;
-  font-size: inherit;
-  font-style: inherit;
-  font-weight: 700;
-  font-weight: 600;
-}
-
-button,
-html [type=button],
-[type=reset],
-[type=submit],
-[type=email],
-[type=number],
-[type=text],
-[type=tel],
-[type=date],
-[type=datetime-local],
-[type=month],
-[type=week],
-[type=url],
-[type=image],
-[type=password],
-[type=search],
-[type=search]::-webkit-search-decoration,
-[type=search]::-webkit-search-cancel-button,
-input[list],
-textarea {
-  -webkit-appearance: none;
-}
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
-}
-
-button,
-input,
-select,
-textarea {
-  border-radius: 2.5px;
-  border-radius: 0.25rem;
-}
-
-[type=radio] {
-  border-radius: 50%;
-}
-
-[type=checkbox] {
-  border-radius: 5px;
-  border-radius: 0.5rem;
-}
-
-[type=radio],
-[type=checkbox] {
-  padding: 0;
-  background-color: #fff;
-}
-
-[type=range] {
-  background-color: transparent;
-}
-
-select[size],
-select[multiple] {
-  height: auto;
-}
-
-select[multiple] {
-  background-image: none;
-}
-
-textarea {
-  height: auto;
-  min-height: 60px;
-  min-height: 6rem;
-  overflow: auto;
-  vertical-align: top;
-  resize: vertical;
-}
-
-::-moz-focus-inner {
-  padding: 0;
-  border-style: none;
-}
-
-button,
-[type=button],
-[type=reset],
-[type=submit] {
-  line-height: normal;
-  text-align: center;
-  margin: 0;
-  background-clip: padding-box;
-  vertical-align: baseline;
-  overflow: visible;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  border: 0;
-  background-image: none;
-}
-button:hover, button:active, button:focus,
-[type=button]:hover,
-[type=button]:active,
-[type=button]:focus,
-[type=reset]:hover,
-[type=reset]:active,
-[type=reset]:focus,
-[type=submit]:hover,
-[type=submit]:active,
-[type=submit]:focus {
-  text-decoration: none;
-  color: #222;
-}
-
-button,
-select,
-input[type=submit],
-input[type=button],
-[type=checkbox],
-[type=range],
-[type=radio],
-[role=button] {
+summary {
   cursor: pointer;
+  font-weight: 700;
+  word-break: break-all;
 }
 
-input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #666;
+dialog {
+  background-color: var(--bf-white);
+  color: var(--bf-dark);
+  border: none;
+  border-radius: var(--bf-spacing-sm);
+  padding: var(--bf-spacing-xl);
+  height: -moz-fit-content;
+  height: fit-content;
+  min-width: min(25rem, 100%);
+  max-width: calc(100vw - (var(--bf-spacing-grid-gutter) * 2));
 }
 
-input::placeholder,
-textarea::placeholder {
-  color: #666;
+@media (min-width: 768px) {
+  dialog {
+    max-width: 50rem;
+  }
 }
 
-:-moz-ui-invalid {
-  box-shadow: none;
+/* Open dialog wins over [hidden] (e.g. <dialog hidden open>). */
+dialog[open] {
+  display: block !important;
 }
 
-[type=email],
-[type=number],
-[type=password],
-[type=tel],
-[type=search],
-[type=text],
-[type=date],
-[type=datetime-local],
-[type=month],
-[type=week],
-[type=time],
-[type=url],
-input[list],
-select,
-textarea {
-  background-color: #fff;
-  border: 1px solid #999;
-  padding: 5px 7.5px;
-  padding: 0.5rem 0.75rem;
+dialog::backdrop {
+  background: rgb(0 0 0 / 40%);
 }
+/* Smooth scrolling when motion is allowed. */
 
-[type=email]:active, [type=email]:focus,
-[type=number]:active,
-[type=number]:focus,
-[type=password]:active,
-[type=password]:focus,
-[type=tel]:active,
-[type=tel]:focus,
-[type=search]:active,
-[type=search]:focus,
-[type=text]:active,
-[type=text]:focus,
-[type=date]:active,
-[type=date]:focus,
-[type=datetime-local]:active,
-[type=datetime-local]:focus,
-[type=month]:active,
-[type=month]:focus,
-[type=week]:active,
-[type=week]:focus,
-[type=time]:active,
-[type=time]:focus,
-[type=url]:active,
-[type=url]:focus,
-input[list]:active,
-input[list]:focus,
-select:active,
-select:focus,
-textarea:active,
-textarea:focus,
-[type=radio]:active,
-[type=radio]:focus,
-[type=checkbox]:active,
-[type=checkbox]:focus {
-  transition: border 0.2s, background-color 0.2s, box-shadow 0.2s;
-  border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
 }
+/* Table border collapse and cell alignment. */
 
-button,
-[type=button],
-[type=reset],
-[type=submit] {
-  color: #222;
-  padding: 6.6666666667px 13.3333333333px;
-  padding: 0.6666666667rem 1.3333333333rem;
-  background: #ccc;
-  transition: color 0.2s, background 0.2s, box-shadow 0.2s;
-}
-button:hover, button:active, button:focus,
-[type=button]:hover,
-[type=button]:active,
-[type=button]:focus,
-[type=reset]:hover,
-[type=reset]:active,
-[type=reset]:focus,
-[type=submit]:hover,
-[type=submit]:active,
-[type=submit]:focus {
-  text-decoration: none;
-  color: #222;
-  background: #b3b3b3;
-}
-button:active, button:focus,
-[type=button]:active,
-[type=button]:focus,
-[type=reset]:active,
-[type=reset]:focus,
-[type=submit]:active,
-[type=submit]:focus {
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
-}
-
-fieldset[disabled] button,
-fieldset[disabled] input,
-fieldset[disabled] input:after,
-fieldset[disabled] input:before,
-fieldset[disabled] input:checked,
-fieldset[disabled] select,
-fieldset[disabled] textarea,
-fieldset[disabled] label,
-button[disabled],
-input[disabled],
-input[disabled]:after,
-input[disabled]:before,
-input[disabled]:checked,
-select[disabled],
-textarea[disabled],
-label[disabled],
-button:disabled,
-input:disabled,
-input:disabled:after,
-input:disabled:before,
-input:disabled:checked,
-select:disabled,
-textarea:disabled,
-label:disabled,
-button[aria-disabled=true],
-input[aria-disabled=true],
-input[aria-disabled=true]:after,
-input[aria-disabled=true]:before,
-input[aria-disabled=true]:checked,
-select[aria-disabled=true],
-textarea[aria-disabled=true],
-label[aria-disabled=true] {
-  cursor: default !important;
-  cursor: not-allowed !important;
-  pointer-events: none !important;
-  -webkit-user-select: none !important;
-     -moz-user-select: none !important;
-          user-select: none !important;
-  box-shadow: none !important;
-  opacity: 0.5 !important;
-}
-
-select:not([size]):not([multiple]) {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.85rem center/8px 10px;
-  padding-right: 20px;
-  padding-right: 2rem;
-}
-
-select::-ms-expand {
-  display: none;
-}
-
-*[dir=rtl] select:not([size]):not([multiple]),
-select[dir=rtl]:not([size]):not([multiple]) {
-  background-position: left 0.85rem top 50%;
-  padding-right: 7.5px;
-  padding-right: 0.75rem;
-  padding-left: 20px;
-  padding-left: 2rem;
-}
-
-@supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
-  [type=checkbox],
-  [type=radio] {
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    height: 1.8rem;
-    width: 1.8rem;
-    vertical-align: top;
-    position: relative;
-    border: 1px solid #999;
-  }
-  [type=checkbox] + label,
-  [type=radio] + label {
-    line-height: 1.8rem;
-    vertical-align: top;
-    margin-left: 5px;
-    margin-left: 0.5rem;
-  }
-  *[dir=rtl] [type=checkbox] + label, [type=checkbox][dir=rtl] + label,
-  *[dir=rtl] [type=radio] + label,
-  [type=radio][dir=rtl] + label {
-    margin-left: 0;
-    margin-right: 5px;
-    margin-right: 0.5rem;
-  }
-  [type=checkbox]:after,
-  [type=radio]:after {
-    content: "";
-    display: block;
-    position: absolute;
-  }
-  [type=checkbox]:checked,
-  [type=radio]:checked {
-    background-color: #007bff;
-    border-color: #000;
-  }
-  [type=radio]:after {
-    width: 1.8rem;
-    height: 1.8rem;
-    left: -0.05rem;
-    top: -0.05rem;
-    border-radius: 50%;
-    background: #fff;
-    transform: scale(0.35);
-  }
-  [type=checkbox]:after {
-    width: 0.6rem;
-    height: 0.8rem;
-    border: 2px solid #fff;
-    border-top: 0;
-    border-left: 0;
-    left: 35%;
-    top: 20%;
-    transform: rotate(43deg);
-  }
-}
-@supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
-  [type=range] {
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    width: 100%;
-    height: 1.4rem;
-  }
-  [type=range]::-webkit-slider-thumb {
-    border: 0;
-    -webkit-appearance: none;
-            appearance: none;
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-top: -0.25rem;
-    background-color: #007bff;
-    border-radius: 1.5rem;
-    -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  }
-  [type=range]::-webkit-slider-thumb:active {
-    background-color: #007bff;
-  }
-  [type=range]::-moz-range-thumb {
-    border: 0;
-    -moz-appearance: none;
-         appearance: none;
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: #007bff;
-    border-radius: 1.5rem;
-    -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  }
-  [type=range]::-moz-range-thumb:active {
-    background-color: #007bff;
-  }
-  [type=range]::-webkit-slider-runnable-track {
-    color: transparent;
-    border-color: transparent;
-    width: 100%;
-    height: 0.65rem;
-    cursor: pointer;
-    background-color: #e9e9e9;
-  }
-  [type=range]::-moz-range-track {
-    color: transparent;
-    border-color: transparent;
-    width: 100%;
-    height: 0.65rem;
-    cursor: pointer;
-    background-color: #e9e9e9;
-  }
-  [type=range]:focus {
-    outline: none;
-  }
-  [type=range]:focus::-webkit-slider-thumb {
-    box-shadow: 0 0 0 0.1rem #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
-  [type=range]:focus::-moz-slider-thumb {
-    box-shadow: 0 0 0 0.1rem #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
-  [type=range]::-moz-focus-outer {
-    border: 0;
-  }
-  [type=range]:focus::-moz-range-thumb {
-    box-shadow: 0 0 0 0.1rem #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
-  [type=range]:disabled {
-    pointer-events: none;
-  }
-  [type=range]:disabled::-webkit-slider-thumb {
-    background-color: #ccc;
-  }
-  [type=range]:disabled::-moz-slider-thumb {
-    background-color: #ccc;
-  }
-}
 table {
+  caption-side: bottom;
   max-width: 100%;
   border-collapse: collapse;
+  border-color: currentcolor; /* Chrome / Safari inheritance. */
+  text-indent: 0; /* Chrome / Safari table indent. */
 }
 
 thead,
@@ -1059,1088 +1386,88 @@ td {
 
 th {
   text-align: inherit;
+  text-align: -webkit-match-parent;
   font-weight: 700;
 }
 
 caption {
-  padding-top: 5px;
-  padding-top: 0.5rem;
-  padding-bottom: 5px;
-  padding-bottom: 0.5rem;
-  color: #999;
+  padding-top: var(--bf-spacing-md);
+  padding-bottom: var(--bf-spacing-md);
+  color: var(--bf-gray);
   text-align: left;
   caption-side: bottom;
   line-height: 1.375;
   font-size: 90%;
 }
+/* Accessibility helpers (adapted from sanitize.css). */
 
-.bf-container,
-.bf-container--fluid {
-  box-sizing: content-box;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-left: 1.5rem;
-  padding-right: 15px;
-  padding-right: 1.5rem;
-}
-.bf-container:before, .bf-container:after,
-.bf-container--fluid:before,
-.bf-container--fluid:after {
-  display: table;
-  content: " ";
-}
-.bf-container:after,
-.bf-container--fluid:after {
-  clear: both;
-}
-
-.bf-container {
-  max-width: 1140px;
-  max-width: 114rem;
-}
-
-.bf-row {
-  display: block;
-  margin-left: -15px;
-  margin-left: -1.5rem;
-  margin-right: -15px;
-  margin-right: -1.5rem;
-}
-.bf-row:before, .bf-row:after {
-  content: " ";
-  display: table;
-}
-.bf-row:after {
-  clear: both;
-}
-
-[class^=bf-col-] {
-  float: left;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-left: 1.5rem;
-  padding-right: 15px;
-  padding-right: 1.5rem;
-}
-
-.bf-no-gutters {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.bf-no-gutters > [class^=bf-col] {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.bf-col-12 {
-  width: 100%;
-}
-
-.bf-col-11 {
-  width: 91.6666666667%;
-}
-
-.bf-col-10 {
-  width: 83.3333333333%;
-}
-
-.bf-col-9 {
-  width: 75%;
-}
-
-.bf-col-8 {
-  width: 66.6666666667%;
-}
-
-.bf-col-7 {
-  width: 58.3333333333%;
-}
-
-.bf-col-6 {
-  width: 50%;
-}
-
-.bf-col-5 {
-  width: 41.6666666667%;
-}
-
-.bf-col-4 {
-  width: 33.3333333333%;
-}
-
-.bf-col-3 {
-  width: 25%;
-}
-
-.bf-col-2 {
-  width: 16.6666666667%;
-}
-
-.bf-col-1 {
-  width: 8.3333%;
-}
-
-@media (max-width: 575px) {
-  .bf-container--break-xs .bf-row {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .bf-container--break-xs [class^=bf-col] {
-    width: 100%;
-    float: none;
-    margin-left: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-@media (max-width: 767px) {
-  .bf-container--break-md .bf-row {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .bf-container--break-md [class^=bf-col] {
-    width: 100%;
-    float: none;
-    margin-left: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-@media (max-width: 991px) {
-  .bf-container--break-lg .bf-row {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .bf-container--break-lg [class^=bf-col] {
-    width: 100%;
-    float: none;
-    margin-left: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-table td[class^=bf-col],
-table th[class^=bf-col] {
-  position: static;
-}
-
-.bf-clearfix:before,
-.bf-clearfix:after {
-  content: " ";
-  display: table;
-}
-
-.bf-clearfix:after {
-  clear: both;
-}
-
-.bf-hide {
-  display: none !important;
-}
-
-.bf-hidden {
-  display: none !important;
-  visibility: hidden !important;
-}
-
-.bf-text-hide {
-  /* stylelint-disable-next-line */
-  font: 0/0 a !important;
-  color: transparent !important;
-  text-shadow: none !important;
-  background-color: transparent !important;
-  border: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/*
-// taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
-// 
-* Hide only visually, but have it available for screen readers:
-* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-*
-* 1. For long content, line feeds are not interpreted as spaces and small width
-*    causes content to wrap 1 word per line:
-*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
-*/
-.bf-sr-only {
-  border: 0 !important;
-  clip: rect(0, 0, 0, 0) !important;
-  height: 1px !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  white-space: nowrap !important;
-  width: 1px !important;
-}
-
-/*
-// taken from https://github.com/h5bp/html5-boilerplate/blob/v7.3.0/dist/css/main.css
-// 
-* Extends the .sr-only class to allow the element
-* to be focusable when navigated to via the keyboard:
-* https://www.drupal.org/node/897638
-*/
-.bf-sr-only.focusable:active,
-.bf-sr-only.focusable:focus {
-  clip: auto !important;
-  height: auto !important;
-  margin: 0 !important;
-  overflow: visible !important;
-  position: static !important;
-  white-space: inherit !important;
-  width: auto !important;
-}
-
-.bf-invisible {
-  visibility: hidden !important;
-}
-
-.bf-visible {
-  visibility: visible !important;
-}
-
-.bf-display-block {
-  display: block !important;
-}
-
-.bf-display-block-center {
-  display: block !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  text-align: center !important;
-}
-
-.bf-display-inline {
-  display: inline !important;
-}
-
-.bf-display-inline-block {
-  display: inline-block !important;
-}
-
-.bf-display-flex {
-  display: flex !important;
-}
-
-.bf-display-inline-flex {
-  display: inline-flex !important;
-}
-
-.bf-display-flex--justify-start {
-  justify-content: flex-start !important;
-}
-
-.bf-display-flex--justify-end {
-  justify-content: flex-end !important;
-}
-
-.bf-display-flex--justify-center {
-  justify-content: center !important;
-}
-
-.bf-display-flex--wrap {
-  flex-wrap: wrap !important;
-}
-
-.bf-display-flex--nowrap {
-  flex-wrap: nowrap !important;
-}
-
-.bf-float-left {
-  float: left !important;
-}
-
-.bf-float-right {
-  float: right !important;
-}
-
-.bf-position-fixed {
-  position: fixed !important;
-}
-
-.bf-position-sticky {
-  position: sticky !important;
-  top: 0 !important;
-}
-
-.bf-align-center-unknown {
-  position: relative !important;
-}
-
-.bf-align-center-unknown--item {
-  position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-}
-
-.bf-align-center-flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.bf-width-25 {
-  width: 25% !important;
-}
-
-.bf-width-33 {
-  width: 33.3333333333% !important;
-}
-
-.bf-width-50 {
-  width: 50% !important;
-}
-
-.bf-width-75 {
-  width: 75% !important;
-}
-
-.bf-width-100 {
-  width: 100% !important;
-}
-
-.bf-width-auto {
-  width: auto !important;
-}
-
-.bf-z-index-1 {
-  z-index: 1;
-}
-
-.bf-z-index-2 {
-  z-index: 2;
-}
-
-.bf-z-index-3 {
-  z-index: 3;
-}
-
-.bf-z-index-4 {
-  z-index: 4;
-}
-
-.bf-z-index-5 {
-  z-index: 5;
-}
-
-.bf-z-index-6 {
-  z-index: 6;
-}
-
-.bf-z-index-7 {
-  z-index: 7;
-}
-
-.bf-z-index-8 {
-  z-index: 8;
-}
-
-.bf-z-index-9 {
-  z-index: 9;
-}
-
-.bf-z-index-10 {
-  z-index: 10;
-}
-
-.bf-z-index-20 {
-  z-index: 20;
-}
-
-.bf-z-index-30 {
-  z-index: 30;
-}
-
-.bf-z-index-40 {
-  z-index: 40;
-}
-
-.bf-z-index-50 {
-  z-index: 50;
-}
-
-.bf-z-index-60 {
-  z-index: 60;
-}
-
-.bf-z-index-70 {
-  z-index: 70;
-}
-
-.bf-z-index-80 {
-  z-index: 80;
-}
-
-.bf-z-index-90 {
-  z-index: 90;
-}
-
-.bf-z-index-100 {
-  z-index: 100;
-}
-
-.bf-z-index-200 {
-  z-index: 200;
-}
-
-.bf-z-index-300 {
-  z-index: 200;
-}
-
-.bf-m-0 {
-  margin: 0 !important;
-}
-
-.bf-m-t-0 {
-  margin-top: 0 !important;
-}
-
-.bf-m-b-0 {
-  margin-bottom: 0 !important;
-}
-
-.bf-m-l-0 {
-  margin-left: 0 !important;
-}
-
-.bf-m-r-0 {
-  margin-right: 0 !important;
-}
-
-.bf-m-1 {
-  margin-bottom: 5px !important;
-  margin-bottom: 0.5rem !important;
-}
-
-.bf-m-2 {
-  margin-bottom: 10px !important;
-  margin-bottom: 1rem !important;
-}
-
-.bf-m-3 {
-  margin-bottom: 20px !important;
-  margin-bottom: 2rem !important;
-}
-
-.bf-m-4 {
-  margin-bottom: 30px !important;
-  margin-bottom: 3rem !important;
-}
-
-.bf-m-b-1 {
-  margin-bottom: 5px !important;
-  margin-bottom: 0.5rem !important;
-}
-
-.bf-m-b-2 {
-  margin-bottom: 10px !important;
-  margin-bottom: 1rem !important;
-}
-
-.bf-m-b-3 {
-  margin-bottom: 20px !important;
-  margin-bottom: 2rem !important;
-}
-
-.bf-m-b-4 {
-  margin-bottom: 30px !important;
-  margin-bottom: 3rem !important;
-}
-
-.bf-p-0 {
-  padding: 0 !important;
-}
-
-.bf-p-t-0 {
-  padding-top: 0 !important;
-}
-
-.bf-p-b-0 {
-  padding-bottom: 0 !important;
-}
-
-.bf-p-l-0 {
-  padding-left: 0 !important;
-}
-
-.bf-p-r-0 {
-  padding-right: 0 !important;
-}
-
-.bf-p-1 {
-  padding-bottom: 5px !important;
-  padding-bottom: 0.5rem !important;
-}
-
-.bf-p-2 {
-  padding-bottom: 10px !important;
-  padding-bottom: 1rem !important;
-}
-
-.bf-p-3 {
-  padding-bottom: 20px !important;
-  padding-bottom: 2rem !important;
-}
-
-.bf-p-4 {
-  padding-bottom: 30px !important;
-  padding-bottom: 3rem !important;
-}
-
-.bf-p-t-1 {
-  padding-top: 5px !important;
-  padding-top: 0.5rem !important;
-}
-
-.bf-p-t-2 {
-  padding-top: 10px !important;
-  padding-top: 1rem !important;
-}
-
-.bf-p-t-3 {
-  padding-top: 20px !important;
-  padding-top: 2rem !important;
-}
-
-.bf-p-t-4 {
-  padding-top: 30px !important;
-  padding-top: 3rem !important;
-}
-
-.bf-p-b-1 {
-  padding-bottom: 5px !important;
-  padding-bottom: 0.5rem !important;
-}
-
-.bf-p-b-2 {
-  padding-bottom: 10px !important;
-  padding-bottom: 1rem !important;
-}
-
-.bf-p-b-3 {
-  padding-bottom: 20px !important;
-  padding-bottom: 2rem !important;
-}
-
-.bf-p-b-4 {
-  padding-bottom: 30px !important;
-  padding-bottom: 3rem !important;
-}
-
-.bf-t-transform-uppercase {
-  text-transform: uppercase !important;
-}
-
-.bf-t-transform-none {
-  text-transform: none !important;
-}
-
-.bf-t-left {
-  text-align: left !important;
-}
-
-.bf-t-center {
-  text-align: center !important;
-}
-
-.bf-t-right {
-  text-align: right !important;
-}
-
-.bf-t-shadow {
-  text-shadow: 0 0 2px #222 !important;
-  text-shadow: 0 0 0.2rem #222 !important;
-}
-
-.bf-t-italic {
-  font-style: italic !important;
-}
-
-.bf-t-style-normal {
-  font-style: normal !important;
-}
-
-.bf-t-weight-300 {
-  font-weight: 300 !important;
-}
-
-.bf-t-weight-400 {
-  font-weight: 400 !important;
-}
-
-.bf-t-weight-500 {
-  font-weight: 500 !important;
-}
-
-.bf-t-weight-600 {
-  font-weight: 600 !important;
-}
-
-.bf-t-weight-700 {
-  font-weight: 700 !important;
-}
-
-.bf-t-weight-800 {
-  font-weight: 800 !important;
-}
-
-.bf-text-break {
-  word-wrap: break-word !important;
-}
-
-.bf-t-truncate {
-  max-width: 100% !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  white-space: nowrap !important;
-  word-wrap: normal !important;
-}
-
-.bf-t-truncate--multiline-2 {
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 2 !important;
-  -webkit-box-orient: vertical !important;
-}
-
-.bf-t-truncate--multiline-3 {
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 3 !important;
-  -webkit-box-orient: vertical !important;
-}
-
-.bf-no-select {
-  -webkit-user-select: none !important;
-     -moz-user-select: none !important;
-          user-select: none !important;
-  -webkit-touch-callout: none !important;
-}
-
-.bf-font-sans-serif {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
-}
-
-.bf-font-serif {
-  font-family: Georgia, Times, "Times New Roman", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
-}
-
-.bf-font-monospace {
-  font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
-}
-
-.bf-h1,
-.bf-h2,
-.bf-h3,
-.bf-h4,
-.bf-h5,
-.bf-h6 {
-  font-weight: 700 !important;
-  font-weight: 600 !important;
-  margin-top: 0 !important;
-  line-height: 1.2 !important;
-  margin-bottom: 10px !important;
-  margin-bottom: 1rem !important;
-}
-
-.bf-h1 {
-  font-size: 36px !important;
-  font-size: 3.6rem !important;
-}
-
-.bf-h2 {
-  font-size: 30px !important;
-  font-size: 3rem !important;
-}
-
-.bf-h3 {
-  font-size: 24px !important;
-  font-size: 2.4rem !important;
-}
-
-.bf-h4 {
-  font-size: 20px !important;
-  font-size: 2rem !important;
-}
-
-.bf-h5,
-.bf-h6 {
-  font-size: 16px !important;
-  font-size: 1.6rem !important;
-}
-
-p.bf-lead {
-  font-size: 120% !important;
-}
-
-body.bf-responsive-typography {
-  --body-rt-font-size-flex: calc(1.6rem + 3 * ((100vw - 320px) / 680));
-  --body-rt-font-size-max: 1.9rem;
-}
-
-@media (min-width: 320px) {
-  body.bf-responsive-typography {
-    font-size: var(--body-rt-font-size-flex);
-  }
-}
-@media (min-width: 1000px) {
-  body.bf-responsive-typography {
-    font-size: var(--body-rt-font-size-max);
-  }
-}
-.bf-btn {
-  display: inline-block;
-  cursor: pointer;
-  color: #222;
-  padding: 6.6666666667px 13.3333333333px;
-  padding: 0.6666666667rem 1.3333333333rem;
-  line-height: normal;
-  text-align: center;
-  margin: 0;
-  background-clip: padding-box;
-  vertical-align: baseline;
-  overflow: visible;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  border-radius: 2.5px;
-  border-radius: 0.25rem;
-  border: 0;
-  background-image: none;
-  background-color: #ccc;
-  transition: all 0.2s;
-}
-.bf-btn:hover, .bf-btn:active, .bf-btn:focus {
-  text-decoration: none;
-  color: #222;
-  background: #b3b3b3;
-}
-.bf-btn:active, .bf-btn:focus {
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
-}
-.bf-btn:focus {
-  outline: 0;
-}
-.bf-btn.bf-btn--primary {
-  color: #fff;
-  background: #007bff;
-}
-.bf-btn.bf-btn--primary:hover, .bf-btn.bf-btn--primary:active, .bf-btn.bf-btn--primary:focus {
-  color: #fff;
-  background: #0062cc;
-}
-.bf-btn.bf-btn--primary:active, .bf-btn.bf-btn--primary:focus {
-  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
-}
-
-fieldset[disabled] .bf-btn,
-.bf-btn[disabled],
-.bf-btn:disabled,
-.bf-btn[aria-disabled=true] {
-  cursor: default !important;
-  cursor: not-allowed !important;
-  pointer-events: none !important;
-  -webkit-user-select: none !important;
-     -moz-user-select: none !important;
-          user-select: none !important;
-  box-shadow: none !important;
-  opacity: 0.5 !important;
-}
-
-.bf-focused {
-  transition: border 0.2s, background-color 0.2s, box-shadow 0.2s !important;
-  border-color: #007bff !important;
-  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25) !important;
-}
-
-.bf-disabled,
-.bf-disabled:hover,
-.bf-disabled:active,
-.bf-disabled:focus,
-.bf-disabled:after,
-.bf-disabled:before,
-.bf-disabled:invalid,
-.bf-disabled:checked {
-  cursor: default !important;
-  cursor: not-allowed !important;
-  pointer-events: none !important;
-  -webkit-user-select: none !important;
-     -moz-user-select: none !important;
-          user-select: none !important;
-  box-shadow: none !important;
-  opacity: 0.5 !important;
-  background-color: #fff;
-  border-color: #999;
-}
-
-label.bf-disabled {
-  background-color: transparent;
-  border-color: transparent;
-}
-
-button.bf-disabled,
-[type=button].bf-disabled,
-[type=reset].bf-disabled,
-[type=submit].bf-disabled,
-.bf-btn.bf-disabled {
-  cursor: default;
-  cursor: not-allowed;
-  pointer-events: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  box-shadow: none;
-  opacity: 0.5;
-  color: #222;
-  background: #ccc;
-}
-button.bf-disabled:hover, button.bf-disabled:active, button.bf-disabled:focus,
-[type=button].bf-disabled:hover,
-[type=button].bf-disabled:active,
-[type=button].bf-disabled:focus,
-[type=reset].bf-disabled:hover,
-[type=reset].bf-disabled:active,
-[type=reset].bf-disabled:focus,
-[type=submit].bf-disabled:hover,
-[type=submit].bf-disabled:active,
-[type=submit].bf-disabled:focus,
-.bf-btn.bf-disabled:hover,
-.bf-btn.bf-disabled:active,
-.bf-btn.bf-disabled:focus {
-  box-shadow: none;
-  color: #222;
-  background: #ccc;
-}
-
-.bf-btn--primary.bf-disabled {
-  cursor: default;
-  cursor: not-allowed;
-  pointer-events: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  box-shadow: none;
-  opacity: 0.5;
-  color: #fff;
-  background: #007bff;
-}
-.bf-btn--primary.bf-disabled:hover, .bf-btn--primary.bf-disabled:active, .bf-btn--primary.bf-disabled:focus {
-  box-shadow: none;
-  color: #fff;
-  background: #007bff;
-}
-
-.bf-invalid,
-.bf-invalid:focus {
-  color: #ff0000 !important;
-  border-color: #ff0000 !important;
-  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25) !important;
-}
-
-.bf-list-unstyled,
-menu ul.bf-list-unstyled,
-menu ol.bf-list-unstyled,
-ul.bf-list-unstyled ul,
-ul.bf-list-unstyled ol,
-ol.bf-list-unstyled ol,
-ol.bf-list-unstyled ul,
-dd.bf-list-unstyled {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-dt {
-  font-weight: 700;
-}
-
-.bf-embed-responsive {
-  position: relative;
-  display: block;
-  width: 100%;
-  padding: 0;
-  overflow: hidden;
-}
-.bf-embed-responsive::before {
-  display: block;
-  content: "";
-  padding-top: 56.25%;
-}
-.bf-embed-responsive .bf-embed-responsive--4-3::before {
-  padding-top: 75%;
-}
-.bf-embed-responsive .bf-embed-responsive--item, .bf-embed-responsive iframe, .bf-embed-responsive embed, .bf-embed-responsive object, .bf-embed-responsive video {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-.bf-table th,
-.bf-table td {
-  padding: 10px;
-  padding: 1rem;
-  border-bottom: 1px solid #999;
-  margin-bottom: 5px;
-  margin-bottom: 0.5rem;
-}
-
-.bf-table-responsive {
-  overflow-x: auto;
-  overflow-y: hidden;
-  -ms-overflow-style: scrollbar;
-}
-
-.bf-table-responsive table {
-  width: 100%;
-  margin-bottom: 5px;
-  margin-bottom: 0.5rem;
-}
-
-.bf-table-responsive.scrollbar {
-  -webkit-overflow-scrolling: auto;
-}
-
-.bf-table--zebra tbody tr:nth-child(odd),
-.bf-table-responsive--zebra tbody tr:nth-child(odd) {
-  background-color: #e9e9e9;
-}
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-  /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-  pre {
-    white-space: pre-wrap !important;
-  }
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
-@media print {
-  body,
-  .bf-container {
-    min-width: 992px !important;
-  }
-  .bf-table-responsive {
-    overflow: auto;
-  }
-  .bf-table-responsive table {
-    width: auto;
-  }
-  .bf-table-responsive table,
-  .bf-table {
-    border-collapse: collapse !important;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .bf-reduced-motion,
-  .bf-reduced-motion::before,
-  .bf-reduced-motion::after,
-  .bf-reduced-motion *,
-  .bf-reduced-motion *::before,
-  .bf-reduced-motion *::after {
-    animation-delay: -1ms !important;
-    animation-duration: 1ms !important;
-    animation-iteration-count: 1 !important;
-    background-attachment: initial !important;
-    scroll-behavior: auto !important;
-    transition-delay: 0s !important;
-    transition-duration: 0s !important;
-  }
-}
-/**
- * Change the cursor on busy elements in all browsers (opinionated).
- */
-[aria-busy=true] {
+/* Busy: progress cursor. */
+:where([aria-busy='true' i]) {
   cursor: progress;
 }
 
-/*
- * Change the cursor on control elements in all browsers (opinionated).
- */
-[aria-controls] {
-  cursor: pointer;
-}
-
-/*
- * Change the cursor on disabled, not-editable, or otherwise
- * inoperable elements in all browsers (opinionated).
- */
-[aria-disabled=true],
-[disabled] {
+/* Disabled / inoperable: not-allowed cursor. */
+:where([aria-disabled='true' i], [disabled]) {
   cursor: not-allowed;
 }
 
-/*
- * Change the display on visually hidden accessible elements
- * in all browsers (opinionated).
- */
-[aria-hidden=false][hidden] {
+/* aria-hidden="false" on [hidden]: keep in a11y tree when not focused. */
+:where([aria-hidden='false' i][hidden]) {
   display: initial;
 }
 
-[aria-hidden=false][hidden]:not(:focus) {
+:where([aria-hidden='false' i][hidden]:not(:focus)) {
   clip: rect(0, 0, 0, 0);
   position: absolute;
+}
+/* Preference queries only (prefers-contrast, forced-colors). Additive. */
+
+/* prefers-contrast: more: underline links, thicker focus, stronger borders (WCAG 1.4.1). */
+@media (prefers-contrast: more) {
+  a {
+    text-decoration: underline;
+  }
+
+  :focus-visible {
+    outline-width: 0.3rem;
+    outline-offset: 0.4rem;
+  }
+
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='tel'],
+  [type='search'],
+  [type='text'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='time'],
+  [type='url'],
+  [type='week'],
+  input[list],
+  select,
+  textarea {
+    border-width: 2px;
+  }
+}
+
+/* forced-colors: restore focus via Highlight; underline links; keep button borders. */
+@media (forced-colors: active) {
+  :focus-visible {
+    outline-color: Highlight;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  /* Keep button borders so disabled/active stay distinguishable. */
+  button,
+  [type='button'],
+  [type='reset'],
+  [type='submit'],
+  .bf-btn {
+    border: 1px solid ButtonText;
+  }
 }
